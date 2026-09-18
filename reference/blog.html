@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insight | GTM, Growth, Product & Operational AI | COMMVIEW</title>
+<meta name="description" content="Field notes from the work: what we see inside B2B scale-ups, what it usually turns out to be, and what we would do about it.">
+<link rel="canonical" href="https://commview.co.uk/insight">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#0B0F14">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="COMMVIEW">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://commview.co.uk/insight">
+<meta property="og:title" content="Insight | GTM, Growth, Product & Operational AI | COMMVIEW">
+<meta property="og:description" content="Field notes from the work: what we see inside B2B scale-ups, what it usually turns out to be, and what we would do about it.">
+<meta property="og:image" content="https://commview.co.uk/og-commview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insight | GTM, Growth, Product & Operational AI | COMMVIEW">
+<meta name="twitter:description" content="Field notes from the work: what we see inside B2B scale-ups, what it usually turns out to be, and what we would do about it.">
+<meta name="twitter:image" content="https://commview.co.uk/og-commview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+/* ===== design system: tokens ===== */
+:root, [data-theme="dark"] {
+  --surface-base: #0b0f14;
+  --surface-raised: #1f2937;
+  --surface-inverse: #f8fafc;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-inverse: #0b0f14;
+  --text-on-accent: #0b0f14;
+  --text-on-brand-blue: #ffffff;
+  --brand-charcoal: #0b0f14;
+  --brand-cyan: #00e5ff;
+  --brand-blue: #5b4df5;
+  --brand-polar: #f8fafc;
+  --accent-green: #10b981;
+  --accent-orange: #ff6b3d;
+  --accent-yellow: #fbbf24;
+  --accent-pink: #ec4899;
+  --slate-dark: #1f2937;
+  --slate: #94a3b8;
+  --slate-light: #e2e8f0;
+  --border-subtle: #1f2937;
+  --border-strong: #94a3b8;
+  --focus-ring: #00e5ff;
+  --chart-1: var(--brand-cyan);
+  --chart-2: var(--brand-blue);
+  --chart-3: var(--accent-green);
+  --chart-4: var(--accent-orange);
+  --chart-5: var(--accent-yellow);
+  --chart-6: var(--accent-pink);
+  --chart-7: var(--slate);
+  --shadow-none: none;
+  --shadow-raised: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-overlay: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+[data-theme="light"] {
+  --surface-base: #f8fafc;
+  --surface-raised: #ffffff;
+  --surface-inverse: #0b0f14;
+  --text-primary: #0b0f14;
+  --text-secondary: #64748b;
+  --text-inverse: #ffffff;
+  --text-on-accent: #0b0f14;
+  --text-on-brand-blue: #ffffff;
+  --brand-charcoal: #0b0f14;
+  --brand-cyan: #00e5ff;
+  --brand-blue: #5b4df5;
+  --brand-polar: #f8fafc;
+  --accent-green: #10b981;
+  --accent-orange: #ff6b3d;
+  --accent-yellow: #fbbf24;
+  --accent-pink: #ec4899;
+  --slate-dark: #1f2937;
+  --slate: #94a3b8;
+  --slate-light: #e2e8f0;
+  --border-subtle: #e2e8f0;
+  --border-strong: #64748b;
+  --focus-ring: #5b4df5;
+  --shadow-raised: 0 1px 2px rgba(11, 15, 20, 0.06);
+  --shadow-overlay: 0 16px 40px rgba(11, 15, 20, 0.12);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
+}
+.display-xl { font-family: var(--font-sans); font-size: 56px; line-height: 58px; font-weight: 800; letter-spacing: -0.02em; }
+.display-l { font-family: var(--font-sans); font-size: 40px; line-height: 44px; font-weight: 700; letter-spacing: -0.02em; }
+.metric { font-family: var(--font-sans); font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.02em; }
+.heading-l { font-family: var(--font-sans); font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -0.01em; }
+.heading-m { font-family: var(--font-sans); font-size: 22px; line-height: 28px; font-weight: 600; }
+.heading-s { font-family: var(--font-sans); font-size: 18px; line-height: 24px; font-weight: 600; }
+.eyebrow { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.18em; }
+.label { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 500; }
+.label-s { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; }
+.body-l { font-family: var(--font-sans); font-size: 18px; line-height: 30px; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 26px; font-weight: 400; }
+.body-s { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 400; }
+/* ===== shared site chrome ===== */
+/* ===== editorial display scale (as used on the homepage) ===== */
+:root {
+  --t-hero: clamp(30px, 4.3vw, 62px);
+  --t-chapter: clamp(32px, 4.4vw, 62px);
+  --t-section: clamp(27px, 3vw, 42px);
+  --t-number: clamp(36px, 4.5vw, 66px);
+  --t-row: clamp(22px, 2.3vw, 34px);
+  --rule: 1px solid var(--border-subtle);
+  /* system gradients (from components/bundle.css) */
+  --gradient-momentum: linear-gradient(135deg, #00e5ff 0%, #5b4df5 100%);
+  --gradient-innovation: linear-gradient(135deg, #5b4df5 0%, #ec4899 100%);
+  --gradient-growth: linear-gradient(135deg, #10b981 0%, #fbbf24 100%);
+  --gradient-energy: linear-gradient(135deg, #ff6b3d 0%, #fbbf24 100%);
+}
+
+/* ===== base ===== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--surface-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+a { color: inherit; text-decoration: none; }
+p { margin: 0; }
+h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+
+.wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding-inline: var(--space-6); }
+.dark { background: var(--brand-charcoal); color: var(--brand-polar); }
+.dark .dim { color: var(--slate); }
+.dim { color: var(--text-secondary); }
+.eyebrow-x {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--text-secondary);
+}
+.dark .eyebrow-x { color: var(--slate); }
+.lede { font-size: 18px; line-height: 1.6; font-weight: 400; }
+.small { font-size: 14px; line-height: 1.6; }
+.hair { height: 1px; background: var(--border-subtle); border: 0; margin: 0; }
+.dark .hair { background: var(--slate-dark); }
+.sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 99;
+  background: var(--brand-charcoal); color: var(--brand-polar); padding: 12px 18px;
+}
+.skip:focus { left: var(--space-6); top: var(--space-4); }
+
+/* ===== header ===== */
+.hdr {
+  position: sticky; top: 0; z-index: 40;
+  background: color-mix(in srgb, var(--surface-base) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--rule);
+}
+.hdr__in { display: flex; align-items: center; gap: var(--space-8); padding-block: var(--space-4); }
+.logo { display: block; color: var(--brand-charcoal); width: auto; }
+.logo svg { display: block; width: 188px; height: auto; }
+.logo__sub {
+  display: block; margin-top: 6px; font-size: 9px; letter-spacing: 0.16em;
+  text-transform: uppercase; white-space: nowrap; color: var(--text-secondary);
+}
+.hdr__nav { display: flex; gap: var(--space-6); margin-left: auto; font-size: 14px; font-weight: 500; }
+.hdr__nav a { color: var(--text-secondary); padding-block: var(--space-2); }
+.hdr__nav a:hover { color: var(--text-primary); }
+.hdr__nav a[aria-current] { color: var(--text-primary); box-shadow: inset 0 -2px 0 var(--brand-blue); }
+.hdr__cta { display: inline-flex; }
+.burger {
+  display: none; background: none; border: var(--rule);
+  border-radius: var(--radius-sm); padding: 10px 12px; cursor: pointer;
+}
+.burger span { display: block; width: 18px; height: 2px; background: var(--text-primary); }
+.burger span + span { margin-top: 4px; }
+
+/* ===== buttons ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: 15px; font-weight: 600; line-height: 1;
+  padding: 14px 22px; border-radius: var(--radius-md); border: 1px solid transparent;
+  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+  cursor: pointer; font-family: inherit;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--ink { background: var(--brand-charcoal); color: var(--brand-polar); }
+.btn--ink:hover { background: var(--brand-blue); }
+.btn--cyan { background: var(--brand-cyan); color: var(--brand-charcoal); }
+.btn--cyan:hover { background: var(--brand-polar); }
+.btn--ghost { border-color: var(--border-strong); color: inherit; background: none; }
+.dark .btn--ghost { border-color: var(--slate); }
+.btn--ghost:hover { border-color: var(--brand-cyan); }
+.btn--lg { font-size: 16px; padding: 18px 28px; }
+
+/* ===== topic chip (shared across all blog pages) ===== */
+.topic {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--text-primary);
+}
+.dark .topic { color: var(--brand-polar); }
+.topic i { width: 8px; height: 8px; border-radius: 999px; background: var(--c, var(--brand-cyan)); flex: none; }
+
+/* ===== meta line ===== */
+.meta {
+  display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-3);
+  font-size: 13px; color: var(--text-secondary);
+}
+.dark .meta { color: var(--slate); }
+.meta i { font-style: normal; opacity: .5; }
+
+/* ===== closing CTA band (shared) ===== */
+.cta { padding-block: var(--space-24); }
+.cta__in { max-width: 820px; margin-right: auto; }
+.cta__h { font-size: var(--t-section); line-height: 1.1; color: var(--brand-polar); }
+.cta__p { margin-top: var(--space-4); max-width: 56ch; font-size: 18px; line-height: 1.6; color: var(--slate); }
+.cta__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+/* ===== footer ===== */
+.ftr { padding-block: var(--space-16); border-top: 1px solid var(--slate-dark); }
+.ftr__top { display: flex; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; align-items: flex-start; }
+.ftr .logo { color: var(--brand-polar); }
+.ftr .logo svg { width: 176px; }
+.ftr__meta { display: flex; gap: var(--space-6); flex-wrap: wrap; font-size: 14px; color: var(--slate); }
+.ftr__meta a:hover { color: var(--brand-polar); }
+.ftr__strap { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-cyan); }
+.ftr__bottom { margin-top: var(--space-12); display: flex; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+
+/* header collapses before the nav + CTA can crowd the logo */
+@media (max-width: 860px) {
+  .hdr__nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--surface-base);
+    border-bottom: var(--rule); padding: var(--space-4) var(--space-6) var(--space-6);
+  }
+  .hdr__nav[data-open="true"] { display: flex; }
+  .hdr__nav a { padding-block: var(--space-3); border-bottom: var(--rule); font-size: 16px; }
+  .burger { display: block; order: 3; }
+  .hdr__cta { order: 2; margin-left: auto; padding: 11px 16px; font-size: 14px; }
+  .hdr__in { gap: var(--space-4); position: relative; }
+  .logo svg { width: 132px; }
+  .logo__sub { display: none; }
+}
+@media (max-width: 720px) {
+  .cta { padding-block: var(--space-16); }
+}
+/* ===== blog hero ===== */
+.bhero { padding-block: clamp(56px, 7vw, 104px) clamp(48px, 6vw, 88px); position: relative; overflow: hidden; }
+.bhero__slash { position: absolute; top: -20%; right: -6%; width: 34%; height: 140%; opacity: .75; pointer-events: none; }
+.bhero__grid { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
+.bhero__h1 { font-size: var(--t-chapter); line-height: 1.02; font-weight: 700; letter-spacing: -0.03em; color: var(--brand-polar); margin-top: var(--space-6); text-wrap: balance; }
+.bhero__h1 em { font-style: normal; color: var(--brand-cyan); }
+.bhero__lede { margin-top: var(--space-6); max-width: 54ch; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.6; color: var(--slate); }
+.bhero__rail { border-left: 1px solid var(--slate-dark); padding-left: var(--space-8); }
+.bhero__list { list-style: none; margin: var(--space-4) 0 0; padding: 0; }
+.bhero__list li + li { margin-top: var(--space-1); }
+.bhero__list a { display: flex; align-items: baseline; gap: var(--space-3); padding-block: var(--space-3); border-bottom: 1px solid var(--slate-dark); }
+.bhero__list a > span { display: flex; align-items: baseline; gap: var(--space-3); width: 100%; }
+.bhero__list i { width: 8px; height: 8px; border-radius: 999px; background: var(--c); flex: none; transform: translateY(-1px); }
+.bhero__list b { font-size: 15px; font-weight: 600; color: var(--brand-polar); }
+.bhero__list u { text-decoration: none; margin-left: auto; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--slate); }
+.bhero__list a:hover b { color: var(--brand-cyan); }
+
+/* ===== featured ===== */
+.feat { padding-block: clamp(48px, 6vw, 88px); border-bottom: var(--rule); }
+.feat__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 4vw, 64px); align-items: center; }
+.feat__h { font-size: clamp(28px, 3.2vw, 46px); line-height: 1.08; margin-top: var(--space-4); text-wrap: balance; }
+.feat__h a:hover { color: var(--brand-blue); }
+.feat__stand { margin-top: var(--space-5, 20px); max-width: 52ch; font-size: 17px; line-height: 1.65; color: var(--text-secondary); }
+.feat__foot { margin-top: var(--space-6); display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-4) var(--space-6); }
+.feat__top { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+.tag { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brand-blue); }
+
+/* slab: stands in for the post image until real artwork exists.
+   Featured gets one full gradient; cards get the charcoal panel so the page
+   keeps to one or two bright accents per section. */
+.slab { position: relative; aspect-ratio: 3 / 2; border-radius: var(--radius-lg); overflow: hidden; background: var(--brand-charcoal); }
+.slab--momentum { background-image: var(--gradient-momentum, linear-gradient(135deg, #00e5ff, #5b4df5)); }
+.slab--innovation { background-image: var(--gradient-innovation, linear-gradient(135deg, #5b4df5, #ec4899)); }
+.slab--growth { background-image: var(--gradient-growth, linear-gradient(135deg, #10b981, #fbbf24)); }
+.slab--energy { background-image: var(--gradient-energy, linear-gradient(135deg, #ff6b3d, #fbbf24)); }
+.slab svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.slab img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== latest grid ===== */
+.latest { padding-block: clamp(48px, 6vw, 88px); }
+.sechead { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+.sechead h2 { font-size: var(--t-section); line-height: 1.1; }
+.sechead a { font-size: 14px; font-weight: 600; color: var(--text-secondary); border-bottom: 1px solid var(--border-strong); padding-bottom: 2px; }
+.sechead a:hover { color: var(--text-primary); border-color: var(--brand-blue); }
+
+.cards { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 48px) clamp(24px, 2.6vw, 40px); }
+.card { display: flex; flex-direction: column; }
+.card__media {
+  position: relative; display: block; aspect-ratio: 16 / 10;
+  border-radius: var(--radius-md); overflow: hidden; background: var(--brand-charcoal);
+}
+.card__media svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.card__media::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 2;
+  background: var(--c, var(--brand-cyan));
+}
+.card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card__body { padding-top: var(--space-5, 20px); display: flex; flex-direction: column; flex: 1; }
+.card__h { margin-top: var(--space-3); font-size: 21px; line-height: 1.25; font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
+.card__h a { display: block; }
+.card:hover .card__h a { color: var(--brand-blue); }
+.card__stand { margin-top: var(--space-3); font-size: 15px; line-height: 1.6; color: var(--text-secondary); }
+.card__meta { margin-top: auto; padding-top: var(--space-5, 20px); }
+
+/* ===== browse by topic ===== */
+.topics { padding-block: clamp(48px, 6vw, 88px); border-top: var(--rule); }
+.topics__grid { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-6); }
+.tile {
+  display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-6); border: var(--rule); border-radius: var(--radius-md);
+  border-top: 3px solid var(--c); background: var(--surface-raised);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+.tile:hover { transform: translateY(-2px); }
+.tile b { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+.tile span { font-size: 14px; line-height: 1.55; color: var(--text-secondary); }
+.tile u { text-decoration: none; margin-top: auto; padding-top: var(--space-4); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+
+/* ===== closing: CTA + subscribe in one dark chapter ===== */
+.close { padding-block: clamp(64px, 7vw, 104px); }
+.close__grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(40px, 5vw, 88px); align-items: start; }
+.close__h { font-size: var(--t-section); line-height: 1.08; color: var(--brand-polar); text-wrap: balance; }
+.close__p { margin-top: var(--space-4); max-width: 46ch; font-size: 17px; line-height: 1.6; color: var(--slate); }
+.close__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+.sub {
+  border: 1px solid var(--slate-dark); border-top: 3px solid var(--brand-cyan);
+  border-radius: var(--radius-md); padding: var(--space-8);
+}
+.sub__h { font-size: 22px; line-height: 1.2; color: var(--brand-polar); }
+.sub__p { margin-top: var(--space-3); font-size: 15px; line-height: 1.6; color: var(--slate); }
+.sub__form { margin-top: var(--space-6); display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.sub__field { flex: 1 1 260px; }
+.sub__field input {
+  width: 100%; padding: 16px 18px; font-family: inherit; font-size: 16px;
+  color: var(--brand-polar); background: transparent;
+  border: 1px solid var(--slate); border-radius: var(--radius-md);
+}
+.sub__field input::placeholder { color: var(--slate); }
+.sub__field input:focus-visible { outline: 2px solid var(--brand-cyan); outline-offset: 2px; }
+.sub__note { margin-top: var(--space-4); font-size: 13px; color: var(--slate); }
+
+@media (max-width: 1020px) {
+  .bhero__grid, .feat__grid, .close__grid { grid-template-columns: minmax(0, 1fr); }
+  .bhero__rail { border-left: 0; padding-left: 0; border-top: 1px solid var(--slate-dark); padding-top: var(--space-6); }
+  .feat__grid { gap: var(--space-8); }
+  .feat__media { order: -1; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topics__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .cards { grid-template-columns: minmax(0, 1fr); gap: var(--space-10, 40px); }
+  .topics__grid { grid-template-columns: minmax(0, 1fr); }
+  .bhero__slash { width: 46%; right: -14%; opacity: .6; }
+  .sub__form { flex-direction: column; }
+  .sub__form .btn { justify-content: center; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://commview.co.uk/insight#blog",
+      "url": "https://commview.co.uk/insight",
+      "name": "COMMVIEW Insight",
+      "description": "Field notes on GTM leadership, growth, product and operational AI for B2B scale-ups.",
+      "inLanguage": "en-GB",
+      "publisher": {
+        "@id": "https://commview.co.uk/#organisation"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Why your pipeline problem is usually a positioning problem",
+          "description": "Pipeline is the symptom everyone can see. It is rarely where the fault sits.",
+          "url": "https://commview.co.uk/insight/why-your-pipeline-problem-is-a-positioning-problem",
+          "datePublished": "2026-09-04",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "GTM Leadership"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "What good ICP work actually looks like",
+          "description": "Not a persona deck. A decision about who you will say no to, and what that costs.",
+          "url": "https://commview.co.uk/insight/what-good-icp-work-actually-looks-like",
+          "datePublished": "2026-08-27",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "GTM Leadership"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The content engine that does not need you in the room",
+          "description": "Most founder-led content stops when the founder gets busy. Here is the handover.",
+          "url": "https://commview.co.uk/insight/the-content-engine-that-does-not-need-you",
+          "datePublished": "2026-08-19",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "Growth"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Launching is not the milestone",
+          "description": "The launch date is the easiest thing to agree on and the least useful thing to measure.",
+          "url": "https://commview.co.uk/insight/launching-is-not-the-milestone",
+          "datePublished": "2026-08-11",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "Product"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Lead scoring without the theatre",
+          "description": "A model nobody trusts is worse than no model. Start with what sales already believes.",
+          "url": "https://commview.co.uk/insight/lead-scoring-without-the-theatre",
+          "datePublished": "2026-08-04",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "Operational AI"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The two-week job that takes two months",
+          "description": "When delivery slips this predictably, the calendar is not the problem.",
+          "url": "https://commview.co.uk/insight/the-two-week-job-that-takes-two-months",
+          "datePublished": "2026-07-28",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "Growth"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Fractional is not part-time",
+          "description": "What you are buying is judgement that has already made the mistake once.",
+          "url": "https://commview.co.uk/insight/fractional-is-not-part-time",
+          "datePublished": "2026-07-21",
+          "author": {
+            "@type": "Person",
+            "name": "Asad Ali"
+          },
+          "articleSection": "GTM Leadership"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://commview.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insight",
+          "item": "https://commview.co.uk/insight"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="cv-logo">
+<g transform="translate(-161,-190)">
+<rect x="199" y="214" width="296" height="296" rx="13" fill="#0B0F14"/>
+<rect x="214.5" y="229.5" width="265.0" height="265.0" rx="7" fill="none" stroke="#94A3B8" stroke-width="5"/>
+<polygon points="368.5,256.0 432.5,256.0 325.5,468.0 261.5,468.0" fill="#00E5FF"/><g transform="translate(0,724) scale(0.1,-0.1)" fill="currentColor" stroke="none"><path d="M6495 4433 c-341 -46 -609 -261 -717 -573 -32 -93 -33 -99 -32 -265
+0 -199 17 -275 95 -410 121 -213 307 -357 539 -417 109 -28 338 -31 440 -6
+273 68 500 257 591 493 23 61 27 80 17 87 -7 4 -107 8 -223 8 l-210 0 -43 -55
+c-254 -330 -792 -130 -792 294 0 129 36 222 121 315 184 202 511 192 671 -20
+l40 -54 224 0 224 0 -6 28 c-37 153 -161 324 -309 425 -168 115 -429 177 -630
+150z"/><path d="M8240 4421 c-307 -66 -545 -259 -649 -529 -76 -198 -67 -458 24 -649
+112 -238 313 -405 570 -474 97 -26 332 -32 430 -10 197 44 403 171 515 319
+253 334 227 805 -60 1093 -218 219 -531 313 -830 250z m295 -386 c404 -106
+470 -663 100 -852 -345 -177 -740 119 -666 499 50 255 312 419 566 353z"/><path d="M16170 4412 l-25 -3 0 -522 c0 -287 2 -656 3 -819 l2 -298 550 0 551
+0 -3 88 -3 87 -440 5 -440 5 -3 272 -2 273 402 2 403 3 3 88 3 87 -228 2
+c-125 1 -289 0 -364 -1 -74 -2 -154 0 -177 4 l-42 7 2 261 3 262 438 3 437 2
+0 95 0 95 -522 2 c-288 2 -534 2 -548 0z"/><path d="M9490 3590 l0 -820 210 0 210 0 2 407 3 407 96 -175 c53 -95 131
+-238 174 -316 68 -124 81 -142 108 -147 42 -8 220 -7 233 2 5 4 75 124 153
+267 204 370 205 371 212 343 4 -13 7 -195 8 -405 l1 -383 210 0 210 0 0 820 0
+820 -218 0 c-196 0 -221 -2 -234 -17 -17 -20 -71 -114 -305 -533 -85 -151
+-158 -279 -162 -283 -4 -4 -36 43 -71 105 -35 62 -95 169 -133 238 -38 69 -96
+170 -128 225 -31 55 -77 136 -101 180 l-44 80 -217 3 -217 2 0 -820z"/><path d="M11600 3590 l0 -820 205 0 205 0 2 303 c2 166 3 348 3 405 0 56 2
+102 5 102 6 0 192 -333 249 -445 17 -33 48 -89 69 -125 l38 -65 126 -3 c92 -2
+128 1 136 10 5 7 48 83 94 168 46 85 124 227 174 315 l89 160 7 -125 c4 -69 6
+-253 5 -410 l-1 -285 212 -3 212 -2 0 820 0 820 -227 -2 -228 -3 -45 -78 c-25
+-42 -80 -141 -124 -220 -158 -285 -301 -537 -306 -537 -3 1 -30 47 -61 103
+-51 93 -223 400 -337 602 -25 44 -54 92 -64 108 l-19 27 -210 0 -209 0 0 -820z"/><path d="M13673 4398 c3 -7 39 -92 80 -188 41 -96 109 -258 152 -360 43 -102
+108 -257 145 -345 139 -328 183 -434 242 -583 l61 -153 111 3 111 3 56 135
+c31 74 86 203 122 285 226 519 506 1162 518 1193 l9 22 -113 0 -112 0 -185
+-430 c-102 -237 -201 -470 -222 -518 -20 -48 -67 -160 -105 -250 -37 -89 -72
+-163 -77 -165 -5 -1 -52 108 -106 243 -54 135 -114 286 -135 335 -21 50 -54
+133 -75 185 -20 52 -65 163 -100 245 -34 83 -81 195 -104 250 l-41 100 -119 3
+c-93 2 -117 0 -113 -10z"/><path d="M17444 4393 c3 -10 31 -97 62 -193 31 -96 92 -287 135 -425 77 -242
+111 -345 254 -788 77 -236 62 -220 195 -215 l84 3 29 75 c86 230 274 753 405
+1128 19 56 38 99 42 95 4 -5 42 -111 85 -238 227 -671 348 -1022 361 -1042 13
+-21 22 -23 113 -23 l99 0 20 58 c11 31 41 113 67 182 26 69 59 161 74 205 16
+44 69 193 119 330 49 138 117 327 151 420 34 94 70 193 81 220 11 28 33 89 49
+138 l30 87 -109 0 c-93 0 -109 -2 -115 -17 -11 -28 -151 -425 -317 -901 -83
+-238 -154 -429 -158 -425 -4 4 -37 103 -75 218 -62 193 -142 432 -311 933
+l-66 192 -97 0 -97 0 -76 -217 c-42 -120 -107 -301 -143 -403 -37 -102 -108
+-305 -159 -452 -50 -147 -94 -270 -98 -273 -3 -3 -17 32 -31 77 -99 327 -123
+408 -159 523 -22 72 -68 220 -103 330 -35 110 -79 248 -97 308 l-32 107 -109
+0 c-99 0 -108 -2 -103 -17z"/></g><g transform="translate(0,724) scale(0.1,-0.1)" fill="#00E5FF" stroke="none"><path d="M15480 3590 l0 -820 175 0 175 0 0 820 0 820 -175 0 -175 0 0 -820z"/></g>
+</g>
+</g></defs></svg>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="/" aria-label="COMMVIEW home">
+      <svg viewBox="0 0 1852 343" role="img" aria-label="COMMVIEW"><use href="#cv-logo"/></svg>
+      <span class="logo__sub">GTM Leadership / Growth / Product / Operational AI</span>
+    </a>
+    <nav class="hdr__nav" id="nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/what-we-do">What We Do</a>
+      <a href="/how-we-work">How We Work</a>
+      <a href="/work">Work</a>
+      <a href="/insight" aria-current="page">Insight</a>
+      <a href="/about">About</a>
+    </nav>
+    <a class="btn btn--ink hdr__cta" href="/contact">Talk to us</a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<section class="bhero dark" aria-labelledby="bhero-h">
+  <svg class="bhero__slash" viewBox="0 0 400 800" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M250 -40 L330 -40 L150 840 L70 840 Z" fill="#00e5ff" fill-opacity=".10"/>
+    <path d="M352 -40 L376 -40 L196 840 L172 840 Z" fill="#5b4df5" fill-opacity=".22"/>
+  </svg>
+  <div class="wrap bhero__grid">
+    <div>
+      <p class="eyebrow-x">Insight</p>
+      <h1 class="bhero__h1" id="bhero-h">Answers we keep<br>having to <em>find</em> twice.</h1>
+      <p class="bhero__lede">Field notes from the work — what we see inside scale-ups, what it usually turns out to be, and what we would do about it. Written by the people doing it, not a content team.</p>
+    </div>
+    <div class="bhero__rail">
+      <p class="eyebrow-x">Browse by topic</p>
+      <ul class="bhero__list">
+        <li style="--c:var(--brand-cyan)"><a href="/insight/topic/gtm-leadership"><span><i aria-hidden="true"></i><b>GTM Leadership</b><u>14 pieces</u></span></a></li><li style="--c:var(--accent-green)"><a href="/insight/topic/growth"><span><i aria-hidden="true"></i><b>Growth</b><u>11 pieces</u></span></a></li><li style="--c:var(--brand-blue)"><a href="/insight/topic/product"><span><i aria-hidden="true"></i><b>Product</b><u>9 pieces</u></span></a></li><li style="--c:var(--accent-pink)"><a href="/insight/topic/operational-ai"><span><i aria-hidden="true"></i><b>Operational AI</b><u>7 pieces</u></span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED ============ -->
+<section class="feat" aria-labelledby="feat-h">
+  <div class="wrap feat__grid">
+    <div>
+      <div class="feat__top">
+        <span class="tag">Featured</span>
+        <span class="topic" style="--c:var(--brand-cyan)"><i aria-hidden="true"></i><span>GTM Leadership</span></span>
+      </div>
+      <h2 class="feat__h" id="feat-h"><a href="/insight/why-your-pipeline-problem-is-a-positioning-problem">Why your pipeline problem is usually a positioning problem</a></h2>
+      <p class="feat__stand">Pipeline is the symptom everyone can see. It is rarely where the fault sits.</p>
+      <div class="feat__foot">
+        <p class="meta"><span>Asad Ali</span><i aria-hidden="true">·</i><time datetime="2026-09-04">4 September 2026</time><i aria-hidden="true">·</i><span>6 min read</span></p>
+        <a class="btn btn--ink" href="/insight/why-your-pipeline-problem-is-a-positioning-problem">Read the piece</a>
+      </div>
+    </div>
+    <div class="feat__media">
+      <!-- sanity: post.coverImage -->
+      <div class="slab slab--momentum">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -20 L322 -20 L198 320 L138 320 Z" fill="#0b0f14" fill-opacity=".72"/>
+            <path d="M340 -20 L356 -20 L232 320 L216 320 Z" fill="#f8fafc" fill-opacity=".16"/>
+          </svg>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LATEST ============ -->
+<section class="latest" aria-labelledby="latest-h">
+  <div class="wrap">
+    <div class="sechead">
+      <h2 id="latest-h">Latest</h2>
+      <a href="/insight/archive">See everything</a>
+    </div>
+    <div class="cards">
+      <!-- sanity: post -->
+      <article class="card" style="--c:var(--brand-cyan)">
+        <a class="card__media" href="/insight/what-good-icp-work-actually-looks-like" tabindex="-1" aria-hidden="true">
+          <!-- sanity: post.coverImage -->
+          <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -10 L318 -10 L188 260 L132 260 Z" fill="var(--brand-cyan)" fill-opacity=".16"/>
+            <path d="M336 -10 L352 -10 L222 260 L206 260 Z" fill="var(--brand-cyan)" fill-opacity=".38"/>
+          </svg>
+        </a>
+        <div class="card__body">
+          <p class="topic" style="--c:var(--brand-cyan)"><i aria-hidden="true"></i><span>GTM Leadership</span></p>
+          <h3 class="card__h"><a href="/insight/what-good-icp-work-actually-looks-like">What good ICP work actually looks like</a></h3>
+          <p class="card__stand">Not a persona deck. A decision about who you will say no to, and what that costs.</p>
+          <p class="card__meta meta"><time datetime="2026-08-27">27 August 2026</time><i aria-hidden="true">·</i><span>8 min read</span></p>
+        </div>
+      </article>
+      <!-- sanity: post -->
+      <article class="card" style="--c:var(--accent-green)">
+        <a class="card__media" href="/insight/the-content-engine-that-does-not-need-you" tabindex="-1" aria-hidden="true">
+          <!-- sanity: post.coverImage -->
+          <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -10 L318 -10 L188 260 L132 260 Z" fill="var(--accent-green)" fill-opacity=".16"/>
+            <path d="M336 -10 L352 -10 L222 260 L206 260 Z" fill="var(--accent-green)" fill-opacity=".38"/>
+          </svg>
+        </a>
+        <div class="card__body">
+          <p class="topic" style="--c:var(--accent-green)"><i aria-hidden="true"></i><span>Growth</span></p>
+          <h3 class="card__h"><a href="/insight/the-content-engine-that-does-not-need-you">The content engine that does not need you in the room</a></h3>
+          <p class="card__stand">Most founder-led content stops when the founder gets busy. Here is the handover.</p>
+          <p class="card__meta meta"><time datetime="2026-08-19">19 August 2026</time><i aria-hidden="true">·</i><span>7 min read</span></p>
+        </div>
+      </article>
+      <!-- sanity: post -->
+      <article class="card" style="--c:var(--brand-blue)">
+        <a class="card__media" href="/insight/launching-is-not-the-milestone" tabindex="-1" aria-hidden="true">
+          <!-- sanity: post.coverImage -->
+          <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -10 L318 -10 L188 260 L132 260 Z" fill="var(--brand-blue)" fill-opacity=".16"/>
+            <path d="M336 -10 L352 -10 L222 260 L206 260 Z" fill="var(--brand-blue)" fill-opacity=".38"/>
+          </svg>
+        </a>
+        <div class="card__body">
+          <p class="topic" style="--c:var(--brand-blue)"><i aria-hidden="true"></i><span>Product</span></p>
+          <h3 class="card__h"><a href="/insight/launching-is-not-the-milestone">Launching is not the milestone</a></h3>
+          <p class="card__stand">The launch date is the easiest thing to agree on and the least useful thing to measure.</p>
+          <p class="card__meta meta"><time datetime="2026-08-11">11 August 2026</time><i aria-hidden="true">·</i><span>5 min read</span></p>
+        </div>
+      </article>
+      <!-- sanity: post -->
+      <article class="card" style="--c:var(--accent-pink)">
+        <a class="card__media" href="/insight/lead-scoring-without-the-theatre" tabindex="-1" aria-hidden="true">
+          <!-- sanity: post.coverImage -->
+          <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -10 L318 -10 L188 260 L132 260 Z" fill="var(--accent-pink)" fill-opacity=".16"/>
+            <path d="M336 -10 L352 -10 L222 260 L206 260 Z" fill="var(--accent-pink)" fill-opacity=".38"/>
+          </svg>
+        </a>
+        <div class="card__body">
+          <p class="topic" style="--c:var(--accent-pink)"><i aria-hidden="true"></i><span>Operational AI</span></p>
+          <h3 class="card__h"><a href="/insight/lead-scoring-without-the-theatre">Lead scoring without the theatre</a></h3>
+          <p class="card__stand">A model nobody trusts is worse than no model. Start with what sales already believes.</p>
+          <p class="card__meta meta"><time datetime="2026-08-04">4 August 2026</time><i aria-hidden="true">·</i><span>9 min read</span></p>
+        </div>
+      </article>
+      <!-- sanity: post -->
+      <article class="card" style="--c:var(--accent-green)">
+        <a class="card__media" href="/insight/the-two-week-job-that-takes-two-months" tabindex="-1" aria-hidden="true">
+          <!-- sanity: post.coverImage -->
+          <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -10 L318 -10 L188 260 L132 260 Z" fill="var(--accent-green)" fill-opacity=".16"/>
+            <path d="M336 -10 L352 -10 L222 260 L206 260 Z" fill="var(--accent-green)" fill-opacity=".38"/>
+          </svg>
+        </a>
+        <div class="card__body">
+          <p class="topic" style="--c:var(--accent-green)"><i aria-hidden="true"></i><span>Growth</span></p>
+          <h3 class="card__h"><a href="/insight/the-two-week-job-that-takes-two-months">The two-week job that takes two months</a></h3>
+          <p class="card__stand">When delivery slips this predictably, the calendar is not the problem.</p>
+          <p class="card__meta meta"><time datetime="2026-07-28">28 July 2026</time><i aria-hidden="true">·</i><span>6 min read</span></p>
+        </div>
+      </article>
+      <!-- sanity: post -->
+      <article class="card" style="--c:var(--brand-cyan)">
+        <a class="card__media" href="/insight/fractional-is-not-part-time" tabindex="-1" aria-hidden="true">
+          <!-- sanity: post.coverImage -->
+          <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M262 -10 L318 -10 L188 260 L132 260 Z" fill="var(--brand-cyan)" fill-opacity=".16"/>
+            <path d="M336 -10 L352 -10 L222 260 L206 260 Z" fill="var(--brand-cyan)" fill-opacity=".38"/>
+          </svg>
+        </a>
+        <div class="card__body">
+          <p class="topic" style="--c:var(--brand-cyan)"><i aria-hidden="true"></i><span>GTM Leadership</span></p>
+          <h3 class="card__h"><a href="/insight/fractional-is-not-part-time">Fractional is not part-time</a></h3>
+          <p class="card__stand">What you are buying is judgement that has already made the mistake once.</p>
+          <p class="card__meta meta"><time datetime="2026-07-21">21 July 2026</time><i aria-hidden="true">·</i><span>4 min read</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOPICS ============ -->
+<section class="topics" aria-labelledby="topics-h">
+  <div class="wrap">
+    <div class="sechead"><h2 id="topics-h">Four disciplines. One view.</h2></div>
+    <div class="topics__grid">
+      <a class="tile" style="--c:var(--brand-cyan)" href="/insight/topic/gtm-leadership"><b>GTM Leadership</b><span>Positioning, ICP, pipeline and the commercial model underneath them.</span><u>14 pieces</u></a><a class="tile" style="--c:var(--accent-green)" href="/insight/topic/growth"><b>Growth</b><span>Content, conversion, analytics and the compounding work that follows.</span><u>11 pieces</u></a><a class="tile" style="--c:var(--brand-blue)" href="/insight/topic/product"><b>Product</b><span>Requirements, user journeys, launch and what happens after launch.</span><u>9 pieces</u></a><a class="tile" style="--c:var(--accent-pink)" href="/insight/topic/operational-ai"><b>Operational AI</b><span>Reporting, lead scoring and automation that earns its place.</span><u>7 pieces</u></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING: CTA + SUBSCRIBE ============ -->
+<section class="close dark" aria-labelledby="close-h">
+  <div class="wrap close__grid">
+    <div>
+      <h2 class="close__h" id="close-h">Reading about it only gets you so far.</h2>
+      <p class="close__p">If something here sounds like your business, bring us the question. We will tell you what we think is actually going on.</p>
+      <div class="close__row">
+        <a class="btn btn--cyan btn--lg" href="/contact">Talk to us</a>
+        <a class="btn btn--ghost btn--lg" href="/diagnostic">Take the diagnostic</a>
+      </div>
+    </div>
+    <div class="sub">
+      <h2 class="sub__h" id="sub-h">One piece a month. Nothing else.</h2>
+      <p class="sub__p">What we saw, what we changed and whether it worked. No newsletter series, no drip sequence.</p>
+      <form class="sub__form" action="/subscribe" method="post">
+        <label class="sub__field">
+          <span class="sr">Work email</span>
+          <input type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+        </label>
+        <button class="btn btn--cyan" type="submit">Subscribe</button>
+      </form>
+      <p class="sub__note">Unsubscribe in one click. We do not share your address.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr dark">
+  <div class="wrap">
+    <div class="ftr__top">
+      <a class="logo" href="/" aria-label="COMMVIEW home">
+        <svg viewBox="0 0 1852 343" role="img" aria-label="COMMVIEW"><use href="#cv-logo"/></svg>
+        <span class="logo__sub" style="color:var(--slate)">GTM Leadership · Growth · Product · Operational AI</span>
+      </a>
+      <nav class="ftr__meta" aria-label="Footer">
+        <a href="/what-we-do">What We Do</a>
+        <a href="/how-we-work">How We Work</a>
+        <a href="/work">Work</a>
+        <a href="/insight">Insight</a>
+        <a href="/about">About</a>
+        <a href="/diagnostic">Diagnostic</a>
+      </nav>
+    </div>
+    <hr class="hair" style="margin-top:var(--space-12)">
+    <div class="ftr__bottom small dim">
+      <address style="font-style:normal">Manchester · <a href="mailto:hello@commview.co.uk" style="color:var(--brand-cyan)">hello@commview.co.uk</a> · <a href="#" rel="me" style="color:var(--brand-cyan)">LinkedIn</a></address>
+      <span class="ftr__strap">Insight → Momentum → Impact</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  var burger = document.querySelector('.burger');
+  var nav = document.getElementById('nav');
+  if (burger && nav) {
+    burger.addEventListener('click', function () {
+      var open = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!open));
+      burger.setAttribute('aria-expanded', String(!open));
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
