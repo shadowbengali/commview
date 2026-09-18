@@ -89,6 +89,57 @@ for (const route of ROUTES) {
   await p.close();
 }
 
+// --- Homepage interactions actually work.
+{
+  const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+  await p.goto(BASE + "/", { waitUntil: "networkidle" });
+
+  // Teleprompter advances (counter changes and last word gets accented).
+  const tp0 = await p.evaluate(() => document.getElementById("tp-n")?.textContent);
+  const accented = await p.evaluate(
+    () => document.querySelectorAll("#tp-track .tp__q em").length
+  );
+  await p.waitForTimeout(6000);
+  const tp1 = await p.evaluate(() => document.getElementById("tp-n")?.textContent);
+  if (accented < 20) fail("teleprompter accents", accented);
+  if (tp0 === tp1) fail("teleprompter did not advance", tp0, tp1);
+  else console.log("teleprompter:", tp0, "->", tp1, "| accented rows:", accented);
+
+  // Capability panels: opening Growth hides GTM's panel, sets aria-expanded.
+  await p.click('.cap__open[data-target="growth"]');
+  await p.waitForTimeout(300);
+  const caps = await p.evaluate(() => ({
+    growthOpen: !document.getElementById("panel-growth")?.hidden,
+    gtmClosed: document.getElementById("panel-gtm-leadership")?.hidden,
+    aria: document
+      .querySelector('.cap__open[data-target="growth"]')
+      ?.getAttribute("aria-expanded"),
+  }));
+  if (!caps.growthOpen || !caps.gtmClosed || caps.aria !== "true")
+    fail("capability panels", JSON.stringify(caps));
+  else console.log("capability panels: toggle OK");
+  await p.close();
+}
+
+// --- Mobile menu opens.
+{
+  const p = await b.newPage({ viewport: { width: 390, height: 844 } });
+  await p.goto(BASE + "/", { waitUntil: "networkidle" });
+  await p.click(".burger");
+  await p.waitForTimeout(200);
+  const menu = await p.evaluate(() => {
+    const n = document.getElementById("nav");
+    return {
+      open: n?.getAttribute("data-open"),
+      expanded: document.querySelector(".burger")?.getAttribute("aria-expanded"),
+      h: Math.round(n?.getBoundingClientRect().height || 0),
+    };
+  });
+  if (menu.open !== "true" || menu.h < 100) fail("mobile menu", JSON.stringify(menu));
+  else console.log("mobile menu:", menu.open, menu.h + "px", "| expanded:", menu.expanded);
+  await p.close();
+}
+
 // --- /studio must load without a page crash.
 {
   const p = await b.newPage({ viewport: { width: 1440, height: 900 } });

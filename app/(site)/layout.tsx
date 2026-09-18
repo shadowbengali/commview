@@ -12,11 +12,24 @@ import "../../styles/tokens.css";
 import "../../styles/components.css";
 import "../../styles/chrome.css";
 
+import { LogoSprite } from "@/components/site/LogoSprite";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+
 export default function SiteLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // Header and footer are ported in Phase 1; the group layout is the seam.
-  return <>{children}</>;
+  return (
+    <>
+      <LogoSprite />
+      <a className="skip" href="#main">
+        Skip to content
+      </a>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }

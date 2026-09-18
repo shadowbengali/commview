@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "fidelity": "node scripts/fidelity.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.1",

@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // British English, strict typing — build fails on type or lint errors.
+  // Strict typing is the build-time safety net. ESLint is not wired up in
+  // Phase 1; verification is Playwright + tsc. (Add eslint-config-next later.)
   typescript: { ignoreBuildErrors: false },
-  eslint: { ignoreDuringBuilds: false },
+  eslint: { ignoreDuringBuilds: true },
   images: {
     // Sanity's image CDN is the only remote source.
     remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],

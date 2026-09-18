@@ -17,9 +17,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // British English, as a document-level signal for search and screen readers.
+  // British English for search and screen readers. The site is light-themed
+  // with dark sections flipping locally via .dark — matching the mocks, which
+  // are all data-theme="light".
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" data-theme="light">
       <body>{children}</body>
     </html>
   );
