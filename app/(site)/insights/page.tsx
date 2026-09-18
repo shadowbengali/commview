@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Insight",
   description:
     "Field notes from the work — what we see inside scale-ups, what it usually turns out to be, and what we would do about it.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/insights" },
 };
 
 const COLOUR: Record<CapabilityColour, string> = {
@@ -53,7 +53,7 @@ function TopicChip({ colour, title }: { colour: string; title: string }) {
 }
 
 function CardMedia({ post, colour }: { post: PostCard; colour: string }) {
-  const href = `/blog/${post.slug}`;
+  const href = `/insights/${post.slug}`;
   return (
     <a className="card__media" href={href} tabIndex={-1} aria-hidden="true">
       {post.coverImage ? (
@@ -74,7 +74,7 @@ function CardMedia({ post, colour }: { post: PostCard; colour: string }) {
 
 function Card({ post }: { post: PostCard }) {
   const colour = post.category ? COLOUR[post.category.colour] : "var(--slate)";
-  const href = `/blog/${post.slug}`;
+  const href = `/insights/${post.slug}`;
   return (
     <article className="card" style={cvar(colour)}>
       <CardMedia post={post} colour={colour} />
@@ -141,7 +141,7 @@ export default async function BlogIndexPage({
               <ul className="bhero__list">
                 {topics.map((t) => (
                   <li key={t.slug} style={cvar(COLOUR[t.colour])}>
-                    <a href={`/blog/topic/${t.slug}`}>
+                    <a href={`/insights/category/${t.slug}`}>
                       <span>
                         <i aria-hidden="true"></i>
                         <b>{t.title}</b>
@@ -171,7 +171,7 @@ export default async function BlogIndexPage({
                 ) : null}
               </div>
               <h2 className="feat__h" id="feat-h">
-                <a href={`/blog/${featured.slug}`}>{featured.title}</a>
+                <a href={`/insights/${featured.slug}`}>{featured.title}</a>
               </h2>
               <p className="feat__stand">{featured.standfirst}</p>
               <div className="feat__foot">
@@ -184,7 +184,7 @@ export default async function BlogIndexPage({
                   <i aria-hidden="true">·</i>
                   <span>{Math.max(featured.readTime || 0, 1)} min read</span>
                 </p>
-                <a className="btn btn--ink" href={`/blog/${featured.slug}`}>
+                <a className="btn btn--ink" href={`/insights/${featured.slug}`}>
                   Read the piece
                 </a>
               </div>
@@ -214,7 +214,7 @@ export default async function BlogIndexPage({
         <div className="wrap">
           <div className="sechead">
             <h2 id="latest-h">Latest</h2>
-            <a href="/blog">See everything</a>
+            <a href="/insights">See everything</a>
           </div>
           {latest.length > 0 ? (
             <div className="cards">
@@ -248,7 +248,7 @@ export default async function BlogIndexPage({
                   key={t.slug}
                   className="tile"
                   style={cvar(COLOUR[t.colour])}
-                  href={`/blog/topic/${t.slug}`}
+                  href={`/insights/category/${t.slug}`}
                 >
                   <b>{t.title}</b>
                   {/* TODO: topic descriptions are mock drafts — approve or rewrite. */}

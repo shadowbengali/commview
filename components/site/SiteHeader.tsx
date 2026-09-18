@@ -31,8 +31,8 @@ export function SiteHeader() {
           <a href="#what-we-do">What We Do</a>
           <a href="#how-we-work">How We Work</a>
           <a href="#">Work</a>
-          {/* Section label is "Insight"; canonical URL is /blog. */}
-          <a href="/blog">Insight</a>
+          {/* Visible label "Insight"; canonical URL is /insights. */}
+          <a href="/insights">Insight</a>
           <a href="#about">About</a>
         </nav>
         <a className="btn btn--ink hdr__cta" href="#">

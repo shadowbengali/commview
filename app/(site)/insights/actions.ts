@@ -12,5 +12,5 @@ export async function subscribe(formData: FormData) {
   if (email) {
     await crm.subscribe(email, "blog-index");
   }
-  redirect("/blog?subscribed=1");
+  redirect("/insights?subscribed=1");
 }

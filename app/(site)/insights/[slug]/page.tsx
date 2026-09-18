@@ -28,13 +28,13 @@ export async function generateMetadata({
   return {
     title: post.seo?.title || post.title,
     description: post.seo?.description || post.standfirst,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `/insights/${post.slug}` },
     robots: post.seo?.noIndex ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "article",
       title: post.title,
       description: post.standfirst,
-      url: `/blog/${post.slug}`,
+      url: `/insights/${post.slug}`,
       publishedTime: post.publishedAt,
       images: post.coverImage
         ? [urlFor(post.coverImage).width(1200).height(630).fit("crop").url()]
@@ -54,7 +54,7 @@ export default async function ArticlePage({
 
   const colour = post.category ? COLOUR[post.category.colour] : "var(--brand-cyan)";
   const toc = extractToc(post.body);
-  const url = `${SITE}/blog/${post.slug}`;
+  const url = `${SITE}/insights/${post.slug}`;
   const initials =
     post.author?.initials ||
     (post.author?.name || "")
@@ -87,14 +87,14 @@ export default async function ArticlePage({
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-          { "@type": "ListItem", position: 2, name: "Insight", item: `${SITE}/blog` },
+          { "@type": "ListItem", position: 2, name: "Insight", item: `${SITE}/insights` },
           ...(post.category
             ? [
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: post.category.title,
-                  item: `${SITE}/blog/topic/${post.category.slug}`,
+                  item: `${SITE}/insights/category/${post.category.slug}`,
                 },
               ]
             : []),
@@ -143,10 +143,10 @@ export default async function ArticlePage({
         <nav className="crumb wrap" aria-label="Breadcrumb">
           <ol>
             <li><a href="/">Home</a></li>
-            <li><a href="/blog">Insight</a></li>
+            <li><a href="/insights">Insight</a></li>
             {post.category ? (
               <li>
-                <a href={`/blog/topic/${post.category.slug}`}>{post.category.title}</a>
+                <a href={`/insights/category/${post.category.slug}`}>{post.category.title}</a>
               </li>
             ) : null}
             <li aria-current="page">{post.title}</li>
@@ -271,10 +271,10 @@ export default async function ArticlePage({
               {post.tags && post.tags.length ? (
                 <div className="tags">
                   {post.category ? (
-                    <a href={`/blog/topic/${post.category.slug}`}>{post.category.title}</a>
+                    <a href={`/insights/category/${post.category.slug}`}>{post.category.title}</a>
                   ) : null}
                   {post.tags.map((t) => (
-                    <a key={t.slug} href={`/blog/tag/${t.slug}`}>{t.title}</a>
+                    <a key={t.slug} href={`/insights/tag/${t.slug}`}>{t.title}</a>
                   ))}
                 </div>
               ) : null}

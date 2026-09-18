@@ -42,7 +42,7 @@ export function TopicChip({ colour, title }: { colour: string; title: string }) 
 // The post card used by the blog index grid and the article "Read next" grid.
 export function PostCardView({ post }: { post: PostCard }) {
   const colour = post.category ? COLOUR[post.category.colour] : "var(--slate)";
-  const href = `/blog/${post.slug}`;
+  const href = `/insights/${post.slug}`;
   return (
     <article className="card" style={cvar(colour)}>
       <a className="card__media" href={href} tabIndex={-1} aria-hidden="true">

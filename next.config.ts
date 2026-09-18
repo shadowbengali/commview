@@ -9,8 +9,19 @@ const nextConfig: NextConfig = {
     // Sanity's image CDN is the only remote source.
     remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
   },
-  // Section decision: visible label "Insight", canonical URLs live under /blog.
-  // No /insight redirect is needed — nothing was ever indexed at /insight.
+  // Section decision: visible label "Insight", canonical URLs live under
+  // /insights (SEO plan). /blog was live briefly, so 301 it across.
+  async redirects() {
+    return [
+      { source: "/blog", destination: "/insights", permanent: true },
+      {
+        source: "/blog/topic/:slug",
+        destination: "/insights/category/:slug",
+        permanent: true,
+      },
+      { source: "/blog/:slug*", destination: "/insights/:slug*", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

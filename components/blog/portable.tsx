@@ -107,7 +107,7 @@ const components: PortableTextComponents = {
       if (!v.post?.slug) return null;
       return (
         <p>
-          <a href={`/blog/${v.post.slug}`}>{v.post.title}</a>
+          <a href={`/insights/${v.post.slug}`}>{v.post.title}</a>
         </p>
       );
     },
