@@ -53,7 +53,7 @@
 .abody__grid { display: grid; grid-template-columns: 220px minmax(0, 1fr) 200px; gap: clamp(32px, 4vw, 72px); align-items: start; }
 
 /* contents rail */
-.toc { position: sticky; top: 104px; }
+.toc { grid-column: 1; position: sticky; top: 104px; }
 .toc__h { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); }
 .toc ol { list-style: none; margin: var(--space-4) 0 0; padding: 0; counter-reset: toc; }
 .toc li { counter-increment: toc; }
@@ -68,7 +68,7 @@
 .toc__mob { display: none; }
 
 /* the measure */
-.prose { max-width: 68ch; font-size: 18px; line-height: 1.72; }
+.prose { grid-column: 2; max-width: 68ch; font-size: 18px; line-height: 1.72; }
 .prose > * + * { margin-top: var(--space-6); }
 .prose p { color: var(--text-primary); }
 .prose a { color: var(--brand-blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
@@ -138,7 +138,7 @@
 .prose th { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); }
 
 /* right rail: share + progress */
-.rail { position: sticky; top: 104px; }
+.rail { grid-column: 3; position: sticky; top: 104px; }
 .rail__h { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); }
 .rail .share { margin-left: 0; margin-top: var(--space-4); }
 .rail__read { margin-top: var(--space-8); font-size: 13px; color: var(--text-secondary); }
@@ -203,7 +203,7 @@
 }
 @media (max-width: 900px) {
   .abody__grid { grid-template-columns: minmax(0, 1fr); }
-  .afoot { grid-column: 1; }
+  .toc, .prose, .rail, .afoot { grid-column: 1; }
   .toc { position: static; }
   .toc__mob { display: block; border: var(--rule); border-radius: var(--radius-md); padding: var(--space-4) var(--space-5, 20px); }
   .toc__mob summary { cursor: pointer; list-style: none; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); display: flex; }
