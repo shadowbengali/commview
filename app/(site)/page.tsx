@@ -11,6 +11,12 @@ import "../../styles/home.css";
 
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
+// The homepage JSON-LD is stored with the final domain as a token; swap in the
+// active site URL so entity @ids/urls match the live deploy. The contact email
+// (hello@commview.co.uk) has no https:// prefix, so it is left untouched.
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const homeJsonLd = HOME_JSON_LD.replaceAll("https://commview.co.uk", SITE);
+
 export const metadata: Metadata = {
   title: {
     absolute:
@@ -81,7 +87,7 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: HOME_JSON_LD }}
+        dangerouslySetInnerHTML={{ __html: homeJsonLd }}
       />
 
       <main id="main">

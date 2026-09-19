@@ -7,7 +7,7 @@ import "../../../styles/what-we-do.css";
 // system), copy supplied by the client and reproduced verbatim. Header/footer
 // come from the shared (site) chrome.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {

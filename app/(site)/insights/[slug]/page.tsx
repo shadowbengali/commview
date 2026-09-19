@@ -8,7 +8,7 @@ import { ArticleProgress } from "@/components/blog/ArticleProgress";
 import { COLOUR, cvar, formatDate, isoDate, PostCardView } from "@/components/blog/shared";
 import "../../../../styles/article.css";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
 
 export const revalidate = 3600; // hourly ISR until the publish webhook lands.
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
 
 // Root layout is deliberately bare: it owns <html>/<body> only. The site's
 // design-system CSS is scoped to the (site) route group, so /studio renders
