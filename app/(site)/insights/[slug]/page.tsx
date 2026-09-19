@@ -198,7 +198,7 @@ export default async function ArticlePage({
         </header>
 
         <div className="abody">
-          <div className="wrap abody__grid">
+          <div className={`wrap abody__grid${toc.length ? "" : " abody__grid--notoc"}`}>
             {toc.length > 0 ? (
               <nav className="toc" aria-label="On this page">
                 <div className="toc__desk">
