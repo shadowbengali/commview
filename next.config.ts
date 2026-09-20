@@ -9,6 +9,17 @@ const nextConfig: NextConfig = {
     // Sanity's image CDN is the only remote source.
     remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
   },
+  // TEMPORARY — pre-launch: X-Robots-Tag on every response blocks indexers even
+  // if they ignore the meta tag. Remove this headers() block to allow indexing.
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
+
   // Section decision: visible label "Insight", canonical URLs live under
   // /insights (SEO plan). /blog was live briefly, so 301 it across.
   async redirects() {

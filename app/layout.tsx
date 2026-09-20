@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: { default: "COMMVIEW", template: "%s — COMMVIEW" },
   description:
     "Operator-led fractional GTM, Growth, Product and Operational AI.",
+  // TEMPORARY — pre-launch: keep the whole site out of every index until the
+  // content is live. Remove this block to allow indexing.
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
 };
 
 export default function RootLayout({
