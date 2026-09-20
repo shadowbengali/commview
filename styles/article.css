@@ -52,8 +52,9 @@
 /* ===== body layout ===== */
 .abody { padding-block: clamp(40px, 5vw, 72px) clamp(56px, 6vw, 96px); border-top: var(--rule); }
 .abody__grid { display: grid; grid-template-columns: 220px minmax(0, 1fr) 200px; gap: clamp(32px, 4vw, 72px); align-items: start; }
-/* No TOC (post has no H2s): drop the empty left gutter — prose left, rail right. */
-.abody__grid--notoc { grid-template-columns: minmax(0, 1fr) 200px; }
+/* No TOC (post has no H2s): centre the reading column + rail as a group, so
+   there's no dead left gutter and no big gap between prose and the rail. */
+.abody__grid--notoc { grid-template-columns: minmax(0, 68ch) 200px; justify-content: center; }
 .abody__grid--notoc .prose { grid-column: 1; }
 .abody__grid--notoc .rail { grid-column: 2; }
 .abody__grid--notoc .afoot { grid-column: 1; }
@@ -205,7 +206,7 @@
 
 @media (max-width: 1180px) {
   .abody__grid { grid-template-columns: 200px minmax(0, 1fr); }
-  .abody__grid--notoc { grid-template-columns: minmax(0, 1fr); }
+  .abody__grid--notoc { grid-template-columns: minmax(0, 68ch); justify-content: center; }
   .abody__grid--notoc .prose { grid-column: 1; }
   .rail { display: none; }
 }
