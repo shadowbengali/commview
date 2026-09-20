@@ -165,10 +165,13 @@ export default async function ArticlePage({
           <div className="byline">
             <div className="byline__who">
               <span className="avatar" aria-hidden="true">{initials}</span>
-              <span className="byline__ident">
+              <span>
                 <span className="byline__name">{post.author?.name}</span>
                 {post.author?.role ? (
-                  <span className="byline__role">{post.author.role}</span>
+                  <>
+                    {" "}
+                    <span className="byline__role">{post.author.role}</span>
+                  </>
                 ) : null}
               </span>
             </div>
