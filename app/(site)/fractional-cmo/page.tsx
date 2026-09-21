@@ -298,8 +298,10 @@ export default function FractionalCmoPage() {
       <section className="fc-sec dark" aria-labelledby="fc-own">
         <div className="wrap">
           <div className="fc-own__head">
-            <p className="eyebrow-x">What we own</p>
-            <h2 id="fc-own" style={{ marginTop: "var(--space-3)" }}>A complete go-to-market operating system.</h2>
+            <div>
+              <p className="eyebrow-x">What we own</p>
+              <h2 id="fc-own" style={{ marginTop: "var(--space-3)" }}>A complete go-to-market operating system.</h2>
+            </div>
             <p className="fc-own__intro">The exact scope depends on the problem, but a Commview fractional CMO can connect the seven parts of the GTM system rather than treating them as separate marketing projects.</p>
           </div>
           <div className="fc-own__grid">

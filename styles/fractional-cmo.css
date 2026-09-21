@@ -34,8 +34,8 @@
 .fc-pull span { display: block; margin-top: var(--space-4); font-size: 15px; font-weight: 400; color: var(--text-secondary); }
 
 /* ===== signs (numbered) ===== */
-.fc-signs__head { max-width: 22ch; }
-.fc-signs__head h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+.fc-signs__head { max-width: none; }
+.fc-signs__head h2 { max-width: 26ch; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
 .fc-signs__grid { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-8); }
 .fc-sign b { display: block; font-size: 14px; font-weight: 700; color: var(--brand-cyan); letter-spacing: 0.04em; }
 .fc-sign h3 { margin-top: var(--space-3); font-size: 17px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
@@ -43,9 +43,9 @@
 .fc-signs__grid .fc-sign { border-top: 2px solid var(--border-subtle); padding-top: var(--space-4); }
 
 /* ===== what we own — GTM system flow ===== */
-.fc-own__head { max-width: 30ch; }
-.fc-own__head h2 { font-size: clamp(26px, 2.8vw, 40px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
-.fc-own__intro { margin-top: var(--space-4); max-width: 60ch; color: var(--slate-light); font-size: 16px; line-height: 1.6; }
+.fc-own__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-12); align-items: end; }
+.fc-own__head h2 { max-width: 18ch; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+.fc-own__intro { max-width: 52ch; color: var(--slate-light); font-size: 16px; line-height: 1.6; }
 .fc-own__grid { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-6); }
 .fc-node { position: relative; }
 .fc-node__ico { width: 40px; height: 40px; border-radius: var(--radius-md); border: 1px solid var(--slate-dark); display: grid; place-items: center; color: var(--brand-cyan); }
@@ -130,6 +130,7 @@
   .fc-hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-12); }
   .fc-lead, .fc-tools__grid, .fc-cost__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
   .fc-pull, .fc-scribble, .fc-axis { justify-self: start; }
+  .fc-own__head { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
   .fc-own__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); }
   .fc-node:not(:last-child)::after, .fc-step:not(:last-child)::after { content: none; }
   .fc-signs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
