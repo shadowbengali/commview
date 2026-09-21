@@ -16,11 +16,86 @@ export const metadata: Metadata = {
   alternates: { canonical: "/fractional-cmo" },
 };
 
-const LAYERS = [
-  { label: "Leadership", notes: ["Set direction", "Find the opportunity", "Align the business"] },
-  { label: "Commview", mid: true, notes: ["Connect the dots", "Drive the work", "Keep it moving"] },
-  { label: "Execution", notes: ["Build the plan", "Get on the tools", "Deliver results"] },
-];
+// ---- Hero diagram: Leadership / Commview / Execution cylinders (SVG, live text)
+const RX = 195, RY = 46, H = 58, CX = 290;
+const bodyPath = (ty: number) =>
+  `M ${CX - RX},${ty} L ${CX - RX},${ty + H} A ${RX},${RY} 0 0 0 ${CX + RX},${ty + H} L ${CX + RX},${ty} A ${RX},${RY} 0 0 1 ${CX - RX},${ty} Z`;
+const spokes = (ty: number) =>
+  [30, 90, 150, 210, 270, 330]
+    .map((a) => {
+      const r = (a * Math.PI) / 180;
+      return `M ${CX},${ty} L ${(CX + RX * Math.cos(r)).toFixed(1)},${(ty + RY * Math.sin(r)).toFixed(1)}`;
+    })
+    .join(" ");
+
+function Cyl({ ty, label, cyan }: { ty: number; label: string; cyan?: boolean }) {
+  const stroke = cyan ? "#7df6ff" : "#33506b";
+  return (
+    <g>
+      <path d={bodyPath(ty)} fill={cyan ? "url(#fcBodyCyan)" : "url(#fcBodyDark)"} stroke={stroke} strokeWidth={cyan ? 1.5 : 1} />
+      <ellipse cx={CX} cy={ty} rx={RX} ry={RY} fill={cyan ? "url(#fcTopCyan)" : "url(#fcTopDark)"} stroke={stroke} strokeWidth={cyan ? 1.5 : 1} />
+      <path d={spokes(ty)} fill="none" stroke={cyan ? "#bff8ff" : "#4a6a88"} strokeWidth="1" strokeOpacity={cyan ? 0.5 : 0.28} />
+      <text x={CX} y={ty + 38} textAnchor="middle" className="fc-diagram__lbl" fontSize="26" fill={cyan ? "#062a33" : "#f8fafc"}>
+        {label}
+      </text>
+    </g>
+  );
+}
+
+function Note({ yc, lines }: { yc: number; lines: string[] }) {
+  return (
+    <g>
+      <path d={`M 490 ${yc} H 556 M 556 ${yc - 27} V ${yc + 27}`} fill="none" stroke="#33506b" strokeWidth="1" />
+      {lines.map((l, i) => (
+        <text key={l} x={576} y={yc - 24 + i * 24} className="fc-diagram__note">{l}</text>
+      ))}
+    </g>
+  );
+}
+
+function LayerDiagram() {
+  return (
+    <svg viewBox="0 0 880 545" role="img" aria-label="Commview sits between leadership — set direction, find the opportunity, align the business — and execution — build the plan, get on the tools, deliver results — connecting the dots and driving the work.">
+      <defs>
+        <radialGradient id="fcTopDark" cx="50%" cy="42%" r="65%">
+          <stop offset="0" stopColor="#33475e" />
+          <stop offset="1" stopColor="#0d1620" />
+        </radialGradient>
+        <linearGradient id="fcBodyDark" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#1b2836" />
+          <stop offset="1" stopColor="#0a1017" />
+        </linearGradient>
+        <radialGradient id="fcTopCyan" cx="50%" cy="42%" r="65%">
+          <stop offset="0" stopColor="#d6fdff" />
+          <stop offset="0.5" stopColor="#25e6ff" />
+          <stop offset="1" stopColor="#06b6d4" />
+        </radialGradient>
+        <linearGradient id="fcBodyCyan" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#0fbfe0" />
+          <stop offset="1" stopColor="#075f78" />
+        </linearGradient>
+        <filter id="fcGlow" x="-70%" y="-70%" width="240%" height="240%">
+          <feGaussianBlur stdDeviation="20" />
+        </filter>
+      </defs>
+
+      {/* cyan halo behind the middle cylinder */}
+      <ellipse cx={CX} cy={250 + H / 2} rx={RX + 20} ry={H + 34} fill="#00e5ff" opacity="0.3" filter="url(#fcGlow)" />
+
+      {/* connector beams */}
+      <path d={`M ${CX} 184 V 204 M ${CX} 354 V 374`} stroke="#5df6ff" strokeWidth="2" strokeLinecap="round" filter="url(#fcGlow)" />
+      <path d={`M ${CX} 184 V 204 M ${CX} 354 V 374`} stroke="#d6fdff" strokeWidth="1.5" strokeLinecap="round" />
+
+      <Cyl ty={80} label="LEADERSHIP" />
+      <Cyl ty={250} label="COMMVIEW" cyan />
+      <Cyl ty={420} label="EXECUTION" />
+
+      <Note yc={109} lines={["Set direction", "Find the opportunity", "Align the business"]} />
+      <Note yc={279} lines={["Connect the dots", "Drive the work", "Keep it moving"]} />
+      <Note yc={449} lines={["Build the plan", "Get on the tools", "Deliver results"]} />
+    </svg>
+  );
+}
 
 const SIGNS = [
   { n: "01", h: "Growth has flattened", p: "What got you here is no longer producing the same result. Before spending more, you need to understand whether the constraint is positioning, demand, conversion, pipeline or something else." },
@@ -129,20 +204,8 @@ export default function FractionalCmoPage() {
               <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
             </div>
           </div>
-          <div className="fc-stack" aria-hidden="true">
-            {LAYERS.map((l, i) => (
-              <div key={l.label}>
-                <div className={`fc-layer${l.mid ? " fc-layer--mid" : ""}`}>
-                  <div className="fc-layer__disc">{l.label}</div>
-                  <ul className="fc-layer__notes">
-                    {l.notes.map((n) => (
-                      <li key={n}>{n}</li>
-                    ))}
-                  </ul>
-                </div>
-                {i < LAYERS.length - 1 ? <p className="fc-stack__spine">|</p> : null}
-              </div>
-            ))}
+          <div className="fc-diagram">
+            <LayerDiagram />
           </div>
         </div>
       </section>
