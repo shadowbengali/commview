@@ -450,28 +450,25 @@ export default function FractionalCmoPage() {
         </div>
       </section>
 
-      {/* ===== FAQ ===== */}
-      <section className="fc-sec fc-sec--tight" aria-labelledby="fc-faq">
-        <div className="wrap">
-          <div className="fc-faq__head">
-            <p className="eyebrow-x" style={{ color: "var(--brand-cyan)" }}>FAQ</p>
-            <h2 id="fc-faq" style={{ marginTop: "var(--space-3)" }}>Straight answers to the questions we get.</h2>
+      {/* ===== FAQ + CTA ===== */}
+      <section className="fc-faqcta" aria-labelledby="fc-faq">
+        <div className="wrap fc-faqcta__grid">
+          <div className="fc-faq">
+            <div className="fc-faq__head">
+              <p className="eyebrow-x" style={{ color: "var(--brand-cyan)" }}>FAQ</p>
+              <h2 id="fc-faq" style={{ marginTop: "var(--space-3)" }}>Straight answers to the questions we get.</h2>
+            </div>
+            <div className="fc-faq__list">
+              {FAQS.map((f, i) => (
+                <details key={i}>
+                  <summary>{f.q}</summary>
+                  <p className="fc-faq__a">{f.a}</p>
+                </details>
+              ))}
+            </div>
           </div>
-          <div className="fc-faq__grid">
-            {FAQS.map((f, i) => (
-              <details key={i}>
-                <summary>{f.q}</summary>
-                <p className="fc-faq__a">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ===== FINAL CTA ===== */}
-      <section className="fc-final dark" aria-labelledby="fc-final">
-        <div className="wrap fc-final__grid">
-          <div>
+          <aside className="fc-cta dark" aria-labelledby="fc-final">
             <p className="eyebrow-x" style={{ color: "var(--brand-cyan)" }}>Let&rsquo;s talk</p>
             <h2 className="fc-final__h" id="fc-final" style={{ marginTop: "var(--space-3)" }}>
               Something isn&rsquo;t working. Let&rsquo;s find out what.
@@ -481,8 +478,8 @@ export default function FractionalCmoPage() {
               <a className="btn btn--cyan btn--lg" href="/contact">Talk to us</a>
               <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
             </div>
-          </div>
-          <p className="fc-scribble" aria-hidden="true">Real strategy.<br />Real progress.</p>
+            <p className="fc-scribble" aria-hidden="true">Real strategy.<br />Real progress.</p>
+          </aside>
         </div>
       </section>
     </main>
