@@ -75,19 +75,31 @@ function LayerDiagram() {
           <stop offset="1" stopColor="#075f78" />
         </linearGradient>
         <filter id="fcGlow" x="-70%" y="-70%" width="240%" height="240%">
-          <feGaussianBlur stdDeviation="20" />
+          <feGaussianBlur stdDeviation="8" />
         </filter>
+        <filter id="fcGlowBig" x="-140%" y="-140%" width="380%" height="380%">
+          <feGaussianBlur stdDeviation="30" />
+        </filter>
+        <radialGradient id="fcAmbient" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stopColor="#12d3ef" stopOpacity="0.34" />
+          <stop offset="0.55" stopColor="#0891b2" stopOpacity="0.12" />
+          <stop offset="1" stopColor="#00e5ff" stopOpacity="0" />
+        </radialGradient>
       </defs>
 
-      {/* cyan halo behind the middle cylinder */}
-      <ellipse cx={CX} cy={250 + H / 2} rx={RX + 20} ry={H + 34} fill="#00e5ff" opacity="0.3" filter="url(#fcGlow)" />
+      {/* ambient wash + layered cyan bloom behind the middle cylinder */}
+      <ellipse cx={CX} cy={279} rx={390} ry={225} fill="url(#fcAmbient)" />
+      <ellipse cx={CX} cy={279} rx={RX + 48} ry={H + 66} fill="#00e5ff" opacity="0.5" filter="url(#fcGlowBig)" />
+      <ellipse cx={CX} cy={279} rx={RX + 4} ry={H + 26} fill="#6cf3ff" opacity="0.6" filter="url(#fcGlowBig)" />
 
-      {/* connector beams */}
-      <path d={`M ${CX} 184 V 204 M ${CX} 354 V 374`} stroke="#5df6ff" strokeWidth="2" strokeLinecap="round" filter="url(#fcGlow)" />
-      <path d={`M ${CX} 184 V 204 M ${CX} 354 V 374`} stroke="#d6fdff" strokeWidth="1.5" strokeLinecap="round" />
+      {/* glowing connector beams */}
+      <path d={`M ${CX} 176 V 210 M ${CX} 346 V 382`} stroke="#00e5ff" strokeWidth="8" strokeLinecap="round" filter="url(#fcGlowBig)" opacity="0.9" />
+      <path d={`M ${CX} 178 V 208 M ${CX} 350 V 378`} stroke="#eafdff" strokeWidth="1.8" strokeLinecap="round" filter="url(#fcGlow)" />
 
       <Cyl ty={80} label="LEADERSHIP" />
       <Cyl ty={250} label="COMMVIEW" cyan />
+      {/* bright rim bloom on the glowing cylinder's top edge */}
+      <ellipse cx={CX} cy={250} rx={RX} ry={RY} fill="none" stroke="#c8fbff" strokeWidth="3" opacity="0.8" filter="url(#fcGlow)" />
       <Cyl ty={420} label="EXECUTION" />
 
       <Note yc={109} lines={["Set direction", "Find the opportunity", "Align the business"]} />
