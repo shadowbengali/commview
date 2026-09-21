@@ -443,9 +443,6 @@ export default function FractionalCmoPage() {
                 <span>{s.s}</span>
               </div>
             ))}
-            <p className="fc-exp__note">
-              These results are from previous leadership roles and form the experience behind Commview, not client case studies.
-            </p>
           </div>
         </div>
       </section>
