@@ -478,7 +478,6 @@ export default function FractionalCmoPage() {
               <a className="btn btn--cyan btn--lg" href="/contact">Talk to us</a>
               <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
             </div>
-            <p className="fc-scribble" aria-hidden="true">Real strategy.<br />Real progress.</p>
           </aside>
         </div>
       </section>

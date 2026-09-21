@@ -68,8 +68,6 @@
 .fc-venn__title { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; }
 .fc-venn__line { font-size: 11px; }
 .fc-venn__foot { text-align: center; margin-top: var(--space-4); font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-primary); }
-.fc-scribble { font-family: "Segoe Script", "Bradley Hand", cursive; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.1; color: var(--text-primary); transform: rotate(-6deg); }
-.fc-scribble u { text-decoration-color: var(--brand-cyan); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
 /* ===== compare table ===== */
 .fc-compare__head h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; max-width: 16ch; }
@@ -126,13 +124,12 @@
 .fc-final__h { font-size: clamp(26px, 2.4vw, 34px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-polar); max-width: 18ch; }
 .fc-final__p { margin-top: var(--space-4); max-width: 40ch; color: var(--slate-light); font-size: 16px; line-height: 1.6; }
 .fc-final__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
-.fc-cta .fc-scribble { margin-top: var(--space-8); color: var(--brand-polar); }
 
 /* ===== responsive ===== */
 @media (max-width: 1020px) {
   .fc-hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-12); }
   .fc-lead, .fc-tools__grid, .fc-cost__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
-  .fc-pull, .fc-scribble, .fc-axis { justify-self: start; }
+  .fc-pull, .fc-axis { justify-self: start; }
   .fc-own__head { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
   .fc-own__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); }
   .fc-node:not(:last-child)::after, .fc-step:not(:last-child)::after { content: none; }
