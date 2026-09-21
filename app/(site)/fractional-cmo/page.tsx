@@ -323,12 +323,11 @@ export default function FractionalCmoPage() {
         </div>
       </section>
 
-      {/* ===== STILL ON THE TOOLS — venn ===== */}
+      {/* ===== LEADERSHIP AND EXECUTION IN ONE — venn ===== */}
       <section className="fc-sec" aria-labelledby="fc-tools">
         <div className="wrap fc-tools__grid">
           <div>
-            <p className="eyebrow-x" style={{ color: "var(--brand-cyan)" }}>Still on the tools</p>
-            <h2 className="fc-tools__h" id="fc-tools" style={{ marginTop: "var(--space-3)" }}>Leadership and execution, in one.</h2>
+            <h2 className="fc-tools__h" id="fc-tools">Leadership and execution, in one.</h2>
             <div className="fc-tools__body">
               <p>This is the biggest distinction in how Commview works. Seniority should not mean becoming detached from the work.</p>
               <p>We can sit in the leadership conversation about where the company should grow, then get into analytics to understand why a journey is not converting. We can define the content strategy and work on the content. We can identify a problem between systems and get into how they connect. We can spot friction in the signup journey and analyse what needs changing.</p>
@@ -354,7 +353,6 @@ export default function FractionalCmoPage() {
             </svg>
             <figcaption className="fc-venn__foot">Same person. Real momentum.</figcaption>
           </figure>
-          <p className="fc-scribble" aria-hidden="true">Still on<br />the <u>tools.</u></p>
         </div>
       </section>
 
