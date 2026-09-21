@@ -16,6 +16,12 @@
 .fc-diagram__lbl { font-weight: 700; letter-spacing: 0.14em; }
 .fc-diagram__note { font-size: 22px; fill: var(--brand-polar); }
 
+/* image hero: full render on desktop/tablet, split into two parts on phones */
+.fc-shot { width: 100%; }
+.fc-shot__full { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); }
+.fc-shot__split { display: none; }
+.fc-shot__split img { width: 100%; height: auto; display: block; border-radius: var(--radius-md); }
+
 /* ===== section scaffolding shared on this page ===== */
 .fc-sec { padding-block: var(--space-24); }
 .fc-sec--tight { padding-block: var(--space-16); }
@@ -135,4 +141,7 @@
 @media (max-width: 640px) {
   .fc-own__grid, .fc-signs__grid, .fc-proc__grid, .fc-exp__grid, .fc-faq__grid { grid-template-columns: minmax(0, 1fr); }
   .fc-sec { padding-block: var(--space-16); }
+  /* split the render into two legible parts on phones */
+  .fc-shot__full { display: none; }
+  .fc-shot__split { display: grid; gap: var(--space-6); }
 }

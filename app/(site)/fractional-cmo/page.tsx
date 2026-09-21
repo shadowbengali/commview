@@ -163,6 +163,10 @@ const FAQS = [
   { q: "Do you work remotely or inside the business?", a: "Both can work. Commview is Manchester-based and can combine remote working with in-person sessions where they materially improve the work. The operating model should fit the business and the problem rather than requiring meetings for their own sake." },
 ];
 
+// Hero visual: "image" uses the supplied render (cropped into two legible
+// parts on mobile); "svg" uses the live-text LayerDiagram. Flip to compare.
+const HERO_MODE = "image" as "image" | "svg";
+
 export default function FractionalCmoPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -216,9 +220,35 @@ export default function FractionalCmoPage() {
               <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
             </div>
           </div>
-          <div className="fc-diagram">
-            <LayerDiagram />
-          </div>
+          {HERO_MODE === "image" ? (
+            <div className="fc-shot">
+              <img
+                className="fc-shot__full"
+                src="/fractional-cmo-hero.webp"
+                width={1672}
+                height={941}
+                alt="CommView sits between leadership and execution — three stacked layers. Leadership: set direction, find the opportunity, align the business. CommView: connect the dots, drive the work, keep it moving. Execution: build the plan, get on the tools, deliver results."
+              />
+              <div className="fc-shot__split">
+                <img
+                  src="/fractional-cmo-hero-cylinders.webp"
+                  width={890}
+                  height={900}
+                  alt="Three stacked layers — Leadership, CommView and Execution — with CommView glowing in the middle."
+                />
+                <img
+                  src="/fractional-cmo-hero-notes.webp"
+                  width={520}
+                  height={900}
+                  alt="What each layer does. Leadership: set direction, find the opportunity, align the business. CommView: connect the dots, drive the work, keep it moving. Execution: build the plan, get on the tools, deliver results."
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="fc-diagram">
+              <LayerDiagram />
+            </div>
+          )}
         </div>
       </section>
 
