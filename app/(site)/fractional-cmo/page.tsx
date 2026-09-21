@@ -209,7 +209,9 @@ export default function FractionalCmoPage() {
           <div>
             <p className="eyebrow-x">Fractional CMO for B2B scale-ups</p>
             <h1 className="fc-hero__h1" id="fc-h1">
-              Strategic leadership. Hands-on execution. Real growth.
+              <span>Strategic leadership.</span>{" "}
+              <span>Hands-on execution.</span>{" "}
+              <span>Real growth.</span>
             </h1>
             <p className="fc-hero__sub">
               A fractional CMO who doesn&rsquo;t just advise — but gets involved,
