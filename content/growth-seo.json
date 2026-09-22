@@ -1,0 +1,236 @@
+{
+  "slug": "growth/seo",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B SEO Consultant | CommView",
+    "description": "SEO consultant for B2B scale-ups. Technical, content and AEO combined around commercial search demand, not vanity rankings.",
+    "primaryKeyword": "seo consultant",
+    "secondaryKeywords": [
+      "seo consultant service",
+      "b2b seo consultant",
+      "saas seo consultant",
+      "seo consultant services",
+      "seo consultant vs agency",
+      "seo results timeline",
+      "seo consultant cost"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "B2B SEO CONSULTANT",
+        "href": "/growth/seo"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/growth/seo/b2b",
+        "purpose": "child"
+      },
+      {
+        "href": "/growth/seo/saas",
+        "purpose": "child"
+      },
+      {
+        "href": "/growth/aeo",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/what-is-aeo",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B SEO CONSULTANT",
+    "h1": [
+      "B2B SEO Consultant.",
+      "Rank for what matters."
+    ],
+    "accentLine": 1,
+    "sub": "SEO should connect search demand to commercial intent. We find the searches that matter to your buyers, fix the technical and content barriers, build the pages worth finding and measure whether visibility turns into useful business behaviour.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "MODERN SEO",
+      "sub": "Visibility is only useful when it reaches the right buyer.",
+      "layers": [
+        "SEARCH DEMAND",
+        "COMMERCIAL INTENT",
+        "USEFUL CONTENT",
+        "DISCOVERABILITY",
+        "PIPELINE SIGNAL"
+      ],
+      "highlight": 4
+    }
+  },
+  "sections": [
+    {
+      "id": "modern",
+      "type": "lead",
+      "targetKeyword": "seo consultant service",
+      "eyebrow": "MODERN SEO",
+      "heading": "What a Modern SEO Consultant Actually Does",
+      "intro": [
+        "Modern SEO is not a monthly ranking report. It combines technical discoverability, search intent, useful content and the way buyers increasingly find answers through both search engines and AI interfaces.",
+        "The work starts by understanding what the business needs to be found for, why those searches matter commercially and whether the existing site deserves to rank for them."
+      ]
+    },
+    {
+      "id": "different",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "b2b seo consultant",
+      "eyebrow": "COMMERCIAL SEO",
+      "heading": "How Commview Does B2B SEO Differently",
+      "intro": "Volume is evidence, not the strategy. We prioritise search opportunities around buyer fit, intent and the commercial job of the page.",
+      "items": [
+        {
+          "title": "Commercial keywords first",
+          "body": "Prioritise searches that connect to a real buyer problem, service or decision rather than chasing volume for its own sake."
+        },
+        {
+          "title": "SEO and AEO together",
+          "body": "Structure useful content so it can perform in traditional search and be understood, extracted and cited by AI answer experiences."
+        },
+        {
+          "title": "Technical and content connected",
+          "body": "Fix discoverability and site structure while building the pages the search demand actually requires."
+        },
+        {
+          "title": "Measure beyond rankings",
+          "body": "Track non-brand visibility, useful traffic, conversion behaviour and downstream commercial signals where the data allows."
+        }
+      ]
+    },
+    {
+      "id": "b2b",
+      "type": "comparison",
+      "targetKeyword": "saas seo consultant",
+      "eyebrow": "B2B AND SAAS",
+      "heading": "SEO for B2B and SaaS Needs a Different Commercial Lens",
+      "intro": "Long buying cycles and smaller addressable markets change what useful search traffic looks like.",
+      "columns": [
+        {
+          "title": "High-volume SEO thinking",
+          "items": [
+            "Optimise for the largest reachable audience",
+            "Treat traffic growth as the primary success signal",
+            "Publish broadly around category topics"
+          ]
+        },
+        {
+          "title": "B2B commercial SEO",
+          "items": [
+            "Prioritise buyer fit and intent",
+            "Connect content to complex buying decisions",
+            "Build service, use-case, comparison and evidence pages around the journey"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deliverables",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "seo consultant services",
+      "eyebrow": "THE ENGAGEMENT",
+      "heading": "What You Get From an SEO Consultant Engagement",
+      "items": [
+        {
+          "title": "Audit",
+          "body": "Technical, content and search-demand review focused on the constraints that materially affect discoverability."
+        },
+        {
+          "title": "Strategy",
+          "body": "Keyword and page ownership mapped to the commercial priorities of the business."
+        },
+        {
+          "title": "Content plan",
+          "body": "A prioritised roadmap of pages and content based on buyer intent, gaps and opportunity."
+        },
+        {
+          "title": "Execution",
+          "body": "Hands-on content, on-page and implementation work, with specialist support brought in where needed."
+        },
+        {
+          "title": "Reporting",
+          "body": "A measurement view that separates brand from non-brand performance and keeps rankings connected to useful behaviour."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "seo consultant faq",
+      "eyebrow": "FAQ",
+      "heading": "SEO Consultant FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What is an SEO consultant?",
+          "a": "An SEO consultant helps a business improve how it is discovered through search by connecting technical site health, search demand, content and page structure. For B2B companies, the useful work goes further than rankings. It should prioritise searches that match the right buyers and connect visibility to meaningful commercial behaviour."
+        },
+        {
+          "q": "SEO consultant vs SEO agency: which is right for us?",
+          "a": "A consultant can suit a business that needs senior diagnosis, prioritisation and hands-on direction without buying a large agency team. An agency can be useful when substantial specialist production capacity is required. Commview can set the commercial SEO direction, execute directly and bring in specialist expertise where the work requires it."
+        },
+        {
+          "q": "How long until we see SEO results?",
+          "a": "There is no responsible fixed timeline for SEO results. Timing depends on the site's current authority, technical condition, competition, content gaps and the searches being targeted. Some technical or existing-page improvements can move sooner than new competitive content. We establish the baseline first and measure progress against the specific opportunity."
+        },
+        {
+          "q": "How much does an SEO consultant cost?",
+          "a": "SEO consulting cost depends on whether the work is a focused audit, a strategy project or ongoing execution across technical SEO, content and measurement. Commview does not publish a single standard price because the scope varies materially. We define the commercial problem and required work before agreeing the engagement."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "SEO traffic is not the goal. Being found by the right buyer for the right reason is.",
+      "body": "We can work out where search can contribute to growth and what needs to change to capture it.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Hero visual is a clean progression from demand to pipeline signal. One additional major visual maximum. No fake SERP screenshots, ranking graphs or keyword-cloud decoration."
+}
