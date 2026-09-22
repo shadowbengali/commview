@@ -1,0 +1,244 @@
+{
+  "slug": "growth/b2b-lead-generation",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B Lead Generation | Pipeline That Closes | CommView",
+    "description": "B2B lead generation built around ICP, channel fit and sales follow-through. Measure useful pipeline and conversion, not lead volume alone.",
+    "primaryKeyword": "b2b lead generation",
+    "secondaryKeywords": [
+      "b2b lead generation strategy",
+      "b2b lead generation platforms",
+      "b2b lead generation measurement",
+      "what is b2b lead generation",
+      "best b2b lead generation",
+      "b2b lead generation cost"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "B2B LEAD GENERATION",
+        "href": "/growth/b2b-lead-generation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/growth/demand-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/fractional-cmo",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/b2b-lead-generation-strategy",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/more-leads-or-better-leads",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B LEAD GENERATION",
+    "h1": [
+      "B2B Lead Generation.",
+      "More leads is not the answer if the wrong leads arrive."
+    ],
+    "accentLine": 1,
+    "sub": "Lead generation works when targeting, offer, channel and sales follow-through agree on what a useful opportunity looks like. We build around the ICP and measure what happens after the form fill.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "QUALITY BEFORE VOLUME",
+      "sub": "The useful number gets smaller as the evidence gets stronger.",
+      "layers": [
+        "ATTENTION",
+        "RELEVANT INTEREST",
+        "QUALIFIED OPPORTUNITY",
+        "PIPELINE",
+        "CUSTOMER"
+      ],
+      "highlight": 4
+    }
+  },
+  "sections": [
+    {
+      "id": "quality",
+      "type": "lead",
+      "targetKeyword": "b2b lead generation",
+      "eyebrow": "VOLUME VS QUALITY",
+      "heading": "The B2B Lead Generation Problem Is Often Quality, Not Volume",
+      "intro": [
+        "A bigger lead number does not fix weak targeting, an unclear offer or a broken route into Sales. It can simply create more work for the same commercial result.",
+        "We start by defining the customer and opportunity the business actually wants, then work backwards into channels, offers and capture points."
+      ]
+    },
+    {
+      "id": "strategy",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "b2b lead generation strategy",
+      "eyebrow": "THE STRATEGY",
+      "heading": "A B2B Lead Generation Strategy Connected to Sales",
+      "intro": "The system needs to survive contact with the sales process.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "ICP",
+          "body": "Define the accounts and buying situations worth pursuing."
+        },
+        {
+          "title": "Offer",
+          "body": "Give the right buyer a relevant reason to engage now."
+        },
+        {
+          "title": "Channel",
+          "body": "Use the places where that audience can realistically be reached or where intent already exists."
+        },
+        {
+          "title": "Capture",
+          "body": "Remove unnecessary friction from the next step."
+        },
+        {
+          "title": "Route",
+          "body": "Send useful context to the right commercial owner rather than treating every lead equally."
+        },
+        {
+          "title": "Learn",
+          "body": "Use downstream conversion and sales feedback to improve the next cycle."
+        }
+      ]
+    },
+    {
+      "id": "channels",
+      "type": "grid",
+      "targetKeyword": "b2b lead generation platforms",
+      "eyebrow": "CHANNELS",
+      "heading": "B2B Lead Generation Channels Follow the Buyer",
+      "intro": "There is no universally best lead generation platform. The useful mix depends on where the ICP can be reached and how it buys.",
+      "items": [
+        {
+          "title": "Search",
+          "body": "Capture existing problem, category and solution intent through SEO and paid search."
+        },
+        {
+          "title": "LinkedIn and paid social",
+          "body": "Reach defined professional audiences where the targeting and economics make sense."
+        },
+        {
+          "title": "Content",
+          "body": "Create useful reasons for the buyer to engage, return or share information."
+        },
+        {
+          "title": "ABM",
+          "body": "Coordinate attention around a defined account universe when the economics justify the focus."
+        },
+        {
+          "title": "Intent signals",
+          "body": "Use behavioural evidence as context for prioritisation rather than treating a score as certainty."
+        },
+        {
+          "title": "Events and direct engagement",
+          "body": "Create or use moments where a relevant audience is prepared to have a deeper conversation."
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "b2b lead generation measurement",
+      "eyebrow": "MEASUREMENT",
+      "heading": "Measure What Happens After the Lead",
+      "items": [
+        {
+          "title": "Fit",
+          "body": "Did the response come from the type of account the business actually wants?"
+        },
+        {
+          "title": "Progression",
+          "body": "Did the opportunity move into a meaningful commercial stage?"
+        },
+        {
+          "title": "Pipeline",
+          "body": "What value entered the pipeline and how much of it progressed?"
+        },
+        {
+          "title": "Learning",
+          "body": "What did Sales and downstream conversion tell us about targeting, offer and channel?"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "b2b lead generation faq",
+      "eyebrow": "FAQ",
+      "heading": "B2B Lead Generation FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What is B2B lead generation?",
+          "a": "B2B lead generation is the process of identifying and creating opportunities for potential business customers to engage with a company. Useful lead generation connects the ICP, proposition, channel, offer and sales process. The objective is not simply to collect contact details, but to create commercially relevant opportunities that can progress."
+        },
+        {
+          "q": "What's the best B2B lead generation channel?",
+          "a": "There is no single best channel for every B2B company. The answer depends on the ICP, buying behaviour, deal value, existing demand and how easily the audience can be reached. Search can capture intent, LinkedIn can target professional audiences, and content or ABM can create reasons to engage. We choose from the buyer backwards."
+        },
+        {
+          "q": "How much does B2B lead generation cost?",
+          "a": "Cost depends on the audience, channel mix, media spend, creative and content requirements, and the level of ongoing execution. Cost per lead alone can be misleading because cheap leads may create little pipeline. Commview scopes investment around the commercial objective and measures the quality of what progresses, not just acquisition volume."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "If Sales wants better leads, start before the handoff.",
+      "body": "We can connect ICP, channel, capture and sales feedback into one lead generation system.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Primary visual narrows from attention to customer. Do not imply all leads follow a linear funnel. Keep diagrams conceptual and commercially grounded."
+}
