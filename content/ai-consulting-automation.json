@@ -1,0 +1,196 @@
+{
+  "slug": "ai-consulting/automation",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI Automation Consultant | B2B | CommView",
+    "description": "AI automation consulting for B2B scale-ups. Find worthwhile automation opportunities, build the useful ones and measure whether they change the operation.",
+    "primaryKeyword": "ai automation consultant",
+    "secondaryKeywords": [
+      "ai automation prioritisation",
+      "ai automation use cases",
+      "ai automation consultant faq",
+      "what does ai automation consultant do",
+      "ai automation roi"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "AI AUTOMATION CONSULTANT",
+        "href": "/ai-consulting/automation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/ai-consulting/workflow-automation",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI AUTOMATION CONSULTANT",
+    "h1": [
+      "AI Automation Consultant.",
+      "Automate what is worth automating."
+    ],
+    "accentLine": 1,
+    "sub": "The useful question is not what can be automated. It is which automation will materially improve the operation once build cost, maintenance, risk and human oversight are included. We find those opportunities, build them and measure what changes.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "PRIORITISE THE WORK",
+      "sub": "Capability alone is not a business case.",
+      "core": "AUTOMATION",
+      "nodes": [
+        "FREQUENCY",
+        "TIME",
+        "ERROR",
+        "VALUE",
+        "RISK"
+      ],
+      "answer": "WORTH BUILDING?"
+    }
+  },
+  "sections": [
+    {
+      "id": "role",
+      "type": "lead",
+      "targetKeyword": "ai automation consultant",
+      "eyebrow": "THE ROLE",
+      "heading": "What an AI Automation Consultant Does",
+      "intro": [
+        "An AI automation consultant identifies operational work that may benefit from AI or automation, assesses whether the economics and risks make sense, then helps design, build, deploy and measure the intervention.",
+        "That means being willing to reject an automation idea when the manual process is rare, unstable or cheaper to leave alone."
+      ]
+    },
+    {
+      "id": "prioritise",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "ai automation prioritisation",
+      "eyebrow": "PRIORITISATION",
+      "heading": "Prioritise AI Automation by Value, Not Novelty",
+      "intro": "Frequency, time, errors and strategic value are useful inputs, but they are not an automatic scoring answer.",
+      "items": [
+        {
+          "title": "Frequency",
+          "body": "How often does the work happen and how much cumulative effort does it create?"
+        },
+        {
+          "title": "Time",
+          "body": "How much human time could realistically be removed or redirected?"
+        },
+        {
+          "title": "Error and rework",
+          "body": "Where do avoidable mistakes, inconsistency or repeated checking create operational cost?"
+        },
+        {
+          "title": "Strategic value",
+          "body": "Would improving the workflow create useful capacity or improve a commercially important process?"
+        },
+        {
+          "title": "Risk and maintenance",
+          "body": "What happens when the automation is wrong, and what will it cost to supervise and maintain?"
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "type": "grid",
+      "targetKeyword": "ai automation use cases",
+      "eyebrow": "COMMON CANDIDATES",
+      "heading": "AI Automation Use Cases Worth Investigating",
+      "items": [
+        {
+          "title": "Reporting",
+          "body": "Collect, structure and summarise routine information while escalating exceptions."
+        },
+        {
+          "title": "Content operations",
+          "body": "Accelerate drafting, repurposing, classification and translation inside an approval process."
+        },
+        {
+          "title": "Lead routing",
+          "body": "Use account and interaction context to support prioritisation and routing."
+        },
+        {
+          "title": "Meeting administration",
+          "body": "Turn transcripts or notes into structured summaries, actions and CRM-ready information."
+        },
+        {
+          "title": "Monitoring",
+          "body": "Watch defined information sources and surface material changes for human review."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai automation consultant faq",
+      "eyebrow": "FAQ",
+      "heading": "AI Automation Consultant FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What does an AI automation consultant actually do?",
+          "a": "An AI automation consultant finds processes where AI or automation could create enough value to justify implementation, then helps design, build, deploy and measure the solution. The work includes process diagnosis, prioritisation, tool selection, integration, controls and adoption. A useful consultant should also tell you when an automation is not worth building."
+        },
+        {
+          "q": "How do we know if an automation is worth building?",
+          "a": "An automation is worth building when the expected reduction in effort, delay, errors or other operational friction justifies the implementation, software, maintenance and oversight required. Frequency and time saved are useful inputs, but risk and strategic value matter too. We establish a baseline and test the business case before scaling."
+        },
+        {
+          "q": "What's the ROI of AI automation for a B2B scale-up?",
+          "a": "There is no universal ROI for AI automation. It depends on the current process, labour involved, transaction volume, error cost, implementation effort, software cost and how much human review remains necessary. The defensible approach is to measure the current workflow, model the expected change and compare that with real results after deployment."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "The ability to automate something is not a reason to automate it.",
+      "body": "Find the work where automation creates enough value to justify its cost, risk and maintenance.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. Hero is a prioritisation decision, not a robot or magic-wand automation visual."
+}
