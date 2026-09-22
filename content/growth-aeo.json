@@ -1,0 +1,255 @@
+{
+  "slug": "growth/aeo",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "Answer Engine Optimization (AEO) | CommView",
+    "description": "Answer Engine Optimization for B2B. Improve how your expertise is understood, extracted and cited across AI answers and search experiences.",
+    "primaryKeyword": "answer engine optimization",
+    "secondaryKeywords": [
+      "what is answer engine optimization",
+      "aeo vs seo",
+      "how aeo works",
+      "aeo services",
+      "b2b aeo",
+      "answer engine optimization faq",
+      "aeo tracking",
+      "ai seo"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "ANSWER ENGINE OPTIMIZATION",
+        "href": "/growth/aeo"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth/aeo/services",
+        "purpose": "child"
+      },
+      {
+        "href": "/growth/seo",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/insights/what-is-aeo",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "ANSWER ENGINE OPTIMIZATION",
+    "h1": [
+      "Answer Engine Optimization.",
+      "Be useful enough to cite."
+    ],
+    "accentLine": 1,
+    "sub": "AEO improves how clearly your expertise can be understood, extracted and referenced when people use AI answer experiences to research a problem, compare options or shape a buying decision. It works alongside SEO, not instead of it.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "FROM SOURCE TO ANSWER",
+      "sub": "Make the source clearer, stronger and easier to use.",
+      "core": "YOUR EXPERTISE",
+      "nodes": [
+        "CLEAR ANSWERS",
+        "ENTITY CLARITY",
+        "STRUCTURE",
+        "EVIDENCE",
+        "SOURCE SIGNALS"
+      ],
+      "answer": "CITABLE"
+    }
+  },
+  "sections": [
+    {
+      "id": "definition",
+      "type": "lead",
+      "targetKeyword": "what is answer engine optimization",
+      "eyebrow": "WHAT IS AEO?",
+      "heading": "What Answer Engine Optimization Is",
+      "intro": [
+        "Answer Engine Optimization is the work of making a source easier for AI-powered answer experiences to understand and use when constructing an answer.",
+        "That includes clear information architecture, extractable answers, consistent entities, structured data where appropriate, strong source material and evidence that makes the content worth referencing. It does not create a guaranteed citation."
+      ]
+    },
+    {
+      "id": "seo",
+      "type": "comparison",
+      "theme": "alt",
+      "targetKeyword": "aeo vs seo",
+      "eyebrow": "AEO VS SEO",
+      "heading": "AEO and SEO Overlap, but They Are Not the Same Job",
+      "intro": "Both depend on useful, discoverable and credible content. The difference is what happens after the system finds the source.",
+      "columns": [
+        {
+          "title": "SEO",
+          "items": [
+            "Compete for visibility in search results",
+            "Optimise pages around queries and search intent",
+            "Earn the click into your site"
+          ]
+        },
+        {
+          "title": "AEO",
+          "items": [
+            "Improve the chance your source can inform an AI-generated answer",
+            "Make facts, expertise and entities easier to interpret and extract",
+            "Measure visibility that can happen without a traditional click"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mechanics",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "how aeo works",
+      "eyebrow": "HOW AEO WORKS",
+      "heading": "How Answer Engine Optimization Actually Works",
+      "intro": "There is no magic schema tag that makes an AI system cite you. The useful work strengthens the source itself.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Questions",
+          "body": "Map the questions buyers actually ask across research, evaluation and comparison."
+        },
+        {
+          "title": "Answers",
+          "body": "Give important questions direct, useful answers rather than burying them inside vague copy."
+        },
+        {
+          "title": "Entities",
+          "body": "Make people, companies, products, services and concepts clear and consistent."
+        },
+        {
+          "title": "Evidence",
+          "body": "Support claims with first-party expertise, data or credible sources where appropriate."
+        },
+        {
+          "title": "Structure",
+          "body": "Use headings, page architecture and structured data to make the information easier to interpret."
+        },
+        {
+          "title": "Measure",
+          "body": "Track target prompts and citations over time, accepting that answer outputs can vary."
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "grid",
+      "targetKeyword": "aeo services",
+      "eyebrow": "THE COMMVIEW METHOD",
+      "heading": "AEO Services From Audit to Measurement",
+      "items": [
+        {
+          "title": "Audit",
+          "body": "Establish how the brand and its expertise currently appear across the target questions and sources."
+        },
+        {
+          "title": "Content restructure",
+          "body": "Improve existing pages so important answers, entities and evidence are easier to find and understand."
+        },
+        {
+          "title": "Technical AEO",
+          "body": "Review crawl access, structured data, canonical signals and the technical foundations that support discoverability."
+        },
+        {
+          "title": "Source building",
+          "body": "Strengthen first-party material and the external signals that help establish the business as a useful source."
+        },
+        {
+          "title": "Tracking",
+          "body": "Monitor target questions and citation patterns rather than pretending a single static ranking exists."
+        }
+      ]
+    },
+    {
+      "id": "b2b",
+      "type": "lead",
+      "theme": "alt",
+      "targetKeyword": "b2b aeo",
+      "eyebrow": "B2B AEO",
+      "heading": "AEO for B2B Is About Being Present Before the Sales Conversation",
+      "intro": [
+        "B2B buyers can use AI tools to define requirements, understand categories, compare approaches and prepare shortlists before speaking to a supplier.",
+        "That makes the quality and clarity of the information available about your expertise commercially important. AEO helps make that source material stronger without pretending the answer engine itself can be controlled."
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "answer engine optimization faq",
+      "eyebrow": "FAQ",
+      "heading": "Answer Engine Optimization FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Is AEO the same as SEO?",
+          "a": "No, although they overlap. SEO primarily improves visibility in search results and the ability to earn visits from relevant searches. AEO focuses on making information easier for AI answer experiences to understand, extract and potentially cite. Strong technical foundations, useful content and credible sources support both disciplines."
+        },
+        {
+          "q": "How do I know if I'm being cited in AI answers?",
+          "a": "Citation tracking requires a defined set of target questions or prompts and repeated monitoring across the answer experiences that matter to your buyers. Outputs can vary by model, time and context, so measurement should look for patterns rather than treating one response as a permanent ranking. Commview establishes a baseline and tracks change."
+        },
+        {
+          "q": "What is AI SEO?",
+          "a": "AI SEO is an emerging umbrella term for improving visibility across search experiences that increasingly use artificial intelligence. It can include conventional SEO, AI Overviews and work often described as AEO or GEO. We prefer to separate the actual jobs being done rather than assume every AI-influenced discovery surface behaves the same way."
+        },
+        {
+          "q": "Does AEO replace SEO?",
+          "a": "No. AEO does not remove the need for technically sound, useful and discoverable web content. Search engines remain an important discovery route, while AI answer experiences add another interface through which buyers can research. The sensible approach is to build strong source material and optimise it for both where their requirements overlap."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "The goal is not to game an answer engine. It is to become a better source.",
+      "body": "We can audit where you appear today, strengthen the source material and build a measurement baseline.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Do not promise citations or claim a fixed window before the category 'saturates'. Avoid unsupported claims about buyer adoption. Hero visual should show source material becoming citable, not AI logos orbiting a website."
+}
