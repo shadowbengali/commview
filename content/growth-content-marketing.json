@@ -1,0 +1,203 @@
+{
+  "slug": "growth/content-marketing",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B Content Marketing | Commercial Content | CommView",
+    "description": "B2B content marketing with commercial purpose. Connect ICP, search demand, point of view and sales enablement through a repeatable content operation.",
+    "primaryKeyword": "b2b content marketing",
+    "secondaryKeywords": [
+      "b2b content strategy",
+      "b2b content types",
+      "content operations",
+      "b2b content volume",
+      "seo content vs pov content",
+      "b2b content marketing roi"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "B2B CONTENT MARKETING",
+        "href": "/growth/content-marketing"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/growth/seo",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/aeo",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B CONTENT MARKETING",
+    "h1": [
+      "B2B Content Marketing.",
+      "Every piece needs a job."
+    ],
+    "accentLine": 1,
+    "sub": "Content can help buyers discover you, understand the problem, compare approaches, trust your expertise or move a sales conversation forward. We build the content system around those jobs rather than a publishing quota.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "CONTENT WITH A JOB",
+      "sub": "Different content should do different work.",
+      "core": "BUYER",
+      "nodes": [
+        "DISCOVER",
+        "UNDERSTAND",
+        "COMPARE",
+        "TRUST",
+        "DECIDE"
+      ],
+      "answer": "COMMERCIAL PURPOSE"
+    }
+  },
+  "sections": [
+    {
+      "id": "strategy",
+      "type": "lead",
+      "targetKeyword": "b2b content strategy",
+      "eyebrow": "CONTENT STRATEGY",
+      "heading": "A B2B Content Strategy Starts With the ICP and Buying Decision",
+      "intro": [
+        "The content plan should follow what the right buyer needs to discover, understand, believe or prove at different points in the journey.",
+        "That means combining search demand, customer questions, sales evidence and a clear point of view rather than filling a calendar because the business thinks it should publish every week."
+      ]
+    },
+    {
+      "id": "types",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "b2b content types",
+      "eyebrow": "DIFFERENT JOBS",
+      "heading": "SEO Content, POV Content and Sales Enablement Do Different Work",
+      "items": [
+        {
+          "title": "SEO content",
+          "body": "Meet relevant existing demand with useful pages built around the questions and searches buyers already make."
+        },
+        {
+          "title": "POV content",
+          "body": "Give the market a reason to think differently about a problem, category or decision and make the company's judgement visible."
+        },
+        {
+          "title": "Sales enablement",
+          "body": "Help a buyer or salesperson resolve questions, objections, comparisons and proof during a live commercial process."
+        },
+        {
+          "title": "Product and service content",
+          "body": "Explain the offer clearly enough for the right customer to understand fit, value and the next step."
+        }
+      ]
+    },
+    {
+      "id": "ops",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "content operations",
+      "eyebrow": "CONTENT OPERATIONS",
+      "heading": "Content Operations Is the Machine That Keeps Useful Content Shipping",
+      "intro": "A strategy without a production and distribution system becomes a backlog.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Prioritise",
+          "body": "Choose content from commercial need, buyer evidence and search opportunity."
+        },
+        {
+          "title": "Brief",
+          "body": "Define the job, audience, angle, evidence and destination before drafting."
+        },
+        {
+          "title": "Create",
+          "body": "Use subject expertise, research and AI assistance where useful without outsourcing judgement."
+        },
+        {
+          "title": "Review",
+          "body": "Check accuracy, point of view, brand and whether the piece actually does its intended job."
+        },
+        {
+          "title": "Distribute",
+          "body": "Put the content where the intended audience can encounter or use it."
+        },
+        {
+          "title": "Measure",
+          "body": "Look at the behaviour and commercial signals appropriate to that content type."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "b2b content marketing faq",
+      "eyebrow": "FAQ",
+      "heading": "B2B Content Marketing FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "How much content does a B2B scale-up actually need?",
+          "a": "There is no useful universal publishing volume. A scale-up needs enough content to cover the important buyer questions, commercial pages, search opportunities and sales needs it has prioritised. Ten useful pieces can be more valuable than fifty generic ones. We build the roadmap from the jobs content needs to do, then set a sustainable cadence."
+        },
+        {
+          "q": "SEO content vs POV content: which should we invest in?",
+          "a": "Most B2B companies need both, but they do different jobs. SEO content can capture existing search demand, while point-of-view content can create distinction and shape how the market thinks about a problem. The mix should follow your growth constraint, existing visibility, category maturity and the questions buyers need answered."
+        },
+        {
+          "q": "How do we measure content marketing ROI in B2B?",
+          "a": "Measure content according to its intended job and connect it to commercial behaviour where possible. That can include non-brand discovery, target-account engagement, conversion, assisted pipeline, sales usage and influence on active opportunities. Attribution will not perfectly explain every B2B buying decision, so we combine quantitative evidence with sales and customer feedback."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "Publishing more is not a content strategy.",
+      "body": "Build the content the buyer and commercial system actually need.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Hero visual is buyer-centred content jobs. Main second visual is content operations. Avoid blog-card mosaics, fake editorial covers and content-volume charts."
+}
