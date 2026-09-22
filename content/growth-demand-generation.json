@@ -1,0 +1,186 @@
+{
+  "slug": "growth/demand-generation",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B Demand Generation | Create and Capture Demand | CommView",
+    "description": "B2B demand generation that creates demand as well as captures it. Programme-led, cross-channel and measured against commercial outcomes.",
+    "primaryKeyword": "b2b demand generation",
+    "secondaryKeywords": [
+      "b2b demand generation strategy",
+      "demand generation faq",
+      "demand gen vs lead gen",
+      "demand generation timeline",
+      "demand generation channels"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "B2B DEMAND GENERATION",
+        "href": "/growth/demand-generation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/growth/b2b-lead-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/demand-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B DEMAND GENERATION",
+    "h1": [
+      "B2B Demand Generation.",
+      "Create demand. Capture demand. Learn from both."
+    ],
+    "accentLine": 1,
+    "sub": "Some buyers are already looking. Others need a reason to care before they ever search for you. A useful demand programme handles both, then connects what happens to pipeline and the next commercial decision.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "overlap",
+      "caption": "THE DEMAND SYSTEM",
+      "sub": "Growth needs both sides.",
+      "leftLabel": "CREATE DEMAND",
+      "rightLabel": "CAPTURE DEMAND",
+      "centreLabel": "COMMERCIAL MOMENTUM"
+    }
+  },
+  "sections": [
+    {
+      "id": "create-capture",
+      "type": "comparison",
+      "targetKeyword": "b2b demand generation",
+      "eyebrow": "CREATE + CAPTURE",
+      "heading": "B2B Demand Generation Needs Demand Creation and Demand Capture",
+      "intro": "Treating all demand as if it already exists leaves growth dependent on the buyers who happen to be in-market today.",
+      "columns": [
+        {
+          "title": "Create demand",
+          "items": [
+            "Make the problem more visible",
+            "Build understanding and preference before active search",
+            "Use point of view, content, events and targeted distribution"
+          ]
+        },
+        {
+          "title": "Capture demand",
+          "items": [
+            "Meet buyers already researching a problem or solution",
+            "Make high-intent pages and offers easy to find",
+            "Reduce friction between interest and a useful next step"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "b2b demand generation strategy",
+      "eyebrow": "OPERATING SYSTEM",
+      "heading": "The B2B Demand Generation Operating System",
+      "intro": "The programme needs a cadence for deciding, running, measuring and learning rather than a calendar full of unrelated campaigns.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Audience",
+          "body": "Keep ICP and buying context explicit."
+        },
+        {
+          "title": "Narrative",
+          "body": "Decide what the market needs to understand or believe."
+        },
+        {
+          "title": "Programme",
+          "body": "Choose the combination of content, distribution, events, paid activity and capture points."
+        },
+        {
+          "title": "Sales connection",
+          "body": "Make commercial signals useful downstream."
+        },
+        {
+          "title": "Measurement",
+          "body": "Track how the programme influences relevant behaviour and pipeline."
+        },
+        {
+          "title": "Iteration",
+          "body": "Use the evidence to change the next programme cycle."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "theme": "alt",
+      "targetKeyword": "demand generation faq",
+      "eyebrow": "FAQ",
+      "heading": "Demand Generation FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "How is demand generation different from lead generation?",
+          "a": "Demand generation is broader than lead generation. It includes work that creates awareness, understanding and preference before a buyer is ready to identify themselves, as well as work that captures existing intent. Lead generation focuses more specifically on creating identifiable prospects or enquiries for follow-up. A useful growth system connects the two."
+        },
+        {
+          "q": "How long before demand generation produces measurable pipeline?",
+          "a": "There is no universal demand generation timeline. Existing demand, deal cycle, audience size, programme type and starting brand position all affect how quickly commercial signals appear. Capture activity can sometimes show movement sooner than demand creation. We define leading and downstream measures at the start rather than promise a fixed pipeline date."
+        },
+        {
+          "q": "What channels does B2B demand generation actually use?",
+          "a": "B2B demand generation can use content, SEO, paid search, paid social, events, ABM, community, partnerships, email and direct sales activity. The channel list is not the strategy. We choose channels based on the ICP, buying behaviour, message and whether the immediate job is creating demand, capturing it or both."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "Demand does not live in a channel plan.",
+      "body": "Build the programme around how the customer becomes aware, interested and ready to act.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Hero visual is a clean create/capture overlap. Distinguish this Growth page from /demand-generation by focusing on programme execution and channel system, while the GTM Leadership page owns senior demand architecture."
+}
