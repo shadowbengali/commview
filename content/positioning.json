@@ -1,0 +1,228 @@
+{
+  "slug": "positioning",
+  "pillar": "gtm-leadership",
+  "accent": "cyan",
+  "meta": {
+    "title": "B2B Positioning Consultant | CommView",
+    "description": "B2B positioning that clarifies who you're for, why you win and what to say. Consultant-led positioning work for B2B scale-ups.",
+    "primaryKeyword": "b2b positioning",
+    "secondaryKeywords": [
+      "positioning problems",
+      "b2b positioning framework",
+      "positioning workshop deliverables",
+      "positioning vs branding",
+      "positioning project timeline",
+      "positioning vs product"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "GTM Leadership",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "B2B Positioning",
+        "href": "/positioning"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/insights/b2b-positioning",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/positioning-or-product-problem",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/why-customers-choose-competitors",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B POSITIONING",
+    "h1": [
+      "B2B Positioning.",
+      "Make the choice clearer."
+    ],
+    "accentLine": 1,
+    "sub": "Good positioning helps the right customer understand who you are for, what problem you solve, why you are different and which alternatives they should compare you with. It gives Marketing and Sales the same commercial story.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "overlap",
+      "caption": "THE POSITIONING GAP",
+      "sub": "What you say only matters if the market understands it.",
+      "leftLabel": "HOW YOU DESCRIBE YOURSELF",
+      "rightLabel": "HOW THE MARKET SEES YOU",
+      "centreLabel": "POSITIONING"
+    }
+  },
+  "sections": [
+    {
+      "id": "definition",
+      "type": "lead",
+      "targetKeyword": "b2b positioning",
+      "eyebrow": "WHAT POSITIONING IS",
+      "heading": "B2B Positioning Is Not Your Tagline, Brand or Messaging",
+      "intro": [
+        "Positioning is the place your product or company occupies in the customer's mind relative to the alternatives they believe they have.",
+        "Messaging expresses that position. Branding gives it identity. A tagline may compress part of it. None of those fixes the underlying problem if the market has put you in the wrong category, cannot see the difference or does not understand why it should care."
+      ]
+    },
+    {
+      "id": "signals",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "positioning problems",
+      "eyebrow": "POSITIONING PROBLEMS",
+      "heading": "Signs Your B2B Positioning Is Broken",
+      "intro": "Positioning problems often show up downstream before anyone calls them positioning problems.",
+      "items": [
+        {
+          "title": "Customers describe you differently",
+          "body": "Prospects leave the sales call with a different idea of what you do than the one you intended."
+        },
+        {
+          "title": "The wrong competitors keep appearing",
+          "body": "Buyers compare you with alternatives you did not think you were competing against."
+        },
+        {
+          "title": "Marketing creates interest but Sales struggles",
+          "body": "The message can earn attention without creating enough commercial preference to close."
+        },
+        {
+          "title": "Every audience gets the same story",
+          "body": "The proposition is so broad that nobody can see why it is specifically relevant to them."
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "b2b positioning framework",
+      "eyebrow": "THE METHOD",
+      "heading": "A B2B Positioning Framework Built From the Customer's Choice",
+      "intro": "We work backwards from the buying decision rather than forwards from the words you already use.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Alternatives",
+          "body": "What would the customer do if you did not exist?"
+        },
+        {
+          "title": "Best-fit customer",
+          "body": "Who feels the problem strongly enough for the difference to matter?"
+        },
+        {
+          "title": "Unique value",
+          "body": "What can you credibly deliver that changes the customer's choice?"
+        },
+        {
+          "title": "Category",
+          "body": "Which market frame helps the buyer understand what you are and how to compare you?"
+        },
+        {
+          "title": "Evidence",
+          "body": "What proof makes the position believable rather than aspirational?"
+        },
+        {
+          "title": "Expression",
+          "body": "Turn the position into a usable commercial story for Marketing and Sales."
+        }
+      ]
+    },
+    {
+      "id": "deliverables",
+      "type": "grid",
+      "targetKeyword": "positioning workshop deliverables",
+      "eyebrow": "WHAT YOU GET",
+      "heading": "Positioning Workshop Deliverables Your Team Can Use",
+      "items": [
+        {
+          "title": "Positioning statement",
+          "body": "A clear internal articulation of the customer, market frame, value and difference."
+        },
+        {
+          "title": "Messaging architecture",
+          "body": "The hierarchy that turns the position into useful messages rather than a collection of claims."
+        },
+        {
+          "title": "Sales narrative",
+          "body": "A commercial story that helps Sales frame the problem, alternatives and reason to change."
+        },
+        {
+          "title": "Competitive view",
+          "body": "A practical view of the alternatives customers consider and where the meaningful differences sit."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "theme": "alt",
+      "targetKeyword": "b2b positioning faq",
+      "eyebrow": "FAQ",
+      "heading": "B2B Positioning FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Is positioning the same as branding?",
+          "a": "No. Positioning defines the place you want to occupy in the customer's mind relative to the alternatives they consider. Branding expresses identity through elements such as name, visual system and tone. Strong branding can amplify good positioning, but it cannot compensate for an unclear market category or weak commercial difference."
+        },
+        {
+          "q": "How long does a positioning project take?",
+          "a": "The timeline depends on how much customer evidence already exists, how many stakeholders need to be involved and whether research is required. Commview scopes the work around the decision that needs to be made rather than promising an arbitrary duration. A focused scale-up engagement should move quickly enough to maintain momentum."
+        },
+        {
+          "q": "Can positioning be fixed without changing the product?",
+          "a": "Sometimes. If the product already solves a valuable problem but customers misunderstand who it is for, what category it belongs in or why it is different, positioning may be the main issue. If the promised value is not supported by the product experience, the problem may sit in product as well as positioning."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "POSITIONING",
+      "heading": "If customers cannot see why they should choose you, more promotion will not fix it.",
+      "body": "We can help work out whether the problem is the position, the message, the product or a combination.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Clarify the choice.",
+        "Align the story.",
+        "Make it usable."
+      ]
+    }
+  ],
+  "notes": "GTM Leadership cyan #00E5FF. Primary visual is the gap between how the business describes itself and how the market sees it. Use only one additional major visual: the positioning method. Editorial, precise, no brand-agency moodboard aesthetic."
+}

@@ -35,9 +35,16 @@ function discoverBuilt() {
   return { exact, dynamicParents };
 }
 const BUILT = discoverBuilt();
+// Every content page renders via the catch-all route, so a content slug counts as built.
+const CONTENT_SLUGS = new Set(
+  fs.readdirSync(DIR)
+    .filter((f) => f.endsWith(".json") && f !== "page.schema.json")
+    .map((f) => { try { return norm("/" + JSON.parse(fs.readFileSync(path.join(DIR, f), "utf8")).slug); } catch { return null; } })
+    .filter(Boolean)
+);
 const isBuilt = (href) => {
   const p = norm(href);
-  return BUILT.exact.has(p) || BUILT.dynamicParents.has(p.split("/")[1]);
+  return BUILT.exact.has(p) || BUILT.dynamicParents.has(p.split("/")[1]) || CONTENT_SLUGS.has(p);
 };
 
 const flat = (v) => (Array.isArray(v) ? v.join(" ") : v || "");
@@ -99,7 +106,8 @@ for (const f of files) {
 
   const before = errors;
   if (!validate(data)) for (const e of validate.errors) fail(f, `${e.instancePath || "/"} ${e.message}`);
-  if (data.slug && data.slug !== slug) fail(f, `slug "${data.slug}" does not match filename "${slug}"`);
+  if (data.slug && data.slug.replaceAll("/", "-") !== slug) fail(f, `filename "${slug}" must be the slug "${data.slug}" with '/' as '-'`);
+  if (data.slug && !PLANNED.has(norm("/" + data.slug))) seo(f, `slug "/${data.slug}" is not in the planned sitemap (lib/routes.json)`);
 
   const json = JSON.stringify(data);
   const todos = (json.match(/TODO:/g) || []).length;

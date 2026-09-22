@@ -2,12 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://commview.co.uk/schemas/page.schema.json",
   "title": "CommView pillar page content",
-  "description": "Content contract v1.0. ChatGPT authors content/<slug>.json against this; the pillar renderer consumes it. Frozen — changes are breaking.",
+  "description": "Content contract v1.1. ChatGPT authors content/<slug>.json against this; the pillar renderer consumes it. v1.1 adds nested slugs (e.g. product-strategy/consulting) rendered by the catch-all route; file name is the slug with '/' replaced by '-'.",
   "type": "object",
   "required": ["slug", "pillar", "accent", "meta", "hero", "sections"],
   "additionalProperties": false,
   "properties": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$" },
     "pillar": { "enum": ["gtm-leadership", "growth", "product", "operational-ai", "corporate"] },
     "accent": { "enum": ["cyan", "green", "blue", "pink", "neutral"] },
     "meta": { "$ref": "#/$defs/meta" },
@@ -34,7 +34,7 @@
       "properties": {
         "label": { "type": "string", "minLength": 1 },
         "href": { "$ref": "#/$defs/internalPath" },
-        "style": { "enum": ["primary", "ghost"] }
+        "style": { "enum": ["primary", "ghost", "text"] }
       }
     },
 
@@ -47,7 +47,7 @@
         "description": { "type": "string", "minLength": 1, "maxLength": 165 },
         "primaryKeyword": { "type": "string", "minLength": 1 },
         "secondaryKeywords": { "type": "array", "items": { "type": "string" } },
-        "schemaTypes": { "type": "array", "items": { "enum": ["Service", "FAQPage", "BreadcrumbList"] } },
+        "schemaTypes": { "type": "array", "items": { "enum": ["Service", "FAQPage", "BreadcrumbList", "LocalBusiness"] } },
         "breadcrumb": {
           "type": "array",
           "items": { "type": "object", "additionalProperties": false, "required": ["name"], "properties": { "name": { "type": "string" }, "href": { "$ref": "#/$defs/internalPath" } } }
@@ -66,11 +66,11 @@
 
     "diagram": {
       "oneOf": [
-        { "type": "object", "additionalProperties": false, "required": ["kind"], "properties": { "kind": { "const": "none" } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind"], "properties": { "kind": { "const": "none" }, "caption": { "type": "string" }, "sub": { "type": "string" } } },
         { "type": "object", "additionalProperties": false, "required": ["kind", "core", "nodes"], "properties": { "kind": { "const": "hub" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "core": { "type": "string" }, "nodes": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "answer": { "type": "string" } } },
-        { "type": "object", "additionalProperties": false, "required": ["kind", "core", "lobes"], "properties": { "kind": { "const": "overlap" }, "core": { "type": "string" }, "coreLines": { "type": "array", "items": { "type": "string" } }, "lobes": { "type": "array", "minItems": 3, "maxItems": 4, "items": { "type": "string" } } } },
-        { "type": "object", "additionalProperties": false, "required": ["kind", "layers"], "properties": { "kind": { "const": "stack" }, "layers": { "type": "array", "minItems": 2, "items": { "type": "string" } } } },
-        { "type": "object", "additionalProperties": false, "required": ["kind", "src", "alt"], "properties": { "kind": { "const": "image" }, "src": { "type": "string" }, "alt": { "type": "string", "minLength": 1 } } }
+        { "type": "object", "additionalProperties": false, "required": ["kind", "leftLabel", "rightLabel"], "properties": { "kind": { "const": "overlap" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "leftLabel": { "type": "string" }, "rightLabel": { "type": "string" }, "centreLabel": { "type": "string" } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "layers"], "properties": { "kind": { "const": "stack" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "layers": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "highlight": { "type": "integer", "minimum": 0 } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "src", "alt"], "properties": { "kind": { "const": "image" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "src": { "type": "string" }, "alt": { "type": "string", "minLength": 1 } } }
       ]
     },
 
@@ -119,7 +119,7 @@
 
     "section": {
       "oneOf": [
-        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "properties": { "type": { "const": "lead" } }, "unevaluatedProperties": false },
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "properties": { "type": { "const": "lead" }, "ctas": { "type": "array", "items": { "$ref": "#/$defs/cta" } } }, "unevaluatedProperties": false },
 
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["items"],
           "properties": { "type": { "const": "grid" },

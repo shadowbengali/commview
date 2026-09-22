@@ -1,0 +1,274 @@
+{
+  "slug": "fractional-cmo/services",
+  "pillar": "gtm-leadership",
+  "accent": "cyan",
+  "meta": {
+    "title": "Fractional CMO Services | What CommView Delivers",
+    "description": "Fractional CMO services covering positioning, ICP, routes to market, demand generation, pipeline, sales handoff and operating rhythm.",
+    "primaryKeyword": "fractional cmo services",
+    "secondaryKeywords": [
+      "b2b positioning",
+      "ideal customer profile",
+      "b2b routes to market",
+      "demand generation consultant",
+      "b2b pipeline",
+      "sales marketing alignment",
+      "gtm operating rhythm"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "GTM Leadership",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "Services",
+        "href": "/fractional-cmo/services"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/positioning",
+        "purpose": "child"
+      },
+      {
+        "href": "/demand-generation",
+        "purpose": "child"
+      },
+      {
+        "href": "/ideal-customer-profile-workshop",
+        "purpose": "child"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "FRACTIONAL CMO SERVICES",
+    "h1": [
+      "Fractional CMO Services.",
+      "What we own with you."
+    ],
+    "accentLine": 1,
+    "sub": "Senior GTM leadership is useful when it connects the commercial decisions that usually get split across different people. Positioning, ICP, routes to market, demand, pipeline and operating rhythm need one through-line.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "ONE COMMERCIAL SYSTEM",
+      "sub": "Different disciplines. One operating view.",
+      "core": "GTM",
+      "nodes": [
+        "POSITIONING",
+        "ICP",
+        "ROUTES TO MARKET",
+        "DEMAND",
+        "PIPELINE",
+        "SALES HANDOFF",
+        "OPERATING RHYTHM"
+      ],
+      "answer": "CONNECTED"
+    }
+  },
+  "sections": [
+    {
+      "id": "positioning",
+      "type": "lead",
+      "targetKeyword": "b2b positioning",
+      "eyebrow": "POSITIONING",
+      "heading": "Positioning That Gives the Market a Reason to Choose You",
+      "intro": [
+        "Clarify the category you compete in, the alternatives customers compare you with, the value that makes you different and the language Sales and Marketing can both use.",
+        "The work is not a tagline exercise. It is about making the commercial choice clearer for the buyer."
+      ],
+      "ctas": [
+        {
+          "label": "Explore B2B Positioning",
+          "href": "/positioning",
+          "style": "text"
+        }
+      ]
+    },
+    {
+      "id": "icp",
+      "type": "lead",
+      "theme": "alt",
+      "targetKeyword": "ideal customer profile",
+      "eyebrow": "IDEAL CUSTOMER PROFILE",
+      "heading": "An Ideal Customer Profile You Can Actually Use",
+      "intro": [
+        "Define which customers are most likely to value what you sell, buy it successfully and justify the cost of acquiring them.",
+        "We connect customer evidence, segmentation and commercial judgement so ICP becomes useful for targeting, messaging, qualification and sales prioritisation."
+      ],
+      "ctas": [
+        {
+          "label": "Explore the ICP Workshop",
+          "href": "/ideal-customer-profile-workshop",
+          "style": "text"
+        }
+      ]
+    },
+    {
+      "id": "rtm",
+      "type": "lead",
+      "targetKeyword": "b2b routes to market",
+      "eyebrow": "ROUTES TO MARKET",
+      "heading": "Choose the Route to Market Before You Choose the Channels",
+      "intro": [
+        "Work out how the product should reach the customer before filling a plan with tactics. That can mean sales-led, product-led, partner-led or a combination depending on the buying motion.",
+        "Channel decisions then follow the route to market rather than becoming the strategy themselves."
+      ]
+    },
+    {
+      "id": "demand",
+      "type": "lead",
+      "theme": "alt",
+      "targetKeyword": "demand generation consultant",
+      "eyebrow": "DEMAND GENERATION",
+      "heading": "Demand Generation Connected to the Commercial Plan",
+      "intro": [
+        "Build programmes across content, paid, events, ABM and other channels around the customer, proposition and route to market.",
+        "Commview can stay close to execution as well as setting direction, so the person making the commercial decision can see whether the programme is actually working."
+      ],
+      "ctas": [
+        {
+          "label": "Explore Demand Generation",
+          "href": "/demand-generation",
+          "style": "text"
+        }
+      ]
+    },
+    {
+      "id": "pipeline",
+      "type": "grid",
+      "targetKeyword": "b2b pipeline",
+      "eyebrow": "PIPELINE",
+      "heading": "Make Pipeline Something the Business Can Manage",
+      "intro": "A pipeline number is only useful when the stages, conversion assumptions and definitions underneath it are understood.",
+      "items": [
+        {
+          "title": "Stages",
+          "body": "Make the movement from interest to opportunity and customer visible."
+        },
+        {
+          "title": "Conversion",
+          "body": "Understand where prospects progress, stall or disappear."
+        },
+        {
+          "title": "Coverage",
+          "body": "Connect pipeline requirements to the revenue target rather than an arbitrary lead target."
+        },
+        {
+          "title": "Forecasting",
+          "body": "Use the evidence available to improve the quality of commercial decisions."
+        }
+      ]
+    },
+    {
+      "id": "handoff",
+      "type": "lead",
+      "theme": "alt",
+      "targetKeyword": "sales marketing alignment",
+      "eyebrow": "SALES HANDOFF",
+      "heading": "Sales and Marketing Need the Same View of a Good Opportunity",
+      "intro": [
+        "Definitions, routing and feedback loops should help the business decide what deserves attention, not create a ceremonial handoff between teams.",
+        "We connect qualification and sales feedback so targeting and demand programmes can improve from what happens downstream."
+      ]
+    },
+    {
+      "id": "rhythm",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "gtm operating rhythm",
+      "eyebrow": "OPERATING RHYTHM",
+      "heading": "Turn the GTM Plan Into a Weekly Operating Rhythm",
+      "intro": "Strategy only becomes useful when the business has a repeatable way to see what is happening and make decisions.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "See",
+          "body": "Use a small set of commercial measures to understand what changed."
+        },
+        {
+          "title": "Diagnose",
+          "body": "Separate a real constraint from noise or a one-off result."
+        },
+        {
+          "title": "Decide",
+          "body": "Make the trade-off, set the priority and name the owner."
+        },
+        {
+          "title": "Act",
+          "body": "Move the work forward rather than creating another deck."
+        },
+        {
+          "title": "Learn",
+          "body": "Bring the result back into the next decision."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "fractional cmo services faq",
+      "eyebrow": "FAQ",
+      "heading": "Fractional CMO Services FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What's included in a fractional CMO engagement?",
+          "a": "A fractional CMO engagement can cover positioning, ICP, routes to market, demand generation, pipeline, sales handoff and the operating rhythm around them. The exact scope should follow the commercial constraint rather than a fixed menu. Commview combines senior direction with hands-on involvement where the work needs to move."
+        },
+        {
+          "q": "How is this different from hiring a marketing agency?",
+          "a": "A fractional CMO sits closer to the business decision than a typical agency engagement. The role can set priorities across GTM, marketing and pipeline, work with internal teams and specialists, and stay accountable for the operating picture. Agencies can still be useful delivery partners inside that system."
+        },
+        {
+          "q": "Do you work with our existing marketing team?",
+          "a": "Yes. A fractional CMO can work with an existing marketing lead, team, agencies and specialist suppliers rather than replacing them. The aim is to add senior commercial direction, connect the work and help the team make better decisions. Where specialist execution is needed, Commview can coordinate it."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GTM LEADERSHIP",
+      "heading": "One commercial problem rarely fits neatly inside one marketing discipline.",
+      "body": "Tell us what is happening. We will work out where the constraint sits and what needs to move.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Insight.",
+        "Momentum.",
+        "Impact."
+      ]
+    }
+  ],
+  "notes": "GTM Leadership cyan #00E5FF. Main visual is the connected GTM operating system. Avoid seven disconnected service cards as the dominant design. Use editorial sections, rules and whitespace. No generic SaaS dashboard."
+}

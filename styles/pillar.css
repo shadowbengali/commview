@@ -63,6 +63,9 @@
 .p-lead__body { display: grid; gap: var(--space-4); color: var(--text-secondary); font-size: 16px; line-height: 1.65; max-width: 58ch; }
 .dark .p-lead__body { color: var(--slate-light); }
 .p-lead__body .lit { color: var(--text-primary); font-weight: 600; }
+.p-lead__cta { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); }
+.p-textlink { font-size: 15px; font-weight: 600; color: var(--c); }
+.p-textlink:hover { text-decoration: underline; text-underline-offset: 3px; }
 .dark .p-lead__body .lit { color: var(--brand-polar); }
 
 /* ===== grid (numbered cells) ===== */

@@ -1,0 +1,201 @@
+{
+  "slug": "product-strategy/discovery",
+  "pillar": "product",
+  "accent": "blue",
+  "meta": {
+    "title": "Product Discovery Service | B2B | CommView",
+    "description": "Product discovery for B2B. Research the customer problem, synthesise evidence, prototype possible answers and decide what deserves building.",
+    "primaryKeyword": "product discovery",
+    "secondaryKeywords": [
+      "what is product discovery",
+      "product discovery process",
+      "continuous product discovery",
+      "product discovery faq",
+      "product discovery services",
+      "product discovery timeline",
+      "when to skip product discovery"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Product",
+        "href": "/product-strategy"
+      },
+      {
+        "name": "PRODUCT DISCOVERY",
+        "href": "/product-strategy/discovery"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/product-strategy",
+        "purpose": "parent"
+      },
+      {
+        "href": "/product-strategy/mvp",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "PRODUCT DISCOVERY",
+    "h1": [
+      "Product Discovery.",
+      "Build evidence before you build product."
+    ],
+    "accentLine": 1,
+    "sub": "Discovery is the work that reduces uncertainty before delivery becomes expensive. We research the customer problem, make the assumptions visible, prototype possible answers and use the evidence to decide what deserves to move forward.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "DISCOVERY",
+      "sub": "Each step should reduce uncertainty.",
+      "layers": [
+        "PROBLEM",
+        "RESEARCH",
+        "SYNTHESIS",
+        "PROTOTYPE",
+        "TEST",
+        "DECIDE"
+      ],
+      "highlight": 5
+    }
+  },
+  "sections": [
+    {
+      "id": "definition",
+      "type": "lead",
+      "targetKeyword": "what is product discovery",
+      "eyebrow": "WHAT IS DISCOVERY?",
+      "heading": "What Product Discovery Is",
+      "intro": [
+        "Product discovery is the evidence-gathering and decision work that happens before or alongside delivery. Its purpose is to understand the customer problem, test important assumptions and reduce the risk of committing significant effort to the wrong solution.",
+        "Good discovery ends in a decision, not an ever-growing research repository."
+      ]
+    },
+    {
+      "id": "process",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "product discovery process",
+      "eyebrow": "THE PROCESS",
+      "heading": "The Commview Product Discovery Process",
+      "intro": "Research is useful when it changes what the team decides to do.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Frame",
+          "body": "Define the customer, problem and decision the discovery needs to inform."
+        },
+        {
+          "title": "Research",
+          "body": "Use interviews, product data, frontline evidence and market context appropriate to the question."
+        },
+        {
+          "title": "Synthesis",
+          "body": "Turn observations into patterns, assumptions and competing explanations."
+        },
+        {
+          "title": "Prototype",
+          "body": "Make possible solutions concrete enough for users and stakeholders to react to."
+        },
+        {
+          "title": "Test",
+          "body": "Collect evidence against the important assumptions rather than seeking general approval."
+        },
+        {
+          "title": "Decide",
+          "body": "Move forward, change direction, gather more evidence or stop."
+        }
+      ]
+    },
+    {
+      "id": "continuous",
+      "type": "comparison",
+      "theme": "alt",
+      "targetKeyword": "continuous product discovery",
+      "eyebrow": "CONTINUOUS OR PROJECT",
+      "heading": "Continuous Product Discovery vs a Focused Discovery Project",
+      "intro": "Both can be useful. The right model depends on the product, team and decision cadence.",
+      "columns": [
+        {
+          "title": "Continuous discovery",
+          "items": [
+            "Useful when a product team is making regular product decisions",
+            "Keeps customer contact and evidence inside the operating rhythm",
+            "Works best when the team has the capacity and ownership to sustain it"
+          ]
+        },
+        {
+          "title": "Focused discovery",
+          "items": [
+            "Useful when a specific strategic decision needs concentrated evidence",
+            "Can reset a product that has drifted or de-risk a significant new bet",
+            "Creates a defined decision point before larger investment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "product discovery faq",
+      "eyebrow": "FAQ",
+      "heading": "Product Discovery FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What does a product discovery service include?",
+          "a": "A product discovery service can include problem framing, customer research, analysis of product and commercial evidence, synthesis, assumption mapping, prototyping, user testing and a recommendation on what should happen next. The exact mix should follow the decision being made rather than a fixed workshop checklist. Commview can continue into specification and delivery."
+        },
+        {
+          "q": "How long does product discovery take?",
+          "a": "Product discovery has no universal duration. A narrow decision with accessible users and existing evidence can move quickly, while a new market or complex workflow may need deeper research and several test cycles. We scope discovery around the uncertainty that must be reduced and aim to reach a useful decision without extending research unnecessarily."
+        },
+        {
+          "q": "Do we need discovery if we already know what customers want?",
+          "a": "Existing customer knowledge is valuable evidence, but it does not automatically tell you which problem matters most or which solution will work. Discovery can be lighter when the evidence is already strong. The key is to identify what remains uncertain before committing delivery effort, rather than repeating research simply because a process says you should."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "PRODUCT",
+      "heading": "Discovery should end with a better decision, not just more notes.",
+      "body": "Bring the customer problem, evidence and product decision into the same piece of work.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Problem before roadmap.",
+        "Evidence before opinion.",
+        "Delivery stays connected."
+      ]
+    }
+  ],
+  "notes": "Product accent #3B82F6. Main visual is problem-to-decision progression. Avoid sticky-note workshop clichés and decorative research artefacts."
+}

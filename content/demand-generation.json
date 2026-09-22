@@ -1,0 +1,206 @@
+{
+  "slug": "demand-generation",
+  "pillar": "gtm-leadership",
+  "accent": "cyan",
+  "meta": {
+    "title": "Demand Generation Consultant | B2B | CommView",
+    "description": "B2B demand generation consulting across content, paid, ABM and events. Build a connected demand programme around pipeline, not isolated campaigns.",
+    "primaryKeyword": "demand generation consultant",
+    "secondaryKeywords": [
+      "b2b demand generation",
+      "b2b demand generation strategy",
+      "demand generation programme",
+      "demand gen vs lead gen",
+      "demand generation consultant role"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "GTM Leadership",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "Demand Generation",
+        "href": "/demand-generation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/growth/b2b-lead-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/demand-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "DEMAND GENERATION CONSULTANT",
+    "h1": [
+      "B2B Demand Generation.",
+      "Build the engine, not another campaign."
+    ],
+    "accentLine": 1,
+    "sub": "Demand generation should connect who you want to reach, what they need to understand, how you create and capture demand, and what happens when interest turns commercial. We build the system around the buyer, then run the work that makes it move.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "THE DEMAND ENGINE",
+      "sub": "One connected loop, not a pile of channels.",
+      "layers": [
+        "CREATE DEMAND",
+        "CAPTURE DEMAND",
+        "CONVERT",
+        "LEARN"
+      ],
+      "highlight": 3
+    }
+  },
+  "sections": [
+    {
+      "id": "meaning",
+      "type": "lead",
+      "targetKeyword": "b2b demand generation",
+      "eyebrow": "DEMAND GENERATION",
+      "heading": "What B2B Demand Generation Actually Means",
+      "intro": [
+        "Demand generation is the coordinated work of creating awareness and preference, capturing existing intent and helping the right buyers move towards a commercial conversation.",
+        "It is broader than lead generation and more accountable than simply calling something brand. The job is to build a repeatable connection between market, message, programmes, buyer behaviour and pipeline."
+      ]
+    },
+    {
+      "id": "approach",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "b2b demand generation strategy",
+      "eyebrow": "THE APPROACH",
+      "heading": "A B2B Demand Generation Strategy Starts Before the Channels",
+      "intro": "Commview does not arrive with a channel quota. We work out what the business needs to change, then choose the programmes that fit the buying motion.",
+      "items": [
+        {
+          "title": "Customer and ICP",
+          "body": "Know which accounts and people the programme is actually trying to influence."
+        },
+        {
+          "title": "Position and message",
+          "body": "Give the market a reason to notice, understand and prefer the offer."
+        },
+        {
+          "title": "Create demand",
+          "body": "Use useful content, events, paid activity, community or ABM where they fit the audience."
+        },
+        {
+          "title": "Capture demand",
+          "body": "Make it easy for existing intent to find the right page, proof, conversation or next step."
+        },
+        {
+          "title": "Connect Sales",
+          "body": "Route useful signals and commercial context rather than throwing disconnected leads over a wall."
+        },
+        {
+          "title": "Measure and learn",
+          "body": "Use downstream evidence to change targeting, message, programme mix and investment."
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "demand generation programme",
+      "eyebrow": "PROGRAMME, NOT CAMPAIGN",
+      "heading": "Build a Demand Generation Programme That Learns",
+      "intro": "Campaigns end. A demand engine should become better at deciding where to spend attention and money.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Diagnose",
+          "body": "Find the commercial constraint before choosing the tactic."
+        },
+        {
+          "title": "Design",
+          "body": "Connect audience, message, channel, offer and sales motion."
+        },
+        {
+          "title": "Run",
+          "body": "Execute the work rather than handing the plan to somebody else by default."
+        },
+        {
+          "title": "Measure",
+          "body": "Look beyond surface engagement to the commercial behaviour that follows."
+        },
+        {
+          "title": "Learn",
+          "body": "Feed sales and customer evidence back into the next programme decision."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "demand generation faq",
+      "eyebrow": "FAQ",
+      "heading": "Demand Generation FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "How is demand generation different from lead generation?",
+          "a": "Demand generation creates and captures interest across the buying journey, including activity that may not produce an immediate lead. Lead generation focuses more narrowly on identifying or collecting prospects for follow-up. A good B2B system connects both, but it does not treat every piece of attention as a lead."
+        },
+        {
+          "q": "What does a demand generation consultant do?",
+          "a": "A demand generation consultant helps decide who to target, what the market needs to hear, which programmes can create or capture demand, how activity connects to Sales and how performance should be measured. At Commview, that can include hands-on execution as well as strategy rather than stopping at a campaign plan."
+        },
+        {
+          "q": "Do you run the demand generation programmes as well as plan them?",
+          "a": "Yes, where that is the right engagement. Commview can write emails, shape content, review SEO and paid activity, analyse conversion and coordinate specialist execution. The aim is to keep strategy close enough to delivery that we can see whether the commercial hypothesis is actually working and change it when needed."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "DEMAND GENERATION",
+      "heading": "Stop asking which channel you need. Start with what is stopping demand from becoming pipeline.",
+      "body": "We can diagnose the constraint, design the programme and stay close enough to execution to see whether it works.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Create.",
+        "Capture.",
+        "Convert.",
+        "Learn."
+      ]
+    }
+  ],
+  "notes": "GTM Leadership cyan #00E5FF. Hero visual is a four-stage demand loop, not a funnel full of vanity metrics. Main in-page visual is the learning programme. Avoid ad-platform dashboards, fake charts and generic marketing icons."
+}

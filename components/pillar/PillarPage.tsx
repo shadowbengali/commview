@@ -106,34 +106,32 @@ function HubDiagram({ d }: { d: Extract<Diagram, { kind: "hub" }> }) {
   );
 }
 
+function TwoLine({ text, x, y }: { text: string; x: number; y: number }) {
+  const w = text.split(" ");
+  if (w.length < 2) return <text x={x} y={y + 5} textAnchor="middle" className="p-diagram__lobe">{text}</text>;
+  const mid = Math.ceil(w.length / 2);
+  return (
+    <>
+      <text x={x} y={y - 4} textAnchor="middle" className="p-diagram__lobe">{w.slice(0, mid).join(" ")}</text>
+      <text x={x} y={y + 15} textAnchor="middle" className="p-diagram__lobe">{w.slice(mid).join(" ")}</text>
+    </>
+  );
+}
+
 function OverlapDiagram({ d }: { d: Extract<Diagram, { kind: "overlap" }> }) {
-  const pc = { x: 300, y: 236, r: 66 };
-  const lobePos = [
-    { cx: 238, cy: 174, lx: 188, ly: 120 }, { cx: 362, cy: 174, lx: 412, ly: 120 },
-    { cx: 238, cy: 298, lx: 188, ly: 352 }, { cx: 362, cy: 298, lx: 412, ly: 352 },
-  ];
   return (
     <div className="p-diagram">
-      <svg viewBox="0 0 600 470" role="img" aria-label={`${d.core}: ${d.lobes.join(", ")}.`}>
-        <defs>
-          <filter id="pdoGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="14" /></filter>
-          <radialGradient id="pdoCore" cx="50%" cy="40%" r="65%"><stop offset="0" stopColor="#1a2350" /><stop offset="1" stopColor="#0b0f14" /></radialGradient>
-        </defs>
-        {d.lobes.map((_, i) => <circle key={i} cx={lobePos[i]?.cx} cy={lobePos[i]?.cy} r="122" fill={ACCENT} fillOpacity="0.09" stroke={ACCENT} strokeWidth="1.2" strokeOpacity="0.6" />)}
-        <circle cx={pc.x} cy={pc.y} r={pc.r + 14} fill={ACCENT} opacity="0.35" filter="url(#pdoGlow)" />
-        <circle cx={pc.x} cy={pc.y} r={pc.r} fill="url(#pdoCore)" stroke={ACCENT} strokeWidth="2" />
-        <text x={pc.x} y={pc.y - (d.coreLines?.length ? 6 : 0)} textAnchor="middle" className="p-diagram__core">{d.core}</text>
-        {d.coreLines?.map((l, i) => <text key={i} x={pc.x} y={pc.y + 16 + i * 16} textAnchor="middle" className="p-diagram__coreline">{l}</text>)}
-        {d.lobes.map((label, i) => {
-          const words = label.split(" ");
-          const p = lobePos[i]; if (!p) return null;
-          return (
-            <g key={label}>
-              <text x={p.lx} y={p.ly} textAnchor="middle" className="p-diagram__lobe">{words[0]}</text>
-              {words[1] && <text x={p.lx} y={p.ly + 18} textAnchor="middle" className="p-diagram__lobe">{words.slice(1).join(" ")}</text>}
-            </g>
-          );
-        })}
+      <svg viewBox="0 0 600 470" role="img" aria-label={`${d.leftLabel} and ${d.rightLabel}${d.centreLabel ? " combine into " + d.centreLabel : ""}.`}>
+        {d.caption && <text x="300" y="40" textAnchor="middle" className="p-diagram__cap">{d.caption}</text>}
+        {d.sub && <text x="300" y="64" textAnchor="middle" className="p-diagram__sub">{d.sub}</text>}
+        <circle cx="235" cy="268" r="150" fill="none" stroke="var(--slate)" strokeWidth="1.4" />
+        <circle cx="365" cy="268" r="150" fill={ACCENT} fillOpacity="0.14" stroke={ACCENT} strokeWidth="1.6" />
+        <TwoLine text={d.leftLabel} x={150} y={268} />
+        <TwoLine text={d.rightLabel} x={450} y={268} />
+        {d.centreLabel && (
+          <g><text x="300" y="272" textAnchor="middle" className="p-diagram__seq" fill={ACCENT}>{d.centreLabel.split(" ").slice(0, 1)}</text>
+          {d.centreLabel.split(" ").length > 1 && <text x="300" y="290" textAnchor="middle" className="p-diagram__seq" fill={ACCENT}>{d.centreLabel.split(" ").slice(1).join(" ")}</text>}</g>
+        )}
       </svg>
     </div>
   );
@@ -146,13 +144,17 @@ function DiagramView({ d }: { d?: Diagram }) {
   if (d.kind === "image") return <div className="p-shot"><img src={d.src} alt={d.alt} /></div>;
   if (d.kind === "stack") {
     const n = d.layers.length;
-    const top = 22, avail = 470 - top * 2, gap = 14;
+    const hasHead = !!(d.caption || d.sub);
+    const top = hasHead ? 78 : 22, avail = 470 - top - 22, gap = 14;
     const h = Math.min(72, (avail - gap * (n - 1)) / n), step = h + gap;
+    const hi = typeof d.highlight === "number" ? d.highlight : n - 1;
     return (
       <div className="p-diagram"><svg viewBox="0 0 600 470" role="img" aria-label={d.layers.join(", then ")}>
         <defs><filter id="pdsGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="10" /></filter></defs>
+        {d.caption && <text x="300" y="34" textAnchor="middle" className="p-diagram__cap">{d.caption}</text>}
+        {d.sub && <text x="300" y="58" textAnchor="middle" className="p-diagram__sub">{d.sub}</text>}
         {d.layers.map((l, i) => {
-          const y = top + i * step, last = i === n - 1;
+          const y = top + i * step, last = i === hi;
           return (
             <g key={l}>
               {i < n - 1 && <line x1="300" y1={y + h} x2="300" y2={y + step} stroke="var(--slate-dark)" strokeWidth="1.5" />}
@@ -170,6 +172,7 @@ function DiagramView({ d }: { d?: Diagram }) {
 
 /* ---------- sections ---------- */
 function Cta({ c }: { c: { label: string; href: string; style: string } }) {
+  if (c.style === "text") return <a className="p-textlink" href={c.href}>{c.label}</a>;
   const cls = c.style === "primary" ? "btn btn--accent btn--lg" : "btn btn--ghost btn--lg";
   return <a className={cls} href={c.href}>{c.label}</a>;
 }
@@ -184,7 +187,10 @@ function SectionView({ s }: { s: Section }) {
               {s.eyebrow && <p className="eyebrow-x" style={{ color: ACCENT }}>{s.eyebrow}</p>}
               {s.heading && <h2 className="p-lead__h" id={s.id} style={{ marginTop: "var(--space-4)" }}><Head h={s.heading} /></h2>}
             </div>
-            <div className="p-lead__body">{s.intro && <Paras r={s.intro} />}</div>
+            <div className="p-lead__body">
+              {s.intro && <Paras r={s.intro} />}
+              {s.ctas?.length ? <div className="p-lead__cta">{s.ctas.map((c, i) => <Cta key={i} c={c} />)}</div> : null}
+            </div>
           </div>
         </section>
       );
@@ -371,6 +377,14 @@ function buildJsonLd(page: Page) {
       name: page.meta.title.split("|")[0].trim(),
       description: page.meta.description,
       provider: { "@id": `${SITE}/#organisation` },
+      areaServed: { "@type": "Country", name: "United Kingdom" },
+    });
+  }
+  if (types.includes("LocalBusiness")) {
+    graph.push({
+      "@type": "LocalBusiness",
+      name: "CommView",
+      url: `${SITE}/${page.slug}`,
       areaServed: { "@type": "Country", name: "United Kingdom" },
     });
   }

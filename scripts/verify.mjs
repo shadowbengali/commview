@@ -8,7 +8,16 @@
 import { chromium } from "playwright";
 
 const BASE = process.env.VERIFY_BASE || "http://localhost:3000";
-const ROUTES = ["/", "/insights", "/what-we-do", "/fractional-cmo", "/growth", "/product-strategy", "/ai-consulting"]; // built pages.
+// Bespoke routes + a representative slice of the content-driven pages (every
+// template, accent and diagram kind). All 26 content pages are covered by the
+// content validator and the production build; this checks rendered overflow.
+const ROUTES = [
+  "/", "/insights", "/what-we-do", "/fractional-cmo",
+  "/growth", "/product-strategy", "/ai-consulting",
+  "/growth/seo", "/product-strategy/consulting",
+  "/ai-consulting/genai", "/ai-consulting/implementation",
+  "/fractional-cmo/services", "/positioning", "/ideal-customer-profile-workshop",
+];
 const WIDTHS = [360, 390, 430, 768, 900, 1024, 1280, 1440, 1920];
 
 const b = await chromium.launch();

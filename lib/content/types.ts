@@ -8,7 +8,7 @@ export type Accent = "cyan" | "green" | "blue" | "pink" | "neutral";
 export type Heading = string | string[]; // array = one forced <span> line per element
 export type Rich = string | string[]; // one paragraph, or several
 
-export type Cta = { label: string; href: string; style: "primary" | "ghost" };
+export type Cta = { label: string; href: string; style: "primary" | "ghost" | "text" };
 
 export type InternalLink = {
   href: string;
@@ -20,17 +20,17 @@ export type Meta = {
   description: string;
   primaryKeyword: string;
   secondaryKeywords?: string[];
-  schemaTypes?: ("Service" | "FAQPage" | "BreadcrumbList")[];
+  schemaTypes?: ("Service" | "FAQPage" | "BreadcrumbList" | "LocalBusiness")[];
   breadcrumb?: { name: string; href?: string }[];
   internalLinks?: InternalLink[];
 };
 
 export type Diagram =
-  | { kind: "none" }
+  | { kind: "none"; caption?: string; sub?: string }
   | { kind: "hub"; caption?: string; sub?: string; core: string; nodes: string[]; answer?: string }
-  | { kind: "overlap"; core: string; coreLines?: string[]; lobes: string[] }
-  | { kind: "stack"; layers: string[] }
-  | { kind: "image"; src: string; alt: string };
+  | { kind: "overlap"; caption?: string; sub?: string; leftLabel: string; rightLabel: string; centreLabel?: string }
+  | { kind: "stack"; caption?: string; sub?: string; layers: string[]; highlight?: number }
+  | { kind: "image"; caption?: string; sub?: string; src: string; alt: string };
 
 export type Hero = {
   eyebrow: string;
@@ -61,7 +61,7 @@ type Base = {
 };
 
 export type Section =
-  | (Base & { type: "lead" })
+  | (Base & { type: "lead"; ctas?: Cta[] })
   | (Base & { type: "grid"; items: { title: string; body: string; href?: string }[] })
   | (Base & {
       type: "venn";

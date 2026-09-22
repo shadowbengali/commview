@@ -1,0 +1,202 @@
+{
+  "slug": "ai-consulting/implementation",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI Implementation Consulting | B2B | CommView",
+    "description": "AI implementation consulting for B2B. Turn a useful AI opportunity into a deployed, measured and adopted system without separating strategy from delivery.",
+    "primaryKeyword": "ai implementation consulting",
+    "secondaryKeywords": [
+      "ai implementation challenges",
+      "ai implementation strategy",
+      "ai adoption",
+      "ai implementation faq",
+      "ai implementation in house vs consulting",
+      "ai implementation timeline"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "AI IMPLEMENTATION CONSULTING",
+        "href": "/ai-consulting/implementation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/ai-consulting/business-operations",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/responsible-ai",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI IMPLEMENTATION CONSULTING",
+    "h1": [
+      "AI Implementation Consulting.",
+      "Get it out of the demo and into the operation."
+    ],
+    "accentLine": 1,
+    "sub": "AI initiatives often look convincing in a prototype and become difficult when they meet real data, systems, controls and users. We keep strategy and implementation connected, deploy small enough to learn and scale only after the system proves useful in the real workflow.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "THE IMPLEMENTATION GAP",
+      "sub": "A demo is not an operating system.",
+      "layers": [
+        "OPPORTUNITY",
+        "PROTOTYPE",
+        "REAL DATA",
+        "WORKFLOW + CONTROLS",
+        "ADOPTION",
+        "MEASURED SYSTEM"
+      ],
+      "highlight": 3
+    }
+  },
+  "sections": [
+    {
+      "id": "challenges",
+      "type": "grid",
+      "targetKeyword": "ai implementation challenges",
+      "eyebrow": "WHY IT STALLS",
+      "heading": "Why AI Initiatives Stall at Implementation",
+      "items": [
+        {
+          "title": "The demo avoided the messy workflow",
+          "body": "The prototype proved a capability but not how it fits the actual process, exceptions and ownership."
+        },
+        {
+          "title": "The data is not ready",
+          "body": "Access, quality, permissions or context become material once the system leaves a controlled example."
+        },
+        {
+          "title": "Nobody owns the operating risk",
+          "body": "Teams have not agreed who reviews failures, handles exceptions or decides when the system should stop."
+        },
+        {
+          "title": "Adoption arrives too late",
+          "body": "Users are asked to change behaviour after the solution has already been designed around assumptions about their work."
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "ai implementation strategy",
+      "eyebrow": "THE METHOD",
+      "heading": "An AI Implementation Strategy Built to Learn Before It Scales",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Define",
+          "body": "Choose the operational problem, baseline and outcome that justify implementation."
+        },
+        {
+          "title": "Build small",
+          "body": "Create the smallest production-relevant version capable of testing the important assumptions."
+        },
+        {
+          "title": "Evaluate",
+          "body": "Test quality, failure modes, cost and the consequence of errors using realistic inputs."
+        },
+        {
+          "title": "Deploy",
+          "body": "Connect the system to the real workflow with logging, controls and escalation."
+        },
+        {
+          "title": "Adopt",
+          "body": "Train users, clarify ownership and adapt the workflow around what people actually need."
+        },
+        {
+          "title": "Scale",
+          "body": "Expand only after measured evidence supports the next investment."
+        }
+      ]
+    },
+    {
+      "id": "adoption",
+      "type": "lead",
+      "theme": "alt",
+      "targetKeyword": "ai adoption",
+      "eyebrow": "ADOPTION",
+      "heading": "AI Adoption Is Part of the Implementation",
+      "intro": [
+        "A technically working system creates little value if the people responsible for the process do not trust it, understand it or know what to do when it fails.",
+        "We involve users in the workflow design, make human responsibilities explicit and document how the system should be used, reviewed and changed. Adoption is treated as operating design, not a training session at the end."
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai implementation faq",
+      "eyebrow": "FAQ",
+      "heading": "AI Implementation FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Why do AI initiatives stall at implementation?",
+          "a": "AI initiatives often stall because a promising demo has not solved the operational work around it. Real implementation introduces data access, integrations, controls, exception handling, ownership, cost and user adoption. We design those requirements into the implementation rather than treating the model or prototype as the finished solution."
+        },
+        {
+          "q": "AI implementation consulting vs building it in-house: which is right?",
+          "a": "Build in-house when you have the product, technical and operational capacity to evaluate, deploy and maintain the system responsibly. Consulting can help when the opportunity is clear but the business lacks specialist capacity or needs an experienced operator to connect strategy, workflow and implementation. A hybrid model can also transfer capability into the team."
+        },
+        {
+          "q": "How long does an AI implementation take?",
+          "a": "There is no responsible fixed timeline for AI implementation. A contained workflow using existing tools can be materially simpler than a custom system touching sensitive data and core operations. We scope around the workflow, integrations, risk and evaluation required, then aim to deploy the smallest useful version before expanding the implementation."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "The hard part is not making AI do something once. It is making the system useful repeatedly.",
+      "body": "Turn the opportunity into a controlled, adopted workflow and measure whether it deserves to scale.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. Hero visual is the gap from prototype to measured system. Avoid generic transformation diagrams."
+}

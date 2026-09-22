@@ -1,0 +1,199 @@
+{
+  "slug": "product-strategy/mvp",
+  "pillar": "product",
+  "accent": "blue",
+  "meta": {
+    "title": "MVP Development & Scoping | B2B | CommView",
+    "description": "MVP development and scoping for B2B scale-ups. Identify the riskiest assumption, design the smallest useful test and connect learning to delivery.",
+    "primaryKeyword": "mvp development",
+    "secondaryKeywords": [
+      "what is mvp development",
+      "mvp development process",
+      "b2b mvp",
+      "mvp faq",
+      "mvp development cost",
+      "mvp development timeline"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Product",
+        "href": "/product-strategy"
+      },
+      {
+        "name": "MVP DEVELOPMENT",
+        "href": "/product-strategy/mvp"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/product-strategy",
+        "purpose": "parent"
+      },
+      {
+        "href": "/product-strategy/discovery",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/product-market-fit",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "MVP DEVELOPMENT",
+    "h1": [
+      "MVP Development and Scoping.",
+      "Test the riskiest assumption, not your ability to build."
+    ],
+    "accentLine": 1,
+    "sub": "An MVP should create useful evidence before the business commits to more product than it needs. We identify the assumption most capable of breaking the idea, design the smallest credible way to test it and connect what we learn to the next product decision.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "THE MVP LOGIC",
+      "sub": "Reduce uncertainty before increasing build.",
+      "layers": [
+        "ASSUMPTIONS",
+        "RISKIEST BET",
+        "SMALLEST CREDIBLE TEST",
+        "EVIDENCE",
+        "DECISION"
+      ],
+      "highlight": 2
+    }
+  },
+  "sections": [
+    {
+      "id": "definition",
+      "type": "comparison",
+      "targetKeyword": "what is mvp development",
+      "eyebrow": "WHAT AN MVP IS",
+      "heading": "What MVP Development Is, and What It Is Not",
+      "intro": "Minimum does not mean careless. Viable does not mean every feature the eventual product may need.",
+      "columns": [
+        {
+          "title": "An MVP is",
+          "items": [
+            "A way to test a meaningful product assumption",
+            "Small enough to limit unnecessary investment",
+            "Credible enough for the intended user and learning goal"
+          ]
+        },
+        {
+          "title": "An MVP is not",
+          "items": [
+            "A half-built final product",
+            "Every requested feature squeezed into version one",
+            "A shortcut around deciding what needs to be learned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "mvp development process",
+      "eyebrow": "THE METHOD",
+      "heading": "The Commview MVP Development Process",
+      "intro": "The amount of build should follow the uncertainty you need to remove.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Map assumptions",
+          "body": "List what must be true for the proposition, customer, behaviour and operating model to work."
+        },
+        {
+          "title": "Find the riskiest bet",
+          "body": "Identify the assumption that would most materially change the decision if it proved false."
+        },
+        {
+          "title": "Design the test",
+          "body": "Choose the smallest credible prototype, workflow or product experience that can create evidence."
+        },
+        {
+          "title": "Specify and build",
+          "body": "Turn the chosen test into journeys, requirements and delivery work without adding unnecessary scope."
+        },
+        {
+          "title": "Measure",
+          "body": "Observe behaviour and collect the evidence relevant to the assumption."
+        },
+        {
+          "title": "Decide",
+          "body": "Use what was learned to continue, change direction, run another test or stop."
+        }
+      ]
+    },
+    {
+      "id": "b2b",
+      "type": "lead",
+      "theme": "alt",
+      "targetKeyword": "b2b mvp",
+      "eyebrow": "B2B MVP",
+      "heading": "A B2B MVP Still Has to Be Credible to the Buyer",
+      "intro": [
+        "B2B users can have higher expectations around trust, workflow fit, security, integration and operational reliability. That does not mean every MVP needs enterprise completeness, but the test must be credible enough that those gaps do not invalidate what you are trying to learn.",
+        "We scope the level of polish and integration around the hypothesis, target user and buying context rather than applying a universal MVP template."
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "mvp faq",
+      "eyebrow": "FAQ",
+      "heading": "MVP Development FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "How much does MVP development cost?",
+          "a": "MVP development cost depends on what must be tested and how much product, design and engineering work is genuinely required to create credible evidence. A prototype, concierge workflow and production application have very different economics. Commview scopes the riskiest assumption first so the investment follows the learning need rather than an arbitrary feature list."
+        },
+        {
+          "q": "How long does MVP development take?",
+          "a": "There is no fixed MVP development timeline because the right test can range from a lightweight prototype to a working product with integrations. The useful question is how quickly the team can generate credible evidence about the riskiest assumption. We reduce scope where possible without making the test so weak that the learning becomes unreliable."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "PRODUCT",
+      "heading": "The smallest product is not always the smallest useful test.",
+      "body": "Work out what you need to learn before deciding how much you need to build.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Problem before roadmap.",
+        "Evidence before opinion.",
+        "Delivery stays connected."
+      ]
+    }
+  ],
+  "notes": "Product accent #3B82F6. Hero visual narrows uncertainty into one credible test. Do not use rocket imagery, generic app mock-ups or claim B2B always requires more polish than B2C as a universal fact."
+}

@@ -1,0 +1,194 @@
+{
+  "slug": "growth/paid-media",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B Paid Media | LinkedIn, Google, Meta | CommView",
+    "description": "B2B paid media built around audience, intent and pipeline. Select LinkedIn, Google, Meta and other channels for the job they can actually do.",
+    "primaryKeyword": "b2b paid media",
+    "secondaryKeywords": [
+      "b2b paid media channels",
+      "b2b paid media measurement",
+      "b2b linkedin vs google ads",
+      "b2b paid media budget",
+      "b2b paid ads not working"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "B2B PAID MEDIA",
+        "href": "/growth/paid-media"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/growth/b2b-lead-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B PAID MEDIA",
+    "h1": [
+      "B2B Paid Media.",
+      "Buy the right attention."
+    ],
+    "accentLine": 1,
+    "sub": "Paid media can reach an audience, capture intent or bring a known buyer back. It cannot rescue a weak proposition or turn every click into pipeline. We choose channels for the job they can do and measure what happens after the click.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "CHANNEL FIT",
+      "sub": "Match the job to the channel.",
+      "core": "BUYER",
+      "nodes": [
+        "TARGET ACCOUNTS",
+        "ACTIVE INTENT",
+        "RETARGETING",
+        "REACH",
+        "CONVERSION"
+      ],
+      "answer": "PIPELINE SIGNAL"
+    }
+  },
+  "sections": [
+    {
+      "id": "works",
+      "type": "lead",
+      "targetKeyword": "b2b paid media",
+      "eyebrow": "WHERE PAID WORKS",
+      "heading": "Where B2B Paid Media Actually Works",
+      "intro": [
+        "Paid media is strongest when the channel matches the buying situation. Professional targeting can help reach a defined account universe. Search can capture existing intent. Retargeting can bring a known visitor back when there is a useful next step.",
+        "The decision should start with the audience and commercial job, not a platform preference."
+      ]
+    },
+    {
+      "id": "channels",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "b2b paid media channels",
+      "eyebrow": "CHANNEL SELECTION",
+      "heading": "Choose B2B Paid Media Channels by Audience, Intent and Economics",
+      "items": [
+        {
+          "title": "LinkedIn",
+          "body": "Useful when professional attributes and account targeting materially improve access to the audience."
+        },
+        {
+          "title": "Google Search",
+          "body": "Useful when buyers already express meaningful intent through the searches they make."
+        },
+        {
+          "title": "Meta",
+          "body": "Can extend reach or retarget audiences when the targeting, creative and economics fit the offer."
+        },
+        {
+          "title": "Retargeting",
+          "body": "Useful for returning known visitors to relevant proof, content or conversion paths rather than simply following them with the same advert."
+        }
+      ]
+    },
+    {
+      "id": "measurement",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "b2b paid media measurement",
+      "eyebrow": "BEYOND CPL",
+      "heading": "Measure B2B Paid Media Beyond Cost Per Lead",
+      "intro": "Cheap clicks and cheap leads are not automatically efficient growth.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Reach",
+          "body": "Did the media reach the intended audience?"
+        },
+        {
+          "title": "Response",
+          "body": "Did the right people engage with the proposition?"
+        },
+        {
+          "title": "Fit",
+          "body": "Were the resulting accounts and contacts commercially relevant?"
+        },
+        {
+          "title": "Progression",
+          "body": "Did useful responses move into a meaningful sales stage?"
+        },
+        {
+          "title": "Pipeline",
+          "body": "What commercial value and learning came from the spend?"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "b2b paid media faq",
+      "eyebrow": "FAQ",
+      "heading": "B2B Paid Media FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Which channel works best for B2B: LinkedIn or Google?",
+          "a": "Neither channel is universally better. LinkedIn can be strong when you need to reach a defined professional or account audience, while Google Search can capture buyers already expressing intent. The better choice depends on the ICP, search demand, offer, deal economics and the job the campaign needs to do."
+        },
+        {
+          "q": "What's a realistic minimum monthly spend for B2B paid media?",
+          "a": "There is no responsible universal minimum because click costs, audience size, geography and the amount of learning required vary widely. A budget needs to be large enough to generate useful evidence without exceeding the economics of the opportunity. We assess the channel, expected audience and commercial value before recommending spend."
+        },
+        {
+          "q": "Why aren't our B2B paid campaigns generating pipeline?",
+          "a": "Paid campaigns can fail to create pipeline because of weak targeting, low buyer intent, an unclear proposition, poor landing-page conversion, slow sales follow-up or a mismatch between the channel and offer. Looking only at ad-platform metrics hides those problems. We trace the journey from audience through to downstream commercial behaviour."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "Do not optimise the ad account in isolation from the business.",
+      "body": "We can work out which paid channels deserve investment and where the real constraint sits.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Hero is channel-fit around the buyer, not platform logos. No fake ad dashboards, CTR charts or platform UI. Keep the green accent restrained."
+}

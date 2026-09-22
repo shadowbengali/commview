@@ -1,0 +1,183 @@
+{
+  "slug": "product-strategy/fractional-cpo",
+  "pillar": "product",
+  "accent": "blue",
+  "meta": {
+    "title": "Fractional CPO | B2B Product Leader | CommView",
+    "description": "Fractional CPO for B2B scale-ups. Senior product leadership across strategy, roadmap, team and delivery without making the full-time hire yet.",
+    "primaryKeyword": "fractional cpo",
+    "secondaryKeywords": [
+      "what is a fractional cpo",
+      "when to hire fractional cpo",
+      "fractional cpo services",
+      "fractional cpo faq",
+      "what does a fractional cpo do",
+      "fractional cpo cost"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Product",
+        "href": "/product-strategy"
+      },
+      {
+        "name": "FRACTIONAL CPO",
+        "href": "/product-strategy/fractional-cpo"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/product-strategy",
+        "purpose": "parent"
+      },
+      {
+        "href": "/product-strategy/consulting",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "FRACTIONAL CPO",
+    "h1": [
+      "Fractional CPO for B2B Scale-ups.",
+      "Senior product leadership. Still close to the work."
+    ],
+    "accentLine": 1,
+    "sub": "A fractional CPO gives a scale-up senior product leadership without forcing a full-time hire before the role makes commercial sense. The job is to create direction, improve decisions, help the team deliver and stay accountable for what the product is trying to change.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "overlap",
+      "caption": "LEADERSHIP + DELIVERY",
+      "sub": "The product decision stays connected to the work.",
+      "leftLabel": "PRODUCT LEADERSHIP",
+      "rightLabel": "HANDS-ON DELIVERY",
+      "centreLabel": "FRACTIONAL CPO"
+    }
+  },
+  "sections": [
+    {
+      "id": "definition",
+      "type": "lead",
+      "targetKeyword": "what is a fractional cpo",
+      "eyebrow": "THE ROLE",
+      "heading": "What Is a Fractional CPO?",
+      "intro": [
+        "A fractional CPO is a senior product leader who works with a business on a part-time or fractional basis, taking ownership of product direction without joining as a full-time executive.",
+        "For a scale-up, that can bridge the gap between founder-led product decisions and a permanent product leadership hire. The useful version of the role stays close enough to customers, data and delivery to make informed decisions rather than operating only at board level."
+      ]
+    },
+    {
+      "id": "when",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "when to hire fractional cpo",
+      "eyebrow": "WHEN IT FITS",
+      "heading": "When a Fractional CPO Is the Right Move",
+      "items": [
+        {
+          "title": "Founder-led product is reaching its limit",
+          "body": "Product decisions still depend on the founder, but the company now needs a repeatable product operating model."
+        },
+        {
+          "title": "There is a leadership gap",
+          "body": "A CPO or product leader has left, or the business needs senior ownership before making the next permanent hire."
+        },
+        {
+          "title": "The product team needs direction",
+          "body": "Delivery capability exists, but strategy, prioritisation and decision rights are unclear."
+        },
+        {
+          "title": "The next stage needs senior product judgement",
+          "body": "The business is entering a new market, changing proposition, preparing to scale or making a material product investment."
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "type": "grid",
+      "targetKeyword": "fractional cpo services",
+      "eyebrow": "WHAT COMMVIEW DELIVERS",
+      "heading": "Fractional CPO Services From Strategy Through Delivery",
+      "items": [
+        {
+          "title": "Product strategy",
+          "body": "Clarify customer problems, strategic bets and how product choices connect to business outcomes."
+        },
+        {
+          "title": "Roadmap and prioritisation",
+          "body": "Create a defensible approach to what moves forward and what does not."
+        },
+        {
+          "title": "Team and operating model",
+          "body": "Clarify roles, decision rights, discovery practices and the connection between product, design, engineering and GTM."
+        },
+        {
+          "title": "Hands-on product work",
+          "body": "Step into discovery, user journeys, prototypes, requirements and delivery detail when the situation needs it."
+        },
+        {
+          "title": "Leadership communication",
+          "body": "Turn product evidence and trade-offs into clear updates for founders, leadership teams and boards."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "theme": "alt",
+      "targetKeyword": "fractional cpo faq",
+      "eyebrow": "FAQ",
+      "heading": "Fractional CPO FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What does a fractional CPO do?",
+          "a": "A fractional CPO provides senior product leadership on a part-time basis. The role can cover product strategy, customer discovery, roadmap and prioritisation, team development, delivery oversight and leadership reporting. At Commview, the role stays hands-on where useful, so strategic decisions remain connected to what customers and delivery teams are actually showing."
+        },
+        {
+          "q": "What does a fractional CPO cost?",
+          "a": "Fractional CPO cost depends on the scope, level of ownership, time commitment and whether the engagement includes hands-on delivery as well as leadership. Commview does not publish a standard rate because those requirements vary significantly. We define the product problem, expected responsibility and working cadence before agreeing the commercial structure."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "PRODUCT",
+      "heading": "You may need CPO-level decisions before you need a full-time CPO.",
+      "body": "Bring senior product leadership into the business without separating strategy from delivery.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Problem before roadmap.",
+        "Evidence before opinion.",
+        "Delivery stays connected."
+      ]
+    }
+  ],
+  "notes": "Product accent #3B82F6. Use the same leadership/execution visual language as Fractional CMO but Product blue, so the family relationship is obvious without cloning the page."
+}
