@@ -1,0 +1,225 @@
+{
+  "slug": "ideal-customer-profile-workshop",
+  "pillar": "gtm-leadership",
+  "accent": "cyan",
+  "meta": {
+    "title": "Ideal Customer Profile Workshop | CommView",
+    "description": "Ideal Customer Profile workshop for B2B scale-ups. Turn customer evidence into a usable ICP for targeting, messaging, qualification and sales prioritisation.",
+    "primaryKeyword": "ideal customer profile",
+    "secondaryKeywords": [
+      "ideal customer profile workshop",
+      "ideal customer profile b2b",
+      "how to create an ideal customer profile",
+      "icp template",
+      "revise ideal customer profile",
+      "icp vs buyer persona"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "GTM Leadership",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "ICP Workshop",
+        "href": "/ideal-customer-profile-workshop"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/positioning",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/ideal-customer-profile",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact?service=icp-workshop",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "IDEAL CUSTOMER PROFILE WORKSHOP",
+    "h1": [
+      "Ideal Customer Profile.",
+      "Know who deserves your attention."
+    ],
+    "accentLine": 1,
+    "sub": "Turn customer data, commercial evidence and what your teams know into an ICP that helps Marketing target, Sales prioritise and the business make better choices about where to spend time and money.",
+    "ctas": [
+      {
+        "label": "Book the workshop",
+        "href": "/contact?service=icp-workshop",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "FROM MARKET TO BEST FIT",
+      "sub": "Narrow with evidence, not instinct.",
+      "layers": [
+        "ADDRESSABLE MARKET",
+        "VIABLE ACCOUNTS",
+        "STRONG FIT",
+        "IDEAL CUSTOMER PROFILE"
+      ],
+      "highlight": 3
+    }
+  },
+  "sections": [
+    {
+      "id": "build",
+      "type": "lead",
+      "targetKeyword": "ideal customer profile workshop",
+      "eyebrow": "THE WORKSHOP",
+      "heading": "What We Build in an Ideal Customer Profile Workshop",
+      "intro": [
+        "The output is a shared definition of the customers the business should prioritise and the evidence behind that choice.",
+        "We bring together customer and commercial data, what Sales and Marketing are seeing, customer patterns and the realities of your proposition. The aim is not to create a fictional perfect customer. It is to make targeting and prioritisation materially clearer."
+      ],
+      "notes": "Do not state a fixed two-week duration or fixed price until commercially confirmed."
+    },
+    {
+      "id": "segmentation",
+      "type": "comparison",
+      "theme": "alt",
+      "targetKeyword": "ideal customer profile b2b",
+      "eyebrow": "ICP VS SEGMENTATION",
+      "heading": "Why a B2B Ideal Customer Profile Does More Than Segment the Market",
+      "intro": "Segmentation tells you how the market can be divided. ICP helps you decide which part deserves disproportionate attention.",
+      "columns": [
+        {
+          "title": "Segmentation",
+          "items": [
+            "Groups the market by shared characteristics",
+            "Useful for understanding structure and variation",
+            "Can leave many segments looking equally attractive"
+          ]
+        },
+        {
+          "title": "Ideal Customer Profile",
+          "items": [
+            "Prioritises the customers most likely to be a strong commercial fit",
+            "Connects attributes to buying and customer evidence",
+            "Helps Marketing and Sales decide where not to spend effort"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "how to create an ideal customer profile",
+      "eyebrow": "THE METHOD",
+      "heading": "How to Create an Ideal Customer Profile From Evidence",
+      "intro": "The useful question is not 'what does our ideal customer look like?' It is 'what evidence tells us where we create and capture the most value?'",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Data",
+          "body": "Look at the customers, opportunities and outcomes the business already has."
+        },
+        {
+          "title": "Interviews",
+          "body": "Bring in the patterns Sales, Marketing, Product and customer-facing teams are seeing."
+        },
+        {
+          "title": "Patterns",
+          "body": "Identify the attributes and circumstances that appear to affect fit, value and buying behaviour."
+        },
+        {
+          "title": "Hypothesis",
+          "body": "Turn those patterns into a clear definition that can guide targeting and qualification."
+        },
+        {
+          "title": "Test",
+          "body": "Use the ICP in real decisions and refine it when the evidence changes."
+        }
+      ]
+    },
+    {
+      "id": "outputs",
+      "type": "grid",
+      "targetKeyword": "icp template",
+      "eyebrow": "WHAT YOU GET",
+      "heading": "An ICP Template Is Only Useful If the Business Can Act on It",
+      "items": [
+        {
+          "title": "Written ICP",
+          "body": "A clear definition of best-fit customers, including the attributes and conditions that matter."
+        },
+        {
+          "title": "Market view",
+          "body": "A practical way to understand the size and shape of the opportunity the ICP represents."
+        },
+        {
+          "title": "Sales and Marketing playbook",
+          "body": "Translate the ICP into targeting, qualification, messaging and prioritisation decisions."
+        },
+        {
+          "title": "Fit scorecard",
+          "body": "A simple way to assess how closely an account matches the evidence behind the ICP."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "theme": "alt",
+      "targetKeyword": "icp workshop faq",
+      "eyebrow": "FAQ",
+      "heading": "Ideal Customer Profile Workshop FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What if we already have an ICP?",
+          "a": "An existing ICP is useful evidence, not a reason to avoid revisiting it. We can test whether it still reflects the customers you win, retain and create value for, and whether Sales and Marketing actually use it. If the market, product or growth stage has changed, the ICP may need to change too."
+        },
+        {
+          "q": "How is an ICP different from a buyer persona?",
+          "a": "An ICP describes the type of company or account that is the best commercial fit for a B2B offer. A buyer persona describes the people involved in the buying process, including their responsibilities, priorities and concerns. You can have several buyer personas inside one ideal customer profile."
+        },
+        {
+          "q": "What data do we need for an ICP workshop?",
+          "a": "Useful inputs can include customer and opportunity data, revenue or retention patterns, win and loss information, sales feedback, customer interviews and product usage where available. Perfect data is not required. We make the evidence gaps visible and separate what the business knows from what still needs to be tested."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "ICP WORKSHOP",
+      "heading": "You do not need to target everyone who could buy.",
+      "body": "Build an ICP that helps the business decide who is worth pursuing and why.",
+      "ctas": [
+        {
+          "label": "Book the workshop",
+          "href": "/contact?service=icp-workshop",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the pattern.",
+        "Define the fit.",
+        "Use it."
+      ]
+    }
+  ],
+  "notes": "GTM Leadership cyan #00E5FF. Hero visual narrows from addressable market to ideal customer profile. This is a productised offer, but do not claim a fixed two-week duration or fixed price until confirmed. Keep the design focused and practical, not workshop-sticky-note theatre."
+}
