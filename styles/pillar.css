@@ -125,6 +125,8 @@
 
 /* ===== comparison (N columns) ===== */
 .p-compare__grid { margin-top: var(--space-12); display: grid; gap: var(--space-8); }
+.p-compare__grid[data-cols="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.p-compare__grid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .p-compare-col { border-top: 2px solid var(--c); padding-top: var(--space-5, 20px); }
 .p-compare-col h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
 .p-compare-col ul { margin-top: var(--space-4); display: grid; gap: var(--space-3); list-style: none; }
@@ -170,7 +172,7 @@
   .p-callout__body { border-left: 0; padding-left: 0; border-top: 1px solid var(--border-subtle); padding-top: var(--space-4); }
   .p-grid[data-cols="4"], .p-grid[data-cols="5"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .p-grid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .p-compare__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .p-compare__grid[data-cols] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .p-proc__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10, 40px) var(--space-8); }
   .p-proc--arrows .p-step:not(:last-child)::after, .p-proc--circles .p-step:not(:last-child)::after { content: none; }
   .p-stats__grid[data-cols="4"], .p-stats__grid[data-cols="5"] { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-8); }
@@ -186,7 +188,7 @@
   .p-hero__meta { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
   .p-meta { border-left: 0; padding-left: 0; }
   .p-meta + .p-meta { border-top: 1px solid var(--slate-dark); padding-top: var(--space-4); }
-  .p-grid[data-cols], .p-proc__grid, .p-compare__grid { grid-template-columns: minmax(0, 1fr); }
+  .p-grid[data-cols], .p-proc__grid, .p-compare__grid[data-cols] { grid-template-columns: minmax(0, 1fr); }
   .p-stats__grid[data-cols] { grid-template-columns: minmax(0, 1fr); }
   .p-stat, .p-stat:nth-child(even) { border-left: 0; padding-inline: 0; }
   .p-stat + .p-stat { border-top: 1px solid var(--slate-dark); padding-top: var(--space-6); }

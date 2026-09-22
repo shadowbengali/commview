@@ -292,7 +292,7 @@ function SectionView({ s }: { s: Section }) {
         <section className={secClass(s)} aria-labelledby={s.id}>
           <div className="wrap">
             <SectionHead s={s} />
-            <div className="p-compare__grid" data-cols={String(s.columns.length)} style={{ gridTemplateColumns: `repeat(${s.columns.length}, minmax(0, 1fr))` }}>
+            <div className="p-compare__grid" data-cols={String(s.columns.length)}>
               {s.columns.map((col, i) => (
                 <div className="p-compare-col" key={i}>
                   <h3>{col.title}</h3>
