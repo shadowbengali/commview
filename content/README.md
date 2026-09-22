@@ -39,6 +39,29 @@ schema plus the rules below and **fails the build** on any error.
     something the schema doesn't cover, leave a `notes` field describing it; Claude builds the
     component once and, if reusable, promotes it into the schema (a new schema version).
 
+## SEO / AEO baseline (enforced by the validator)
+
+Every page is checked against these. Structural faults are **errors** (fail the build).
+Content-quality checks are **warnings** by default and become **errors** under `SEO_STRICT=1`
+— flip that in the build once the current pages are clean, and no non-compliant page can merge.
+
+Guaranteed by the renderer (can't regress): exactly one `<h1>`, clean `H1 → H2 → H3`
+hierarchy, semantic sections, `lang="en-GB"`, canonical, `noindex` pre-launch, and JSON-LD
+(`Service` / `FAQPage` / `BreadcrumbList`) built from `meta.schemaTypes`.
+
+Enforced from the content:
+- **Title** contains the `primaryKeyword` and is ≤ 60 chars.
+- **Meta description** contains the `primaryKeyword`, 70–160 chars.
+- **Primary keyword appears in the hero** (h1 / eyebrow / sub) — above the fold.
+- **`FAQPage` ⇔ a `faq` section** with items (and a faq section should declare FAQPage — AEO).
+- **`BreadcrumbList` ⇔ `meta.breadcrumb`.**
+- **Every internal link resolves to a real route** — no 404s. Declared `internalLinks` must
+  actually render on the page; rendered `href`s must point to a route that exists.
+- One `primaryKeyword` per URL (no cannibalisation). Section `targetKeyword`s record intent.
+
+H1 wording is a brand/style choice (punchy H1s are fine); the keyword lives in title, eyebrow
+and H2s. The validator does not force the keyword into the H1.
+
 ## Section types
 
 `lead` · `grid` · `venn` · `stepper` · `stats` · `callout` · `comparison` · `logos` · `faq` · `cta`.
