@@ -321,20 +321,21 @@ export default function GrowthPage() {
 
       {/* ===== FINAL CTA ===== */}
       <section className="gr-final dark" aria-labelledby="gr-final">
-        <div className="wrap gr-final__grid">
-          <div>
-            <p className="eyebrow-x" style={{ color: "var(--c)" }}>Let&rsquo;s talk</p>
-            <h2 className="gr-final__h" id="gr-final" style={{ marginTop: "var(--space-3)" }}>
-              <span>Ready to grow smarter?</span>{" "}
-              <span>Let&rsquo;s find the constraint.</span>
-            </h2>
-            <p className="gr-final__p">You don&rsquo;t need to know whether the answer is SEO, demand generation, paid media, conversion or something else before speaking to us. That&rsquo;s the point of the diagnosis.</p>
-            <div className="gr-final__row">
-              <a className="btn btn--green btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
-              <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
+        <div className="wrap">
+          <p className="eyebrow-x" style={{ color: "var(--c)" }}>Let&rsquo;s talk</p>
+          <h2 className="gr-final__h" id="gr-final" style={{ marginTop: "var(--space-3)" }}>
+            Ready to grow smarter? Let&rsquo;s find the constraint.
+          </h2>
+          <div className="gr-final__row2">
+            <div className="gr-final__lead">
+              <p className="gr-final__p">You don&rsquo;t need to know whether the answer is SEO, demand generation, paid media, conversion or something else before speaking to us. That&rsquo;s the point of the diagnosis.</p>
+              <div className="gr-final__row">
+                <a className="btn btn--green btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+                <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
+              </div>
             </div>
+            <p className="gr-final__tag">Less guesswork.<br />More growth.</p>
           </div>
-          <p className="gr-final__tag">Less guesswork.<br />More growth.</p>
         </div>
       </section>
     </main>
