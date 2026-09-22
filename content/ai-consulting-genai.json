@@ -1,0 +1,212 @@
+{
+  "slug": "ai-consulting/genai",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "Generative AI Consulting | B2B | CommView",
+    "description": "Generative AI consulting for B2B. Choose useful LLM use cases, evaluate reliability and put generative AI into controlled production workflows.",
+    "primaryKeyword": "generative ai consulting",
+    "secondaryKeywords": [
+      "generative ai b2b",
+      "generative ai limitations",
+      "generative ai consulting services",
+      "generative ai consulting faq",
+      "generative ai b2b use cases",
+      "chatgpt vs claude vs custom llm",
+      "generative ai hallucination risk"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "GENERATIVE AI CONSULTING",
+        "href": "/ai-consulting/genai"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/ai-consulting/business-operations",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "GENERATIVE AI CONSULTING",
+    "h1": [
+      "Generative AI Consulting for B2B.",
+      "Beyond the impressive demo."
+    ],
+    "accentLine": 1,
+    "sub": "Generative AI is strong at some information-heavy tasks and unreliable at others. We identify where LLMs genuinely fit the work, evaluate the output against the consequence of error and build the useful cases into controlled operations.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "overlap",
+      "caption": "USEFUL GENERATIVE AI",
+      "sub": "Capability needs control.",
+      "leftLabel": "MODEL CAPABILITY",
+      "rightLabel": "OPERATING CONTROL",
+      "centreLabel": "PRODUCTION USE"
+    }
+  },
+  "sections": [
+    {
+      "id": "strengths",
+      "type": "grid",
+      "targetKeyword": "generative ai b2b",
+      "eyebrow": "WHAT IT DOES WELL",
+      "heading": "What Generative AI Can Do Well in B2B",
+      "intro": "Suitability depends on the task, source material and level of review required.",
+      "items": [
+        {
+          "title": "Drafting",
+          "body": "Create useful first drafts from clear context, source material and constraints."
+        },
+        {
+          "title": "Extraction",
+          "body": "Pull defined information from documents or unstructured text for downstream processing."
+        },
+        {
+          "title": "Summarisation",
+          "body": "Condense meetings, documents and interactions when users can verify the important details."
+        },
+        {
+          "title": "Classification",
+          "body": "Group or route text using defined categories, with evaluation against real examples."
+        },
+        {
+          "title": "Transformation",
+          "body": "Reformat, translate or adapt existing material where the source and desired output are controlled."
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "generative ai limitations",
+      "eyebrow": "WHERE IT FAILS",
+      "heading": "Generative AI Limitations Need to Shape the Workflow",
+      "items": [
+        {
+          "title": "Reliability",
+          "body": "A fluent answer can still be wrong, incomplete or inconsistent."
+        },
+        {
+          "title": "Hallucination",
+          "body": "Models can generate unsupported information, so factual use cases need grounding, evaluation and review proportionate to risk."
+        },
+        {
+          "title": "Cost and latency",
+          "body": "Model choice, context size and workflow volume can materially affect operating economics and user experience."
+        },
+        {
+          "title": "Brand and data risk",
+          "body": "Sensitive information, customer-facing output and regulated decisions need appropriate controls, permissions and human accountability."
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "generative ai consulting services",
+      "eyebrow": "FROM USE CASE TO OPERATION",
+      "heading": "Generative AI Consulting Services From Selection to Deployment",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Select",
+          "body": "Choose use cases where generative capability solves a real information problem."
+        },
+        {
+          "title": "Design",
+          "body": "Define context, source material, output constraints and human responsibility."
+        },
+        {
+          "title": "Prototype",
+          "body": "Test prompts, retrieval and workflow options quickly against representative examples."
+        },
+        {
+          "title": "Evaluate",
+          "body": "Measure quality and failure modes rather than judging a handful of impressive outputs."
+        },
+        {
+          "title": "Deploy",
+          "body": "Put the model inside the real workflow with controls, logging and escalation."
+        },
+        {
+          "title": "Improve",
+          "body": "Monitor performance and change prompts, models, retrieval or process as evidence develops."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "generative ai consulting faq",
+      "eyebrow": "FAQ",
+      "heading": "Generative AI Consulting FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What can generative AI actually do well in B2B?",
+          "a": "Generative AI can be useful for drafting, summarisation, extraction, classification, translation and transforming information when the task has clear context and appropriate review. It is particularly helpful where people spend substantial time reading or producing text. Suitability depends on accuracy requirements, data sensitivity and the consequence of a wrong output."
+        },
+        {
+          "q": "Should we use ChatGPT, Claude or build our own?",
+          "a": "The right choice depends on the workflow, data, integrations, model performance, control requirements and operating cost. A general-purpose product can be enough for individual work, while an API or custom application can fit repeatable business processes. We evaluate the job first and avoid locking the operating model to a preferred model provider."
+        },
+        {
+          "q": "How do we manage hallucination risk?",
+          "a": "Manage hallucination risk by limiting the task, grounding outputs in trusted source material where appropriate, evaluating against representative examples, constraining what the model is allowed to do and keeping human review for consequential outputs. The required control should match the consequence of error. Some tasks are simply poor candidates for generative AI."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "Use generative AI where its strengths match the work and its failures can be controlled.",
+      "body": "We can move from an interesting LLM demo to a production workflow that has a reason to exist.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. No vendor logos in hero. The page should visually communicate capability plus control, not model fandom."
+}
