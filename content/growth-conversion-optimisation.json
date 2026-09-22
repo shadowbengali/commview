@@ -1,0 +1,201 @@
+{
+  "slug": "growth/conversion-optimisation",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B Conversion Optimisation (CRO) | CommView",
+    "description": "B2B conversion optimisation for websites, landing pages and sign-up flows. Diagnose friction, form sharper hypotheses and make changes worth measuring.",
+    "primaryKeyword": "b2b conversion optimisation",
+    "secondaryKeywords": [
+      "b2b cro",
+      "b2b conversion optimisation approach",
+      "why isn't website converting",
+      "b2b cro traffic threshold",
+      "b2b cro vs ecommerce cro"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Growth",
+        "href": "/growth"
+      },
+      {
+        "name": "B2B CONVERSION OPTIMISATION",
+        "href": "/growth/conversion-optimisation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/growth",
+        "purpose": "parent"
+      },
+      {
+        "href": "/insights/why-isnt-website-converting",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B CONVERSION OPTIMISATION",
+    "h1": [
+      "B2B Conversion Optimisation.",
+      "Find the friction before you test the button."
+    ],
+    "accentLine": 1,
+    "sub": "B2B sites often have smaller samples, longer buying cycles and several people involved in the decision. We use behavioural data, customer evidence and commercial judgement to find meaningful friction before proposing changes.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "FROM VISIT TO ACTION",
+      "sub": "Conversion problems can sit anywhere in the journey.",
+      "layers": [
+        "RIGHT VISITOR",
+        "CLEAR RELEVANCE",
+        "ENOUGH TRUST",
+        "LOW FRICTION",
+        "USEFUL NEXT STEP"
+      ],
+      "highlight": 4
+    }
+  },
+  "sections": [
+    {
+      "id": "different",
+      "type": "lead",
+      "targetKeyword": "b2b cro",
+      "eyebrow": "B2B CRO",
+      "heading": "Where B2B Conversion Optimisation Is Genuinely Different",
+      "intro": [
+        "Much CRO advice assumes high transaction volumes, short journeys and a single person making the decision. B2B often has the opposite conditions.",
+        "That makes endless micro-tests a poor default. The useful work is often diagnosing a bigger problem in audience fit, proposition, proof, page structure, form design or the next step being offered."
+      ]
+    },
+    {
+      "id": "approach",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "b2b conversion optimisation approach",
+      "eyebrow": "THE APPROACH",
+      "heading": "A B2B Conversion Optimisation Approach Built Around Better Hypotheses",
+      "intro": "Start with evidence, make a meaningful change and measure the behaviour that follows.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Observe",
+          "body": "Use analytics, search data, recordings, funnel behaviour and sales evidence where available."
+        },
+        {
+          "title": "Listen",
+          "body": "Bring in customer and frontline feedback to understand why the behaviour may be happening."
+        },
+        {
+          "title": "Diagnose",
+          "body": "Identify the most plausible friction rather than producing a generic CRO checklist."
+        },
+        {
+          "title": "Prioritise",
+          "body": "Choose changes by expected commercial impact, confidence and effort."
+        },
+        {
+          "title": "Change",
+          "body": "Make a meaningful intervention that can plausibly alter the journey."
+        },
+        {
+          "title": "Measure",
+          "body": "Evaluate the result with the sample and buying cycle in mind."
+        }
+      ]
+    },
+    {
+      "id": "areas",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "why isn't website converting",
+      "eyebrow": "WHERE FRICTION HIDES",
+      "heading": "Why Isn't Your B2B Website Converting?",
+      "items": [
+        {
+          "title": "Wrong traffic",
+          "body": "The page may be receiving visitors who were never a good fit for the offer."
+        },
+        {
+          "title": "Unclear relevance",
+          "body": "The right buyer cannot quickly see whether the product or service is for a problem like theirs."
+        },
+        {
+          "title": "Weak proof",
+          "body": "The proposition asks for trust without giving the buyer enough evidence to believe it."
+        },
+        {
+          "title": "Too much friction",
+          "body": "Forms, navigation, sign-up or booking flows ask for more effort than the next step justifies."
+        },
+        {
+          "title": "Wrong next step",
+          "body": "The only conversion offered may be too large, too early or disconnected from how the buyer wants to progress."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "b2b cro faq",
+      "eyebrow": "FAQ",
+      "heading": "B2B Conversion Optimisation FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Why isn't our website converting?",
+          "a": "A low conversion rate can come from the wrong traffic, an unclear proposition, weak proof, poor page structure, unnecessary form friction or a next step that does not fit buyer intent. The conversion number alone cannot tell you which. We combine behavioural evidence with customer and commercial context before recommending a change."
+        },
+        {
+          "q": "How much traffic do we need before CRO is worth doing?",
+          "a": "You do not need huge traffic to improve a B2B journey, but low volume changes how confidently you can run conventional statistical tests. With smaller samples, qualitative evidence, funnel behaviour and larger hypothesis-led changes become more important. The right method depends on the decision you need to make and the data available."
+        },
+        {
+          "q": "How is B2B CRO different from ecommerce CRO?",
+          "a": "B2B conversion journeys often involve longer sales cycles, higher consideration, multiple stakeholders and fewer completed conversions than ecommerce. The website may be creating a meeting, trial or sales conversation rather than an immediate purchase. That means optimisation needs to consider lead quality and downstream progression, not only the on-page conversion rate."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "GROWTH",
+      "heading": "A conversion problem is rarely solved by changing a button colour.",
+      "body": "Find the friction that is actually stopping the right buyer from moving.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the constraint.",
+        "Move the work.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Growth accent #10B981. Hero visual shows the conditions required before a useful action. Main second visual is the evidence-to-measure method. No A/B-test clichés, heatmap decoration or fake uplift percentages."
+}
