@@ -18,8 +18,11 @@ const fail = (f, m) => { errors++; console.error(`FAIL ${f}: ${m}`); };
 const warn = (f, m) => { warnings++; console.warn(`WARN ${f}: ${m}`); };
 const seo = (f, m) => (STRICT ? fail : warn)(f, m); // promotable SEO quality checks
 
-// --- route discovery, for internal-link existence checks ---
-function discoverRoutes() {
+// --- routes: canonical plan (lib/routes.json) + what's actually built ---
+const norm = (href) => (href.split(/[?#]/)[0].replace(/\/+$/, "")) || "/";
+const PLANNED = new Set(JSON.parse(fs.readFileSync("lib/routes.json", "utf8")).planned.map(norm));
+
+function discoverBuilt() {
   const site = "app/(site)";
   const exact = new Set(["/"]);
   const dynamicParents = new Set();
@@ -31,11 +34,10 @@ function discoverRoutes() {
   }
   return { exact, dynamicParents };
 }
-const ROUTES = discoverRoutes();
-const routeExists = (href) => {
-  const p = (href.split(/[?#]/)[0].replace(/\/+$/, "")) || "/";
-  if (ROUTES.exact.has(p)) return true;
-  return ROUTES.dynamicParents.has(p.split("/")[1]);
+const BUILT = discoverBuilt();
+const isBuilt = (href) => {
+  const p = norm(href);
+  return BUILT.exact.has(p) || BUILT.dynamicParents.has(p.split("/")[1]);
 };
 
 const flat = (v) => (Array.isArray(v) ? v.join(" ") : v || "");
@@ -72,10 +74,15 @@ function auditSeo(f, data) {
   if (types.includes("BreadcrumbList") && !data.meta.breadcrumb?.length) fail(f, `BreadcrumbList declared but no breadcrumb`);
   if (!hasFaq) seo(f, `no faq section — recommended for AEO`);
 
-  // internal-link existence (404 risk)
+  // internal links: must be in the planned sitemap. Forward-refs to planned-but-
+  // unbuilt pages are fine (they route once built); an unplanned path is a typo.
+  let pending = 0;
   for (const h of collectHrefs(data)) {
-    if (h.startsWith("/") && !routeExists(h)) seo(f, `internal link ${h} → no such route yet (would 404)`);
+    if (!h.startsWith("/")) continue;
+    if (!PLANNED.has(norm(h))) seo(f, `internal link ${h} is not in the planned sitemap (lib/routes.json) — typo or unplanned URL`);
+    else if (!isBuilt(h)) pending++;
   }
+  if (pending) console.log(`     ${f}: ${pending} link(s) target planned pages not built yet (will route when built)`);
 }
 
 // --- run ---
