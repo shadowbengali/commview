@@ -1,0 +1,229 @@
+{
+  "slug": "ai-consulting/business-operations",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI for Business Operations | B2B Scale-ups | CommView",
+    "description": "AI for business operations for B2B scale-ups. Apply AI to reporting, workflows, content, communications and decision support where it earns its place.",
+    "primaryKeyword": "ai for business operations",
+    "secondaryKeywords": [
+      "ai for business efficiency",
+      "ai roi b2b",
+      "ai for business operations method",
+      "ai for business operations faq",
+      "can ai reduce costs",
+      "best ai ops use cases"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "AI FOR BUSINESS OPERATIONS",
+        "href": "/ai-consulting/business-operations"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/ai-consulting/workflow-automation",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/can-ai-reduce-our-costs",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/ai-for-business-efficiency",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI FOR BUSINESS OPERATIONS",
+    "h1": [
+      "AI for Business Operations.",
+      "Improve the work, not the AI story."
+    ],
+    "accentLine": 1,
+    "sub": "Operational AI applies AI to the day-to-day work of the business where it can remove manual effort, shorten cycle times, improve consistency or create useful capacity. The starting point is the operation, not a list of AI tools.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "THE OPERATING LAYER",
+      "sub": "AI has to earn a role in real work.",
+      "core": "OPERATIONS",
+      "nodes": [
+        "CONTENT",
+        "COMMS",
+        "DATA + REPORTING",
+        "WORKFLOW",
+        "DECISION SUPPORT"
+      ],
+      "answer": "MEASURABLE CHANGE"
+    }
+  },
+  "sections": [
+    {
+      "id": "meaning",
+      "type": "lead",
+      "targetKeyword": "ai for business operations",
+      "eyebrow": "THE OPERATING LAYER",
+      "heading": "What AI for Business Operations Actually Means",
+      "intro": [
+        "AI for business operations means applying AI inside repeatable day-to-day work rather than treating AI as a strategy in itself.",
+        "The opportunity can sit in content, communications, data and reporting, workflows or decision support. Sometimes AI is the right intervention. Sometimes a simpler process change or conventional automation is better. The objective is operational improvement, not AI adoption for its own sake."
+      ]
+    },
+    {
+      "id": "use-cases",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "ai for business efficiency",
+      "eyebrow": "WHERE TO LOOK",
+      "heading": "B2B Operations Where AI Can Create Useful Efficiency",
+      "intro": "These are candidates to investigate, not guaranteed ROI claims.",
+      "items": [
+        {
+          "title": "Reporting automation",
+          "body": "Reduce repetitive collection, formatting, summarisation and first-pass analysis where the underlying data is reliable."
+        },
+        {
+          "title": "Lead scoring and routing",
+          "body": "Use richer context to help prioritise and route commercial signals, while keeping decision rules and human accountability clear."
+        },
+        {
+          "title": "Content operations",
+          "body": "Accelerate research, drafting, repurposing, translation and quality checks without outsourcing brand or commercial judgement."
+        },
+        {
+          "title": "Sales intelligence",
+          "body": "Summarise account context, interactions and signals so commercial teams spend less time assembling information."
+        },
+        {
+          "title": "Workflow automation",
+          "body": "Connect multi-step work across systems where AI can interpret, classify, draft or route information inside a controlled process."
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "type": "grid",
+      "targetKeyword": "ai roi b2b",
+      "eyebrow": "EARN ITS PLACE",
+      "heading": "How to Know if AI Will Earn Its Place",
+      "intro": "A simple filter can remove a lot of weak AI ideas before anyone starts building.",
+      "items": [
+        {
+          "title": "Repetitive?",
+          "body": "Does the work happen often enough that reducing effort or delay would matter?"
+        },
+        {
+          "title": "Patterned?",
+          "body": "Is there enough repeatable structure or context for AI or automation to assist reliably?"
+        },
+        {
+          "title": "Measurable?",
+          "body": "Can you establish a baseline and tell whether cost, speed, capacity, quality or another relevant outcome changed?"
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "ai for business operations method",
+      "eyebrow": "THE METHOD",
+      "heading": "From Operational Friction to Working AI",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Audit",
+          "body": "Find repetitive work, bottlenecks and decision points across the operation."
+        },
+        {
+          "title": "Prioritise",
+          "body": "Compare expected value, feasibility, risk and the quality of the available data."
+        },
+        {
+          "title": "Prototype",
+          "body": "Test the intervention cheaply enough to learn before committing to a larger implementation."
+        },
+        {
+          "title": "Deploy",
+          "body": "Connect the useful solution to the real workflow and systems."
+        },
+        {
+          "title": "Measure",
+          "body": "Compare the result against the baseline and check for unintended consequences."
+        },
+        {
+          "title": "Train",
+          "body": "Give the people using and supervising the system enough understanding to operate it responsibly."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai for business operations faq",
+      "eyebrow": "FAQ",
+      "heading": "AI for Business Operations FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Can AI actually reduce our operating costs?",
+          "a": "AI can reduce operating costs when it removes enough repetitive effort, delay or rework to outweigh the cost of implementation, software, oversight and maintenance. It is not automatic. We baseline the current process, estimate the plausible change, test the intervention and measure the real result before recommending wider rollout."
+        },
+        {
+          "q": "What operations functions benefit most from AI?",
+          "a": "The strongest candidates are usually functions with repeatable, information-heavy work and an outcome that can be measured. Reporting, content operations, sales intelligence, workflow routing and parts of customer or marketing operations can fit that pattern. The specific process matters more than the department label, so we assess the work before choosing the technology."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "Start with the work that is slow, repetitive or unnecessarily manual.",
+      "body": "We can identify where AI deserves a role and where a simpler intervention will do the job better.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. Hero is an operating-layer hub, not an AI brain. Avoid claiming these are universally the five highest-ROI use cases."
+}
