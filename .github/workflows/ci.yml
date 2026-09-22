@@ -1,0 +1,28 @@
+name: CI
+
+# Enforces the foundations on every push and PR, independent of any agent.
+# A failure here blocks the merge once branch protection requires this check.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    name: typecheck + content/SEO validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: TypeScript
+        run: npm run typecheck
+      - name: Content contract + SEO baseline
+        run: npm run validate:content
+        # Flip to hard-fail on SEO quality issues (keyword coverage, lengths,
+        # unplanned links) once the back catalogue is clean:
+        # env:
+        #   SEO_STRICT: "1"
