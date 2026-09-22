@@ -1,0 +1,415 @@
+{
+  "slug": "product-strategy",
+  "pillar": "product",
+  "accent": "blue",
+  "meta": {
+    "title": "B2B Product Strategy & Fractional CPO | CommView",
+    "description": "B2B product strategy for scale-ups. Customer discovery, prioritisation, MVPs, roadmaps and fractional product leadership, from strategy to delivery.",
+    "primaryKeyword": "b2b product strategy",
+    "secondaryKeywords": [
+      "product management consultant",
+      "product strategy consultant",
+      "fractional cpo",
+      "mvp development",
+      "product discovery",
+      "product roadmap"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Product",
+        "href": "/product-strategy"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/product-strategy/consulting",
+        "purpose": "child"
+      },
+      {
+        "href": "/product-strategy/fractional-cpo",
+        "purpose": "child"
+      },
+      {
+        "href": "/product-strategy/mvp",
+        "purpose": "child"
+      },
+      {
+        "href": "/product-strategy/discovery",
+        "purpose": "child"
+      },
+      {
+        "href": "/product-strategy/roadmap",
+        "purpose": "child"
+      },
+      {
+        "href": "/insights/product-market-fit",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/product-roadmap-guide",
+        "purpose": "insight"
+      },
+      {
+        "href": "/work",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      },
+      {
+        "href": "/diagnostic",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B PRODUCT STRATEGY",
+    "h1": [
+      "Build the right thing.",
+      "Not just the next thing."
+    ],
+    "accentLine": 1,
+    "sub": "Product strategy starts before the roadmap. We help B2B scale-ups understand the customer problem, decide what is worth solving, turn the evidence into clear product decisions and stay close enough to delivery to make sure the right thing actually gets built.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      },
+      {
+        "label": "Take the Diagnostic",
+        "href": "/diagnostic",
+        "style": "ghost"
+      }
+    ],
+    "meta": [
+      {
+        "label": [
+          "Problem",
+          "before roadmap"
+        ]
+      },
+      {
+        "label": [
+          "Evidence",
+          "before opinion"
+        ]
+      },
+      {
+        "label": [
+          "Delivery",
+          "stays connected"
+        ]
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "layers": [
+        "CUSTOMER PROBLEM",
+        "EVIDENCE",
+        "DECISION",
+        "PROTOTYPE",
+        "DELIVERY",
+        "OUTCOME"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "takeaways",
+      "type": "grid",
+      "theme": "alt",
+      "eyebrow": "The product principle",
+      "heading": "Problem before roadmap.",
+      "items": [
+        {
+          "title": "Customer problem first",
+          "body": "Customer problem first, roadmap second, features third."
+        },
+        {
+          "title": "Requests are evidence",
+          "body": "Customer requests are evidence, not automatically the roadmap. We look for the underlying need and the commercial reason to solve it."
+        },
+        {
+          "title": "Stay close to delivery",
+          "body": "Commview can work from discovery and product decisions through prototypes, user journeys, requirements and delivery."
+        },
+        {
+          "title": "Use AI for leverage",
+          "body": "AI can accelerate research, prototyping and specification. Product judgement still decides what deserves to be built."
+        }
+      ]
+    },
+    {
+      "id": "customer-problem",
+      "type": "lead",
+      "targetKeyword": "b2b product consulting",
+      "eyebrow": "B2B PRODUCT CONSULTING",
+      "heading": "B2B Product Consulting Starts With the Customer Problem",
+      "intro": [
+        "A roadmap is an output. It should not be the starting point.",
+        "Before deciding what to build, we want to understand who the customer is, what they are trying to achieve, where the friction sits and what evidence says the problem is worth solving.",
+        "That sounds obvious. In practice, product teams are constantly pulled towards solutions. A customer asks for a feature. Sales needs something for a deal. A competitor launches something new. Somebody senior has an idea. The roadmap fills up, but the connection between those requests and the customer problem becomes weaker.",
+        "Commview brings the conversation back to the problem. What do we know? What are we assuming? Which assumption carries the most risk? What would have to be true for this to create value? Then we decide what deserves to move forward."
+      ]
+    },
+    {
+      "id": "problems",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "product strategy problems",
+      "eyebrow": "PRODUCT STRATEGY PROBLEMS",
+      "heading": "Where B2B Product Strategy Goes Off Course",
+      "intro": "Scale-ups rarely run out of things they could build. The harder problem is deciding what not to build.",
+      "items": [
+        {
+          "title": "The roadmap becomes a request list",
+          "body": "Customers, Sales, leadership and delivery all have legitimate requests. Treating every request as a requirement creates a busy roadmap without creating a coherent product strategy."
+        },
+        {
+          "title": "Features ship but adoption does not follow",
+          "body": "Shipping is not the outcome. If customers do not discover, understand or repeatedly use what has been built, the team needs to understand why before adding more."
+        },
+        {
+          "title": "Product-market fit becomes an assumption",
+          "body": "Early traction can create confidence that the market and proposition are settled. As the company grows, the customer mix, competition and buying environment change. Product-market fit needs evidence, not nostalgia."
+        },
+        {
+          "title": "The team starts with the solution",
+          "body": "A feature can become emotionally committed to before the problem has been properly understood. Discovery becomes validation of an answer the business has already chosen."
+        },
+        {
+          "title": "Delivery speed hides weak prioritisation",
+          "body": "A faster team can still build the wrong things faster. Velocity matters after the business has made a good product decision, not instead of one."
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "type": "grid",
+      "targetKeyword": "product management consultant",
+      "eyebrow": "PRODUCT MANAGEMENT CONSULTANT",
+      "heading": "Product Management Consulting From Strategy to Delivery",
+      "intro": [
+        "Commview can work at the level the problem requires. Sometimes that means senior product leadership and prioritisation. Sometimes it means getting directly into discovery, journeys, prototypes, requirements and delivery.",
+        "The five product services below sit underneath this pillar. Each has its own detailed page and search intent."
+      ],
+      "items": [
+        {
+          "title": "Product Strategy Consulting",
+          "body": "Clarify the customer problem, strategic choices and priorities, then turn them into a product direction the team can actually use.",
+          "href": "/product-strategy/consulting"
+        },
+        {
+          "title": "Fractional CPO",
+          "body": "Senior product leadership without making the permanent hire. Product direction, priorities, team alignment and delivery oversight.",
+          "href": "/product-strategy/fractional-cpo"
+        },
+        {
+          "title": "MVP Scoping and Delivery",
+          "body": "Define the riskiest assumption and build the smallest credible product or test that gives the business useful evidence.",
+          "href": "/product-strategy/mvp"
+        },
+        {
+          "title": "Product Discovery",
+          "body": "Research, synthesise, prototype and test before committing significant time and engineering capacity to a solution.",
+          "href": "/product-strategy/discovery"
+        },
+        {
+          "title": "Roadmap and Prioritisation",
+          "body": "Turn strategy and evidence into clear product bets, outcomes and prioritised initiatives rather than a feature list with dates.",
+          "href": "/product-strategy/roadmap"
+        }
+      ]
+    },
+    {
+      "id": "hands-on",
+      "type": "stepper",
+      "theme": "dark",
+      "eyebrow": "HANDS-ON PRODUCT WORK",
+      "heading": "From Product Decision to Prototype, Specification and Delivery",
+      "intro": [
+        "Product strategy should survive contact with delivery.",
+        "Commview is deliberately hands-on. We can move from the customer problem into user journeys, prototypes, requirements, user stories and the conversations needed to get the product built.",
+        "Keeping strategy and delivery connected creates a tighter loop:"
+      ],
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Understand",
+          "body": "Understand the customer problem and commercial context."
+        },
+        {
+          "title": "Decide",
+          "body": "Decide which problem or assumption deserves attention."
+        },
+        {
+          "title": "Prototype",
+          "body": "Prototype the experience quickly enough to learn."
+        },
+        {
+          "title": "Specify",
+          "body": "Specify what needs to be built without prescribing unnecessary detail."
+        },
+        {
+          "title": "Deliver",
+          "body": "Work with delivery to keep the intent intact."
+        },
+        {
+          "title": "Measure",
+          "body": "Measure whether the outcome actually changed."
+        }
+      ],
+      "notes": "Design intent: this is the main Product visual. Express decision quality as CUSTOMER PROBLEM → EVIDENCE → DECISION → PROTOTYPE → DELIVERY → OUTCOME. Avoid dashboards and extra graphs."
+    },
+    {
+      "id": "ai",
+      "type": "callout",
+      "targetKeyword": "ai product strategy",
+      "eyebrow": "AI AND PRODUCT STRATEGY",
+      "heading": "AI Can Accelerate Product Work. It Cannot Make the Product Decision.",
+      "icon": "ai",
+      "body": [
+        "AI has changed how quickly product teams can move. Research can be synthesised faster. Early concepts can become clickable prototypes quickly. User journeys, requirements and first-pass stories can be developed in a fraction of the time they once took.",
+        "We use that leverage. But speed does not remove the need for judgement.",
+        "AI does not own the customer relationship. It does not carry the commercial risk. It does not decide which evidence matters, which cohort to prioritise, which strategic trade-off the company should make or whether a feature deserves to exist.",
+        "Our approach is simple: use AI to reduce the time between question and evidence, then keep the important product decisions with people who understand the customer, business and consequences.",
+        "AI makes the product process faster. It should not make the roadmap for you."
+      ],
+      "notes": "Treat AI as an acceleration layer beneath the product process, not the centre of the proposition."
+    },
+    {
+      "id": "engagement",
+      "type": "stepper",
+      "theme": "alt",
+      "targetKeyword": "product consultant engagement",
+      "eyebrow": "PRODUCT CONSULTANT ENGAGEMENT",
+      "heading": "How a Product Consultant Engagement Works",
+      "intro": "The engagement depends on where the product problem sits. Commview can work fractionally, around a defined product challenge or in an advisory capacity, but the working method stays consistent.",
+      "style": "circles",
+      "steps": [
+        {
+          "title": "Understand",
+          "body": "Get clear on the customer, commercial objective, existing evidence and the decision the business needs to make."
+        },
+        {
+          "title": "Discover",
+          "body": "Gather the evidence needed to challenge assumptions. That may include customer conversations, product data, sales insight, market context and existing research."
+        },
+        {
+          "title": "Decide",
+          "body": "Turn the evidence into choices. What problem matters? What do we believe? What should we prioritise? What are we deliberately not doing?"
+        },
+        {
+          "title": "Make it tangible",
+          "body": "Use journeys, prototypes, requirements and specifications to turn the decision into something customers and delivery teams can react to."
+        },
+        {
+          "title": "Deliver and learn",
+          "body": "Stay close to delivery, measure the outcome and feed what we learn back into the next product decision."
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "type": "lead",
+      "eyebrow": "EXPERIENCE BEHIND COMMVIEW",
+      "heading": "Product Experience From Strategy Through Delivery",
+      "intro": "Commview's product approach comes from hands-on product leadership, not product theory. The experience behind the business includes taking digital propositions into multiple markets, working across public and authenticated customer experiences, shaping product requirements, prioritising roadmaps and leading multidisciplinary delivery."
+    },
+    {
+      "id": "related",
+      "type": "grid",
+      "tight": true,
+      "eyebrow": "KEEP EXPLORING",
+      "heading": "Product thinking beyond this page.",
+      "items": [
+        {
+          "title": "Product-market fit",
+          "body": "Explore how to think about product-market fit as evidence rather than a one-off milestone.",
+          "href": "/insights/product-market-fit"
+        },
+        {
+          "title": "Product roadmap guide",
+          "body": "Explore how strategy, evidence and prioritisation should shape a useful product roadmap.",
+          "href": "/insights/product-roadmap-guide"
+        },
+        {
+          "title": "Our work",
+          "body": "See how Commview approaches commercial problems across product, GTM, growth and operational AI.",
+          "href": "/work"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "b2b product strategy faq",
+      "eyebrow": "B2B PRODUCT STRATEGY FAQ",
+      "heading": "B2B Product Strategy FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What does a product strategy consultant do?",
+          "a": "A product strategy consultant helps a business decide which customer problems are worth solving and how those choices translate into product direction. The work can include discovery, prioritisation, roadmap decisions, proposition, prototyping and measurement. Commview can also stay involved through specification and delivery rather than stopping at the recommendation."
+        },
+        {
+          "q": "What is the difference between product strategy and product management?",
+          "a": "Product strategy defines the choices behind the product: who it is for, which problems matter, where the product should compete and what outcomes matter. Product management turns those choices into continuous decisions and delivery. In a scale-up the two often overlap, which is why Commview can work across both."
+        },
+        {
+          "q": "Fractional CPO or full-time CPO: which is right?",
+          "a": "A fractional CPO can make sense when the business needs senior product leadership but does not yet need, or cannot justify, a permanent executive hire. A full-time CPO is better where the scale, team and ongoing leadership requirement justify a permanent role. The decision depends on the problem and operating model."
+        },
+        {
+          "q": "Can you work with our existing product and engineering team?",
+          "a": "Yes. Commview can work alongside product managers, designers, engineers and commercial teams rather than replacing them. The role may be to provide senior product direction, strengthen discovery and prioritisation, turn decisions into clearer requirements or connect product work more closely to customer and commercial evidence."
+        },
+        {
+          "q": "Do you build prototypes and write product requirements?",
+          "a": "Yes. Where it helps move the product decision forward, Commview can work on user journeys, clickable prototypes, requirements, specifications and user stories. The objective is not documentation for its own sake. These artefacts should make assumptions visible, improve decisions and give delivery teams enough clarity to build effectively."
+        },
+        {
+          "q": "How do you use AI in product strategy?",
+          "a": "Commview uses AI to accelerate parts of product work such as synthesis, prototyping, journey development and first-pass specifications. AI does not decide the roadmap. Prioritisation, strategic trade-offs and investment decisions still require human judgement grounded in customer evidence, commercial context and the consequences of getting the decision wrong."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "LET'S TALK",
+      "heading": "Before you build the next thing, make sure it is the right thing.",
+      "body": "If the roadmap is full but the direction is unclear, the answer may not be another prioritisation framework. Let's work out what the customer needs, what the evidence supports and what deserves to be built.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        },
+        {
+          "label": "Take the Diagnostic",
+          "href": "/diagnostic",
+          "style": "ghost"
+        }
+      ],
+      "tagline": [
+        "Problem first.",
+        "Evidence next.",
+        "Build what matters."
+      ]
+    }
+  ],
+  "notes": "Product accent is blue (#3B82F6 via design tokens). Keep established Commview dark/light editorial language. Maximum two major visual devices. Main visual is the customer problem to outcome sequence. AI is a secondary acceleration layer. No generic SaaS dashboard styling."
+}
