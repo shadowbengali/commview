@@ -1,0 +1,227 @@
+{
+  "slug": "product-strategy/roadmap",
+  "pillar": "product",
+  "accent": "blue",
+  "meta": {
+    "title": "Product Roadmap Consulting | B2B | CommView",
+    "description": "Product roadmap consulting for B2B scale-ups. Turn strategy and evidence into prioritised outcomes and initiatives that can survive changing information.",
+    "primaryKeyword": "product roadmap consulting",
+    "secondaryKeywords": [
+      "product roadmap problems",
+      "how to build a product roadmap",
+      "product roadmap communication",
+      "product roadmap faq",
+      "product roadmap timeframe",
+      "sharing product roadmap with sales",
+      "product roadmap prioritisation"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Product",
+        "href": "/product-strategy"
+      },
+      {
+        "name": "PRODUCT ROADMAP CONSULTING",
+        "href": "/product-strategy/roadmap"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/product-strategy",
+        "purpose": "parent"
+      },
+      {
+        "href": "/insights/product-roadmap-guide",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/should-we-build-this-feature",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "PRODUCT ROADMAP CONSULTING",
+    "h1": [
+      "Product Roadmap Consulting.",
+      "Make the roadmap explain the decision."
+    ],
+    "accentLine": 1,
+    "sub": "A useful roadmap shows where the product is trying to create an outcome and why that work deserves priority. It should guide decisions without pretending the team can predict every feature and date months in advance.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "ROADMAP LOGIC",
+      "sub": "Strategy becomes choices before it becomes work.",
+      "layers": [
+        "STRATEGY",
+        "OUTCOMES",
+        "STRATEGIC BETS",
+        "PRIORITISED INITIATIVES",
+        "DELIVERY EVIDENCE"
+      ],
+      "highlight": 3
+    }
+  },
+  "sections": [
+    {
+      "id": "problems",
+      "type": "grid",
+      "targetKeyword": "product roadmap problems",
+      "eyebrow": "WHY ROADMAPS FAIL",
+      "heading": "Why Most Product Roadmaps Fail",
+      "intro": "The roadmap becomes dangerous when it hides the reasoning behind the work.",
+      "items": [
+        {
+          "title": "Feature list disguised as strategy",
+          "body": "The document records what will be built but cannot explain which outcome those features are intended to change."
+        },
+        {
+          "title": "The loudest customer wins",
+          "body": "Individual requests become commitments without enough evidence that the underlying problem matters across the target market."
+        },
+        {
+          "title": "Sales pressure becomes product priority",
+          "body": "Near-term deal pressure can override product strategy when there is no explicit decision model for trade-offs."
+        },
+        {
+          "title": "Dates become promises",
+          "body": "A planning view is treated as certainty even when discovery and delivery are still generating new information."
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "how to build a product roadmap",
+      "eyebrow": "THE METHOD",
+      "heading": "How to Build a Product Roadmap From Strategy, Not Requests",
+      "intro": "The roadmap should make the logic visible.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Strategy",
+          "body": "Clarify the customer, problem and product direction."
+        },
+        {
+          "title": "Outcomes",
+          "body": "Define the customer or business change the product needs to create."
+        },
+        {
+          "title": "Bets",
+          "body": "Choose the product opportunities most likely to influence those outcomes."
+        },
+        {
+          "title": "Prioritise",
+          "body": "Compare evidence, value, risk, dependencies and effort without pretending the scoring model makes the decision for you."
+        },
+        {
+          "title": "Initiatives",
+          "body": "Translate priorities into coherent areas of work rather than premature feature commitments."
+        },
+        {
+          "title": "Learn",
+          "body": "Use discovery and delivery evidence to update the roadmap as assumptions change."
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "type": "comparison",
+      "theme": "alt",
+      "targetKeyword": "product roadmap communication",
+      "eyebrow": "COMMUNICATION",
+      "heading": "One Product Roadmap Does Not Need to Say the Same Thing to Everyone",
+      "intro": "Different audiences need different levels of detail, but the underlying product logic should remain consistent.",
+      "columns": [
+        {
+          "title": "Leadership and board",
+          "items": [
+            "Strategic bets and expected outcomes",
+            "Material trade-offs and investment choices",
+            "Evidence, risk and progress"
+          ]
+        },
+        {
+          "title": "Delivery teams",
+          "items": [
+            "Prioritised problems and initiatives",
+            "Context behind the decision",
+            "Dependencies, discovery and learning"
+          ]
+        },
+        {
+          "title": "Sales and customers",
+          "items": [
+            "Direction and relevant themes",
+            "Careful language around uncertainty",
+            "No invented certainty about dates or features"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "product roadmap faq",
+      "eyebrow": "FAQ",
+      "heading": "Product Roadmap FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "How far ahead should a product roadmap look?",
+          "a": "A product roadmap should look far enough ahead to communicate strategic direction without pretending distant work is certain. Near-term initiatives can carry more detail because evidence and delivery constraints are clearer. Further out, themes, outcomes or strategic bets are usually more honest. The appropriate horizon depends on the product, market and planning cadence."
+        },
+        {
+          "q": "Should the sales team see the full product roadmap?",
+          "a": "Sales should understand product direction and the context needed for customer conversations, but that does not require exposing every internal planning detail as a commitment. A sales-facing view can communicate relevant themes and confidence levels while protecting the team from accidental promises. The underlying strategy should remain consistent across versions."
+        },
+        {
+          "q": "How do we prioritise between competing customer requests?",
+          "a": "Start by separating the requested feature from the underlying customer problem. Compare how often and how severely the problem appears in the target market, its strategic fit, expected value, evidence, risk, dependencies and delivery cost. Prioritisation frameworks can organise the evidence, but product judgement still has to make the trade-off."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "PRODUCT",
+      "heading": "A roadmap should make trade-offs clearer, not hide them behind dates.",
+      "body": "Build a roadmap that connects strategy, evidence and delivery without turning uncertainty into false promises.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Problem before roadmap.",
+        "Evidence before opinion.",
+        "Delivery stays connected."
+      ]
+    }
+  ],
+  "notes": "Product accent #3B82F6. Hero visual is strategy-to-initiative logic. Use one strong roadmap visual, not a fake Gantt chart. Product judgement remains explicit; frameworks organise evidence but do not decide."
+}
