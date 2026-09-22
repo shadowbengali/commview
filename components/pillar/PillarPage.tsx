@@ -144,14 +144,27 @@ function DiagramView({ d }: { d?: Diagram }) {
   if (d.kind === "hub") return <HubDiagram d={d} />;
   if (d.kind === "overlap") return <OverlapDiagram d={d} />;
   if (d.kind === "image") return <div className="p-shot"><img src={d.src} alt={d.alt} /></div>;
-  if (d.kind === "stack") return (
-    <div className="p-diagram"><svg viewBox="0 0 600 470" role="img" aria-label={d.layers.join(", ")}>
-      {d.layers.map((l, i) => <g key={l}>
-        <rect x="120" y={60 + i * 130} width="360" height="90" rx="12" fill={ACCENT} fillOpacity={i === 1 ? 0.22 : 0.08} stroke={ACCENT} strokeWidth="1.5" />
-        <text x="300" y={112 + i * 130} textAnchor="middle" className="p-diagram__core">{l}</text>
-      </g>)}
-    </svg></div>
-  );
+  if (d.kind === "stack") {
+    const n = d.layers.length;
+    const top = 22, avail = 470 - top * 2, gap = 14;
+    const h = Math.min(72, (avail - gap * (n - 1)) / n), step = h + gap;
+    return (
+      <div className="p-diagram"><svg viewBox="0 0 600 470" role="img" aria-label={d.layers.join(", then ")}>
+        <defs><filter id="pdsGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="10" /></filter></defs>
+        {d.layers.map((l, i) => {
+          const y = top + i * step, last = i === n - 1;
+          return (
+            <g key={l}>
+              {i < n - 1 && <line x1="300" y1={y + h} x2="300" y2={y + step} stroke="var(--slate-dark)" strokeWidth="1.5" />}
+              {last && <rect x="128" y={y - 3} width="344" height={h + 6} rx="12" fill={ACCENT} opacity="0.28" filter="url(#pdsGlow)" />}
+              <rect x="130" y={y} width="340" height={h} rx="12" fill={last ? ACCENT : "var(--brand-charcoal)"} fillOpacity={last ? 1 : 0.5} stroke={ACCENT} strokeWidth="1.4" strokeOpacity={last ? 1 : 0.55} />
+              <text x="300" y={y + h / 2 + 5} textAnchor="middle" className="p-diagram__seq" fill={last ? "var(--brand-charcoal)" : "var(--brand-polar)"}>{l}</text>
+            </g>
+          );
+        })}
+      </svg></div>
+    );
+  }
   return null;
 }
 

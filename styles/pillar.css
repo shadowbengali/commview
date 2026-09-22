@@ -39,6 +39,7 @@
 .p-diagram__coreline { font-size: 12px; fill: var(--slate-light); }
 .p-diagram__find { font-size: 15px; font-weight: 700; fill: var(--brand-charcoal); }
 .p-diagram__lobe { font-size: 14px; font-weight: 600; fill: var(--brand-polar); }
+.p-diagram__seq { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; }
 .p-shot { width: 100%; }
 .p-shot img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); }
 
@@ -171,7 +172,7 @@
   .p-grid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .p-compare__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .p-proc__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10, 40px) var(--space-8); }
-  .p-proc--arrows .p-step::after, .p-proc--circles .p-step::after { content: none; }
+  .p-proc--arrows .p-step:not(:last-child)::after, .p-proc--circles .p-step:not(:last-child)::after { content: none; }
   .p-stats__grid[data-cols="4"], .p-stats__grid[data-cols="5"] { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-8); }
   .p-stat { padding-inline: var(--space-6); }
   .p-stat:nth-child(odd) { border-left: 0; padding-left: 0; }
