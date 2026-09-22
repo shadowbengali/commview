@@ -201,7 +201,10 @@ export default function GrowthPage() {
           <div className="gr-engine__head">
             <div>
               <p className="eyebrow-x" style={{ color: "var(--c)" }}>What we do</p>
-              <h2 id="gr-engine" style={{ marginTop: "var(--space-3)" }}>A complete growth engine, built for B2B.</h2>
+              <h2 id="gr-engine" style={{ marginTop: "var(--space-3)" }}>
+                <span>A complete growth engine,</span>{" "}
+                <span>built for B2B.</span>
+              </h2>
             </div>
             <p className="gr-engine__intro">Commview works across the growth journey, from strategy and audience through content, channels, conversion and measurement. We don&rsquo;t assume every business needs every capability — the mix depends on the problem we are trying to solve.</p>
           </div>
@@ -322,7 +325,8 @@ export default function GrowthPage() {
           <div>
             <p className="eyebrow-x" style={{ color: "var(--c)" }}>Let&rsquo;s talk</p>
             <h2 className="gr-final__h" id="gr-final" style={{ marginTop: "var(--space-3)" }}>
-              Ready to grow smarter? Let&rsquo;s find the constraint.
+              <span>Ready to grow smarter?</span>{" "}
+              <span>Let&rsquo;s find the constraint.</span>
             </h2>
             <p className="gr-final__p">You don&rsquo;t need to know whether the answer is SEO, demand generation, paid media, conversion or something else before speaking to us. That&rsquo;s the point of the diagnosis.</p>
             <div className="gr-final__row">

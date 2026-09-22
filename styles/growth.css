@@ -42,7 +42,8 @@
 
 /* ===== what we do — growth engine (numbered 5) ===== */
 .gr-engine__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-12); align-items: end; }
-.gr-engine__head h2 { max-width: 16ch; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+.gr-engine__head h2 { max-width: none; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+.gr-engine__head h2 span { display: block; }
 .gr-engine__intro { max-width: 52ch; color: var(--text-secondary); font-size: 16px; line-height: 1.6; }
 .gr-engine__grid { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-8); }
 .gr-cell { border-top: 2px solid var(--border-subtle); padding-top: var(--space-4); }
@@ -69,7 +70,7 @@
 .gr-stat span { display: block; margin-top: var(--space-3); font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
 
 /* ===== process ===== */
-.gr-proc__head h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; max-width: 16ch; }
+.gr-proc__head h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
 .gr-proc__grid { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-8); }
 .gr-step b { display: block; font-size: 14px; font-weight: 700; color: var(--c); }
 .gr-step h3 { margin-top: var(--space-3); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
@@ -85,7 +86,7 @@
 
 /* ===== faq (full-width, filled rows) ===== */
 .gr-faq { background: var(--surface-raised); }
-.gr-faq__head h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; max-width: 20ch; }
+.gr-faq__head h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
 .gr-faq__list { margin-top: var(--space-8); display: grid; gap: var(--space-3); }
 .gr-faq details { background: color-mix(in srgb, var(--brand-charcoal) 4%, transparent); border-radius: var(--radius-md); }
 .gr-faq summary { list-style: none; cursor: pointer; padding: var(--space-5, 20px) var(--space-6); display: flex; gap: var(--space-6); align-items: center; justify-content: space-between; font-size: 16px; font-weight: 600; line-height: 1.4; letter-spacing: -0.01em; }
@@ -98,7 +99,8 @@
 /* ===== final CTA (dark, full-width) ===== */
 .gr-final { padding-block: var(--space-24); }
 .gr-final__grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-16); align-items: center; }
-.gr-final__h { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-polar); max-width: 16ch; }
+.gr-final__h { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-polar); max-width: none; }
+.gr-final__h span { display: block; }
 .gr-final__p { margin-top: var(--space-4); max-width: 48ch; color: var(--slate-light); font-size: 17px; line-height: 1.6; }
 .gr-final__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .gr-final__tag { border-left: 1px solid var(--slate-dark); padding-left: var(--space-8); font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.6; color: var(--slate-light); white-space: nowrap; }
