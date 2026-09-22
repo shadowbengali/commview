@@ -93,6 +93,8 @@ img { max-width: 100%; height: auto; display: block; }
 .btn--ink:hover { background: var(--brand-blue); }
 .btn--cyan { background: var(--brand-cyan); color: var(--brand-charcoal); }
 .btn--cyan:hover { background: var(--brand-polar); }
+.btn--green { background: var(--accent-green); color: var(--brand-charcoal); }
+.btn--green:hover { background: var(--brand-polar); }
 .btn--ghost { border-color: var(--border-strong); color: inherit; background: none; }
 .dark .btn--ghost { border-color: var(--slate); }
 .btn--ghost:hover { border-color: var(--brand-cyan); }
