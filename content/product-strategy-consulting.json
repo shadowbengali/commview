@@ -1,0 +1,232 @@
+{
+  "slug": "product-strategy/consulting",
+  "pillar": "product",
+  "accent": "blue",
+  "meta": {
+    "title": "Product Strategy Consultant | B2B | CommView",
+    "description": "Product strategy consulting for B2B scale-ups. Connect customer problems, commercial reality, product decisions and a prioritised roadmap.",
+    "primaryKeyword": "product strategy consultant",
+    "secondaryKeywords": [
+      "what does a product strategy consultant do",
+      "product strategy consulting method",
+      "when to hire product strategy consultant",
+      "product strategy consultant faq",
+      "product strategy vs product management",
+      "product strategy consultant deliverables"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Product",
+        "href": "/product-strategy"
+      },
+      {
+        "name": "PRODUCT STRATEGY CONSULTANT",
+        "href": "/product-strategy/consulting"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/product-strategy",
+        "purpose": "parent"
+      },
+      {
+        "href": "/product-strategy/roadmap",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/product-market-fit",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "PRODUCT STRATEGY CONSULTANT",
+    "h1": [
+      "Product Strategy Consultant for B2B.",
+      "Turn evidence into product decisions."
+    ],
+    "accentLine": 1,
+    "sub": "Product strategy gets difficult when customer requests, commercial pressure and delivery capacity all compete for the roadmap. We reconnect the product to the customer problem, decide which bets deserve investment and stay close enough to delivery to see whether the strategy survives contact with reality.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "FROM PROBLEM TO PRIORITY",
+      "sub": "The roadmap comes after the evidence.",
+      "layers": [
+        "CUSTOMER PROBLEM",
+        "EVIDENCE",
+        "STRATEGIC BET",
+        "PRIORITY",
+        "ROADMAP",
+        "OUTCOME"
+      ],
+      "highlight": 4
+    }
+  },
+  "sections": [
+    {
+      "id": "role",
+      "type": "lead",
+      "targetKeyword": "what does a product strategy consultant do",
+      "eyebrow": "THE ROLE",
+      "heading": "What Does a Product Strategy Consultant Do?",
+      "intro": [
+        "A product strategy consultant helps a business decide which customer problems and product opportunities deserve investment, and how those decisions connect to commercial goals.",
+        "The work is not simply producing a roadmap. It means diagnosing where the product and market have drifted apart, gathering evidence, making trade-offs explicit and turning the resulting strategy into decisions the delivery team can act on."
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "product strategy consulting method",
+      "eyebrow": "THE METHOD",
+      "heading": "Product Strategy Consulting From Customer Evidence to Roadmap",
+      "intro": "Start with the problem, not the backlog.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Customer problem",
+          "body": "Define whose problem matters and what evidence exists that it is worth solving."
+        },
+        {
+          "title": "Evidence",
+          "body": "Bring together customer research, product behaviour, market context and commercial signals."
+        },
+        {
+          "title": "Strategic bets",
+          "body": "Decide where the product can create meaningful customer and business value."
+        },
+        {
+          "title": "Prioritisation",
+          "body": "Make the trade-offs visible rather than allowing every request onto the roadmap."
+        },
+        {
+          "title": "Delivery",
+          "body": "Translate decisions into journeys, prototypes, requirements and work the team can execute."
+        },
+        {
+          "title": "Outcome",
+          "body": "Measure what happened and feed the evidence back into the next decision."
+        }
+      ]
+    },
+    {
+      "id": "signals",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "when to hire product strategy consultant",
+      "eyebrow": "WHEN IT HELPS",
+      "heading": "When to Hire a Product Strategy Consultant",
+      "items": [
+        {
+          "title": "The roadmap has become a request list",
+          "body": "Customers, Sales and internal teams all have reasonable requests, but there is no shared logic for what wins."
+        },
+        {
+          "title": "Growth has changed the product problem",
+          "body": "The product found a market, but the next stage needs clearer choices about segment, proposition or where to invest."
+        },
+        {
+          "title": "A major decision needs evidence",
+          "body": "A fundraise, acquisition, new market or significant product investment creates a decision that deserves more than internal opinion."
+        },
+        {
+          "title": "Delivery is busy but direction is unclear",
+          "body": "The team ships, but it is difficult to explain which customer or commercial outcome the work is intended to change."
+        }
+      ]
+    },
+    {
+      "id": "deliverables",
+      "type": "grid",
+      "targetKeyword": "product strategy consultant deliverables",
+      "eyebrow": "WHAT YOU GET",
+      "heading": "Product Strategy Consultant Deliverables That Teams Can Use",
+      "items": [
+        {
+          "title": "Problem and evidence view",
+          "body": "A clear account of the customer problem, available evidence and the assumptions that still need testing."
+        },
+        {
+          "title": "Strategic choices",
+          "body": "Explicit product bets and trade-offs connected to customer and commercial outcomes."
+        },
+        {
+          "title": "Prioritisation",
+          "body": "A decision model for what moves forward, what waits and why."
+        },
+        {
+          "title": "Roadmap direction",
+          "body": "A roadmap organised around outcomes and initiatives rather than an undifferentiated feature list."
+        },
+        {
+          "title": "Delivery artefacts",
+          "body": "Where useful, prototypes, user journeys, requirements and stories that keep the strategic intent connected to execution."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "product strategy consultant faq",
+      "eyebrow": "FAQ",
+      "heading": "Product Strategy Consultant FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "How is product strategy consulting different from product management?",
+          "a": "Product strategy consulting focuses on the choices that determine where the product should compete, which customer problems deserve investment and how product decisions support the business. Product management also includes the ongoing work of coordinating discovery, prioritisation and delivery. Commview can work at strategy level and stay hands-on through execution."
+        },
+        {
+          "q": "What does a product strategy consultant actually deliver?",
+          "a": "A product strategy consultant can deliver customer and market evidence, a clear problem definition, strategic bets, prioritisation logic, roadmap direction and the decision principles behind them. The exact output depends on the problem. Commview can also turn decisions into prototypes, user journeys, requirements and delivery-ready work where that helps."
+        },
+        {
+          "q": "When should we hire a product strategy consultant?",
+          "a": "Hire a product strategy consultant when an important product decision lacks enough clarity or evidence to make confidently. Common signals include roadmap paralysis, post-product-market-fit drift, a major strategic change or a backlog dominated by competing requests. The value comes from improving the decision before more delivery effort is committed."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "PRODUCT",
+      "heading": "The roadmap should be the consequence of the strategy, not the strategy itself.",
+      "body": "We can help turn customer and commercial evidence into product choices the team can actually execute.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Problem before roadmap.",
+        "Evidence before opinion.",
+        "Delivery stays connected."
+      ]
+    }
+  ],
+  "notes": "Product accent #3B82F6. Main visual is the problem-to-priority sequence. Keep the page editorial and decision-led, not a generic product-management framework wall."
+}
