@@ -1,0 +1,224 @@
+{
+  "slug": "ai-consulting/workflow-automation",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI Workflow Automation | B2B | CommView",
+    "description": "AI workflow automation for B2B scale-ups. Design, build and measure multi-step workflows with AI where interpretation genuinely improves the process.",
+    "primaryKeyword": "ai workflow automation",
+    "secondaryKeywords": [
+      "what is ai workflow automation",
+      "ai workflow automation b2b",
+      "ai workflow automation tools",
+      "ai workflow automation implementation",
+      "ai workflow automation faq",
+      "best ai workflow automation tools"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "AI WORKFLOW AUTOMATION",
+        "href": "/ai-consulting/workflow-automation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/ai-consulting/automation",
+        "purpose": "related"
+      },
+      {
+        "href": "/ai-consulting/business-operations",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI WORKFLOW AUTOMATION",
+    "h1": [
+      "AI Workflow Automation.",
+      "Automate the flow, not just the task."
+    ],
+    "accentLine": 1,
+    "sub": "AI workflow automation connects multi-step business processes and uses AI where interpretation, classification, extraction or drafting genuinely improves the flow. We design around the process first, then choose the tools that fit it.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "WORKFLOW WITH AI IN THE LOOP",
+      "sub": "The intelligence sits where judgement-like processing is useful.",
+      "layers": [
+        "TRIGGER",
+        "CONTEXT",
+        "AI STEP",
+        "BUSINESS RULE",
+        "HUMAN REVIEW",
+        "ACTION + LOG"
+      ],
+      "highlight": 2
+    }
+  },
+  "sections": [
+    {
+      "id": "definition",
+      "type": "lead",
+      "targetKeyword": "what is ai workflow automation",
+      "eyebrow": "WHAT IT IS",
+      "heading": "What Is AI Workflow Automation?",
+      "intro": [
+        "AI workflow automation is the use of AI inside a multi-step automated process to handle work such as interpreting text, extracting information, classifying inputs, drafting outputs or choosing between defined routes.",
+        "The AI step is only one part of the system. Reliable workflows also need triggers, data, business rules, integrations, exception handling, human review where appropriate and logging."
+      ]
+    },
+    {
+      "id": "b2b",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "ai workflow automation b2b",
+      "eyebrow": "B2B WORKFLOWS",
+      "heading": "Where AI Workflow Automation Can Work in B2B",
+      "items": [
+        {
+          "title": "Marketing operations",
+          "body": "Move information between systems, enrich campaign inputs, repurpose approved material and route work for review."
+        },
+        {
+          "title": "Sales operations",
+          "body": "Summarise interactions, enrich account context, classify inbound signals and prepare information for the next commercial action."
+        },
+        {
+          "title": "Customer success",
+          "body": "Triage incoming requests, surface account context and route cases while preserving human ownership for consequential decisions."
+        },
+        {
+          "title": "Reporting",
+          "body": "Collect structured inputs, prepare summaries and flag exceptions so people spend less time assembling routine reports."
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "comparison",
+      "targetKeyword": "ai workflow automation tools",
+      "eyebrow": "TOOLS",
+      "heading": "AI Workflow Automation Tools Follow the Process",
+      "intro": "The best tool depends on the workflow, systems, control requirements and technical environment.",
+      "columns": [
+        {
+          "title": "Automation platforms",
+          "items": [
+            "Zapier for broad SaaS connectivity and accessible workflow building",
+            "Make for visual multi-step automation",
+            "n8n for flexible workflows and deployment options"
+          ]
+        },
+        {
+          "title": "Custom build",
+          "items": [
+            "Useful when the workflow needs deeper application logic or product integration",
+            "Can provide more control over data, interfaces and evaluation",
+            "Carries greater build and maintenance responsibility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "ai workflow automation implementation",
+      "eyebrow": "IMPLEMENTATION",
+      "heading": "AI Workflow Automation From Design to Handover",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Design",
+          "body": "Map the current workflow, exceptions, systems and desired outcome."
+        },
+        {
+          "title": "Build",
+          "body": "Connect the systems and add AI only where it performs a useful processing job."
+        },
+        {
+          "title": "Test",
+          "body": "Evaluate normal cases, edge cases, failure modes and human escalation."
+        },
+        {
+          "title": "Deploy",
+          "body": "Put the workflow into the real operating environment with appropriate controls."
+        },
+        {
+          "title": "Measure",
+          "body": "Compare time, quality, throughput or other relevant measures against the baseline."
+        },
+        {
+          "title": "Hand over",
+          "body": "Document ownership, monitoring and how the team should change or stop the workflow."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai workflow automation faq",
+      "eyebrow": "FAQ",
+      "heading": "AI Workflow Automation FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What is AI workflow automation?",
+          "a": "AI workflow automation combines conventional automation with AI inside a multi-step business process. The AI can interpret, classify, extract, summarise or draft where fixed rules are not enough, while the wider workflow handles triggers, integrations, business rules and actions. Human review can remain in the process where errors carry meaningful consequences."
+        },
+        {
+          "q": "What's the best AI workflow automation tool?",
+          "a": "There is no single best tool for every workflow. Zapier, Make and n8n can all be useful depending on integrations, complexity, hosting, control and the skills of the team maintaining the system. Custom development can fit deeper product or operational requirements. We choose after mapping the workflow rather than forcing the process into a preferred platform."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "A good AI workflow should make the operation simpler, not create another system to babysit.",
+      "body": "Map the process, put intelligence where it helps and keep ownership of the outcome clear.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. Hero is a controlled workflow with one highlighted AI step. Tool logos should not dominate the page."
+}
