@@ -1,0 +1,155 @@
+{
+  "slug": "ai-consulting/uk",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI Consulting UK | Manchester-Based | CommView",
+    "description": "AI consulting UK for B2B scale-ups. Manchester-based, working with clients across the UK and internationally on practical Operational AI.",
+    "primaryKeyword": "ai consulting uk",
+    "secondaryKeywords": [
+      "ai consultant uk",
+      "ai consulting uk faq",
+      "ai consultant uk international",
+      "uk ai data protection",
+      "ai consultant uk in person"
+    ],
+    "schemaTypes": [
+      "Service",
+      "LocalBusiness",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "AI CONSULTING UK",
+        "href": "/ai-consulting/uk"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/about",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI CONSULTING UK",
+    "h1": [
+      "AI Consulting UK.",
+      "Manchester-based. Built to work wherever the client is."
+    ],
+    "accentLine": 1,
+    "sub": "Commview is a Manchester-based B2B consultancy working on practical Operational AI. We can work remotely across the UK and internationally, with in-person collaboration where it materially improves the engagement.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "none",
+      "caption": "UK DELIVERY",
+      "sub": "Manchester base. Remote-first collaboration. In-person where useful."
+    }
+  },
+  "sections": [
+    {
+      "id": "delivery",
+      "type": "lead",
+      "targetKeyword": "ai consulting uk",
+      "eyebrow": "UK BASED",
+      "heading": "UK-Based AI Consulting With Flexible Delivery",
+      "intro": [
+        "Commview is based in Manchester and is set up to work remotely with clients across the UK and internationally.",
+        "Location should not dictate the operating model. Workshops, stakeholder sessions and delivery can happen remotely, with in-person work used where being in the room materially improves discovery, alignment or implementation."
+      ]
+    },
+    {
+      "id": "sectors",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "ai consultant uk",
+      "eyebrow": "OPERATING CONTEXT",
+      "heading": "AI Consulting Informed by B2B Operating Experience",
+      "intro": "The experience behind Commview spans sectors including telecommunications, industrial and distribution businesses, retail and professional environments. That is prior operator experience, not a claim that each sector is a Commview AI client.",
+      "items": [
+        {
+          "title": "Telecommunications",
+          "body": "Experience inside complex B2B digital, product, demand and operational environments."
+        },
+        {
+          "title": "Industrial and distribution",
+          "body": "Experience with technical products, large catalogues, multi-market growth and commercial operations."
+        },
+        {
+          "title": "Retail and digital",
+          "body": "Experience across digital journeys, ecommerce, acquisition and conversion."
+        },
+        {
+          "title": "Professional environments",
+          "body": "Current consultancy work across B2B strategy, growth and digital operations."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai consulting uk faq",
+      "eyebrow": "FAQ",
+      "heading": "AI Consulting UK FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "Do you work with UK-based clients only?",
+          "a": "No. Commview is based in Manchester but can work with organisations across the UK and internationally. Most strategy, workflow design, analysis and implementation work can be delivered remotely. The right delivery model depends on the client, systems and stakeholders rather than the location of the office."
+        },
+        {
+          "q": "How does UK data protection law affect AI implementation?",
+          "a": "UK AI implementations still need to handle personal data in line with applicable data protection obligations, including the UK GDPR and Data Protection Act 2018 where relevant. The exact requirements depend on the data and use case. We design data access and controls into the workflow and recommend specialist legal advice where the implementation creates material compliance questions."
+        },
+        {
+          "q": "Do you meet clients in person or remote-only?",
+          "a": "Both are possible. Commview is Manchester-based and works remote-first because it keeps delivery flexible across locations. In-person sessions can be useful for discovery, leadership alignment, workshops or complex operating decisions. We use them when they improve the work rather than making travel part of the engagement by default."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "Need practical AI consulting in the UK without a giant transformation programme?",
+      "body": "Start with the operating problem and build from there.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. Geo page should be quieter than the service pages. No London skyline, Union Jack or generic map decoration. Keep Manchester provenance factual and understated."
+}
