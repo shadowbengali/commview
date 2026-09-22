@@ -8,7 +8,7 @@
 import { chromium } from "playwright";
 
 const BASE = process.env.VERIFY_BASE || "http://localhost:3000";
-const ROUTES = ["/", "/insights", "/what-we-do", "/fractional-cmo", "/growth"]; // built pages.
+const ROUTES = ["/", "/insights", "/what-we-do", "/fractional-cmo", "/growth", "/product-strategy"]; // built pages.
 const WIDTHS = [360, 390, 430, 768, 900, 1024, 1280, 1440, 1920];
 
 const b = await chromium.launch();
