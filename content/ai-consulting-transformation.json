@@ -1,0 +1,203 @@
+{
+  "slug": "ai-consulting/transformation",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI Transformation Consultant | B2B | CommView",
+    "description": "AI transformation consulting for B2B scale-ups. Prioritise, phase and embed useful AI changes without turning the business into a giant transformation programme.",
+    "primaryKeyword": "ai transformation consultant",
+    "secondaryKeywords": [
+      "ai transformation",
+      "ai implementation roadmap",
+      "responsible ai implementation",
+      "ai transformation consultant faq",
+      "ai transformation scale up",
+      "ai transformation vs big consulting",
+      "ai transformation failure"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      },
+      {
+        "name": "AI TRANSFORMATION CONSULTANT",
+        "href": "/ai-consulting/transformation"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting",
+        "purpose": "parent"
+      },
+      {
+        "href": "/ai-consulting/implementation",
+        "purpose": "related"
+      },
+      {
+        "href": "/insights/responsible-ai",
+        "purpose": "insight"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI TRANSFORMATION CONSULTANT",
+    "h1": [
+      "AI Transformation Consultant.",
+      "Change the operation in phases."
+    ],
+    "accentLine": 1,
+    "sub": "For a scale-up, AI transformation should not mean launching a giant programme because AI is fashionable. It means identifying where operating models genuinely need to change, sequencing the useful interventions and building enough governance for the risk involved.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "TRANSFORMATION ROADMAP",
+      "sub": "Change compounds when useful systems become normal operations.",
+      "layers": [
+        "ASSESS",
+        "PRIORITISE",
+        "PHASE",
+        "DEPLOY",
+        "EMBED",
+        "MEASURE"
+      ],
+      "highlight": 4
+    }
+  },
+  "sections": [
+    {
+      "id": "meaning",
+      "type": "lead",
+      "targetKeyword": "ai transformation",
+      "eyebrow": "SCALE-UP TRANSFORMATION",
+      "heading": "What AI Transformation Means for a Scale-up",
+      "intro": [
+        "AI transformation for a scale-up is a deliberate change to how selected parts of the business operate, using AI where it creates enough value to justify the change.",
+        "The scale should match the business. Rather than beginning with an enterprise-wide programme, we identify operational priorities, prove useful interventions and expand the operating model as evidence and capability grow."
+      ]
+    },
+    {
+      "id": "roadmap",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "ai implementation roadmap",
+      "eyebrow": "THE ROADMAP",
+      "heading": "An AI Implementation Roadmap From Assessment to Embedded Use",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Assess",
+          "body": "Understand workflows, data, systems, skills, risks and existing AI use."
+        },
+        {
+          "title": "Prioritise",
+          "body": "Choose opportunities by operational value, feasibility, risk and measurability."
+        },
+        {
+          "title": "Phase",
+          "body": "Sequence work so the business can learn before committing to broader change."
+        },
+        {
+          "title": "Deploy",
+          "body": "Put useful systems into real workflows with controls and ownership."
+        },
+        {
+          "title": "Embed",
+          "body": "Change processes, responsibilities and capability so the new way of working can persist."
+        },
+        {
+          "title": "Measure",
+          "body": "Track whether the operating change created the intended result and adjust the roadmap."
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "responsible ai implementation",
+      "eyebrow": "GOVERNANCE",
+      "heading": "Responsible AI Implementation Starts With the Consequence of Error",
+      "items": [
+        {
+          "title": "Data",
+          "body": "Know what information the system can access, where it goes and who is authorised to use it."
+        },
+        {
+          "title": "Human accountability",
+          "body": "Keep a named person or team responsible for consequential decisions and exceptions."
+        },
+        {
+          "title": "Evaluation",
+          "body": "Test quality and failure modes against representative work before expanding use."
+        },
+        {
+          "title": "Monitoring",
+          "body": "Log important behaviour and define what should trigger review, intervention or shutdown."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai transformation consultant faq",
+      "eyebrow": "FAQ",
+      "heading": "AI Transformation Consultant FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What does AI transformation mean for a scale-up specifically?",
+          "a": "For a scale-up, AI transformation means changing selected workflows, capabilities and operating practices where AI can create measurable value. It does not require an enterprise-wide programme. The sensible approach is to prioritise a small number of important opportunities, deploy them with appropriate controls and expand only when the evidence supports broader change."
+        },
+        {
+          "q": "How is this different from what McKinsey or Accenture do?",
+          "a": "Commview is designed for a smaller B2B scale-up context and stays close to implementation. Large consultancies can support complex enterprise transformation at a scale that may be appropriate for larger organisations. Our model starts with specific operating friction, builds and measures useful interventions, and keeps the people defining the change connected to delivery."
+        },
+        {
+          "q": "Where do AI transformations fail?",
+          "a": "AI transformations can fail when technology is chosen before the operating problem, when pilots never reach production, when data or integration constraints appear too late, or when users and accountability are ignored. They can also fail by scaling weak use cases. Phased implementation and measurement make those problems visible before the commitment becomes larger."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "OPERATIONAL AI",
+      "heading": "Transformation does not need to mean transforming everything at once.",
+      "body": "Build the operating changes that earn their place, then use the evidence to decide what comes next.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent #EC4899. Keep this scale-up appropriate. Do not use loaded claims about named consultancies. Comparison should explain model differences, not declare a winner."
+}
