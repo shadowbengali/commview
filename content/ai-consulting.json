@@ -1,0 +1,423 @@
+{
+  "slug": "ai-consulting",
+  "pillar": "operational-ai",
+  "accent": "pink",
+  "meta": {
+    "title": "AI Consulting for B2B Operations | CommView",
+    "description": "AI consulting for B2B operations. Find where AI can reduce cost, increase speed and create capacity, then turn useful opportunities into working systems.",
+    "primaryKeyword": "ai consulting",
+    "secondaryKeywords": [
+      "ai for business",
+      "ai for business operations",
+      "ai consulting services",
+      "ai workflow automation",
+      "ai automation consultant",
+      "ai implementation consulting",
+      "generative ai consulting",
+      "ai transformation consultant"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "breadcrumb": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Operational AI",
+        "href": "/ai-consulting"
+      }
+    ],
+    "internalLinks": [
+      {
+        "href": "/ai-consulting/business-operations",
+        "purpose": "child"
+      },
+      {
+        "href": "/ai-consulting/workflow-automation",
+        "purpose": "child"
+      },
+      {
+        "href": "/ai-consulting/automation",
+        "purpose": "child"
+      },
+      {
+        "href": "/ai-consulting/implementation",
+        "purpose": "child"
+      },
+      {
+        "href": "/ai-consulting/genai",
+        "purpose": "child"
+      },
+      {
+        "href": "/ai-consulting/transformation",
+        "purpose": "child"
+      },
+      {
+        "href": "/ai-consulting/uk",
+        "purpose": "child"
+      },
+      {
+        "href": "/insights/ai-for-business",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/can-ai-reduce-our-costs",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/responsible-ai",
+        "purpose": "insight"
+      },
+      {
+        "href": "/work",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      },
+      {
+        "href": "/diagnostic",
+        "purpose": "cta"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "AI CONSULTING FOR B2B OPERATIONS",
+    "h1": [
+      "Put AI where it",
+      "actually earns its place."
+    ],
+    "accentLine": 1,
+    "sub": "AI is useful when it changes how the business operates. We find the work where AI can remove manual effort, shorten cycle times or create capacity, then help turn the opportunity into something people can actually use.",
+    "ctas": [
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      },
+      {
+        "label": "Take the Diagnostic",
+        "href": "/diagnostic",
+        "style": "ghost"
+      }
+    ],
+    "meta": [
+      {
+        "label": [
+          "Cost",
+          "less manual effort"
+        ]
+      },
+      {
+        "label": [
+          "Speed",
+          "shorter cycle times"
+        ]
+      },
+      {
+        "label": [
+          "Capacity",
+          "more useful work"
+        ]
+      }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "OPERATIONAL AI",
+      "sub": "Start with the work, not the tool.",
+      "core": "AI",
+      "nodes": [
+        "REPORTING",
+        "WORKFLOWS",
+        "CONTENT",
+        "LEAD SCORING",
+        "SALES INTELLIGENCE"
+      ],
+      "answer": "EARN ITS PLACE"
+    }
+  },
+  "sections": [
+    {
+      "id": "principle",
+      "type": "lead",
+      "targetKeyword": "ai for business",
+      "eyebrow": "AI FOR BUSINESS",
+      "heading": "How Commview Thinks About AI in Business",
+      "intro": [
+        "AI is not a strategy in itself. It is another way to change how work gets done.",
+        "That means we do not start with a model, platform or list of fashionable use cases. We start with the operation. Where is time being lost? Which work repeats? Where are people moving information between systems? Where does slow access to information hold up a decision?",
+        "If AI can materially improve the way that work happens, it has a job to do. If a simpler process change, automation or existing tool solves the problem better, we use that instead.",
+        "The point is not to add more AI. The point is to make the business work better."
+      ]
+    },
+    {
+      "id": "operations",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "ai for business operations",
+      "eyebrow": "AI FOR BUSINESS OPERATIONS",
+      "heading": "Where AI Actually Earns Its Place in B2B Operations",
+      "intro": "The useful opportunities tend to sit inside work that is repetitive, information-heavy or slowed down by manual hand-offs. These are five areas we look at first.",
+      "items": [
+        {
+          "title": "Reporting and analysis",
+          "body": "Reduce the manual work involved in collecting, structuring and summarising information so people spend more time interpreting what changed and what to do next.",
+          "href": "/ai-consulting/business-operations"
+        },
+        {
+          "title": "Workflow automation",
+          "body": "Connect repeatable steps across systems, trigger the next action and keep people involved where judgement, approval or exception handling matters.",
+          "href": "/ai-consulting/workflow-automation"
+        },
+        {
+          "title": "Content and translation",
+          "body": "Use AI to accelerate drafting, adaptation, summarisation and translation while keeping human review around accuracy, brand and commercial judgement.",
+          "href": "/ai-consulting/genai"
+        },
+        {
+          "title": "Lead scoring and routing",
+          "body": "Bring behavioural and account signals together to help prioritise attention and route opportunities without pretending a score can replace commercial judgement.",
+          "href": "/ai-consulting/automation"
+        },
+        {
+          "title": "Sales intelligence",
+          "body": "Turn fragmented customer and account information into useful context for preparation, follow-up and decision support without adding another manual research task.",
+          "href": "/ai-consulting/business-operations"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "type": "grid",
+      "targetKeyword": "ai consulting services",
+      "eyebrow": "AI CONSULTING SERVICES",
+      "heading": "Operational AI Services From Opportunity to Implementation",
+      "intro": "The pillar is broad because the work does not stop at identifying a use case. Commview can help diagnose the opportunity, design the workflow, implement it and make sure it becomes part of the way the business operates.",
+      "items": [
+        {
+          "title": "AI for Business Operations",
+          "body": "Find the operational work where AI can improve speed, capacity or consistency, and decide what is worth changing.",
+          "href": "/ai-consulting/business-operations"
+        },
+        {
+          "title": "AI Workflow Automation",
+          "body": "Redesign repeatable workflows and connect the steps, systems and human decisions needed to make them work.",
+          "href": "/ai-consulting/workflow-automation"
+        },
+        {
+          "title": "AI Automation Consulting",
+          "body": "Prioritise automation opportunities around the work they remove, the value they create and the effort needed to deploy them.",
+          "href": "/ai-consulting/automation"
+        },
+        {
+          "title": "AI Implementation",
+          "body": "Move from an AI opportunity to a deployed workflow or system, then measure adoption and whether it changed the operation.",
+          "href": "/ai-consulting/implementation"
+        },
+        {
+          "title": "Generative AI Consulting",
+          "body": "Apply generative AI where drafting, extraction, summarisation, classification or synthesis can improve the way work gets done.",
+          "href": "/ai-consulting/genai"
+        },
+        {
+          "title": "AI Transformation",
+          "body": "Look across teams and workflows when the opportunity is larger than a single automation and needs coordinated operating change.",
+          "href": "/ai-consulting/transformation"
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "type": "stepper",
+      "theme": "dark",
+      "targetKeyword": "ai implementation strategy",
+      "eyebrow": "FROM OPPORTUNITY TO OPERATION",
+      "heading": "Do Not Start With AI. Start With the Work.",
+      "intro": "A useful AI initiative should have a clear operational reason to exist. We keep the path deliberately practical.",
+      "style": "arrows",
+      "steps": [
+        {
+          "title": "Find the friction",
+          "body": "Identify repetitive work, delays, manual hand-offs and information bottlenecks."
+        },
+        {
+          "title": "Understand the workflow",
+          "body": "Map what happens today, who is involved, which systems matter and where judgement is required."
+        },
+        {
+          "title": "Choose the intervention",
+          "body": "Decide whether AI, conventional automation, process change or a combination is the sensible answer."
+        },
+        {
+          "title": "Build small",
+          "body": "Create the smallest useful implementation that can prove whether the idea works in the real operation."
+        },
+        {
+          "title": "Measure",
+          "body": "Look at adoption and the operational change, including time, cost, capacity, quality or cycle time where measurable."
+        },
+        {
+          "title": "Scale what works",
+          "body": "Expand only when the evidence supports it, with controls and human oversight appropriate to the workflow."
+        }
+      ],
+      "notes": "Main in-page visual. Keep it editorial and operational, not futuristic. Show work moving through a system. No robot, brain, circuit-board or generic AI imagery."
+    },
+    {
+      "id": "difference",
+      "type": "comparison",
+      "theme": "alt",
+      "targetKeyword": "ai consulting vs mckinsey",
+      "eyebrow": "A DIFFERENT KIND OF AI CONSULTING",
+      "heading": "Where Commview Is Different From the Big Consultancies",
+      "intro": "A scale-up usually does not need a transformation programme before it can improve the way work gets done. The engagement should be proportionate to the problem.",
+      "columns": [
+        {
+          "title": "Traditional consultancy model",
+          "items": [
+            "Strategy can be separated from implementation",
+            "Large transformation programmes can precede useful operational change",
+            "Recommendations may pass to another team to execute"
+          ]
+        },
+        {
+          "title": "Commview",
+          "items": [
+            "Operator-led and hands-on",
+            "Start with a specific operational constraint",
+            "Build, test and measure before scaling",
+            "Keep strategy and implementation connected"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guardrails",
+      "type": "callout",
+      "targetKeyword": "responsible ai",
+      "eyebrow": "AI WITH JUDGEMENT",
+      "heading": [
+        "Automate the work.",
+        "Not the accountability."
+      ],
+      "accentLine": 1,
+      "icon": "ai",
+      "body": [
+        "AI can draft, classify, summarise, extract, route and recommend. That does not mean every decision should be delegated to it.",
+        "We design around the consequence of being wrong. Where a workflow affects customers, money, compliance, reputation or an important commercial decision, the right controls and human review need to stay visible.",
+        "The objective is useful leverage, not autonomy for its own sake."
+      ]
+    },
+    {
+      "id": "outcomes",
+      "type": "lead",
+      "targetKeyword": "ai consulting case studies",
+      "eyebrow": "AI CONSULTING OUTCOMES",
+      "heading": "Judge AI by What Changes in the Operation",
+      "intro": [
+        "A successful implementation is not one that produces the most impressive demo. It is one that becomes useful enough to change the way work happens.",
+        "We look for measurable operational evidence: less manual work, shorter cycle times, more capacity, fewer avoidable hand-offs, better access to information or a more consistent process.",
+        "Where we publish AI work, the case study will show the problem, what changed and the outcome rather than treating the technology itself as the result."
+      ]
+    },
+    {
+      "id": "explore",
+      "type": "grid",
+      "tight": true,
+      "eyebrow": "KEEP EXPLORING",
+      "heading": "Operational AI thinking beyond this page.",
+      "items": [
+        {
+          "title": "AI for business",
+          "body": "How to think about AI as an operating tool rather than a strategy in itself.",
+          "href": "/insights/ai-for-business"
+        },
+        {
+          "title": "Can AI reduce our costs?",
+          "body": "Where AI can create real operating leverage and where the business case is weaker.",
+          "href": "/insights/can-ai-reduce-our-costs"
+        },
+        {
+          "title": "Responsible AI",
+          "body": "How to keep judgement, controls and accountability around AI-enabled work.",
+          "href": "/insights/responsible-ai"
+        },
+        {
+          "title": "AI consulting in the UK",
+          "body": "Explore Commview's AI consulting approach for UK B2B scale-ups.",
+          "href": "/ai-consulting/uk"
+        },
+        {
+          "title": "Our work",
+          "body": "See how Commview approaches commercial and operational problems across the four capabilities.",
+          "href": "/work"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "targetKeyword": "ai consulting faq",
+      "eyebrow": "AI CONSULTING FAQ",
+      "heading": "AI Consulting FAQ",
+      "layout": "stacked",
+      "items": [
+        {
+          "q": "What is AI consulting?",
+          "a": "AI consulting helps a business identify where artificial intelligence can create useful operational or commercial change, then plan and implement it. For Commview, that starts with the work rather than the technology. We examine the workflow, the problem, the available data and the consequence of errors before deciding whether AI belongs in the solution."
+        },
+        {
+          "q": "How much does AI consulting cost?",
+          "a": "AI consulting costs depend on the scope of the problem, the systems involved and whether the work covers diagnosis, implementation or a broader operating change. Commview does not publish a fixed price because a focused workflow project and a cross-functional transformation are materially different engagements. We scope the work around the outcome required."
+        },
+        {
+          "q": "What is the difference between AI consulting and an AI agency?",
+          "a": "The labels overlap, so the practical difference is usually the work being bought. An AI agency may focus on building a particular automation, agent or technical solution. AI consulting can start earlier by deciding where AI is worth using, redesigning the workflow and connecting implementation to the wider operating and commercial context."
+        },
+        {
+          "q": "Can AI actually reduce our costs?",
+          "a": "AI can reduce costs when it removes enough repetitive work, delay or manual processing to justify the implementation and ongoing operating cost. It does not automatically make a process cheaper. The business case should compare the current workflow with the proposed one and measure what changes after deployment."
+        },
+        {
+          "q": "Do we need an AI strategy before we start?",
+          "a": "Not always. A B2B scale-up can often start with a specific operational problem, test a useful intervention and learn from it before creating a wider AI programme. A broader strategy becomes more valuable when multiple teams, systems, governance requirements and investment decisions need to be coordinated."
+        },
+        {
+          "q": "How do you decide which AI use case to tackle first?",
+          "a": "Start with the work that creates meaningful friction and can be measured. We look at frequency, time consumed, process complexity, available information, error consequences and the value of improving the workflow. The first use case should be useful enough to matter but contained enough to test without creating unnecessary transformation risk."
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "LET'S TALK",
+      "heading": "Find the work where AI can actually earn its place.",
+      "body": "If you know there is operational drag but do not want to start with a tool looking for a problem, we can map the work, find the opportunity and decide what is worth changing.",
+      "ctas": [
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        },
+        {
+          "label": "Take the Diagnostic",
+          "href": "/diagnostic",
+          "style": "ghost"
+        }
+      ],
+      "tagline": [
+        "Find the friction.",
+        "Build what helps.",
+        "Measure the change."
+      ]
+    }
+  ],
+  "notes": "Operational AI accent is pink (#EC4899 via design tokens). Keep the established Commview dark/light editorial language. Maximum two major visual devices. Hero visual should feel like an operating system, not AI decoration: AI sits at the centre of real work such as reporting, workflows, content, lead scoring and sales intelligence, with the message that it must earn its place. Main in-page visual is the operational method from friction to measured change. Avoid robots, brains, circuit boards, glowing neural networks, generic SaaS dashboards and decorative AI imagery. Keep typography, spacing and section rhythm consistent with the existing Commview pillar pages."
+}
