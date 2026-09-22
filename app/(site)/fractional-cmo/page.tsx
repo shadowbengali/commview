@@ -218,7 +218,7 @@ export default function FractionalCmoPage() {
               fixes what&rsquo;s not working and makes it happen.
             </p>
             <div className="fc-hero__cta">
-              <a className="btn btn--cyan btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+              <a className="btn btn--cyan btn--lg" href="/diagnostic">Take the Diagnostic</a>
               <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
             </div>
           </div>
@@ -318,7 +318,7 @@ export default function FractionalCmoPage() {
             ))}
           </div>
           <p className="fc-own__more">
-            <a href="/fractional-cmo/services">See all services &rarr;</a>
+            <a href="/fractional-cmo/services">See all services</a>
           </p>
         </div>
       </section>
@@ -473,7 +473,7 @@ export default function FractionalCmoPage() {
             <p className="fc-final__p">You don&rsquo;t need to diagnose it before speaking to us.</p>
             <div className="fc-final__row">
               <a className="btn btn--cyan btn--lg" href="/contact">Talk to us</a>
-              <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+              <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic</a>
             </div>
           </aside>
         </div>

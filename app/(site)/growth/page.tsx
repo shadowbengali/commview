@@ -163,7 +163,7 @@ export default function GrowthPage() {
               the right work, focused on measurable commercial outcomes.
             </p>
             <div className="gr-hero__cta">
-              <a className="btn btn--green btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+              <a className="btn btn--green btn--lg" href="/diagnostic">Take the Diagnostic</a>
               <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
             </div>
             <div className="gr-hero__meta">
@@ -330,7 +330,7 @@ export default function GrowthPage() {
             <div className="gr-final__lead">
               <p className="gr-final__p">You don&rsquo;t need to know whether the answer is SEO, demand generation, paid media, conversion or something else before speaking to us. That&rsquo;s the point of the diagnosis.</p>
               <div className="gr-final__row">
-                <a className="btn btn--green btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+                <a className="btn btn--green btn--lg" href="/diagnostic">Take the Diagnostic</a>
                 <a className="btn btn--ghost btn--lg" href="/contact">Talk to us</a>
               </div>
             </div>

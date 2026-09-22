@@ -320,7 +320,7 @@ export default function WhatWeDoPage() {
                 ))}
               </ul>
               <a className="wwd-explore" href={p.explore.href}>
-                {p.explore.label} <span aria-hidden="true">&rarr;</span>
+                {p.explore.label}
               </a>
             </div>
             <aside className="wwd-rail">
@@ -348,7 +348,7 @@ export default function WhatWeDoPage() {
               <p>The Commview Business Diagnostic looks across GTM Leadership, Growth, Product and Operational AI to identify strengths, weaknesses, blind spots and where we'd investigate first.</p>
             </div>
             <div className="wwd-cta__row">
-              <a className="btn btn--cyan btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+              <a className="btn btn--cyan btn--lg" href="/diagnostic">Take the Diagnostic</a>
               <a className="btn btn--ghost" href="/contact">Or talk to us</a>
             </div>
           </div>

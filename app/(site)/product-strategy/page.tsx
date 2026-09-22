@@ -147,7 +147,7 @@ export default function ProductStrategyPage() {
             </p>
             <div className="pr-hero__cta">
               <a className="btn btn--blue btn--lg" href="/contact">Talk to us</a>
-              <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+              <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic</a>
             </div>
             <div className="pr-hero__meta">
               <div className="pr-meta"><b>Customer<br />problem first</b></div>
@@ -311,7 +311,7 @@ export default function ProductStrategyPage() {
               <p className="pr-final__p">If the roadmap is full but the direction is unclear, the answer may not be another prioritisation framework. Let&rsquo;s work out what the customer needs, what the evidence supports and what deserves to be built.</p>
               <div className="pr-final__row">
                 <a className="btn btn--blue btn--lg" href="/contact">Talk to us</a>
-                <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic &rarr;</a>
+                <a className="btn btn--ghost btn--lg" href="/diagnostic">Take the Diagnostic</a>
               </div>
             </div>
             <p className="pr-final__tag">Clearer thinking.<br />Faster progress.<br />Real impact.</p>
