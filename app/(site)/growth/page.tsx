@@ -230,17 +230,17 @@ export default function GrowthPage() {
           </div>
           <figure className="gr-venn">
             <svg viewBox="0 0 520 350" role="img" aria-label="Strategy and execution combine into growth: where to play, who to target and what will win, alongside content, channels, campaigns and continuous optimisation.">
-              <circle cx="185" cy="155" r="150" fill="var(--brand-charcoal)" stroke="var(--slate-dark)" strokeWidth="1" />
-              <circle cx="335" cy="155" r="150" fill="var(--c)" fillOpacity="0.16" stroke="var(--c)" strokeWidth="1.5" />
-              <text x="150" y="120" textAnchor="middle" className="gr-venn__title" fill="var(--brand-polar)">STRATEGY</text>
-              <text x="150" y="148" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Where should we play?</text>
-              <text x="150" y="166" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Who should we target?</text>
-              <text x="150" y="184" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">What will make us win?</text>
-              <text x="372" y="120" textAnchor="middle" className="gr-venn__title" fill="var(--brand-polar)">EXECUTION</text>
-              <text x="372" y="148" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Content and channels.</text>
-              <text x="372" y="166" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Campaigns and automation.</text>
-              <text x="372" y="184" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Continuous optimisation.</text>
-              <text x="260" y="162" textAnchor="middle" fontSize="26" fill="var(--c)">+</text>
+              <circle cx="175" cy="155" r="145" fill="none" stroke="var(--slate)" strokeWidth="1.2" />
+              <circle cx="345" cy="155" r="145" fill="var(--c)" fillOpacity="0.15" stroke="var(--c)" strokeWidth="1.5" />
+              <text x="112" y="118" textAnchor="middle" className="gr-venn__title" fill="var(--brand-polar)">STRATEGY</text>
+              <text x="112" y="146" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Where should we play?</text>
+              <text x="112" y="164" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Who should we target?</text>
+              <text x="112" y="182" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">What will make us win?</text>
+              <text x="408" y="118" textAnchor="middle" className="gr-venn__title" fill="var(--brand-polar)">EXECUTION</text>
+              <text x="408" y="146" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Content and channels.</text>
+              <text x="408" y="164" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Campaigns and automation.</text>
+              <text x="408" y="182" textAnchor="middle" className="gr-venn__line" fill="var(--slate-light)">Continuous optimisation.</text>
+              <text x="260" y="164" textAnchor="middle" fontSize="26" fill="var(--c)">+</text>
             </svg>
             <figcaption className="gr-venn__foot">More pipeline. Higher revenue.</figcaption>
           </figure>
