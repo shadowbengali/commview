@@ -35,7 +35,8 @@
 
 /* two-column head: heading left, body/intro right */
 .gr-lead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-12); align-items: start; }
-.gr-lead__h { font-size: clamp(28px, 3vw, 42px); line-height: 1.06; font-weight: 700; letter-spacing: -0.02em; max-width: 14ch; }
+.gr-lead__h { font-size: clamp(28px, 3vw, 42px); line-height: 1.06; font-weight: 700; letter-spacing: -0.02em; max-width: none; }
+.gr-lead__h span { display: block; }
 .gr-lead__body { display: grid; gap: var(--space-4); color: var(--text-secondary); font-size: 16px; line-height: 1.65; max-width: 58ch; }
 .gr-lead__body .lit { color: var(--text-primary); font-weight: 600; }
 

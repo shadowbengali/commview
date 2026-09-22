@@ -182,7 +182,9 @@ export default function GrowthPage() {
           <div>
             <p className="eyebrow-x" style={{ color: "var(--c)" }}>A different approach</p>
             <h2 className="gr-lead__h" id="gr-approach" style={{ marginTop: "var(--space-4)" }}>
-              More signal. Less noise. Real growth.
+              <span>More signal.</span>{" "}
+              <span>Less noise.</span>{" "}
+              <span>Real growth.</span>
             </h2>
           </div>
           <div className="gr-lead__body">
