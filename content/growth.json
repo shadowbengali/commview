@@ -1,0 +1,155 @@
+{
+  "slug": "growth",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "B2B Growth Marketing for Scale-ups | CommView",
+    "description": "B2B growth marketing focused on commercial results. SEO, AEO, demand gen, content, paid and CRO, diagnosed and delivered by operators.",
+    "primaryKeyword": "b2b marketing agency",
+    "secondaryKeywords": ["b2b growth marketing", "growth marketing consultant"],
+    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "breadcrumb": [{ "name": "Home", "href": "/" }, { "name": "Growth", "href": "/growth" }],
+    "internalLinks": [
+      { "href": "/growth/seo", "purpose": "child" },
+      { "href": "/growth/demand-generation", "purpose": "child" },
+      { "href": "/diagnostic", "purpose": "cta" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "B2B Growth Marketing",
+    "h1": ["Growth has slowed.", "Let’s find out why."],
+    "accentLine": 1,
+    "sub": "We help B2B scale-ups diagnose what’s really holding growth back, then build and execute the work needed to move it. Not more marketing activity for the sake of it — the right work, focused on measurable commercial outcomes.",
+    "ctas": [
+      { "label": "Take the Diagnostic", "href": "/diagnostic", "style": "primary" },
+      { "label": "Talk to us", "href": "/contact", "style": "ghost" }
+    ],
+    "meta": [
+      { "label": ["Diagnose", "the constraint"] },
+      { "label": ["Focus", "the investment"] },
+      { "label": ["Deliver", "measurable results"] }
+    ],
+    "diagram": {
+      "kind": "hub",
+      "caption": "GROWTH HAS SLOWED.",
+      "sub": "Is it…",
+      "core": "GROWTH",
+      "nodes": ["Demand?", "Targeting?", "Conversion?", "Proposition?", "Pipeline?"],
+      "answer": "We find the constraint."
+    }
+  },
+  "sections": [
+    {
+      "id": "approach",
+      "type": "lead",
+      "targetKeyword": "b2b growth marketing",
+      "eyebrow": "A different approach",
+      "heading": ["More signal.", "Less noise.", "Real growth."],
+      "intro": [
+        "B2B growth marketing isn’t about adding more activity. It’s about understanding what is and isn’t working, then focusing time and investment where they can make the biggest commercial difference.",
+        "That means looking beyond channel metrics. Traffic can rise while conversion falls. Lead volume can increase while Sales sees less value. Content can perform well in search without influencing a single buying decision.",
+        "The job is to connect the evidence and find the constraint before deciding what to do next."
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "grid",
+      "theme": "alt",
+      "targetKeyword": "growth marketing consultant",
+      "eyebrow": "What we do",
+      "heading": ["A complete growth engine,", "built for B2B."],
+      "intro": "Commview works across the growth journey, from strategy and audience through content, channels, conversion and measurement. We don’t assume every business needs every capability — the mix depends on the problem we are trying to solve.",
+      "items": [
+        { "title": "Strategy", "body": "Set the direction based on your commercial goals, market and opportunity. We work out what growth needs to achieve before deciding which activity belongs in the plan." },
+        { "title": "Audience", "body": "Understand who is most likely to buy, succeed and create value. That means getting beyond broad personas and focusing on the customers and buying situations that matter." },
+        { "title": "Content", "body": "Create what buyers actually need: content that answers real questions, builds authority, supports discovery and helps customers move towards a decision." },
+        { "title": "Channels", "body": "Choose the right mix of SEO, AEO, paid, organic, email, partnerships and other routes based on how the audience actually researches and buys." },
+        { "title": "Conversion", "body": "Turn attention into commercial progress. We analyse journeys, forms, sign-up flows, propositions and hand-offs to understand where interest is being lost." }
+      ]
+    },
+    {
+      "id": "outcomes",
+      "type": "venn",
+      "theme": "dark",
+      "eyebrow": "Built around commercial outcomes",
+      "heading": ["Strategy, execution", "and outcomes."],
+      "body": "A strategy only matters if it changes what happens next. Commview combines the thinking with hands-on execution so the person diagnosing the growth problem stays close enough to the work to see whether the solution is actually working.",
+      "pull": "Strategy + execution = growth.",
+      "left": { "title": "STRATEGY", "lines": ["Where should we play?", "Who should we target?", "What will make us win?"] },
+      "right": { "title": "EXECUTION", "lines": ["Content and channels.", "Campaigns and automation.", "Continuous optimisation."] },
+      "centre": "+",
+      "caption": "More pipeline. Higher revenue."
+    },
+    {
+      "id": "impact",
+      "type": "stats",
+      "eyebrow": "Proven impact",
+      "heading": "Real results for real businesses.",
+      "stats": [
+        { "value": "6,000+", "label": "MQLs generated", "context": "Previous in-house leadership experience", "evidence": "needs-verification" },
+        { "value": "1,000+", "label": "SQLs created", "context": "Previous in-house leadership experience", "evidence": "needs-verification" },
+        { "value": "£3m", "label": "Marketing-influenced pipeline", "context": "Previous in-house leadership experience", "evidence": "needs-verification" },
+        { "value": "50%", "label": "Run-cost reduction, from £7m to £3.5m", "context": "Previous in-house leadership experience", "evidence": "needs-verification" },
+        { "value": "800%", "label": "Organic growth delivered", "context": "Previous demand-generation leadership role", "evidence": "needs-verification" }
+      ]
+    },
+    {
+      "id": "process",
+      "type": "stepper",
+      "theme": "alt",
+      "tight": true,
+      "style": "arrows",
+      "eyebrow": "How we work",
+      "heading": "A clear, practical process.",
+      "steps": [
+        { "title": "Understand", "body": "Start with the commercial goal, audience, market and current performance. What are we trying to change?" },
+        { "title": "Diagnose", "body": "Follow the evidence. What is working, what isn’t, and where is the biggest constraint?" },
+        { "title": "Prioritise", "body": "Focus on the activities most likely to create commercial impact rather than producing a long list of marketing tasks." },
+        { "title": "Execute", "body": "Build, launch and optimise the work. Commview can execute directly, work with your team or bring in specialist capability." },
+        { "title": "Measure", "body": "Track what changed, learn from the result and put more investment behind what works." }
+      ]
+    },
+    {
+      "id": "experience",
+      "type": "logos",
+      "tight": true,
+      "eyebrow": "Trusted experience",
+      "heading": "Experience across complex B2B markets.",
+      "logos": [
+        { "name": "Vodafone Business", "alt": "Vodafone Business" },
+        { "name": "ADI Global", "alt": "ADI Global" },
+        { "name": "Distrelec", "alt": "Distrelec" },
+        { "name": "Travis Perkins", "alt": "Travis Perkins" },
+        { "name": "Money Advisor", "alt": "Money Advisor" }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "layout": "stacked",
+      "eyebrow": "Frequently asked questions",
+      "heading": "Straight answers to common questions.",
+      "items": [
+        { "q": "What’s the difference between growth marketing and demand generation?", "a": "Growth marketing looks across the wider commercial growth system, including audience, acquisition, conversion, pipeline and measurement. Demand generation is one part of that system, focused on creating awareness, interest and preference before and during the buying journey." },
+        { "q": "Which channels do you focus on?", "a": "We are deliberately channel-neutral. Commview works across SEO, AEO, content, demand generation, paid media, email and conversion, but we don’t start by deciding which channel to sell. We diagnose the growth constraint first, then choose the work that fits it." },
+        { "q": "How do you measure success?", "a": "We agree the measures around the problem being solved. That may include qualified demand, conversion, pipeline, progression, revenue or efficiency rather than relying on traffic, impressions or lead volume alone. The measures should tell us whether the original diagnosis was right." },
+        { "q": "Do you work with our existing team or agency?", "a": "Yes. Commview can work alongside internal marketers, sales teams and existing agencies. We can set the direction, connect work that has become fragmented, fill capability gaps and make sure each part of the growth system is working towards the same commercial outcome." },
+        { "q": "How long does a growth engagement usually last?", "a": "It depends on the problem. A focused diagnostic or conversion project can be relatively contained, while SEO, content and broader growth programmes need time to compound. We scope the engagement around the work required rather than forcing every client into the same retainer." },
+        { "q": "What types of businesses do you work with?", "a": "Commview is built primarily for B2B companies that already have a product or service people buy but need to improve how they grow. The strongest fit is where marketing, sales, product and operations overlap and the answer is unlikely to sit inside one channel." }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "Let’s talk",
+      "heading": "Ready to grow smarter? Let’s find the constraint.",
+      "body": "You don’t need to know whether the answer is SEO, demand generation, paid media, conversion or something else before speaking to us. That’s the point of the diagnosis.",
+      "ctas": [
+        { "label": "Take the Diagnostic", "href": "/diagnostic", "style": "primary" },
+        { "label": "Talk to us", "href": "/contact", "style": "ghost" }
+      ],
+      "tagline": ["Less guesswork.", "More growth."]
+    }
+  ]
+}

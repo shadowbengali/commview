@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://commview.co.uk/schemas/page.schema.json",
+  "title": "CommView pillar page content",
+  "description": "Content contract v1.0. ChatGPT authors content/<slug>.json against this; the pillar renderer consumes it. Frozen — changes are breaking.",
+  "type": "object",
+  "required": ["slug", "pillar", "accent", "meta", "hero", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "pillar": { "enum": ["gtm-leadership", "growth", "product", "operational-ai", "corporate"] },
+    "accent": { "enum": ["cyan", "green", "blue", "pink", "neutral"] },
+    "meta": { "$ref": "#/$defs/meta" },
+    "hero": { "$ref": "#/$defs/hero" },
+    "sections": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/section" } },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    { "if": { "properties": { "pillar": { "const": "gtm-leadership" } } }, "then": { "properties": { "accent": { "const": "cyan" } } } },
+    { "if": { "properties": { "pillar": { "const": "growth" } } }, "then": { "properties": { "accent": { "const": "green" } } } },
+    { "if": { "properties": { "pillar": { "const": "product" } } }, "then": { "properties": { "accent": { "const": "blue" } } } },
+    { "if": { "properties": { "pillar": { "const": "operational-ai" } } }, "then": { "properties": { "accent": { "const": "pink" } } } },
+    { "if": { "properties": { "pillar": { "const": "corporate" } } }, "then": { "properties": { "accent": { "const": "neutral" } } } }
+  ],
+  "$defs": {
+    "heading": { "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }] },
+    "rich": { "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }] },
+    "internalPath": { "type": "string", "pattern": "^/" },
+
+    "cta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "href", "style"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "href": { "$ref": "#/$defs/internalPath" },
+        "style": { "enum": ["primary", "ghost"] }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "description", "primaryKeyword"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 70 },
+        "description": { "type": "string", "minLength": 1, "maxLength": 165 },
+        "primaryKeyword": { "type": "string", "minLength": 1 },
+        "secondaryKeywords": { "type": "array", "items": { "type": "string" } },
+        "schemaTypes": { "type": "array", "items": { "enum": ["Service", "FAQPage", "BreadcrumbList"] } },
+        "breadcrumb": {
+          "type": "array",
+          "items": { "type": "object", "additionalProperties": false, "required": ["name"], "properties": { "name": { "type": "string" }, "href": { "$ref": "#/$defs/internalPath" } } }
+        },
+        "internalLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["href", "purpose"],
+            "properties": { "href": { "$ref": "#/$defs/internalPath" }, "purpose": { "enum": ["parent", "child", "related", "insight", "cta"] } }
+          }
+        }
+      }
+    },
+
+    "diagram": {
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["kind"], "properties": { "kind": { "const": "none" } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "core", "nodes"], "properties": { "kind": { "const": "hub" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "core": { "type": "string" }, "nodes": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "answer": { "type": "string" } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "core", "lobes"], "properties": { "kind": { "const": "overlap" }, "core": { "type": "string" }, "coreLines": { "type": "array", "items": { "type": "string" } }, "lobes": { "type": "array", "minItems": 3, "maxItems": 4, "items": { "type": "string" } } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "layers"], "properties": { "kind": { "const": "stack" }, "layers": { "type": "array", "minItems": 2, "items": { "type": "string" } } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "src", "alt"], "properties": { "kind": { "const": "image" }, "src": { "type": "string" }, "alt": { "type": "string", "minLength": 1 } } }
+      ]
+    },
+
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "h1", "sub", "ctas"],
+      "properties": {
+        "eyebrow": { "type": "string", "minLength": 1 },
+        "h1": { "$ref": "#/$defs/heading" },
+        "accentLine": { "type": "integer", "minimum": 0 },
+        "sub": { "$ref": "#/$defs/rich" },
+        "ctas": { "type": "array", "minItems": 1, "maxItems": 2, "items": { "$ref": "#/$defs/cta" } },
+        "meta": { "type": "array", "maxItems": 3, "items": { "type": "object", "additionalProperties": false, "required": ["label"], "properties": { "label": { "type": "array", "minItems": 1, "maxItems": 2, "items": { "type": "string" } } } } },
+        "diagram": { "$ref": "#/$defs/diagram" }
+      }
+    },
+
+    "stat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "label", "evidence"],
+      "properties": {
+        "value": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "context": { "type": "string" },
+        "evidence": { "enum": ["verified", "needs-verification"] }
+      }
+    },
+
+    "baseSection": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "type": { "type": "string" },
+        "theme": { "enum": ["light", "alt", "dark"] },
+        "tight": { "type": "boolean" },
+        "eyebrow": { "type": "string" },
+        "heading": { "$ref": "#/$defs/heading" },
+        "intro": { "$ref": "#/$defs/rich" },
+        "targetKeyword": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "type"]
+    },
+
+    "section": {
+      "oneOf": [
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "properties": { "type": { "const": "lead" } }, "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["items"],
+          "properties": { "type": { "const": "grid" },
+            "items": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" }, "href": { "$ref": "#/$defs/internalPath" } } } } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["left", "right"],
+          "properties": { "type": { "const": "venn" }, "body": { "$ref": "#/$defs/rich" }, "pull": { "type": "string" }, "centre": { "type": "string" }, "caption": { "type": "string" },
+            "left": { "$ref": "#/$defs/vennSet" }, "right": { "$ref": "#/$defs/vennSet" } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["steps"],
+          "properties": { "type": { "const": "stepper" }, "style": { "enum": ["arrows", "circles"] },
+            "steps": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" } } } } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["stats"],
+          "properties": { "type": { "const": "stats" }, "stats": { "type": "array", "minItems": 2, "maxItems": 5, "items": { "$ref": "#/$defs/stat" } } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["body"],
+          "properties": { "type": { "const": "callout" }, "body": { "$ref": "#/$defs/rich" }, "accentLine": { "type": "integer", "minimum": 0 }, "icon": { "enum": ["ai", "spark", "none"] } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["columns"],
+          "properties": { "type": { "const": "comparison" },
+            "columns": { "type": "array", "minItems": 2, "maxItems": 3, "items": { "type": "object", "additionalProperties": false, "required": ["title", "items"], "properties": { "title": { "type": "string" }, "items": { "type": "array", "minItems": 1, "items": { "type": "string" } } } } } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["logos"],
+          "properties": { "type": { "const": "logos" },
+            "logos": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["name", "alt"], "properties": { "name": { "type": "string" }, "asset": { "type": "string" }, "alt": { "type": "string", "minLength": 1 } } } } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["items"],
+          "properties": { "type": { "const": "faq" }, "layout": { "enum": ["stacked", "split"] },
+            "items": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["q", "a"], "properties": { "q": { "type": "string" }, "a": { "type": "string" } } } } },
+          "unevaluatedProperties": false },
+
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["ctas"],
+          "properties": { "type": { "const": "cta" }, "body": { "$ref": "#/$defs/rich" }, "ctas": { "type": "array", "minItems": 1, "maxItems": 2, "items": { "$ref": "#/$defs/cta" } }, "tagline": { "type": "array", "items": { "type": "string" } } },
+          "unevaluatedProperties": false }
+      ]
+    },
+
+    "vennSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "lines"],
+      "properties": { "title": { "type": "string" }, "lines": { "type": "array", "minItems": 1, "maxItems": 5, "items": { "type": "string" } } }
+    }
+  }
+}

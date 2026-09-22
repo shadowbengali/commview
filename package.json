@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/validate-content.mjs && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "validate:content": "node scripts/validate-content.mjs",
     "verify": "node scripts/verify.mjs",
     "fidelity": "node scripts/fidelity.mjs"
   },
@@ -28,6 +29,7 @@
     "@types/node": "^22.10.7",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
+    "ajv": "^8.20.0",
     "playwright": "^1.49.1",
     "png-to-ico": "^3.0.2",
     "typescript": "^5.7.3"
