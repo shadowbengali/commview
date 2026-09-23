@@ -30,8 +30,10 @@
 /* ===== experience / logos ===== */
 .ab-exp { padding-block: var(--space-24); background: var(--surface-raised); border-top: 1px solid var(--border-subtle); }
 .ab-exp__body { margin-top: var(--space-5, 20px); max-width: 74ch; display: grid; gap: var(--space-3); font-size: 15px; line-height: 1.6; color: var(--text-secondary); }
-.ab-logos { list-style: none; margin: var(--space-12) 0 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-8) var(--space-12); }
-.ab-logos li { display: flex; align-items: center; }
+/* even full-width grid so the strip's left edge lines up with the copy above
+   (not a centred clump against left-aligned text) */
+.ab-logos { list-style: none; margin: var(--space-12) 0 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-10, 40px) var(--space-8); align-items: center; }
+.ab-logos li { display: flex; align-items: center; justify-content: center; }
 /* Supplied assets are a mix of monochrome symbol-marks, wordmarks and colour
    rasters; a uniform desaturated treatment makes the strip cohere and stay calm
    and subordinate to the copy. Swap in colour wordmark assets + drop the filter
@@ -110,6 +112,7 @@
   .ab-hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-10, 40px); }
   .ab-signal { order: -1; justify-content: flex-start; height: clamp(180px, 42vw, 240px); }
   .ab-diff__grid, .ab-net__grid, .ab-model__grid, .ab-founder__grid, .ab-phil__head { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  .ab-logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .ab-orbit { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
   .ab-orbit__col { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); }
   .ab-orbit__core { order: -1; justify-self: center; }
@@ -119,6 +122,7 @@
   .ab-hero { padding-block: var(--space-12); }
   .ab-diff, .ab-exp, .ab-net, .ab-model, .ab-founder, .ab-phil, .ab-cta { padding-block: var(--space-16); }
   .ab-principles { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  .ab-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
   .ab-compare { grid-template-columns: minmax(0, 1fr); }
   .ab-founder__aside { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
   .ab-founder__photo { max-width: 200px; }
