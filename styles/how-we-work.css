@@ -1,0 +1,107 @@
+/* COMMVIEW /how-we-work — bespoke corporate conversion page, built on the
+   design system tokens. Header/footer come from the shared (site) chrome;
+   this sheet is page-only. Calmer than the homepage: charcoal / polar / white
+   surfaces, capability colours used only selectively. */
+
+/* ===== hero ===== */
+.hw-hero { padding-block: var(--space-16) var(--space-12); }
+.hw-hero .eyebrow-x { color: var(--slate); }
+.hw-hero__in { max-width: 900px; }
+.hw-hero__h1 { margin-top: var(--space-4); font-size: clamp(34px, 5vw, 60px); line-height: 1.04; font-weight: 800; letter-spacing: -0.02em; max-width: 18ch; }
+.hw-hero__h1 em { font-style: normal; color: var(--brand-cyan); }
+.hw-hero__intro { margin-top: var(--space-8); max-width: 60ch; display: grid; gap: var(--space-4); color: var(--slate-light); font-size: 16px; line-height: 1.6; }
+.hw-hero__intro .hw-lead { color: var(--brand-polar); font-weight: 600; font-size: 18px; }
+.hw-hero__pull { margin-top: var(--space-8); max-width: 46ch; font-size: clamp(19px, 2vw, 24px); line-height: 1.3; font-weight: 700; letter-spacing: -0.01em; color: var(--brand-polar); border-left: 2px solid var(--brand-cyan); padding-left: var(--space-4); }
+.hw-hero__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+.hw-hero__method { margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--slate-dark); list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-4); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate); }
+.hw-hero__method li { display: flex; align-items: center; gap: var(--space-4); }
+.hw-hero__method li + li::before { content: ""; width: 7px; height: 7px; border-top: 1.5px solid var(--brand-cyan); border-right: 1.5px solid var(--brand-cyan); rotate: 45deg; }
+.hw-hero__method li:nth-child(1) { color: var(--brand-polar); }
+
+/* ===== chapters: insight / momentum / impact ===== */
+.hw-chapter { padding-block: var(--space-16); border-top: 1px solid var(--border-subtle); }
+.hw-chapter:first-of-type { border-top: 0; }
+.hw-chapter__grid { display: grid; grid-template-columns: minmax(0, 0.32fr) minmax(0, 1fr); gap: var(--space-16); align-items: start; }
+.hw-chapter__aside { display: flex; flex-direction: column; gap: var(--space-2); position: sticky; top: 120px; }
+.hw-chapter__num { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; color: var(--text-secondary); }
+.hw-chapter__name { font-size: clamp(22px, 2.2vw, 30px); font-weight: 800; letter-spacing: -0.02em; color: var(--brand-cyan); }
+.hw-chapter__main h2 { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.14; font-weight: 700; letter-spacing: -0.02em; max-width: 22ch; }
+.hw-chapter__body { margin-top: var(--space-6); display: grid; gap: var(--space-4); color: var(--text-secondary); font-size: 16px; line-height: 1.65; max-width: 62ch; }
+.hw-chapter__body .lit { color: var(--text-primary); font-weight: 600; }
+.hw-chapter__pull { margin-top: var(--space-8); max-width: 46ch; font-size: clamp(19px, 2vw, 24px); line-height: 1.3; font-weight: 700; letter-spacing: -0.01em; color: var(--text-primary); border-left: 2px solid var(--brand-cyan); padding-left: var(--space-4); }
+
+/* ===== working rhythm loop ===== */
+.hw-rhythm { padding-block: var(--space-24); }
+.hw-rhythm__head { max-width: 640px; }
+.hw-rhythm__head h2 { margin-top: var(--space-4); font-size: clamp(28px, 3vw, 42px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+.hw-rhythm__intro { margin-top: var(--space-6); color: var(--slate-light); font-size: 16px; line-height: 1.6; }
+.hw-loop { margin-top: var(--space-12); list-style: none; padding-left: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8); }
+.hw-loop__step { position: relative; display: grid; gap: var(--space-3); align-content: start; padding-right: var(--space-4); }
+.hw-loop__n { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: var(--brand-cyan); }
+.hw-loop__step-name { font-size: clamp(18px, 1.8vw, 22px); font-weight: 700; letter-spacing: -0.01em; color: var(--brand-polar); }
+.hw-loop__step-body { font-size: 14px; line-height: 1.55; color: var(--slate); }
+/* connector chevron sits in the gap, level with the number */
+.hw-loop__step:not(:last-child)::after { content: ""; position: absolute; top: 6px; right: calc(var(--space-8) / -2); transform: translate(50%, 0); width: 9px; height: 9px; border-top: 2px solid var(--slate); border-right: 2px solid var(--slate); rotate: 45deg; }
+.hw-loop__repeat { margin-top: var(--space-8); display: flex; align-items: center; gap: var(--space-3); font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--slate); }
+.hw-loop__repeat::before { content: ""; width: 18px; height: 18px; border: 2px solid var(--slate); border-right-color: transparent; border-radius: 999px; rotate: -45deg; flex: none; }
+
+/* ===== engagements ===== */
+.hw-eng { padding-block: var(--space-24); border-top: 1px solid var(--border-subtle); }
+.hw-eng__head { max-width: 640px; }
+.hw-eng__head h2 { margin-top: var(--space-4); font-size: clamp(28px, 3vw, 42px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+.hw-eng__intro { margin-top: var(--space-6); color: var(--text-secondary); font-size: 16px; line-height: 1.6; }
+.hw-eng__grid { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-12) var(--space-16); }
+.hw-eng__item { display: grid; gap: var(--space-3); border-top: 2px solid var(--brand-cyan); padding-top: var(--space-4); }
+.hw-eng__n { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: var(--text-secondary); }
+.hw-eng__item h3 { font-size: clamp(19px, 1.9vw, 23px); font-weight: 700; letter-spacing: -0.01em; }
+.hw-eng__item p { color: var(--text-secondary); font-size: 15px; line-height: 1.6; max-width: 46ch; }
+
+/* ===== team ===== */
+.hw-team { padding-block: var(--space-24); background: var(--surface-raised); }
+.hw-team__grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: var(--space-16); align-items: start; }
+.hw-team h2 { margin-top: var(--space-4); font-size: clamp(26px, 2.8vw, 38px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; max-width: 16ch; }
+.hw-team__body { display: grid; gap: var(--space-4); color: var(--text-secondary); font-size: 17px; line-height: 1.65; max-width: 56ch; }
+.hw-team__body .lit { color: var(--text-primary); font-weight: 600; }
+
+/* ===== what you won't get (manifesto) ===== */
+.hw-manifesto { padding-block: var(--space-24); }
+.hw-manifesto h2 { margin-top: var(--space-4); font-size: clamp(28px, 3vw, 42px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+.hw-manifesto__list { margin-top: var(--space-12); list-style: none; padding-left: 0; display: grid; }
+.hw-manifesto__list li { padding-block: var(--space-6); border-top: 1px solid var(--slate-dark); font-size: clamp(22px, 3.2vw, 40px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-polar); }
+.hw-manifesto__list li:last-child { border-bottom: 1px solid var(--slate-dark); }
+
+/* ===== FAQ ===== */
+.hw-faq { padding-block: var(--space-24); border-top: 1px solid var(--border-subtle); }
+.hw-faq__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); align-items: baseline; }
+.hw-faq__head h2 { font-size: clamp(26px, 2.6vw, 34px); font-weight: 700; letter-spacing: -0.02em; }
+.hw-faq__head p { color: var(--text-secondary); font-size: 15px; max-width: 42ch; }
+.hw-faq__list { margin-top: var(--space-8); }
+.hw-faq details { border-top: 1px solid var(--border-subtle); }
+.hw-faq details:last-child { border-bottom: 1px solid var(--border-subtle); }
+.hw-faq summary { list-style: none; cursor: pointer; padding-block: var(--space-6); display: flex; justify-content: space-between; gap: var(--space-6); align-items: center; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.hw-faq summary::-webkit-details-marker { display: none; }
+.hw-faq summary::after { content: "+"; font-size: 22px; font-weight: 400; color: var(--text-secondary); flex: none; }
+.hw-faq details[open] summary::after { content: "\2212"; }
+.hw-faq summary:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+.hw-faq__a { padding-bottom: var(--space-6); color: var(--text-secondary); font-size: 16px; line-height: 1.65; max-width: 68ch; }
+
+/* ===== closing CTA ===== */
+.hw-cta { padding-block: var(--space-24); }
+.hw-cta__in { max-width: 900px; }
+.hw-cta h2 { margin-top: var(--space-4); font-size: clamp(28px, 3.4vw, 46px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; max-width: 20ch; }
+.hw-cta__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+/* ===== responsive ===== */
+@media (max-width: 1020px) {
+  .hw-chapter__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .hw-chapter__aside { flex-direction: row; align-items: baseline; gap: var(--space-4); position: static; top: auto; }
+  .hw-loop { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-12) var(--space-8); }
+  .hw-loop__step:not(:last-child)::after { display: none; }
+  .hw-team__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+}
+@media (max-width: 720px) {
+  .hw-hero { padding-block: var(--space-12) var(--space-12); }
+  .hw-rhythm, .hw-eng, .hw-team, .hw-manifesto, .hw-faq, .hw-cta { padding-block: var(--space-16); }
+  .hw-eng__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  .hw-loop { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+}
