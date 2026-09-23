@@ -11,9 +11,9 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {
-  title: { absolute: "What We Do | B2B GTM, Growth, Product, AI | CommView" },
+  title: { absolute: "B2B Consulting Services | GTM, Growth, Product & AI | CommView" },
   description:
-    "Four services for B2B scale-ups: GTM Leadership, Growth, Product and Operational AI. Different questions. Different answers. Usually more than one.",
+    "B2B consulting services spanning GTM leadership, growth, product and operational AI. We diagnose what is holding growth back, then help fix it.",
   alternates: { canonical: "/what-we-do" },
 };
 
@@ -48,7 +48,7 @@ const PILLARS: Pillar[] = [
       { text: "We can tackle a defined problem or work inside the business as a fractional CMO, taking responsibility for the commercial system rather than standing outside it giving advice." },
     ],
     chipsLabel: "That can include:",
-    chips: ["Positioning", "Ideal Customer Profile", "Routes to market", "Demand generation", "Pipeline", "Sales hand-off", "Operating rhythm"],
+    chips: ["Positioning", "Ideal Customer Profile", "Routes to market", "Pipeline", "Sales hand-off", "Operating rhythm"],
     explore: { label: "Explore GTM Leadership", href: "/fractional-cmo" },
     rail: {
       kind: "quote",
@@ -130,12 +130,30 @@ const VENN = [
   { key: "ai", fill: "var(--accent-pink)", cx: 380, cy: 420, name: "Operational AI", cap: "Do more with less", nx: 380, ny: 478 },
 ];
 
+// Answers reinforce the brief's themes (diagnose before prescribing, strategy
+// and execution stay connected, operator-led, specialists brought in) with no
+// invented proof, prices, outcomes or team-size claims.
 const FAQ = [
-  "What does a B2B consultant actually do?",
-  "What B2B consulting services does Commview provide?",
-  "Do I need to know which service I need before contacting you?",
-  "Does Commview only provide strategy?",
-  "Can Commview work alongside our existing team?",
+  {
+    q: "What does a B2B consultant actually do?",
+    a: "A good B2B consultant helps you work out what is actually holding the business back, then helps fix it. That means diagnosing the real problem before prescribing a solution, making the commercial decisions with you and staying close to the work as it happens rather than handing over a document and leaving.",
+  },
+  {
+    q: "What B2B consulting services does Commview provide?",
+    a: "Commview works across four connected areas: GTM Leadership, Growth, Product and Operational AI. Most engagements use more than one, because business problems rarely sit inside a single function. We start from the problem rather than the service, then bring the right combination of the four to solve it.",
+  },
+  {
+    q: "Do I need to know which service I need before contacting you?",
+    a: "No. You do not need to diagnose the problem before asking for help. If you know growth has slowed, the marketing is not landing or the team is stretched, that is enough to start. We work out where the constraint sits and what is worth looking at first.",
+  },
+  {
+    q: "Does Commview only provide strategy?",
+    a: "No. Strategy and execution stay connected. The person helping make the strategic decision stays close enough to the work to see whether it is working and to change course if it is not. Where a problem needs deeper specialist expertise, we bring the right specialist into the work.",
+  },
+  {
+    q: "Can Commview work alongside our existing team?",
+    a: "Yes. We can work alongside your internal marketing, sales, product and technology teams, as well as existing agencies and specialist partners. Often the most useful thing we do is connect the work across those functions so everyone is solving the same problem and moving towards the same outcome.",
+  },
 ];
 
 function RailView({ rail }: { rail: Pillar["rail"] }) {
@@ -196,6 +214,14 @@ export default function WhatWeDoPage() {
         },
       },
       {
+        "@type": "FAQPage",
+        mainEntity: FAQ.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
@@ -235,6 +261,10 @@ export default function WhatWeDoPage() {
                 Because you shouldn't have to diagnose the problem before you ask
                 for help.
               </p>
+            </div>
+            <div className="wwd-hero__row">
+              <a className="btn btn--cyan btn--lg" href="/diagnostic">Take the Diagnostic</a>
+              <a className="btn btn--ghost" href="/contact">Talk to us</a>
             </div>
             <div className="wwd-hero__pillars">
               <span>GTM Leadership</span>
@@ -375,11 +405,10 @@ export default function WhatWeDoPage() {
             <p>Straight answers to common questions about our B2B consulting services.</p>
           </div>
           <div className="wwd-faq__list">
-            {FAQ.map((q, i) => (
+            {FAQ.map((f, i) => (
               <details key={i}>
-                <summary>{q}</summary>
-                {/* TODO: FAQ answer copy needed (40–60 words, per the SEO brief). */}
-                <p className="wwd-faq__a">TODO: answer copy needed.</p>
+                <summary>{f.q}</summary>
+                <p className="wwd-faq__a">{f.a}</p>
               </details>
             ))}
           </div>
