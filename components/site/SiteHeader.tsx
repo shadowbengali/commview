@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Logo } from "./Logo";
 
@@ -72,9 +72,32 @@ const Chevron = () => (
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [mega, setMega] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Hover intent: the mega closes only when the pointer is over neither the
+  // trigger nor the panel. A short timer bridges the gap between the two so
+  // moving from the button down into the panel doesn't flicker it shut, while
+  // moving off the button to anywhere else in the header still closes it.
+  const openMega = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setMega(true);
+  };
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setMega(false), 120);
+  };
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMega(false); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
 
   return (
-    <header className="hdr" onMouseLeave={() => setMega(false)}>
+    <header className="hdr">
       <div className="wrap hdr__in">
         <a className="logo" href="/" aria-label="CommView home">
           <Logo />
@@ -87,7 +110,8 @@ export function SiteHeader() {
             type="button"
             aria-expanded={mega}
             onClick={() => setMega((v) => !v)}
-            onMouseEnter={() => setMega(true)}
+            onMouseEnter={openMega}
+            onMouseLeave={scheduleClose}
           >
             What We Do
           </button>
@@ -110,7 +134,7 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div className={"mega" + (mega ? " mega--open" : "")} hidden={!mega} role="region" aria-label="What We Do">
+      <div className={"mega" + (mega ? " mega--open" : "")} hidden={!mega} role="region" aria-label="What We Do" onMouseEnter={openMega} onMouseLeave={scheduleClose}>
         <div className="wrap mega__in">
           <div className="mega__cols">
             {MENU.map((col) => (

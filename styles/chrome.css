@@ -84,7 +84,9 @@ img { max-width: 100%; height: auto; display: block; }
 .hdr__wwd { display: inline-flex; align-items: center; gap: 4px; background: none; border: 0; padding: var(--space-2) 0; font: inherit; font-size: 14px; font-weight: 500; color: var(--text-secondary); cursor: pointer; }
 .hdr__wwd:hover, .hdr__wwd[aria-expanded="true"] { color: var(--text-primary); }
 .hdr__wwd-m { display: none; }
-.mega { position: absolute; left: 0; right: 0; top: 100%; z-index: 39; background: var(--brand-charcoal); color: var(--brand-polar); border-top: 1px solid var(--slate-dark); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45); }
+.mega { position: absolute; left: 0; right: 0; top: 100%; z-index: 39; background: var(--brand-charcoal); color: var(--brand-polar); border: 1px solid color-mix(in srgb, var(--brand-polar) 14%, transparent); border-top: 0; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5); }
+/* accent line ties the four capability colours and stops the panel blending into a dark hero */
+.mega::before { content: ""; position: absolute; left: -1px; right: -1px; top: 0; height: 3px; background: linear-gradient(90deg, var(--brand-cyan), var(--accent-green), var(--brand-blue), var(--accent-pink)); }
 .mega[hidden] { display: none; }
 .mega__in { padding-block: var(--space-8) var(--space-8); }
 .mega__cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8); }
@@ -97,7 +99,8 @@ img { max-width: 100%; height: auto; display: block; }
 .mega-col__ico svg { width: 34px; height: 34px; }
 .mega-col__head { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--space-3); font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: var(--mc); }
 .mega-col__head .chev { width: 18px; height: 18px; }
-.mega-col__tag { margin-top: var(--space-3); font-size: 14px; line-height: 1.5; color: var(--slate-light); max-width: 30ch; }
+/* min-height reserves three lines so every column's links row starts at the same y (no stepped look) */
+.mega-col__tag { margin-top: var(--space-3); min-height: calc(3 * 1.5 * 14px); font-size: 14px; line-height: 1.5; color: var(--slate-light); max-width: 30ch; }
 .mega-col__links { margin-top: var(--space-6); list-style: none; border-top: 1px solid var(--slate-dark); padding-top: var(--space-2); }
 .mega-col__links a { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-3) 0; font-size: 15px; color: var(--brand-polar); border-bottom: 1px solid color-mix(in srgb, var(--slate-dark) 55%, transparent); }
 .mega-col__links a:hover { color: var(--mc); }
