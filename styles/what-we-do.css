@@ -10,6 +10,7 @@
 .wwd-hero__intro { margin-top: var(--space-8); max-width: 62ch; display: grid; gap: var(--space-4); color: var(--slate-light); font-size: 16px; line-height: 1.6; }
 .wwd-hero__intro .lead { color: var(--brand-polar); font-weight: 600; font-size: 18px; }
 .wwd-hero__accent { writing-mode: vertical-rl; text-transform: uppercase; letter-spacing: 0.28em; font-size: 11px; font-weight: 600; color: var(--slate); border-left: 1px solid var(--slate-dark); padding-left: var(--space-4); align-self: stretch; }
+.wwd-hero__row { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .wwd-hero__pillars { margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--slate-dark); display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); }
 .wwd-hero__pillars span { position: relative; }
 .wwd-hero__pillars span + span::before { content: "/"; position: absolute; left: calc(var(--space-3) * -1); color: var(--border-strong); }
