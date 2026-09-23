@@ -325,34 +325,34 @@ export default function FractionalCmoPage() {
 
       {/* ===== LEADERSHIP AND EXECUTION IN ONE — venn ===== */}
       <section className="fc-sec" aria-labelledby="fc-tools">
-        <div className="wrap fc-tools__grid">
-          <div>
-            <h2 className="fc-tools__h" id="fc-tools">Leadership and execution, in one.</h2>
+        <div className="wrap">
+          <h2 className="fc-tools__h" id="fc-tools">Leadership and execution, in one.</h2>
+          <div className="fc-tools__grid">
             <div className="fc-tools__body">
               <p>This is the biggest distinction in how Commview works. Seniority should not mean becoming detached from the work.</p>
               <p>We can sit in the leadership conversation about where the company should grow, then get into analytics to understand why a journey is not converting. We can define the content strategy and work on the content. We can identify a problem between systems and get into how they connect. We can spot friction in the signup journey and analyse what needs changing.</p>
               <p>That does not mean pretending one person is the best specialist at everything. Where deeper expertise is needed, we bring in the right capability. Commview stays close enough to make sure the execution still reflects the strategy.</p>
               <p className="lit">We don&rsquo;t just tell you what to do. We help you do it.</p>
             </div>
-          </div>
-          <figure className="fc-venn">
+            <figure className="fc-venn">
             <svg viewBox="0 0 520 350" role="img" aria-label="Leadership and execution in one person: where to grow, who to sell to and what's stopping pipeline, alongside doing the work.">
               <circle cx="180" cy="160" r="152" className="fc-venn__exec" fillOpacity="0.92" />
               <circle cx="345" cy="170" r="150" fill="var(--slate-light)" />
-              <text x="150" y="120" textAnchor="middle" className="fc-venn__title" fill="var(--brand-polar)">LEADERSHIP</text>
-              <text x="150" y="150" textAnchor="middle" className="fc-venn__line" fill="var(--brand-polar)">Where should we grow?</text>
-              <text x="150" y="168" textAnchor="middle" className="fc-venn__line" fill="var(--brand-polar)">Who should we sell to?</text>
-              <text x="150" y="186" textAnchor="middle" className="fc-venn__line" fill="var(--brand-polar)">What&rsquo;s stopping pipeline?</text>
-              <text x="378" y="120" textAnchor="middle" className="fc-venn__title" fill="var(--brand-charcoal)">EXECUTION</text>
-              <text x="378" y="148" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Open Search Console.</text>
-              <text x="378" y="166" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Interrogate the CRM.</text>
-              <text x="378" y="184" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Rewrite the proposition.</text>
-              <text x="378" y="202" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Fix the journey.</text>
-              <text x="378" y="220" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Build the content plan.</text>
+              <text x="118" y="120" textAnchor="middle" className="fc-venn__title" fill="var(--brand-polar)">LEADERSHIP</text>
+              <text x="118" y="150" textAnchor="middle" className="fc-venn__line" fill="var(--brand-polar)">Where should we grow?</text>
+              <text x="118" y="168" textAnchor="middle" className="fc-venn__line" fill="var(--brand-polar)">Who should we sell to?</text>
+              <text x="118" y="186" textAnchor="middle" className="fc-venn__line" fill="var(--brand-polar)">What&rsquo;s stopping pipeline?</text>
+              <text x="392" y="120" textAnchor="middle" className="fc-venn__title" fill="var(--brand-charcoal)">EXECUTION</text>
+              <text x="392" y="148" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Open Search Console.</text>
+              <text x="392" y="166" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Interrogate the CRM.</text>
+              <text x="392" y="184" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Rewrite the proposition.</text>
+              <text x="392" y="202" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Fix the journey.</text>
+              <text x="392" y="220" textAnchor="middle" className="fc-venn__line" fill="var(--brand-charcoal)">Build the content plan.</text>
               <text x="262" y="176" textAnchor="middle" fontSize="26" fill="var(--brand-cyan)">+</text>
             </svg>
             <figcaption className="fc-venn__foot">Same person. Real momentum.</figcaption>
-          </figure>
+            </figure>
+          </div>
         </div>
       </section>
 
