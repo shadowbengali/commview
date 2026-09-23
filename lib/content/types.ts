@@ -73,6 +73,16 @@ export type Section =
       right: { title: string; lines: string[] };
     })
   | (Base & { type: "stepper"; style?: "arrows" | "circles"; steps: { title: string; body: string }[] })
+  | (Base & {
+      type: "aiflow";
+      heading: Heading;
+      accent?: string;
+      steps: { title: string; body: string }[];
+      flowLabel?: string;
+      decision: { title: string; tags?: string[]; note: string };
+      body: Rich;
+      aside?: { lines: string[]; accent?: string };
+    })
   | (Base & { type: "stats"; stats: Stat[] })
   | (Base & { type: "callout"; accentLine?: number; body: Rich; icon?: "ai" | "spark" | "none" })
   | (Base & { type: "comparison"; columns: { title: string; items: string[] }[] })

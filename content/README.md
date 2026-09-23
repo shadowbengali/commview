@@ -64,7 +64,7 @@ and H2s. The validator does not force the keyword into the H1.
 
 ## Section types
 
-`lead` · `grid` · `venn` · `stepper` · `stats` · `callout` · `comparison` · `logos` · `faq` · `cta`.
+`lead` · `grid` · `venn` · `stepper` · `stats` · `callout` · `aiflow` · `comparison` · `logos` · `faq` · `cta`.
 Diagram kinds (hero visual): `hub` · `overlap` · `stack` · `image` · `none`.
 
 See `growth.json` — the reference implementation — for a complete, valid example of every part.

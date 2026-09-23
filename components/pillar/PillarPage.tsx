@@ -177,6 +177,59 @@ function Cta({ c }: { c: { label: string; href: string; style: string } }) {
   return <a className={cls} href={c.href}>{c.label}</a>;
 }
 
+function accentPhrase(text: string, phrase?: string) {
+  if (!phrase || !text.includes(phrase)) return text;
+  const i = text.indexOf(phrase);
+  return (<>{text.slice(0, i)}<span className="accent">{phrase}</span>{text.slice(i + phrase.length)}</>);
+}
+
+const STEP_ICONS = [
+  <svg key="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4-4" strokeLinecap="round" /></svg>,
+  <svg key="p" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M9 9v11" /></svg>,
+  <svg key="l" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M8 6h12M8 12h12M8 18h12" strokeLinecap="round" /><circle cx="4" cy="6" r="1" /><circle cx="4" cy="12" r="1" /><circle cx="4" cy="18" r="1" /></svg>,
+  <svg key="d" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" strokeLinejoin="round" /></svg>,
+];
+
+function AiFlow({ s }: { s: Extract<Section, { type: "aiflow" }> }) {
+  const lines = Array.isArray(s.heading) ? s.heading : [s.heading];
+  return (
+    <section className={secClass(s)} aria-labelledby={s.id}>
+      <div className="wrap p-aiflow">
+        <div className="p-aiflow__main">
+          {s.eyebrow && <p className="eyebrow-x p-aiflow__eye" style={{ color: ACCENT }}>{s.eyebrow}</p>}
+          <h2 className="p-aiflow__h" id={s.id}>{lines.map((l, i) => <span key={i}>{accentPhrase(l, s.accent)}</span>)}</h2>
+          <div className="p-aiflow__flow">
+            {s.steps.flatMap((st, i) => [
+              <div className="p-aiflow__card" key={"c" + i}>
+                <span className="p-aiflow__ico" aria-hidden>{STEP_ICONS[i % STEP_ICONS.length]}</span>
+                <b>{st.title}</b>
+                <p>{st.body}</p>
+              </div>,
+              i < s.steps.length - 1 ? <span className="p-aiflow__arw" key={"a" + i} aria-hidden>&rarr;</span> : null,
+            ])}
+          </div>
+          {s.flowLabel && <div className="p-aiflow__bracket"><span>{s.flowLabel}</span></div>}
+          <div className="p-aiflow__down" aria-hidden>&darr;</div>
+          <div className="p-aiflow__decision dark">
+            <span className="p-aiflow__dico" aria-hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2.2" /><path d="M3 20a6 6 0 0 1 12 0M15.5 20a5 5 0 0 1 5.5-4.9" /></svg></span>
+            <b>{s.decision.title}</b>
+            {s.decision.tags?.length ? <p className="p-aiflow__tags">{s.decision.tags.join("  •  ")}</p> : null}
+            <p className="p-aiflow__note">{s.decision.note}</p>
+          </div>
+        </div>
+        <div className="p-aiflow__side">
+          <Paras r={s.body} className="p-aiflow__body" />
+          {s.aside ? (
+            <div className="p-aiflow__aside">
+              {s.aside.lines.map((l, i) => <p key={i}>{accentPhrase(l, s.aside!.accent)}</p>)}
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SectionView({ s }: { s: Section }) {
   switch (s.type) {
     case "lead":
@@ -278,6 +331,8 @@ function SectionView({ s }: { s: Section }) {
         </section>
       );
     }
+    case "aiflow":
+      return <AiFlow s={s} />;
     case "callout":
       return (
         <section className={secClass(s)} aria-labelledby={s.id}>

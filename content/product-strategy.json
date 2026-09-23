@@ -274,19 +274,54 @@
     },
     {
       "id": "ai",
-      "type": "callout",
+      "type": "aiflow",
       "targetKeyword": "ai product strategy",
-      "eyebrow": "AI AND PRODUCT STRATEGY",
-      "heading": "AI Can Accelerate Product Work. It Cannot Make the Product Decision.",
-      "icon": "ai",
-      "body": [
-        "AI has changed how quickly product teams can move. Research can be synthesised faster. Early concepts can become clickable prototypes quickly. User journeys, requirements and first-pass stories can be developed in a fraction of the time they once took.",
-        "We use that leverage. But speed does not remove the need for judgement.",
-        "AI does not own the customer relationship. It does not carry the commercial risk. It does not decide which evidence matters, which cohort to prioritise, which strategic trade-off the company should make or whether a feature deserves to exist.",
-        "Our approach is simple: use AI to reduce the time between question and evidence, then keep the important product decisions with people who understand the customer, business and consequences.",
-        "AI makes the product process faster. It should not make the roadmap for you."
+      "eyebrow": "AI + Product",
+      "heading": [
+        "AI can accelerate product work.",
+        "It cannot make the product decision."
       ],
-      "notes": "Treat AI as an acceleration layer beneath the product process, not the centre of the proposition."
+      "accent": "It cannot",
+      "steps": [
+        {
+          "title": "Research",
+          "body": "Synthesise insights faster."
+        },
+        {
+          "title": "Prototype",
+          "body": "Turn ideas into clickable concepts."
+        },
+        {
+          "title": "Specification",
+          "body": "Draft requirements and user stories."
+        },
+        {
+          "title": "Delivery",
+          "body": "Move from idea to execution."
+        }
+      ],
+      "flowLabel": "AI accelerates the work",
+      "decision": {
+        "title": "Product decision",
+        "tags": [
+          "Customer",
+          "Evidence",
+          "Commercial risk"
+        ],
+        "note": "Human judgement stays here."
+      },
+      "body": [
+        "AI has changed how quickly product teams can move. Research can be synthesised faster. Early concepts can become clickable prototypes. User journeys, requirements and first-pass stories can be developed in a fraction of the time they once took.",
+        "We use that leverage. But speed does not remove the need for judgement.",
+        "AI does not own the customer relationship. It does not carry the commercial risk. It does not decide which evidence matters, which cohort to prioritise, which strategic trade-off the company should make or whether a feature deserves to exist."
+      ],
+      "aside": {
+        "lines": [
+          "Use AI to shorten the distance between question and evidence.",
+          "Keep the product decision human."
+        ],
+        "accent": "Keep the product decision human."
+      }
     },
     {
       "id": "engagement",

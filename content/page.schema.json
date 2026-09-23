@@ -136,6 +136,16 @@
             "steps": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" } } } } },
           "unevaluatedProperties": false },
 
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["heading", "steps", "decision", "body"],
+          "properties": { "type": { "const": "aiflow" },
+            "accent": { "type": "string" },
+            "steps": { "type": "array", "minItems": 2, "maxItems": 5, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" } } } },
+            "flowLabel": { "type": "string" },
+            "decision": { "type": "object", "additionalProperties": false, "required": ["title", "note"], "properties": { "title": { "type": "string" }, "tags": { "type": "array", "items": { "type": "string" } }, "note": { "type": "string" } } },
+            "body": { "$ref": "#/$defs/rich" },
+            "aside": { "type": "object", "additionalProperties": false, "required": ["lines"], "properties": { "lines": { "type": "array", "items": { "type": "string" } }, "accent": { "type": "string" } } } },
+          "unevaluatedProperties": false },
+
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["stats"],
           "properties": { "type": { "const": "stats" }, "stats": { "type": "array", "minItems": 2, "maxItems": 5, "items": { "$ref": "#/$defs/stat" } } },
           "unevaluatedProperties": false },
