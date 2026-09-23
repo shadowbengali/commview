@@ -68,6 +68,7 @@
       "oneOf": [
         { "type": "object", "additionalProperties": false, "required": ["kind"], "properties": { "kind": { "const": "none" }, "caption": { "type": "string" }, "sub": { "type": "string" } } },
         { "type": "object", "additionalProperties": false, "required": ["kind", "core", "nodes"], "properties": { "kind": { "const": "hub" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "core": { "type": "string" }, "nodes": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "answer": { "type": "string" } } },
+        { "type": "object", "additionalProperties": false, "required": ["kind", "core", "nodes"], "properties": { "kind": { "const": "orb" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "core": { "type": "string" }, "nodes": { "type": "array", "minItems": 3, "maxItems": 4, "items": { "type": "string" } }, "checklist": { "type": "array", "items": { "type": "string" } } } },
         { "type": "object", "additionalProperties": false, "required": ["kind", "leftLabel", "rightLabel"], "properties": { "kind": { "const": "overlap" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "leftLabel": { "type": "string" }, "rightLabel": { "type": "string" }, "centreLabel": { "type": "string" } } },
         { "type": "object", "additionalProperties": false, "required": ["kind", "layers"], "properties": { "kind": { "const": "stack" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "layers": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "highlight": { "type": "integer", "minimum": 0 } } },
         { "type": "object", "additionalProperties": false, "required": ["kind", "src", "alt"], "properties": { "kind": { "const": "image" }, "caption": { "type": "string" }, "sub": { "type": "string" }, "src": { "type": "string" }, "alt": { "type": "string", "minLength": 1 } } }
@@ -123,7 +124,9 @@
 
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["items"],
           "properties": { "type": { "const": "grid" },
-            "items": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" }, "href": { "$ref": "#/$defs/internalPath" } } } } },
+            "variant": { "enum": ["numbered", "icon", "cards"] },
+            "align": { "enum": ["center"] },
+            "items": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" }, "href": { "$ref": "#/$defs/internalPath" }, "icon": { "type": "string" } } } } },
           "unevaluatedProperties": false },
 
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["left", "right"],
@@ -132,8 +135,8 @@
           "unevaluatedProperties": false },
 
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["steps"],
-          "properties": { "type": { "const": "stepper" }, "style": { "enum": ["arrows", "circles"] },
-            "steps": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" } } } } },
+          "properties": { "type": { "const": "stepper" }, "style": { "enum": ["arrows", "circles", "icons"] },
+            "steps": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title", "body"], "properties": { "title": { "type": "string" }, "body": { "type": "string" }, "icon": { "type": "string" } } } } },
           "unevaluatedProperties": false },
 
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["heading", "steps", "decision", "body"],

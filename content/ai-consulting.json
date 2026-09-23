@@ -87,13 +87,13 @@
     ]
   },
   "hero": {
-    "eyebrow": "AI CONSULTING FOR B2B OPERATIONS",
+    "eyebrow": "AI Consulting for Business Operations",
     "h1": [
       "Put AI where it",
       "actually earns its place."
     ],
     "accentLine": 1,
-    "sub": "AI is useful when it changes how the business operates. We find the work where AI can remove manual effort, shorten cycle times or create capacity, then help turn the opportunity into something people can actually use.",
+    "sub": "AI is useful when it changes how the business operates. We find the work that can be done faster, cheaper or better, and help you move from opportunity to implementation.",
     "ctas": [
       {
         "label": "Talk to us",
@@ -109,36 +109,40 @@
     "meta": [
       {
         "label": [
-          "Cost",
-          "less manual effort"
+          "Lower",
+          "costs"
         ]
       },
       {
         "label": [
-          "Speed",
-          "shorter cycle times"
+          "Faster",
+          "cycles"
         ]
       },
       {
         "label": [
-          "Capacity",
-          "more useful work"
+          "More capacity",
+          "for higher value work"
         ]
       }
     ],
     "diagram": {
-      "kind": "hub",
+      "kind": "orb",
       "caption": "OPERATIONAL AI",
-      "sub": "Start with the work, not the tool.",
+      "sub": "Same work. Less effort. More impact.",
       "core": "AI",
       "nodes": [
-        "REPORTING",
-        "WORKFLOWS",
-        "CONTENT",
-        "LEAD SCORING",
-        "SALES INTELLIGENCE"
+        "PEOPLE",
+        "PROCESSES",
+        "DATA",
+        "SYSTEMS"
       ],
-      "answer": "EARN ITS PLACE"
+      "checklist": [
+        "Identify real opportunities",
+        "Design and test solutions",
+        "Implement with your team",
+        "Measure the impact"
+      ]
     }
   },
   "sections": [
@@ -166,30 +170,36 @@
       "items": [
         {
           "title": "Reporting and analysis",
-          "body": "Reduce the manual work involved in collecting, structuring and summarising information so people spend more time interpreting what changed and what to do next.",
-          "href": "/ai-consulting/business-operations"
+          "body": "Turn scattered data into clear insights, faster.",
+          "href": "/ai-consulting/business-operations",
+          "icon": "report"
         },
         {
           "title": "Workflow automation",
-          "body": "Connect repeatable steps across systems, trigger the next action and keep people involved where judgement, approval or exception handling matters.",
-          "href": "/ai-consulting/workflow-automation"
+          "body": "Remove manual work across systems and processes.",
+          "href": "/ai-consulting/workflow-automation",
+          "icon": "workflow"
         },
         {
           "title": "Content and translation",
-          "body": "Use AI to accelerate drafting, adaptation, summarisation and translation while keeping human review around accuracy, brand and commercial judgement.",
-          "href": "/ai-consulting/genai"
+          "body": "Create, adapt and summarise content at scale.",
+          "href": "/ai-consulting/genai",
+          "icon": "database"
         },
         {
           "title": "Lead scoring and routing",
-          "body": "Bring behavioural and account signals together to help prioritise attention and route opportunities without pretending a score can replace commercial judgement.",
-          "href": "/ai-consulting/automation"
+          "body": "Identify and prioritise the right opportunities.",
+          "href": "/ai-consulting/automation",
+          "icon": "people"
         },
         {
           "title": "Sales intelligence",
-          "body": "Turn fragmented customer and account information into useful context for preparation, follow-up and decision support without adding another manual research task.",
-          "href": "/ai-consulting/business-operations"
+          "body": "Surface customer and market insights to support better conversations.",
+          "href": "/ai-consulting/business-operations",
+          "icon": "chart"
         }
-      ]
+      ],
+      "variant": "icon"
     },
     {
       "id": "services",
@@ -201,35 +211,42 @@
       "items": [
         {
           "title": "AI for Business Operations",
-          "body": "Find the operational work where AI can improve speed, capacity or consistency, and decide what is worth changing.",
-          "href": "/ai-consulting/business-operations"
+          "body": "Find the right opportunities and define what success looks like.",
+          "href": "/ai-consulting/business-operations",
+          "icon": "target"
         },
         {
           "title": "AI Workflow Automation",
-          "body": "Redesign repeatable workflows and connect the steps, systems and human decisions needed to make them work.",
-          "href": "/ai-consulting/workflow-automation"
+          "body": "Automate processes and connect the tools, systems and people.",
+          "href": "/ai-consulting/workflow-automation",
+          "icon": "workflow"
         },
         {
           "title": "AI Automation Consulting",
-          "body": "Prioritise automation opportunities around the work they remove, the value they create and the effort needed to deploy them.",
-          "href": "/ai-consulting/automation"
+          "body": "Design the operating model, governance and change approach.",
+          "href": "/ai-consulting/automation",
+          "icon": "people"
         },
         {
           "title": "AI Implementation",
-          "body": "Move from an AI opportunity to a deployed workflow or system, then measure adoption and whether it changed the operation.",
-          "href": "/ai-consulting/implementation"
+          "body": "Build, test and deploy solutions that work in the real world.",
+          "href": "/ai-consulting/implementation",
+          "icon": "layers"
         },
         {
           "title": "Generative AI Consulting",
-          "body": "Apply generative AI where drafting, extraction, summarisation, classification or synthesis can improve the way work gets done.",
-          "href": "/ai-consulting/genai"
+          "body": "Apply GenAI for content, research, analysis and internal productivity.",
+          "href": "/ai-consulting/genai",
+          "icon": "sparkle"
         },
         {
           "title": "AI Transformation",
-          "body": "Look across teams and workflows when the opportunity is larger than a single automation and needs coordinated operating change.",
-          "href": "/ai-consulting/transformation"
+          "body": "Scale what works and embed AI into the way the business operates.",
+          "href": "/ai-consulting/transformation",
+          "icon": "chart"
         }
-      ]
+      ],
+      "variant": "cards"
     },
     {
       "id": "method",
@@ -239,31 +256,37 @@
       "eyebrow": "FROM OPPORTUNITY TO OPERATION",
       "heading": "Do Not Start With AI. Start With the Work.",
       "intro": "A useful AI initiative should have a clear operational reason to exist. We keep the path deliberately practical.",
-      "style": "arrows",
+      "style": "icons",
       "steps": [
         {
           "title": "Find the friction",
-          "body": "Identify repetitive work, delays, manual hand-offs and information bottlenecks."
+          "body": "Identify the work that is slow, costly or inconsistent.",
+          "icon": "search"
         },
         {
           "title": "Understand the workflow",
-          "body": "Map what happens today, who is involved, which systems matter and where judgement is required."
+          "body": "Map the process, data, people and systems.",
+          "icon": "doc"
         },
         {
           "title": "Choose the intervention",
-          "body": "Decide whether AI, conventional automation, process change or a combination is the sensible answer."
+          "body": "Decide where AI can add real value.",
+          "icon": "bulb"
         },
         {
-          "title": "Build small",
-          "body": "Create the smallest useful implementation that can prove whether the idea works in the real operation."
+          "title": "Build and test",
+          "body": "Create a working solution and validate it.",
+          "icon": "box"
         },
         {
           "title": "Measure",
-          "body": "Look at adoption and the operational change, including time, cost, capacity, quality or cycle time where measurable."
+          "body": "Track the impact on time, cost, quality and capacity.",
+          "icon": "chart"
         },
         {
           "title": "Scale what works",
-          "body": "Expand only when the evidence supports it, with controls and human oversight appropriate to the workflow."
+          "body": "Embed it into operations and look for the next opportunity.",
+          "icon": "refresh"
         }
       ],
       "notes": "Main in-page visual. Keep it editorial and operational, not futuristic. Show work moving through a system. No robot, brain, circuit-board or generic AI imagery."
@@ -307,22 +330,38 @@
       ],
       "accentLine": 1,
       "icon": "ai",
-      "body": [
-        "AI can draft, classify, summarise, extract, route and recommend. That does not mean every decision should be delegated to it.",
-        "We design around the consequence of being wrong. Where a workflow affects customers, money, compliance, reputation or an important commercial decision, the right controls and human review need to stay visible.",
-        "The objective is useful leverage, not autonomy for its own sake."
-      ]
+      "body": "AI can draft, classify, summarise and make recommendations. It cannot take responsibility for the decision. The humans who understand your customers, your business and the consequences still need to make the call. We help you design AI solutions that support better decisions, not replace them."
     },
     {
       "id": "outcomes",
-      "type": "lead",
+      "type": "grid",
+      "variant": "icon",
+      "align": "center",
       "targetKeyword": "ai consulting case studies",
-      "eyebrow": "AI CONSULTING OUTCOMES",
+      "eyebrow": "AI Consulting Outcomes",
       "heading": "Judge AI by What Changes in the Operation",
-      "intro": [
-        "A successful implementation is not one that produces the most impressive demo. It is one that becomes useful enough to change the way work happens.",
-        "We look for measurable operational evidence: less manual work, shorter cycle times, more capacity, fewer avoidable hand-offs, better access to information or a more consistent process.",
-        "Where we publish AI work, the case study will show the problem, what changed and the outcome rather than treating the technology itself as the result."
+      "intro": "A successful implementation is not one that produces the most impressive demo. It is one that makes the day-to-day work better.",
+      "items": [
+        {
+          "title": "Faster cycle times",
+          "body": "Get work done in hours, not weeks.",
+          "icon": "clock"
+        },
+        {
+          "title": "Lower operational cost",
+          "body": "Remove manual effort and reduce rework.",
+          "icon": "database"
+        },
+        {
+          "title": "More capacity",
+          "body": "Free up your team for higher value work.",
+          "icon": "people"
+        },
+        {
+          "title": "Better decisions",
+          "body": "Access the right information at the right time.",
+          "icon": "chart"
+        }
       ]
     },
     {

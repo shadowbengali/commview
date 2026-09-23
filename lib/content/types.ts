@@ -28,6 +28,7 @@ export type Meta = {
 export type Diagram =
   | { kind: "none"; caption?: string; sub?: string }
   | { kind: "hub"; caption?: string; sub?: string; core: string; nodes: string[]; answer?: string }
+  | { kind: "orb"; caption?: string; sub?: string; core: string; nodes: string[]; checklist?: string[] }
   | { kind: "overlap"; caption?: string; sub?: string; leftLabel: string; rightLabel: string; centreLabel?: string }
   | { kind: "stack"; caption?: string; sub?: string; layers: string[]; highlight?: number }
   | { kind: "image"; caption?: string; sub?: string; src: string; alt: string };
@@ -62,7 +63,7 @@ type Base = {
 
 export type Section =
   | (Base & { type: "lead"; ctas?: Cta[] })
-  | (Base & { type: "grid"; items: { title: string; body: string; href?: string }[] })
+  | (Base & { type: "grid"; variant?: "numbered" | "icon" | "cards"; align?: "center"; items: { title: string; body: string; href?: string; icon?: string }[] })
   | (Base & {
       type: "venn";
       body?: Rich;
@@ -72,7 +73,7 @@ export type Section =
       left: { title: string; lines: string[] };
       right: { title: string; lines: string[] };
     })
-  | (Base & { type: "stepper"; style?: "arrows" | "circles"; steps: { title: string; body: string }[] })
+  | (Base & { type: "stepper"; style?: "arrows" | "circles" | "icons"; steps: { title: string; body: string; icon?: string }[] })
   | (Base & {
       type: "aiflow";
       heading: Heading;

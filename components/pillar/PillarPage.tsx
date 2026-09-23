@@ -1,6 +1,7 @@
 // Pillar-page renderer. Consumes a content/<slug>.json (typed as Page) and
 // renders it through styles/pillar.css. This is the only place pillar layout
 // lives; ChatGPT never touches it. Server Component (native <details>, no JS).
+import type { ReactNode } from "react";
 import type { Page, Section, Heading, Rich, Diagram, Stat } from "../../lib/content/types";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
@@ -8,6 +9,31 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.
 const IS_PROD = process.env.VERCEL_ENV === "production";
 
 const ACCENT = "var(--c)";
+
+/* ---------- icons ---------- */
+const ICONS: Record<string, ReactNode> = {
+  report: <><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round" /></>,
+  workflow: <><circle cx="12" cy="12" r="3.2" /><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1" strokeLinecap="round" /></>,
+  database: <><ellipse cx="12" cy="6" rx="7.5" ry="3" /><path d="M4.5 6v6c0 1.6 3.4 3 7.5 3s7.5-1.4 7.5-3V6M4.5 12v6c0 1.6 3.4 3 7.5 3s7.5-1.4 7.5-3v-6" /></>,
+  people: <><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2.2" /><path d="M3 20a6 6 0 0 1 12 0M15.5 20a5 5 0 0 1 5.5-4.9" /></>,
+  chart: <path d="M4 20h16M8 20v-6M13 20V8M18 20v-9" strokeLinecap="round" />,
+  target: <><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="1" /></>,
+  layers: <path d="M12 3l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5" />,
+  sparkle: <path d="M12 3l1.9 5.5L19.5 10l-5.6 1.5L12 17l-1.9-5.5L4.5 10l5.6-1.5L12 3z" />,
+  search: <><circle cx="11" cy="11" r="7" /><path d="M21 21l-4-4" strokeLinecap="round" /></>,
+  doc: <><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z" /><path d="M14 3v5h5M9 13h6M9 17h6" strokeLinecap="round" /></>,
+  bulb: <><path d="M9 18h6M10 21h4" strokeLinecap="round" /><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.2 1 2h6c0-.8.3-1.4 1-2A6 6 0 0 0 12 3z" /></>,
+  box: <path d="M12 2.5l8 4.5v9L12 20.5 4 16v-9l8-4.5zM4 7l8 4.5L20 7M12 11.5v9" />,
+  refresh: <path d="M20 12a8 8 0 1 1-2.3-5.6M20 3.5V8h-4.5" strokeLinecap="round" strokeLinejoin="round" />,
+  clock: <><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5v4.7l3.2 2" strokeLinecap="round" /></>,
+  lightning: <path d="M13 2.5L4.5 13.5H11l-1 8 8.5-11H12l1-7.5z" strokeLinejoin="round" />,
+  check: <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />,
+};
+function Icon({ name }: { name?: string }) {
+  const g = name ? ICONS[name] : null;
+  if (!g) return null;
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round">{g}</svg>;
+}
 
 /* ---------- helpers ---------- */
 function Head({ h, accentLine }: { h: Heading; accentLine?: number }) {
@@ -26,7 +52,7 @@ function Paras({ r, className }: { r: Rich; className?: string }) {
   return <>{arr.map((p, i) => <p key={i} className={className}>{p}</p>)}</>;
 }
 
-function SectionHead({ s }: { s: Extract<Section, { type: string }> }) {
+function SectionHead({ s, center }: { s: Extract<Section, { type: string }>; center?: boolean }) {
   const heading = "heading" in s ? s.heading : undefined;
   const intro = "intro" in s ? s.intro : undefined;
   const eyebrow = "eyebrow" in s ? s.eyebrow : undefined;
@@ -36,6 +62,7 @@ function SectionHead({ s }: { s: Extract<Section, { type: string }> }) {
       {heading && <h2 id={s.id} style={{ marginTop: "var(--space-3)" }}><Head h={heading} /></h2>}
     </div>
   );
+  if (center) return <div className="p-head p-head--solo p-head--center">{inner}{intro && <div><Paras r={intro} className="p-head__intro" /></div>}</div>;
   if (!intro) return <div className="p-head p-head--solo">{inner}</div>;
   return (
     <div className="p-head">
@@ -137,9 +164,35 @@ function OverlapDiagram({ d }: { d: Extract<Diagram, { kind: "overlap" }> }) {
   );
 }
 
+function OrbDiagram({ d }: { d: Extract<Diagram, { kind: "orb" }> }) {
+  const core = { x: 225, y: 235, r: 48 };
+  const pos: [number, number][] = [[225, 108], [95, 235], [355, 235], [225, 362]];
+  return (
+    <div className="p-diagram">
+      <svg viewBox="0 0 700 460" role="img" aria-label={`${d.core} at the centre of ${d.nodes.join(", ")}.`}>
+        <defs>
+          <filter id="orbGlow" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="16" /></filter>
+          <radialGradient id="orbFill" cx="50%" cy="42%" r="62%"><stop offset="0" stopColor="#141a24" /><stop offset="0.65" stopColor="#0b0f14" /><stop offset="1" stopColor="var(--c)" stopOpacity="0.5" /></radialGradient>
+        </defs>
+        {d.caption && <text x="225" y="28" textAnchor="middle" className="p-diagram__cap">{d.caption}</text>}
+        {d.sub && <text x="225" y="50" textAnchor="middle" className="p-diagram__sub">{d.sub}</text>}
+        <g stroke="var(--slate-dark)" strokeWidth="1.5">{pos.map(([x, y], i) => <line key={i} x1={core.x} y1={core.y} x2={x} y2={y} />)}</g>
+        <circle cx={core.x} cy={core.y} r={core.r + 18} fill="var(--c)" opacity="0.4" filter="url(#orbGlow)" />
+        <circle cx={core.x} cy={core.y} r={core.r} fill="url(#orbFill)" stroke="var(--c)" strokeWidth="2.5" />
+        <text x={core.x} y={core.y + 8} textAnchor="middle" className="p-diagram__core">{d.core}</text>
+        {d.nodes.map((label, i) => { const [x, y] = pos[i]; const w = Math.max(96, label.length * 9 + 30);
+          return <g key={label}><rect x={x - w / 2} y={y - 16} width={w} height="32" rx="16" fill="var(--brand-charcoal)" stroke="var(--slate)" strokeWidth="1" /><text x={x} y={y + 5} textAnchor="middle" className="p-diagram__node">{label}</text></g>; })}
+        {d.checklist?.map((item, i) => { const y = 148 + i * 48;
+          return <g key={item}><path d={`M462 ${y} l4 5 l8 -10`} fill="none" stroke="var(--c)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /><text x={484} y={y + 4} className="p-diagram__check">{item}</text></g>; })}
+      </svg>
+    </div>
+  );
+}
+
 function DiagramView({ d }: { d?: Diagram }) {
   if (!d || d.kind === "none") return null;
   if (d.kind === "hub") return <HubDiagram d={d} />;
+  if (d.kind === "orb") return <OrbDiagram d={d} />;
   if (d.kind === "overlap") return <OverlapDiagram d={d} />;
   if (d.kind === "image") return <div className="p-shot"><img src={d.src} alt={d.alt} /></div>;
   if (d.kind === "stack") {
@@ -248,18 +301,24 @@ function SectionView({ s }: { s: Section }) {
         </section>
       );
     case "grid": {
-      const cols = String(s.items.length);
+      const variant = s.variant ?? "numbered";
+      const center = s.align === "center";
+      const n = (i: number) => String(i + 1).padStart(2, "0");
       return (
         <section className={secClass(s)} aria-labelledby={s.id}>
           <div className="wrap">
-            <SectionHead s={s} />
-            <div className="p-grid" data-cols={cols}>
+            <SectionHead s={s} center={center} />
+            <div className={`p-grid p-grid--${variant}${center ? " p-grid--center" : ""}`} data-cols={String(s.items.length)}>
               {s.items.map((it, i) => (
                 <div className="p-cell" key={i}>
-                  <b>{String(i + 1).padStart(2, "0")}</b>
+                  {variant === "cards" && <span className="p-cell__n">{n(i)}</span>}
+                  {it.icon && <span className="p-cell__ico" aria-hidden><Icon name={it.icon} /></span>}
+                  {variant === "numbered" && !it.icon && <b>{n(i)}</b>}
                   <h3>{it.title}</h3>
                   <p>{it.body}</p>
-                  {it.href && <a className="p-cell__more" href={it.href}>Learn more</a>}
+                  {it.href && (variant === "cards"
+                    ? <a className="p-cell__arw" href={it.href} aria-label={it.title}>&rarr;</a>
+                    : <a className="p-cell__more" href={it.href}>Learn more &rarr;</a>)}
                 </div>
               ))}
             </div>
@@ -293,16 +352,20 @@ function SectionView({ s }: { s: Section }) {
         </section>
       );
     case "stepper": {
-      const circles = s.style === "circles";
+      const style = s.style ?? "arrows";
       return (
         <section className={secClass(s)} aria-labelledby={s.id}>
           <div className="wrap">
             <SectionHead s={s} />
-            <div className={"p-proc__grid " + (circles ? "p-proc--circles" : "p-proc--arrows")}>
+            <div className={"p-proc__grid p-proc--" + style} data-cols={String(s.steps.length)}>
               {s.steps.map((st, i) => (
                 <div className="p-step" key={i}>
-                  {circles ? <div className="p-step__n">{String(i + 1).padStart(2, "0")}</div> : <b>{String(i + 1).padStart(2, "0")}</b>}
-                  <h3>{st.title}</h3>
+                  {style === "icons"
+                    ? <div className="p-step__ico" aria-hidden><Icon name={st.icon} /></div>
+                    : style === "circles"
+                    ? <div className="p-step__n">{String(i + 1).padStart(2, "0")}</div>
+                    : <b>{String(i + 1).padStart(2, "0")}</b>}
+                  <h3>{style === "icons" ? `${i + 1}. ${st.title}` : st.title}</h3>
                   <p>{st.body}</p>
                 </div>
               ))}
