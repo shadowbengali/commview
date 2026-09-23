@@ -12,7 +12,7 @@ const BASE = process.env.VERIFY_BASE || "http://localhost:3000";
 // template, accent and diagram kind). All 26 content pages are covered by the
 // content validator and the production build; this checks rendered overflow.
 const ROUTES = [
-  "/", "/insights", "/what-we-do", "/how-we-work", "/contact", "/work", "/fractional-cmo",
+  "/", "/insights", "/what-we-do", "/how-we-work", "/contact", "/work", "/about", "/fractional-cmo",
   "/growth", "/product-strategy", "/ai-consulting",
   "/growth/seo", "/product-strategy/consulting",
   "/ai-consulting/genai", "/ai-consulting/implementation",
