@@ -1,0 +1,12 @@
+/* Self-hosted Inter as a single variable font (weights 100-900 in one file),
+   replacing the five static @fontsource weight files. Family stays "Inter" so
+   the whole design system (--font-sans: Inter, ...) and every component are
+   unchanged. font-display: swap keeps text visible during load. The file is
+   preloaded in the (site) layout head for a faster LCP. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/fonts/inter-variable-latin.woff2") format("woff2");
+}
