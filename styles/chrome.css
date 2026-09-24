@@ -181,7 +181,31 @@ img { max-width: 100%; height: auto; display: block; }
   .hdr__nav[data-open="true"] { display: flex; }
   .hdr__nav a { padding-block: var(--space-3); border-bottom: var(--rule); font-size: 16px; }
   .hdr__wwd { display: none; }
-  .hdr__wwd-m { display: block; padding-block: var(--space-3); border-bottom: var(--rule); font-size: 16px; color: var(--text-secondary); }
+  /* Mobile "What We Do" accordion: tap the trigger to reveal the four pillars
+     in their colours; tap again to close. */
+  .hdr__wwd-m { display: block; }
+  .hdr__wwd-mtrig {
+    display: flex; align-items: center; justify-content: space-between; width: 100%;
+    background: none; border: 0; border-bottom: var(--rule);
+    padding-block: var(--space-3); font: inherit; font-size: 16px; font-weight: 500;
+    color: var(--text-secondary); cursor: pointer;
+  }
+  .hdr__wwd-mtrig[aria-expanded="true"] { color: var(--text-primary); }
+  .hdr__wwd-mchev { width: 18px; height: 18px; transition: transform 0.2s ease; }
+  .hdr__wwd-mtrig[aria-expanded="true"] .hdr__wwd-mchev { transform: rotate(180deg); }
+  .hdr__wwd-msub { list-style: none; margin: 0; padding: 0; }
+  .hdr__wwd-msub li[data-accent="cyan"] { --mc: var(--brand-cyan); }
+  .hdr__wwd-msub li[data-accent="green"] { --mc: var(--accent-green); }
+  .hdr__wwd-msub li[data-accent="blue"] { --mc: var(--accent-blue); }
+  .hdr__wwd-msub li[data-accent="pink"] { --mc: var(--accent-pink); }
+  .hdr__wwd-msub li a {
+    display: flex; align-items: center; gap: 10px;
+    padding-block: var(--space-3); padding-left: var(--space-4);
+    border-bottom: var(--rule); font-size: 15px; font-weight: 600; color: var(--mc);
+  }
+  .hdr__wwd-msub li a::before {
+    content: ""; width: 8px; height: 8px; border-radius: 999px; background: var(--mc); flex: none;
+  }
   .mega { display: none; }
   .burger { display: block; order: 3; }
   .hdr__cta { order: 2; margin-left: auto; padding: 11px 16px; font-size: 14px; }

@@ -76,7 +76,11 @@ const Chevron = () => (
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [mega, setMega] = useState(false);
+  const [wwdOpen, setWwdOpen] = useState(false); // mobile "What We Do" accordion
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Close the whole mobile menu (and its sub-accordion) after navigating.
+  const closeMobile = () => { setOpen(false); setWwdOpen(false); };
 
   // Hover intent: the mega closes only when the pointer is over neither the
   // trigger nor the panel. A short timer bridges the gap between the two so
@@ -119,7 +123,25 @@ export function SiteHeader() {
           >
             What We Do
           </button>
-          <a className="hdr__wwd-m" href="/what-we-do">What We Do</a>
+          <div className="hdr__wwd-m">
+            <button
+              className="hdr__wwd-mtrig"
+              type="button"
+              aria-expanded={wwdOpen}
+              aria-controls="wwd-sub"
+              onClick={() => setWwdOpen((v) => !v)}
+            >
+              What We Do
+              <svg className="hdr__wwd-mchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <ul className="hdr__wwd-msub" id="wwd-sub" hidden={!wwdOpen}>
+              {MENU.map((col) => (
+                <li data-accent={col.accent} key={col.href}>
+                  <a href={col.href} onClick={closeMobile}>{col.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
           <a href="/how-we-work">How We Work</a>
           <a href="/work">Work</a>
           <a href="/insights">Insight</a>
