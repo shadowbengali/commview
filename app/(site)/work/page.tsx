@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 
 import { CaseStudies } from "@/components/work/CaseStudies";
-import { CASES, CAP_COLOUR, type Cap } from "@/lib/work/cases";
+import { CASES, CAP_COLOUR, CAP_HREF, type Cap } from "@/lib/work/cases";
 
 import "../../../styles/work.css";
 
@@ -117,7 +117,7 @@ export default function WorkPage() {
               <li className="wk-stream" style={cvar(CAP_COLOUR[w.cap])} key={w.n}>
                 <span className="wk-stream__n">{w.n}</span>
                 <div className="wk-stream__c">
-                  <span className="wk-stream__tag">{w.cap}</span>
+                  <a className="wk-stream__tag" href={CAP_HREF[w.cap]}>{w.cap}</a>
                   <h3 className="wk-stream__title">{w.title}</h3>
                   <p className="wk-stream__body">{w.body}</p>
                   <span className="wk-stream__status">In progress</span>

@@ -48,6 +48,18 @@ const isBuilt = (href) => {
 };
 
 const flat = (v) => (Array.isArray(v) ? v.join(" ") : v || "");
+// Inline prose links written as [anchor](/path) in body copy / faq answers /
+// callouts — the pillar renderer turns these into real <a> internal links, so
+// the validator must treat them as internal links too.
+const INLINE_LINK = /\]\((\/[^)\s]+)\)/g;
+function inlineHrefs(data) {
+  const out = [];
+  let m;
+  const s = JSON.stringify(data);
+  INLINE_LINK.lastIndex = 0;
+  while ((m = INLINE_LINK.exec(s))) out.push(m[1]);
+  return out;
+}
 function collectHrefs(data) {
   const out = [];
   for (const c of data.hero?.ctas || []) out.push(c.href);
@@ -55,6 +67,7 @@ function collectHrefs(data) {
     for (const it of s.items || []) if (it.href) out.push(it.href);
     for (const c of s.ctas || []) out.push(c.href);
   }
+  out.push(...inlineHrefs(data));
   return out;
 }
 
@@ -117,7 +130,9 @@ for (const f of files) {
 
   const surface = JSON.stringify([data.hero?.ctas, data.sections]);
   for (const link of data.meta?.internalLinks || []) {
-    const rx = new RegExp(`"href":"${link.href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`);
+    const esc = link.href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    // Rendered either as a structured href ("href":"/x") or an inline prose link ]( /x )
+    const rx = new RegExp(`"href":"${esc}"|\\]\\(${esc}\\)`);
     if (!rx.test(surface)) warn(f, `declared internal link ${link.href} (${link.purpose}) is not rendered on the page`);
   }
 

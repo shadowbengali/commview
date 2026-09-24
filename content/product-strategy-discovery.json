@@ -44,6 +44,10 @@
         "purpose": "related"
       },
       {
+        "href": "/product-strategy/roadmap",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -89,6 +93,18 @@
       "intro": [
         "Product discovery is the evidence-gathering and decision work that happens before or alongside delivery. Its purpose is to understand the customer problem, test important assumptions and reduce the risk of committing significant effort to the wrong solution.",
         "Good discovery ends in a decision, not an ever-growing research repository."
+      ],
+      "ctas": [
+        {
+          "label": "product strategy",
+          "href": "/product-strategy",
+          "style": "text"
+        },
+        {
+          "label": "product roadmap",
+          "href": "/product-strategy/roadmap",
+          "style": "text"
+        }
       ]
     },
     {
@@ -188,6 +204,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "MVP scoping",
+          "href": "/product-strategy/mvp",
+          "style": "text"
         }
       ],
       "tagline": [

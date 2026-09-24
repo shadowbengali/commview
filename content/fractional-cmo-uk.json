@@ -35,6 +35,14 @@
         "purpose": "parent"
       },
       {
+        "href": "/positioning",
+        "purpose": "related"
+      },
+      {
+        "href": "/cmo-support",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -79,7 +87,7 @@
       "variant": "icon",
       "eyebrow": "Built for UK businesses",
       "heading": "Local expertise. Global experience.",
-      "intro": "We work with UK B2B companies from high-growth startups to established scale-ups, bringing global experience and local market understanding to define strategy, align teams and deliver measurable growth.",
+      "intro": "We work with UK B2B companies from high-growth startups to established scale-ups, bringing global experience and local market understanding to define strategy, sharpen [B2B positioning](/positioning), align teams and deliver measurable growth.",
       "items": [
         {
           "icon": "target",
@@ -110,7 +118,7 @@
       "variant": "icon",
       "eyebrow": "Common challenges",
       "heading": "UK businesses face growing complexity.",
-      "intro": "Longer sales cycles, more channels, higher customer expectations and increased competition make senior marketing leadership critical, but a full-time CMO is not always the right answer.",
+      "intro": "Longer sales cycles, more channels, higher customer expectations and increased competition make senior marketing leadership critical, but a full-time CMO is not always the right answer. If you already have that leadership and simply need more delivery capacity, [CMO Support](/cmo-support) may be the better fit.",
       "items": [
         {
           "icon": "chart",

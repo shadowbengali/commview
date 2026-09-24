@@ -43,6 +43,10 @@
         "purpose": "related"
       },
       {
+        "href": "/positioning",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/product-market-fit",
         "purpose": "insight"
       },
@@ -154,6 +158,18 @@
       "intro": [
         "B2B users can have higher expectations around trust, workflow fit, security, integration and operational reliability. That does not mean every MVP needs enterprise completeness, but the test must be credible enough that those gaps do not invalidate what you are trying to learn.",
         "We scope the level of polish and integration around the hypothesis, target user and buying context rather than applying a universal MVP template."
+      ],
+      "ctas": [
+        {
+          "label": "B2B positioning",
+          "href": "/positioning",
+          "style": "text"
+        },
+        {
+          "label": "product strategy",
+          "href": "/product-strategy",
+          "style": "text"
+        }
       ]
     },
     {
@@ -186,6 +202,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "product discovery",
+          "href": "/product-strategy/discovery",
+          "style": "text"
         }
       ],
       "tagline": [

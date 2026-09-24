@@ -182,7 +182,7 @@ export default function OutboundLeadGenerationPage() {
           <div className="ob-split__lead">
             <p className="eyebrow-x ob-eye">Our approach</p>
             <h2 id="ob-approach-h">An outbound system<br />that actually works.</h2>
-            <p className="ob-split__intro ob-split__intro--dark">We build outbound campaigns around your ideal customer profile, real buying signals and a clear process from initial outreach to qualified opportunity. It is a multi-channel, data-driven approach designed to start the right conversations with the right people.</p>
+            <p className="ob-split__intro ob-split__intro--dark">We build outbound campaigns around your <a href="/ideal-customer-profile-workshop">ideal customer profile</a>, real buying signals and a clear process from initial outreach to qualified opportunity. It is a multi-channel, data-driven approach designed to start the right conversations with the right people.</p>
           </div>
           <ul className="ob-approach__grid">
             {APPROACH.map((a) => (
@@ -332,13 +332,12 @@ export default function OutboundLeadGenerationPage() {
         </div>
       </section>
 
-      {/* related links (kept in-flow for internal linking) */}
-      <nav className="ob-related wrap" aria-label="Related services">
+      {/* Sibling Growth services this outbound motion connects to (kept in-flow
+          for contextual internal linking; ICP is linked inline in the approach). */}
+      <nav className="ob-related wrap" aria-label="Related B2B lead generation services">
         <span>Related:</span>
         <a href="/growth/b2b-lead-generation">B2B lead generation</a>
         <a href="/growth/demand-generation">Demand generation</a>
-        <a href="/ideal-customer-profile-workshop">Ideal Customer Profile workshop</a>
-        <a href="/positioning">Positioning</a>
       </nav>
     </main>
   );

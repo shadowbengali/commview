@@ -47,6 +47,10 @@
         "purpose": "related"
       },
       {
+        "href": "/ai-consulting/implementation",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -91,7 +95,7 @@
       "heading": "What Is AI Workflow Automation?",
       "intro": [
         "AI workflow automation is the use of AI inside a multi-step automated process to handle work such as interpreting text, extracting information, classifying inputs, drafting outputs or choosing between defined routes.",
-        "The AI step is only one part of the system. Reliable workflows also need triggers, data, business rules, integrations, exception handling, human review where appropriate and logging."
+        "The AI step is only one part of the system. Reliable workflows also need triggers, data, business rules, integrations, exception handling, human review where appropriate and logging, all of which turn a demo into a working [AI implementation](/ai-consulting/implementation)."
       ]
     },
     {
@@ -191,7 +195,7 @@
       "items": [
         {
           "q": "What is AI workflow automation?",
-          "a": "AI workflow automation combines conventional automation with AI inside a multi-step business process. The AI can interpret, classify, extract, summarise or draft where fixed rules are not enough, while the wider workflow handles triggers, integrations, business rules and actions. Human review can remain in the process where errors carry meaningful consequences."
+          "a": "AI workflow automation combines [conventional automation](/ai-consulting/automation) with AI inside a multi-step [business operations](/ai-consulting/business-operations) workflow. The AI can interpret, classify, extract, summarise or draft where fixed rules are not enough, while the wider workflow handles triggers, integrations, business rules and actions. Human review can remain in the process where errors carry meaningful consequences."
         },
         {
           "q": "What's the best AI workflow automation tool?",

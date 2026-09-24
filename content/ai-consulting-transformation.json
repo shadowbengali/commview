@@ -44,6 +44,10 @@
         "purpose": "related"
       },
       {
+        "href": "/ai-consulting/business-operations",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/responsible-ai",
         "purpose": "insight"
       },
@@ -91,8 +95,8 @@
       "eyebrow": "SCALE-UP TRANSFORMATION",
       "heading": "What AI Transformation Means for a Scale-up",
       "intro": [
-        "AI transformation for a scale-up is a deliberate change to how selected parts of the business operate, using AI where it creates enough value to justify the change.",
-        "The scale should match the business. Rather than beginning with an enterprise-wide programme, we identify operational priorities, prove useful interventions and expand the operating model as evidence and capability grow."
+        "Within Commview's broader [AI consulting](/ai-consulting), AI transformation for a scale-up is a deliberate change to how selected parts of the business operate, using AI where it creates enough value to justify the change.",
+        "The scale should match the business. Rather than beginning with an enterprise-wide programme, we identify [operational priorities](/ai-consulting/business-operations), prove useful interventions and expand the operating model as evidence and capability grow."
       ]
     },
     {
@@ -170,7 +174,7 @@
         },
         {
           "q": "How is this different from what McKinsey or Accenture do?",
-          "a": "Commview is designed for a smaller B2B scale-up context and stays close to implementation. Large consultancies can support complex enterprise transformation at a scale that may be appropriate for larger organisations. Our model starts with specific operating friction, builds and measures useful interventions, and keeps the people defining the change connected to delivery."
+          "a": "Commview is designed for a smaller B2B scale-up context and stays close to [AI implementation](/ai-consulting/implementation). Large consultancies can support complex enterprise transformation at a scale that may be appropriate for larger organisations. Our model starts with specific operating friction, builds and measures useful interventions, and keeps the people defining the change connected to delivery."
         },
         {
           "q": "Where do AI transformations fail?",

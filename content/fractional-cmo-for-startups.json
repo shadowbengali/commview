@@ -30,6 +30,14 @@
         "purpose": "parent"
       },
       {
+        "href": "/positioning",
+        "purpose": "related"
+      },
+      {
+        "href": "/ideal-customer-profile-workshop",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -74,7 +82,7 @@
       "variant": "icon",
       "eyebrow": "Early-stage challenges",
       "heading": "You've got a great product. Now you need customers.",
-      "intro": "Startups often have a strong product but unclear positioning, limited demand and no repeatable GTM motion. We help you turn potential into traction.",
+      "intro": "Startups often have a strong product but unclear [positioning](/positioning), limited demand and no repeatable GTM motion. We help you turn potential into traction.",
       "items": [
         {
           "icon": "target",
@@ -105,7 +113,7 @@
       "variant": "icon",
       "eyebrow": "What we bring",
       "heading": "Senior marketing leadership without the full-time hire.",
-      "intro": "We plug in as your fractional CMO, working alongside you and your team to set the strategy, build the plan and drive execution.",
+      "intro": "We plug in as your fractional CMO, working alongside you and your team to set the strategy, define your [ideal customer profile](/ideal-customer-profile-workshop), build the plan and drive execution.",
       "items": [
         {
           "icon": "bulb",

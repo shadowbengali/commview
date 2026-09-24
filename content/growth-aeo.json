@@ -45,6 +45,10 @@
         "purpose": "related"
       },
       {
+        "href": "/growth/content-marketing",
+        "purpose": "related"
+      },
+      {
         "href": "/growth",
         "purpose": "parent"
       },
@@ -202,6 +206,13 @@
       "intro": [
         "B2B buyers can use AI tools to define requirements, understand categories, compare approaches and prepare shortlists before speaking to a supplier.",
         "That makes the quality and clarity of the information available about your expertise commercially important. AEO helps make that source material stronger without pretending the answer engine itself can be controlled."
+      ],
+      "ctas": [
+        {
+          "label": "B2B content marketing",
+          "href": "/growth/content-marketing",
+          "style": "text"
+        }
       ]
     },
     {
@@ -214,7 +225,7 @@
       "items": [
         {
           "q": "Is AEO the same as SEO?",
-          "a": "No, although they overlap. SEO primarily improves visibility in search results and the ability to earn visits from relevant searches. AEO focuses on making information easier for AI answer experiences to understand, extract and potentially cite. Strong technical foundations, useful content and credible sources support both disciplines."
+          "a": "No, although they overlap. [SEO](/growth/seo) primarily improves visibility in search results and the ability to earn visits from relevant searches. AEO focuses on making information easier for AI answer experiences to understand, extract and potentially cite. Strong technical foundations, useful content and credible sources support both disciplines."
         },
         {
           "q": "How do I know if I'm being cited in AI answers?",
@@ -242,6 +253,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "AEO services",
+          "href": "/growth/aeo/services",
+          "style": "text"
         }
       ],
       "tagline": [

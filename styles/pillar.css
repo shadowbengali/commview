@@ -66,6 +66,10 @@
 .p-lead__cta { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); }
 .p-textlink { font-size: 15px; font-weight: 600; color: var(--c); }
 .p-textlink:hover { text-decoration: underline; text-underline-offset: 3px; }
+/* Inline contextual link inside body prose — reads as text, underlined in the
+   section accent so it is discoverable without turning copy into a link farm. */
+.p-inlink { color: inherit; text-decoration: underline; text-decoration-color: var(--c); text-decoration-thickness: 1px; text-underline-offset: 2px; font-weight: 600; transition: color 0.15s ease; }
+.p-inlink:hover { color: var(--c); }
 .dark .p-lead__body .lit { color: var(--brand-polar); }
 
 /* ===== grid (numbered cells) ===== */

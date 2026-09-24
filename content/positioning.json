@@ -39,6 +39,14 @@
         "purpose": "parent"
       },
       {
+        "href": "/ideal-customer-profile-workshop",
+        "purpose": "related"
+      },
+      {
+        "href": "/product-strategy",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/b2b-positioning",
         "purpose": "insight"
       },
@@ -126,7 +134,7 @@
       "targetKeyword": "b2b positioning framework",
       "eyebrow": "THE METHOD",
       "heading": "A B2B Positioning Framework Built From the Customer's Choice",
-      "intro": "We work backwards from the buying decision rather than forwards from the words you already use.",
+      "intro": "We work backwards from the buying decision and the [ideal customer profile](/ideal-customer-profile-workshop) rather than forwards from the words you already use.",
       "style": "arrows",
       "steps": [
         {
@@ -199,7 +207,7 @@
         },
         {
           "q": "Can positioning be fixed without changing the product?",
-          "a": "Sometimes. If the product already solves a valuable problem but customers misunderstand who it is for, what category it belongs in or why it is different, positioning may be the main issue. If the promised value is not supported by the product experience, the problem may sit in product as well as positioning."
+          "a": "Sometimes. If the product already solves a valuable problem but customers misunderstand who it is for, what category it belongs in or why it is different, positioning may be the main issue. If the promised value is not supported by the product experience, the problem may sit in [product strategy](/product-strategy) as well as positioning."
         }
       ]
     },
@@ -209,7 +217,7 @@
       "theme": "dark",
       "eyebrow": "POSITIONING",
       "heading": "If customers cannot see why they should choose you, more promotion will not fix it.",
-      "body": "We can help work out whether the problem is the position, the message, the product or a combination.",
+      "body": "Our [fractional CMO](/fractional-cmo) team can help work out whether the problem is the position, the message, the product or a combination.",
       "ctas": [
         {
           "label": "Talk to us",

@@ -42,6 +42,14 @@
         "purpose": "related"
       },
       {
+        "href": "/ai-consulting/implementation",
+        "purpose": "related"
+      },
+      {
+        "href": "/ai-consulting/business-operations",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -85,7 +93,7 @@
       "eyebrow": "THE ROLE",
       "heading": "What an AI Automation Consultant Does",
       "intro": [
-        "An AI automation consultant identifies operational work that may benefit from AI or automation, assesses whether the economics and risks make sense, then helps design, build, deploy and measure the intervention.",
+        "An AI automation consultant identifies [operational work](/ai-consulting/business-operations) that may benefit from AI or automation, from a single task to end-to-end [AI workflow automation](/ai-consulting/workflow-automation), assesses whether the economics and risks make sense, then helps design, build, deploy and measure the intervention.",
         "That means being willing to reject an automation idea when the manual process is rare, unstable or cheaper to leave alone."
       ]
     },
@@ -163,7 +171,7 @@
         },
         {
           "q": "How do we know if an automation is worth building?",
-          "a": "An automation is worth building when the expected reduction in effort, delay, errors or other operational friction justifies the implementation, software, maintenance and oversight required. Frequency and time saved are useful inputs, but risk and strategic value matter too. We establish a baseline and test the business case before scaling."
+          "a": "An automation is worth building when the expected reduction in effort, delay, errors or other operational friction justifies the [AI implementation](/ai-consulting/implementation), software, maintenance and oversight required. Frequency and time saved are useful inputs, but risk and strategic value matter too. We establish a baseline and test the business case before scaling."
         },
         {
           "q": "What's the ROI of AI automation for a B2B scale-up?",

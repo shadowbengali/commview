@@ -12,6 +12,15 @@ export const CAP_COLOUR: Record<Cap, string> = {
   "Operational AI": "var(--accent-pink)",
 };
 
+// Each capability maps to its pillar page, so a case's capability tag can act as
+// a contextual link into the relevant service.
+export const CAP_HREF: Record<Cap, string> = {
+  "GTM Leadership": "/fractional-cmo",
+  Growth: "/growth",
+  Product: "/product-strategy",
+  "Operational AI": "/ai-consulting",
+};
+
 export const FILTERS: ("All" | Cap)[] = ["All", "GTM Leadership", "Growth", "Product", "Operational AI"];
 
 export type Study = {

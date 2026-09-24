@@ -43,6 +43,14 @@
         "purpose": "related"
       },
       {
+        "href": "/product-strategy/discovery",
+        "purpose": "related"
+      },
+      {
+        "href": "/product-strategy/fractional-cpo",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/product-market-fit",
         "purpose": "insight"
       },
@@ -90,7 +98,7 @@
       "eyebrow": "THE ROLE",
       "heading": "What Does a Product Strategy Consultant Do?",
       "intro": [
-        "A product strategy consultant helps a business decide which customer problems and product opportunities deserve investment, and how those decisions connect to commercial goals.",
+        "A [product strategy](/product-strategy) consultant helps a business decide which customer problems and product opportunities deserve investment, and how those decisions connect to commercial goals.",
         "The work is not simply producing a roadmap. It means diagnosing where the product and market have drifted apart, gathering evidence, making trade-offs explicit and turning the resulting strategy into decisions the delivery team can act on."
       ]
     },
@@ -195,7 +203,7 @@
       "items": [
         {
           "q": "How is product strategy consulting different from product management?",
-          "a": "Product strategy consulting focuses on the choices that determine where the product should compete, which customer problems deserve investment and how product decisions support the business. Product management also includes the ongoing work of coordinating discovery, prioritisation and delivery. Commview can work at strategy level and stay hands-on through execution."
+          "a": "Product strategy consulting focuses on the choices that determine where the product should compete, which customer problems deserve investment and how product decisions support the business. Product management also includes the ongoing work of coordinating [discovery](/product-strategy/discovery), prioritisation and delivery. Commview can work at strategy level and stay hands-on through execution."
         },
         {
           "q": "What does a product strategy consultant actually deliver?",
@@ -219,6 +227,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "Fractional CPO leadership",
+          "href": "/product-strategy/fractional-cpo",
+          "style": "text"
         }
       ],
       "tagline": [

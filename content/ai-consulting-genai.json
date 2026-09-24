@@ -44,6 +44,14 @@
         "purpose": "related"
       },
       {
+        "href": "/ai-consulting/workflow-automation",
+        "purpose": "related"
+      },
+      {
+        "href": "/ai-consulting/implementation",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -80,7 +88,7 @@
       "targetKeyword": "generative ai b2b",
       "eyebrow": "WHAT IT DOES WELL",
       "heading": "What Generative AI Can Do Well in B2B",
-      "intro": "Suitability depends on the task, source material and level of review required.",
+      "intro": "As with any [AI consulting](/ai-consulting) work, suitability depends on the task, source material and level of review required.",
       "items": [
         {
           "title": "Drafting",
@@ -175,11 +183,11 @@
       "items": [
         {
           "q": "What can generative AI actually do well in B2B?",
-          "a": "Generative AI can be useful for drafting, summarisation, extraction, classification, translation and transforming information when the task has clear context and appropriate review. It is particularly helpful where people spend substantial time reading or producing text. Suitability depends on accuracy requirements, data sensitivity and the consequence of a wrong output."
+          "a": "Generative AI can be useful for drafting, summarisation, extraction, classification, translation and transforming information when the task has clear context and appropriate review. It is particularly helpful where people spend substantial time reading or producing text, often as one step inside broader [AI workflow automation](/ai-consulting/workflow-automation). Suitability depends on accuracy requirements, data sensitivity and the consequence of a wrong output."
         },
         {
           "q": "Should we use ChatGPT, Claude or build our own?",
-          "a": "The right choice depends on the workflow, data, integrations, model performance, control requirements and operating cost. A general-purpose product can be enough for individual work, while an API or custom application can fit repeatable business processes. We evaluate the job first and avoid locking the operating model to a preferred model provider."
+          "a": "The right choice depends on the workflow, data, integrations, model performance, control requirements and operating cost. A general-purpose product can be enough for individual work, while an API or custom application can fit repeatable business processes. We evaluate the job first and avoid locking the operating model to a preferred model provider, then treat rollout as an [AI implementation](/ai-consulting/implementation) question rather than a model-picking one."
         },
         {
           "q": "How do we manage hallucination risk?",

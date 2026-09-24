@@ -43,6 +43,14 @@
         "purpose": "related"
       },
       {
+        "href": "/growth/outbound-lead-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/ideal-customer-profile-workshop",
+        "purpose": "related"
+      },
+      {
         "href": "/fractional-cmo",
         "purpose": "related"
       },
@@ -99,6 +107,13 @@
       "intro": [
         "A bigger lead number does not fix weak targeting, an unclear offer or a broken route into Sales. It can simply create more work for the same commercial result.",
         "We start by defining the customer and opportunity the business actually wants, then work backwards into channels, offers and capture points."
+      ],
+      "ctas": [
+        {
+          "label": "Demand generation",
+          "href": "/growth/demand-generation",
+          "style": "text"
+        }
       ]
     },
     {
@@ -143,7 +158,7 @@
       "targetKeyword": "b2b lead generation platforms",
       "eyebrow": "CHANNELS",
       "heading": "B2B Lead Generation Channels Follow the Buyer",
-      "intro": "There is no universally best lead generation platform. The useful mix depends on where the ICP can be reached and how it buys.",
+      "intro": "There is no universally best lead generation platform. The useful mix depends on where the [ICP](/ideal-customer-profile-workshop) can be reached and how it buys.",
       "items": [
         {
           "title": "Search",
@@ -231,6 +246,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "Outbound lead generation",
+          "href": "/growth/outbound-lead-generation",
+          "style": "text"
         }
       ],
       "tagline": [

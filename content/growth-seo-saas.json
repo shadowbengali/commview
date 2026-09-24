@@ -34,6 +34,10 @@
         "purpose": "parent"
       },
       {
+        "href": "/growth/content-marketing",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -182,7 +186,8 @@
         {
           "icon": "doc",
           "title": "Content strategy",
-          "body": "Use cases, comparison pages, integrations and thought leadership."
+          "body": "Use cases, comparison pages, integrations and thought leadership.",
+          "href": "/growth/content-marketing"
         },
         {
           "icon": "workflow",

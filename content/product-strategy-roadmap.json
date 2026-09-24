@@ -40,6 +40,10 @@
         "purpose": "parent"
       },
       {
+        "href": "/product-strategy/discovery",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/product-roadmap-guide",
         "purpose": "insight"
       },
@@ -105,7 +109,7 @@
         },
         {
           "title": "Dates become promises",
-          "body": "A planning view is treated as certainty even when discovery and delivery are still generating new information."
+          "body": "A planning view is treated as certainty even when [product discovery](/product-strategy/discovery) and delivery are still generating new information."
         }
       ]
     },
@@ -214,6 +218,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "product strategy",
+          "href": "/product-strategy",
+          "style": "text"
         }
       ],
       "tagline": [

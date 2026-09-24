@@ -43,6 +43,14 @@
         "purpose": "related"
       },
       {
+        "href": "/product-strategy/roadmap",
+        "purpose": "related"
+      },
+      {
+        "href": "/product-strategy/discovery",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -119,11 +127,13 @@
       "items": [
         {
           "title": "Product strategy",
-          "body": "Clarify customer problems, strategic bets and how product choices connect to business outcomes."
+          "body": "Clarify customer problems, strategic bets and how product choices connect to business outcomes.",
+          "href": "/product-strategy"
         },
         {
           "title": "Roadmap and prioritisation",
-          "body": "Create a defensible approach to what moves forward and what does not."
+          "body": "Create a defensible approach to what moves forward and what does not.",
+          "href": "/product-strategy/roadmap"
         },
         {
           "title": "Team and operating model",
@@ -150,7 +160,7 @@
       "items": [
         {
           "q": "What does a fractional CPO do?",
-          "a": "A fractional CPO provides senior product leadership on a part-time basis. The role can cover product strategy, customer discovery, roadmap and prioritisation, team development, delivery oversight and leadership reporting. At Commview, the role stays hands-on where useful, so strategic decisions remain connected to what customers and delivery teams are actually showing."
+          "a": "A fractional CPO provides senior product leadership on a part-time basis. The role can cover product strategy, [customer discovery](/product-strategy/discovery), roadmap and prioritisation, team development, delivery oversight and leadership reporting. At Commview, the role stays hands-on where useful, so strategic decisions remain connected to what customers and delivery teams are actually showing."
         },
         {
           "q": "What does a fractional CPO cost?",

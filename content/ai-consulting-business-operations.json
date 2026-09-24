@@ -43,6 +43,14 @@
         "purpose": "related"
       },
       {
+        "href": "/ai-consulting/automation",
+        "purpose": "related"
+      },
+      {
+        "href": "/ai-consulting/implementation",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/can-ai-reduce-our-costs",
         "purpose": "insight"
       },
@@ -95,7 +103,7 @@
       "heading": "What AI for Business Operations Actually Means",
       "intro": [
         "AI for business operations means applying AI inside repeatable day-to-day work rather than treating AI as a strategy in itself.",
-        "The opportunity can sit in content, communications, data and reporting, workflows or decision support. Sometimes AI is the right intervention. Sometimes a simpler process change or conventional automation is better. The objective is operational improvement, not AI adoption for its own sake."
+        "The opportunity can sit in content, communications, data and reporting, [workflow automation](/ai-consulting/workflow-automation) or decision support. Sometimes AI is the right intervention. Sometimes a simpler process change or [conventional automation](/ai-consulting/automation) is better. The objective is operational improvement, not AI adoption for its own sake."
       ]
     },
     {
@@ -196,7 +204,7 @@
       "items": [
         {
           "q": "Can AI actually reduce our operating costs?",
-          "a": "AI can reduce operating costs when it removes enough repetitive effort, delay or rework to outweigh the cost of implementation, software, oversight and maintenance. It is not automatic. We baseline the current process, estimate the plausible change, test the intervention and measure the real result before recommending wider rollout."
+          "a": "AI can reduce operating costs when it removes enough repetitive effort, delay or rework to outweigh the cost of [AI implementation](/ai-consulting/implementation), software, oversight and maintenance. It is not automatic. We baseline the current process, estimate the plausible change, test the intervention and measure the real result before recommending wider rollout."
         },
         {
           "q": "What operations functions benefit most from AI?",

@@ -49,9 +49,36 @@ function Head({ h, accentLine }: { h: Heading; accentLine?: number }) {
   );
 }
 
+// Inline contextual links inside body prose. Content authors write a natural
+// phrase as [anchor](/internal-path); everything else renders as plain text.
+// Only site-internal paths (leading "/") are accepted, matching the internal-
+// link model the validator enforces. Backward-compatible: strings without the
+// pattern are returned unchanged.
+const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]+)\)/g;
+function inline(text: string): ReactNode {
+  if (!text.includes("](")) return text;
+  const out: ReactNode[] = [];
+  let last = 0;
+  let m: RegExpExecArray | null;
+  INLINE_LINK.lastIndex = 0;
+  while ((m = INLINE_LINK.exec(text))) {
+    if (m.index > last) out.push(text.slice(last, m.index));
+    out.push(<a key={out.length} className="p-inlink" href={m[2]}>{m[1]}</a>);
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
+
+// Reduce inline-link markdown to its anchor text — for plain-text contexts such
+// as JSON-LD, where the [anchor](/path) syntax must not leak into structured data.
+function stripInline(text: string): string {
+  return text.replace(/\[([^\]]+)\]\((\/[^)\s]+)\)/g, "$1");
+}
+
 function Paras({ r, className }: { r: Rich; className?: string }) {
   const arr = Array.isArray(r) ? r : [r];
-  return <>{arr.map((p, i) => <p key={i} className={className}>{p}</p>)}</>;
+  return <>{arr.map((p, i) => <p key={i} className={className}>{inline(p)}</p>)}</>;
 }
 
 function SectionHead({ s, center }: { s: Extract<Section, { type: string }>; center?: boolean }) {
@@ -316,7 +343,7 @@ function SectionView({ s }: { s: Section }) {
             </div>
             <div className="p-lead__body">
               {s.intro && <Paras r={s.intro} />}
-              {s.callout && <p className="p-pull">{s.callout}</p>}
+              {s.callout && <p className="p-pull">{inline(s.callout)}</p>}
               {s.ctas?.length ? <div className="p-lead__cta">{s.ctas.map((c, i) => <Cta key={i} c={c} />)}</div> : null}
             </div>
           </div>
@@ -337,7 +364,7 @@ function SectionView({ s }: { s: Section }) {
                   {it.icon && <span className="p-cell__ico" aria-hidden><Icon name={it.icon} /></span>}
                   {variant === "numbered" && !it.icon && <b>{n(i)}</b>}
                   <h3>{it.title}</h3>
-                  {it.body && <p>{it.body}</p>}
+                  {it.body && <p>{inline(it.body)}</p>}
                   {it.points?.length ? <ul className="p-cell__points">{it.points.map((p, j) => <li key={j}>{p}</li>)}</ul> : null}
                   {it.href && (variant === "cards"
                     ? <a className="p-cell__arw" href={it.href} aria-label={it.title}>&rarr;</a>
@@ -389,7 +416,7 @@ function SectionView({ s }: { s: Section }) {
                     ? <div className="p-step__n">{String(i + 1).padStart(2, "0")}</div>
                     : <b>{String(i + 1).padStart(2, "0")}</b>}
                   <h3>{style === "icons" ? `${i + 1}. ${st.title}` : st.title}</h3>
-                  {st.body && <p>{st.body}</p>}
+                  {st.body && <p>{inline(st.body)}</p>}
                   {st.points?.length ? <ul className="p-step__points">{st.points.map((p, j) => <li key={j}>{p}</li>)}</ul> : null}
                 </div>
               ))}
@@ -408,8 +435,8 @@ function SectionView({ s }: { s: Section }) {
                 <article className="p-stage" key={i} style={it.accent ? ({ ["--c" as string]: ACC_VAR[it.accent] } as CSSProperties) : undefined}>
                   <span className="p-stage__num">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="p-stage__name">{it.name}</h3>
-                  {it.lead && <p className="p-stage__lead">{it.lead}</p>}
-                  {it.body && <p className="p-stage__body">{it.body}</p>}
+                  {it.lead && <p className="p-stage__lead">{inline(it.lead)}</p>}
+                  {it.body && <p className="p-stage__body">{inline(it.body)}</p>}
                   {it.points?.length ? <ul className="p-stage__points">{it.points.map((p, j) => <li key={j}>{p}</li>)}</ul> : null}
                   {it.pull && <p className="p-stage__pull">{it.pull}</p>}
                 </article>
@@ -465,7 +492,7 @@ function SectionView({ s }: { s: Section }) {
               {s.columns.map((col, i) => (
                 <div className="p-compare-col" key={i}>
                   <h3>{col.title}</h3>
-                  <ul>{col.items.map((it, j) => <li key={j}>{it}</li>)}</ul>
+                  <ul>{col.items.map((it, j) => <li key={j}>{inline(it)}</li>)}</ul>
                 </div>
               ))}
             </div>
@@ -530,7 +557,7 @@ function SectionView({ s }: { s: Section }) {
       const list = (
         <div className="p-faq__list">
           {s.items.map((f, i) => (
-            <details key={i}><summary>{f.q}</summary><p className="p-faq__a">{f.a}</p></details>
+            <details key={i}><summary>{f.q}</summary><p className="p-faq__a">{inline(f.a)}</p></details>
           ))}
         </div>
       );
@@ -584,7 +611,7 @@ function buildJsonLd(page: Page) {
   }
   const faqs = page.sections.flatMap((s) => (s.type === "faq" ? s.items : []));
   if (types.includes("FAQPage") && faqs.length) {
-    graph.push({ "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
+    graph.push({ "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: stripInline(f.a) } })) });
   }
   if (types.includes("BreadcrumbList") && page.meta.breadcrumb?.length) {
     graph.push({

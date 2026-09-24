@@ -48,6 +48,10 @@
         "purpose": "related"
       },
       {
+        "href": "/growth/content-marketing",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/what-is-aeo",
         "purpose": "insight"
       },
@@ -113,7 +117,8 @@
         },
         {
           "title": "SEO and AEO together",
-          "body": "Structure useful content so it can perform in traditional search and be understood, extracted and cited by AI answer experiences."
+          "body": "Structure useful content so it can perform in traditional search and be understood, extracted and cited by AI answer experiences.",
+          "href": "/growth/aeo"
         },
         {
           "title": "Technical and content connected",
@@ -169,7 +174,8 @@
         },
         {
           "title": "Content plan",
-          "body": "A prioritised roadmap of pages and content based on buyer intent, gaps and opportunity."
+          "body": "A prioritised roadmap of pages and content based on buyer intent, gaps and opportunity.",
+          "href": "/growth/content-marketing"
         },
         {
           "title": "Execution",
@@ -219,6 +225,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "SaaS SEO consulting",
+          "href": "/growth/seo/saas",
+          "style": "text"
         }
       ],
       "tagline": [

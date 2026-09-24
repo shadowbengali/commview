@@ -35,6 +35,14 @@
         "purpose": "parent"
       },
       {
+        "href": "/growth/demand-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/b2b-lead-generation",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -110,7 +118,7 @@
       "variant": "icon",
       "eyebrow": "What we bring",
       "heading": "Experienced marketing leadership to unlock your next stage of growth.",
-      "intro": "We work as an extension of your leadership team, setting the strategy, aligning your teams and driving execution across demand, product marketing, content and operations.",
+      "intro": "We work as an extension of your leadership team, setting the strategy, aligning your teams and driving execution across [demand generation](/growth/demand-generation), product marketing, content and operations.",
       "items": [
         {
           "icon": "target",
@@ -207,7 +215,7 @@
       "type": "stats",
       "eyebrow": "Proven results",
       "heading": "Real impact for B2B scale-ups.",
-      "intro": "We have helped scale-ups across the UK and Europe build demand, enter new markets and improve pipeline and conversion through clearer positioning, better execution and smarter use of AI and automation.",
+      "intro": "We have helped scale-ups across the UK and Europe build demand, strengthen [B2B lead generation](/growth/b2b-lead-generation), enter new markets and improve pipeline and conversion through clearer positioning, better execution and smarter use of AI and automation.",
       "stats": [
         {
           "value": "3x",

@@ -34,6 +34,14 @@
         "purpose": "parent"
       },
       {
+        "href": "/growth/seo",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/content-marketing",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -181,7 +189,8 @@
         {
           "icon": "doc",
           "title": "Content strategy",
-          "body": "Answer key questions with clear, structured and authoritative content."
+          "body": "Answer key questions with clear, structured and authoritative content.",
+          "href": "/growth/content-marketing"
         },
         {
           "icon": "workflow",
@@ -294,7 +303,7 @@
       "items": [
         {
           "q": "How are AEO services different from SEO services?",
-          "a": "SEO focuses heavily on discoverability and performance in search engines. AEO adds the question of how content, entities and evidence are interpreted and surfaced inside AI-generated answers. The disciplines overlap substantially, so Commview treats AEO as an extension of modern search strategy rather than an excuse to duplicate the same work."
+          "a": "[SEO](/growth/seo) focuses heavily on discoverability and performance in search engines. AEO adds the question of how content, entities and evidence are interpreted and surfaced inside AI-generated answers. The disciplines overlap substantially, so Commview treats AEO as an extension of modern search strategy rather than an excuse to duplicate the same work."
         },
         {
           "q": "How long until we get cited in AI answers?",

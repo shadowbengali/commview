@@ -42,6 +42,14 @@
         "purpose": "related"
       },
       {
+        "href": "/growth/conversion-optimisation",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/demand-generation",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -87,6 +95,13 @@
       "intro": [
         "Paid media is strongest when the channel matches the buying situation. Professional targeting can help reach a defined account universe. Search can capture existing intent. Retargeting can bring a known visitor back when there is a useful next step.",
         "The decision should start with the audience and commercial job, not a platform preference."
+      ],
+      "ctas": [
+        {
+          "label": "Demand generation",
+          "href": "/growth/demand-generation",
+          "style": "text"
+        }
       ]
     },
     {
@@ -165,7 +180,7 @@
         },
         {
           "q": "Why aren't our B2B paid campaigns generating pipeline?",
-          "a": "Paid campaigns can fail to create pipeline because of weak targeting, low buyer intent, an unclear proposition, poor landing-page conversion, slow sales follow-up or a mismatch between the channel and offer. Looking only at ad-platform metrics hides those problems. We trace the journey from audience through to downstream commercial behaviour."
+          "a": "Paid campaigns can fail to create pipeline because of weak targeting, low buyer intent, an unclear proposition, poor [landing-page conversion](/growth/conversion-optimisation), slow sales follow-up or a mismatch between the channel and offer. Looking only at ad-platform metrics hides those problems. We trace the journey from audience through to downstream commercial behaviour."
         }
       ]
     },
@@ -181,6 +196,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "B2B lead generation",
+          "href": "/growth/b2b-lead-generation",
+          "style": "text"
         }
       ],
       "tagline": [

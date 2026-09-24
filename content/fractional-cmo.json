@@ -51,6 +51,10 @@
         "purpose": "related"
       },
       {
+        "href": "/cmo-support",
+        "purpose": "related"
+      },
+      {
         "href": "/work",
         "purpose": "related"
       },
@@ -379,7 +383,7 @@
         },
         {
           "q": "When does a fractional CMO make sense?",
-          "a": "When the business needs CMO-level decisions now but does not yet need, or is not yet ready for, a permanent executive. That often applies when founders are still carrying senior marketing decisions, when growth has slowed and more activity is not fixing it, or when GTM investment is increasing without enough confidence in where it should go."
+          "a": "When the business needs CMO-level decisions now but does not yet need, or is not yet ready for, a permanent executive. That often applies when founders are still carrying senior marketing decisions, when growth has slowed and more activity is not fixing it, or when GTM investment is increasing without enough confidence in where it should go. If the leadership is already in place and the real gap is delivery capacity, [CMO Support](/cmo-support) is the better fit."
         },
         {
           "q": "What does CommView typically work on?",

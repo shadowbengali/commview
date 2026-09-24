@@ -38,6 +38,14 @@
         "purpose": "parent"
       },
       {
+        "href": "/growth/b2b-lead-generation",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/paid-media",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/why-isnt-website-converting",
         "purpose": "insight"
       },
@@ -86,6 +94,13 @@
       "intro": [
         "Much CRO advice assumes high transaction volumes, short journeys and a single person making the decision. B2B often has the opposite conditions.",
         "That makes endless micro-tests a poor default. The useful work is often diagnosing a bigger problem in audience fit, proposition, proof, page structure, form design or the next step being offered."
+      ],
+      "ctas": [
+        {
+          "label": "B2B paid media",
+          "href": "/growth/paid-media",
+          "style": "text"
+        }
       ]
     },
     {
@@ -172,7 +187,7 @@
         },
         {
           "q": "How is B2B CRO different from ecommerce CRO?",
-          "a": "B2B conversion journeys often involve longer sales cycles, higher consideration, multiple stakeholders and fewer completed conversions than ecommerce. The website may be creating a meeting, trial or sales conversation rather than an immediate purchase. That means optimisation needs to consider lead quality and downstream progression, not only the on-page conversion rate."
+          "a": "B2B conversion journeys often involve longer sales cycles, higher consideration, multiple stakeholders and fewer completed conversions than ecommerce. The website may be creating a meeting, trial or sales conversation rather than an immediate purchase. That means optimisation needs to consider [lead quality](/growth/b2b-lead-generation) and downstream progression, not only the on-page conversion rate."
         }
       ]
     },

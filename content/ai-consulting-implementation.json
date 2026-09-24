@@ -43,6 +43,18 @@
         "purpose": "related"
       },
       {
+        "href": "/ai-consulting/workflow-automation",
+        "purpose": "related"
+      },
+      {
+        "href": "/ai-consulting/genai",
+        "purpose": "related"
+      },
+      {
+        "href": "/ai-consulting/transformation",
+        "purpose": "related"
+      },
+      {
         "href": "/insights/responsible-ai",
         "purpose": "insight"
       },
@@ -152,7 +164,7 @@
       "heading": "AI Adoption Is Part of the Implementation",
       "intro": [
         "A technically working system creates little value if the people responsible for the process do not trust it, understand it or know what to do when it fails.",
-        "We involve users in the workflow design, make human responsibilities explicit and document how the system should be used, reviewed and changed. Adoption is treated as operating design, not a training session at the end."
+        "We involve users in the [workflow design](/ai-consulting/workflow-automation), make human responsibilities explicit and document how the system should be used, reviewed and changed. Adoption is treated as operating design, not a training session at the end, and it is what lets a change survive into wider [AI transformation](/ai-consulting/transformation)."
       ]
     },
     {
@@ -165,7 +177,7 @@
       "items": [
         {
           "q": "Why do AI initiatives stall at implementation?",
-          "a": "AI initiatives often stall because a promising demo has not solved the operational work around it. Real implementation introduces data access, integrations, controls, exception handling, ownership, cost and user adoption. We design those requirements into the implementation rather than treating the model or prototype as the finished solution."
+          "a": "AI initiatives often stall because a promising demo has not solved the operational work around it. Real implementation introduces data access, integrations, controls, exception handling, ownership, cost and user adoption, with [generative AI consulting](/ai-consulting/genai) work adding evaluation and grounding on top. We design those requirements into the implementation rather than treating the model or prototype as the finished solution."
         },
         {
           "q": "AI implementation consulting vs building it in-house: which is right?",

@@ -12,6 +12,7 @@
     "internalLinks": [
       { "href": "/growth/seo", "purpose": "child" },
       { "href": "/growth/demand-generation", "purpose": "child" },
+      { "href": "/growth/aeo", "purpose": "related" },
       { "href": "/diagnostic", "purpose": "cta" }
     ]
   },
@@ -19,7 +20,7 @@
     "eyebrow": "B2B Growth Marketing",
     "h1": ["Growth has slowed.", "Let’s find out why."],
     "accentLine": 1,
-    "sub": "We help B2B scale-ups diagnose what’s really holding growth back, then build and execute the work needed to move it. Not more marketing activity for the sake of it — the right work, focused on measurable commercial outcomes.",
+    "sub": "We help B2B scale-ups diagnose what’s really holding growth back, then build and execute the work needed to move it. Not more marketing activity for the sake of it. The right work, focused on measurable commercial outcomes.",
     "ctas": [
       { "label": "Take the Diagnostic", "href": "/diagnostic", "style": "primary" },
       { "label": "Talk to us", "href": "/contact", "style": "ghost" }
@@ -58,7 +59,7 @@
       "targetKeyword": "growth marketing consultant",
       "eyebrow": "What we do",
       "heading": ["A complete growth engine,", "built for B2B."],
-      "intro": "Commview works across the growth journey, from strategy and audience through content, channels, conversion and measurement. We don’t assume every business needs every capability — the mix depends on the problem we are trying to solve.",
+      "intro": "Commview works across the growth journey, from strategy and audience through content, channels, conversion and measurement. We don’t assume every business needs every capability. The mix depends on the problem we are trying to solve.",
       "items": [
         { "title": "Strategy", "body": "Set the direction based on your commercial goals, market and opportunity. We work out what growth needs to achieve before deciding which activity belongs in the plan." },
         { "title": "Audience", "body": "Understand who is most likely to buy, succeed and create value. That means getting beyond broad personas and focusing on the customers and buying situations that matter." },
@@ -130,8 +131,8 @@
       "eyebrow": "Frequently asked questions",
       "heading": "Straight answers to common questions.",
       "items": [
-        { "q": "What’s the difference between growth marketing and demand generation?", "a": "Growth marketing looks across the wider commercial growth system, including audience, acquisition, conversion, pipeline and measurement. Demand generation is one part of that system, focused on creating awareness, interest and preference before and during the buying journey." },
-        { "q": "Which channels do you focus on?", "a": "We are deliberately channel-neutral. Commview works across SEO, AEO, content, demand generation, paid media, email and conversion, but we don’t start by deciding which channel to sell. We diagnose the growth constraint first, then choose the work that fits it." },
+        { "q": "What’s the difference between growth marketing and demand generation?", "a": "Growth marketing looks across the wider commercial growth system, including audience, acquisition, conversion, pipeline and measurement. [Demand generation](/growth/demand-generation) is one part of that system, focused on creating awareness, interest and preference before and during the buying journey." },
+        { "q": "Which channels do you focus on?", "a": "We are deliberately channel-neutral. Commview works across [SEO](/growth/seo), [AEO](/growth/aeo), content, demand generation, paid media, email and conversion, but we don’t start by deciding which channel to sell. We diagnose the growth constraint first, then choose the work that fits it." },
         { "q": "How do you measure success?", "a": "We agree the measures around the problem being solved. That may include qualified demand, conversion, pipeline, progression, revenue or efficiency rather than relying on traffic, impressions or lead volume alone. The measures should tell us whether the original diagnosis was right." },
         { "q": "Do you work with our existing team or agency?", "a": "Yes. Commview can work alongside internal marketers, sales teams and existing agencies. We can set the direction, connect work that has become fragmented, fill capability gaps and make sure each part of the growth system is working towards the same commercial outcome." },
         { "q": "How long does a growth engagement usually last?", "a": "It depends on the problem. A focused diagnostic or conversion project can be relatively contained, while SEO, content and broader growth programmes need time to compound. We scope the engagement around the work required rather than forcing every client into the same retainer." },

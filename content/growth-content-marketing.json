@@ -47,6 +47,10 @@
         "purpose": "related"
       },
       {
+        "href": "/growth/demand-generation",
+        "purpose": "related"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -92,6 +96,13 @@
       "intro": [
         "The content plan should follow what the right buyer needs to discover, understand, believe or prove at different points in the journey.",
         "That means combining search demand, customer questions, sales evidence and a clear point of view rather than filling a calendar because the business thinks it should publish every week."
+      ],
+      "ctas": [
+        {
+          "label": "Demand generation",
+          "href": "/growth/demand-generation",
+          "style": "text"
+        }
       ]
     },
     {
@@ -104,7 +115,8 @@
       "items": [
         {
           "title": "SEO content",
-          "body": "Meet relevant existing demand with useful pages built around the questions and searches buyers already make."
+          "body": "Meet relevant existing demand with useful pages built around the questions and searches buyers already make.",
+          "href": "/growth/seo"
         },
         {
           "title": "POV content",
@@ -190,6 +202,11 @@
           "label": "Talk to us",
           "href": "/contact",
           "style": "primary"
+        },
+        {
+          "label": "Answer Engine Optimisation",
+          "href": "/growth/aeo",
+          "style": "text"
         }
       ],
       "tagline": [
