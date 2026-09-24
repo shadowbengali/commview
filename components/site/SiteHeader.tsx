@@ -36,10 +36,10 @@ const MENU: Col[] = [
       ["B2B SEO", "/growth/seo"],
       ["AEO", "/growth/aeo"],
       ["B2B Lead Generation", "/growth/b2b-lead-generation"],
+      ["Outbound Lead Generation", "/growth/outbound-lead-generation"],
       ["Demand Generation", "/growth/demand-generation"],
       ["Paid Media", "/growth/paid-media"],
       ["Content Marketing", "/growth/content-marketing"],
-      ["Conversion Optimisation", "/growth/conversion-optimisation"],
     ],
   },
   {
