@@ -73,6 +73,7 @@
 .p-grid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .p-grid[data-cols="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .p-grid[data-cols="5"] { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.p-grid[data-cols="6"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .p-cell { border-top: 2px solid var(--border-subtle); padding-top: var(--space-4); }
 .dark .p-cell { border-top-color: var(--slate-dark); }
 .p-cell b { display: block; font-size: 14px; font-weight: 700; color: var(--c); letter-spacing: 0.04em; }
@@ -237,7 +238,7 @@
   .p-lead, .p-venn__grid, .p-head, .p-callout__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
   .p-faq--split .p-faq__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
   .p-callout__body { border-left: 0; padding-left: 0; border-top: 1px solid var(--border-subtle); padding-top: var(--space-4); }
-  .p-grid[data-cols="4"], .p-grid[data-cols="5"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .p-grid[data-cols="4"], .p-grid[data-cols="5"], .p-grid[data-cols="6"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .p-grid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .p-compare__grid[data-cols] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .p-aiflow { grid-template-columns: minmax(0, 1fr); gap: var(--space-10, 40px); }
@@ -301,6 +302,11 @@
 .p-matrix .is-hl { background: color-mix(in srgb, var(--c) 8%, transparent); }
 .p-matrix thead .is-hl { color: var(--c); border-bottom: 2px solid var(--c); }
 .p-matrix__note { margin-top: var(--space-4); font-size: 13px; color: var(--text-secondary); }
+/* text-cell matrix: sentences instead of tick/dash marks */
+.p-matrix--text td { text-align: left; color: var(--text-secondary); vertical-align: top; }
+.dark .p-matrix--text td { color: var(--slate-light); }
+.p-matrix--text td.is-hl { color: var(--text-primary); font-weight: 600; }
+.dark .p-matrix--text td.is-hl { color: var(--brand-polar); }
 .p-mark { display: inline-flex; }
 .p-mark svg { width: 20px; height: 20px; }
 .p-mark--yes { color: var(--c); }

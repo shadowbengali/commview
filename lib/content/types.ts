@@ -10,6 +10,9 @@ export type Rich = string | string[]; // one paragraph, or several
 
 export type Cta = { label: string; href: string; style: "primary" | "ghost" | "text" };
 
+// "yes"/"no"/"partial" render as a tick/dash/circle mark; any other string renders as text.
+export type MatrixCellValue = "yes" | "no" | "partial" | (string & {});
+
 export type InternalLink = {
   href: string;
   purpose: "parent" | "child" | "related" | "insight" | "cta";
@@ -63,7 +66,7 @@ type Base = {
 };
 
 export type Section =
-  | (Base & { type: "lead"; ctas?: Cta[] })
+  | (Base & { type: "lead"; ctas?: Cta[]; callout?: string })
   | (Base & { type: "grid"; variant?: "numbered" | "icon" | "cards"; align?: "center"; items: { title: string; body?: string; points?: string[]; href?: string; icon?: string }[] })
   | (Base & {
       type: "venn";
@@ -89,7 +92,7 @@ export type Section =
   | (Base & { type: "stats"; stats: Stat[] })
   | (Base & { type: "callout"; accentLine?: number; body: Rich; icon?: "ai" | "spark" | "none" })
   | (Base & { type: "comparison"; columns: { title: string; items: string[] }[] })
-  | (Base & { type: "matrix"; columns: { title: string; highlight?: boolean }[]; rows: { label: string; cells: ("yes" | "no" | "partial")[] }[]; note?: string })
+  | (Base & { type: "matrix"; columns: { title: string; highlight?: boolean }[]; rows: { label: string; cells: MatrixCellValue[] }[]; note?: string })
   | (Base & { type: "logos"; logos: { name: string; asset?: string; alt: string }[] })
   | (Base & { type: "faq"; layout?: "stacked" | "split"; items: { q: string; a: string }[] })
   | (Base & { type: "cta"; body?: Rich; ctas: Cta[]; tagline?: string[] });

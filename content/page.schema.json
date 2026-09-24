@@ -121,7 +121,7 @@
 
     "section": {
       "oneOf": [
-        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "properties": { "type": { "const": "lead" }, "ctas": { "type": "array", "items": { "$ref": "#/$defs/cta" } } }, "unevaluatedProperties": false },
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "properties": { "type": { "const": "lead" }, "ctas": { "type": "array", "items": { "$ref": "#/$defs/cta" } }, "callout": { "type": "string" } }, "unevaluatedProperties": false },
 
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["items"],
           "properties": { "type": { "const": "grid" },
@@ -171,7 +171,7 @@
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["columns", "rows"],
           "properties": { "type": { "const": "matrix" },
             "columns": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "type": "object", "additionalProperties": false, "required": ["title"], "properties": { "title": { "type": "string" }, "highlight": { "type": "boolean" } } } },
-            "rows": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["label", "cells"], "properties": { "label": { "type": "string" }, "cells": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "enum": ["yes", "no", "partial"] } } } } },
+            "rows": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["label", "cells"], "properties": { "label": { "type": "string" }, "cells": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "type": "string" }, "description": "Exactly \"yes\"/\"no\"/\"partial\" renders a tick/dash/circle mark; any other string renders as text." } } } },
             "note": { "type": "string" } },
           "unevaluatedProperties": false },
 

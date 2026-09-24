@@ -291,7 +291,9 @@ function AiFlow({ s }: { s: Extract<Section, { type: "aiflow" }> }) {
   );
 }
 
-function MatrixCell({ v }: { v: "yes" | "no" | "partial" }) {
+function MatrixCell({ v }: { v: string }) {
+  // Exactly "yes"/"no"/"partial" renders a mark; any other string renders as text.
+  if (v !== "yes" && v !== "no" && v !== "partial") return <>{v}</>;
   const label = v === "yes" ? "Yes" : v === "no" ? "No" : "Partial";
   return (
     <span className={"p-mark p-mark--" + v} role="img" aria-label={label}>
@@ -314,6 +316,7 @@ function SectionView({ s }: { s: Section }) {
             </div>
             <div className="p-lead__body">
               {s.intro && <Paras r={s.intro} />}
+              {s.callout && <p className="p-pull">{s.callout}</p>}
               {s.ctas?.length ? <div className="p-lead__cta">{s.ctas.map((c, i) => <Cta key={i} c={c} />)}</div> : null}
             </div>
           </div>
@@ -469,13 +472,14 @@ function SectionView({ s }: { s: Section }) {
           </div>
         </section>
       );
-    case "matrix":
+    case "matrix": {
+      const isText = s.rows.some((r) => r.cells.some((c) => c !== "yes" && c !== "no" && c !== "partial"));
       return (
         <section className={secClass(s)} aria-labelledby={s.id}>
           <div className="wrap">
             <SectionHead s={s} />
             <div className="p-matrix__wrap">
-              <table className="p-matrix">
+              <table className={"p-matrix" + (isText ? " p-matrix--text" : "")}>
                 <thead>
                   <tr>
                     <th scope="col"><span className="sr">Criterion</span></th>
@@ -498,6 +502,7 @@ function SectionView({ s }: { s: Section }) {
           </div>
         </section>
       );
+    }
     case "logos":
       return (
         <section className={secClass(s)} aria-labelledby={s.id}>
