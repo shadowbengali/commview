@@ -131,7 +131,9 @@
 .dark .p-step p { color: var(--slate-light); }
 .p-proc--arrows .p-step:not(:last-child)::after { content: "\2192"; position: absolute; top: 0; right: calc(var(--space-8) * -0.55); color: var(--slate-dark); }
 .p-proc--circles .p-step__n { width: 40px; height: 40px; border-radius: var(--radius-pill); display: grid; place-items: center; font-size: 14px; font-weight: 700; color: var(--brand-polar); background: color-mix(in srgb, var(--c) 22%, var(--brand-charcoal)); border: 1.5px solid var(--c); position: relative; z-index: 1; }
-.p-proc--circles .p-step:not(:last-child)::after { content: ""; position: absolute; top: 20px; left: 40px; right: calc(var(--space-8) * -1); height: 1.5px; background: var(--slate-dark); z-index: 0; }
+.p-proc--circles .p-step { position: relative; }
+.p-proc--circles .p-step:not(:last-child)::after { content: ""; position: absolute; top: 20px; left: 40px; right: calc(var(--space-8) * -1); height: 2px; background: color-mix(in srgb, var(--c) 55%, var(--slate-dark)); z-index: 0; }
+.p-proc--circles .p-step:not(:last-child)::before { content: ""; position: absolute; top: 20px; right: calc(var(--space-8) * -1); width: 8px; height: 8px; border-top: 2px solid var(--c); border-right: 2px solid var(--c); transform: translate(50%, -50%) rotate(45deg); z-index: 1; }
 .p-proc--circles .p-step h3 { margin-top: var(--space-4); }
 
 /* ===== stats ===== */
@@ -243,7 +245,7 @@
   .p-aiflow__arw { display: none; }
   .p-proc__grid[data-cols] { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10, 40px) var(--space-8); }
   .p-grid--cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .p-proc--arrows .p-step:not(:last-child)::after, .p-proc--circles .p-step:not(:last-child)::after, .p-proc--icons .p-step:not(:last-child)::after { content: none; }
+  .p-proc--arrows .p-step:not(:last-child)::after, .p-proc--circles .p-step:not(:last-child)::after, .p-proc--circles .p-step:not(:last-child)::before, .p-proc--icons .p-step:not(:last-child)::after { content: none; }
   .p-stats__grid[data-cols="4"], .p-stats__grid[data-cols="5"] { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-8); }
   .p-stat { padding-inline: var(--space-6); }
   .p-stat:nth-child(odd) { border-left: 0; padding-left: 0; }
