@@ -1,0 +1,185 @@
+{
+  "slug": "cmo-support",
+  "pillar": "gtm-leadership",
+  "accent": "cyan",
+  "meta": {
+    "title": "Outsourced Marketing Support for B2B CMOs | CommView",
+    "description": "Outsourced marketing support for B2B CMOs who need experienced delivery capacity across GTM, Growth, Product and Operational AI.",
+    "primaryKeyword": "outsourced marketing",
+    "secondaryKeywords": [
+      "outsourced marketing management",
+      "outsourced marketing service",
+      "outsourced marketing agency",
+      "outsourced marketing team",
+      "b2b outsourced marketing",
+      "outsourced marketing department",
+      "digital marketing support services"
+    ],
+    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "breadcrumb": [
+      {"name": "Home", "href": "/"},
+      {"name": "GTM Leadership", "href": "/fractional-cmo"},
+      {"name": "CMO Support"}
+    ],
+    "internalLinks": [
+      {"href": "/fractional-cmo", "purpose": "related"},
+      {"href": "/growth", "purpose": "related"},
+      {"href": "/ai-consulting", "purpose": "related"},
+      {"href": "/contact", "purpose": "cta"}
+    ]
+  },
+  "hero": {
+    "eyebrow": "CMO SUPPORT",
+    "h1": ["Outsourced Marketing Support.", "For CMOs who need more delivery capacity."],
+    "accentLine": 1,
+    "sub": "You already have the strategy and senior marketing leadership. What you need is experienced people who can take ownership of the work, get it moving and deliver alongside your team.",
+    "ctas": [
+      {"label": "Talk to us", "href": "/contact", "style": "primary"},
+      {"label": "See how we work", "href": "/how-we-work", "style": "ghost"}
+    ],
+    "diagram": {
+      "kind": "flow",
+      "caption": "KEEP THE LEADERSHIP. OUTSOURCE THE CONSTRAINT.",
+      "nodes": ["YOUR CMO", "THE CONSTRAINT", "COMMVIEW OPERATORS", "DELIVERY", "IMPACT"]
+    }
+  },
+  "sections": [
+    {
+      "id": "difference",
+      "type": "lead",
+      "eyebrow": "OUTSOURCED MARKETING",
+      "heading": "Outsourced marketing without outsourcing your marketing leadership.",
+      "intro": [
+        "You do not need another person arriving with a strategy deck and telling your marketing team what it should be doing. You need experienced capacity around the leadership you already have.",
+        "Commview works underneath and alongside CMOs and marketing leaders. Give us a defined problem, workstream or commercial priority and we can take ownership of moving it from decision to delivery.",
+        "That might mean fixing an underperforming growth channel, getting a product launch ready, building a new market motion, putting an AI plan into practice or sorting the measurement that nobody has had time to fix."
+      ],
+      "callout": "Keep the leadership. Outsource the constraint."
+    },
+    {
+      "id": "when",
+      "type": "grid",
+      "theme": "dark",
+      "variant": "icon",
+      "eyebrow": "WHEN IT MAKES SENSE",
+      "heading": "When an outsourced marketing team gives a CMO more leverage.",
+      "intro": "The issue is often not a lack of ideas. It is the gap between what the business has committed to and the capacity available to deliver it.",
+      "items": [
+        {"title": "The plan is bigger than the team", "body": "The priorities are clear, but the people already in the business are at capacity."},
+        {"title": "A specialist problem needs fixing", "body": "SEO, demand generation, AI, product GTM or another workstream needs experience the current team does not have."},
+        {"title": "A deadline will not move", "body": "A market launch, product release or board commitment needs delivery capacity now, not after a lengthy hiring process."},
+        {"title": "Too much is sitting with the CMO", "body": "Important work keeps returning to the senior marketing leader because nobody else has the experience or ownership to carry it through."}
+      ]
+    },
+    {
+      "id": "workstreams",
+      "type": "grid",
+      "variant": "editorial",
+      "eyebrow": "WHAT YOU CAN OUTSOURCE",
+      "heading": "Give us the problem. We assemble the right experience around it.",
+      "intro": "CMO Support is not a fixed outsourced marketing department. The work starts with the constraint and brings in the operators needed to solve it.",
+      "items": [
+        {"title": "GTM Leadership", "body": "Positioning, ICP, routes to market, launches, proposition and the commercial decisions connecting Product, Marketing and Sales.", "href": "/fractional-cmo"},
+        {"title": "Growth", "body": "SEO, AEO, demand generation, outbound, paid media, content and conversion work where the priority is measurable commercial growth.", "href": "/growth"},
+        {"title": "Product", "body": "Product strategy, discovery, MVP decisions, roadmaps and product GTM where the marketing problem starts further upstream.", "href": "/product-strategy"},
+        {"title": "Operational AI", "body": "AI implementation, workflow automation and practical changes to how marketing and wider business teams operate.", "href": "/ai-consulting"}
+      ]
+    },
+    {
+      "id": "management",
+      "type": "lead",
+      "theme": "alt",
+      "eyebrow": "OUTSOURCED MARKETING MANAGEMENT",
+      "heading": "Experienced delivery that works inside your existing team.",
+      "intro": [
+        "We are not trying to replace your CMO, internal team or good specialist agencies. We work within the structure you already have, take clear ownership and connect the people needed to get the work done.",
+        "That means the CMO keeps control of the marketing direction while Commview provides senior execution capacity where it is needed. We can work with internal teams, agencies, product leaders, sales teams and external specialists without creating another management layer."
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "signal",
+      "eyebrow": "THE BRIEF CAN BE THIS SIMPLE",
+      "heading": "An outsourced marketing service built around the problem, not a retainer.",
+      "intro": "You do not need to translate the problem into an agency scope before speaking to us. Start with what needs to change.",
+      "items": [
+        "We need to launch in Germany.",
+        "SEO is not producing enough non-brand demand.",
+        "The CEO wants an AI plan we can actually implement.",
+        "Demand generation is busy but pipeline is not moving.",
+        "We have a product launch in six weeks and the GTM is not ready.",
+        "Nobody trusts the reporting or attribution."
+      ]
+    },
+    {
+      "id": "agency",
+      "type": "compare",
+      "theme": "dark",
+      "eyebrow": "OUTSOURCED MARKETING AGENCY",
+      "heading": "Not another agency layer. Operators who can own the work.",
+      "intro": [
+        "An outsourced marketing agency will often start with the services it sells. Commview starts with the commercial problem and works out which capability it actually needs.",
+        "Sometimes that means working alongside an existing agency rather than replacing it. Sometimes it means bringing in a specialist operator for a defined workstream. The important part is that somebody experienced owns the problem through to delivery."
+      ],
+      "columns": [
+        {"title": "Commview CMO Support", "highlight": true},
+        {"title": "Traditional agency"}
+      ],
+      "rows": [
+        {"label": "Starts with", "cells": ["The business constraint", "A service or channel brief"]},
+        {"label": "Works with existing partners", "cells": ["Yes", "Depends on scope"]},
+        {"label": "Senior operators stay close to delivery", "cells": ["Yes", "Varies by model"]},
+        {"label": "Can cross GTM, Growth, Product and AI", "cells": ["Yes", "Usually within agency capability"]},
+        {"label": "Designed to replace the CMO", "cells": ["No", "No"]}
+      ]
+    },
+    {
+      "id": "b2b",
+      "type": "lead",
+      "eyebrow": "B2B OUTSOURCED MARKETING",
+      "heading": "B2B outsourced marketing needs people who understand how the whole commercial system connects.",
+      "intro": [
+        "In B2B, a marketing problem rarely stays inside marketing. Positioning affects demand. Product decisions affect adoption. Sales feedback changes targeting. Data quality changes what the team believes is working.",
+        "Commview brings together operators with experience across GTM, Growth, Product and Operational AI so the work does not stop at the edge of a channel or department.",
+        "The network includes experience gained inside organisations including Vodafone Business, ADI Global, Distrelec, Travis Perkins, Microsoft, Google, Capgemini, Accenture, Apple, Barclays and Resideo. That is operator experience, not a claim that those organisations are Commview clients."
+      ]
+    },
+    {
+      "id": "how",
+      "type": "stages",
+      "eyebrow": "HOW WE WORK",
+      "heading": "From insight to impact.",
+      "intro": "No 40-slide handover. The same engagement moves from understanding the constraint to getting the work moving and proving whether it changed anything.",
+      "items": [
+        {"name": "Insight", "accent": "cyan", "points": ["Understand the commercial priority", "Find the actual constraint", "Agree what Commview should own"]},
+        {"name": "Momentum", "accent": "blue", "points": ["Bring in the right operators", "Work inside the existing team", "Move the priority from plan to delivery"]},
+        {"name": "Impact", "accent": "pink", "points": ["Measure what changed", "Fix what is not working", "Scale what proves useful"]}
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "layout": "split",
+      "eyebrow": "CMO SUPPORT FAQ",
+      "heading": "Common questions about outsourced marketing support.",
+      "items": [
+        {"q": "What is outsourced marketing?", "a": "Outsourced marketing means using external people or a team to take responsibility for part of your marketing work instead of hiring every capability permanently. With Commview, the CMO or marketing leader keeps the strategic leadership while we provide experienced capacity around specific problems and workstreams."},
+        {"q": "Is CMO Support the same as a fractional CMO?", "a": "No. A fractional CMO provides senior marketing leadership when the business needs someone to set direction and own the marketing function. CMO Support is for businesses that already have that leadership. Commview works alongside the existing CMO or marketing leader to provide additional senior execution capacity."},
+        {"q": "Can Commview work as an outsourced marketing team?", "a": "Yes, where that is the right model. We can assemble operators around a defined priority or several connected workstreams and work with your existing people and partners. The aim is not to build a parallel marketing department. It is to add the capability and capacity needed to move the work."},
+        {"q": "What marketing work can we outsource?", "a": "Commview can support work across GTM, Growth, Product and Operational AI. That can include positioning, launches, SEO, AEO, demand generation, outbound, paid media, content, product strategy, workflow automation and AI implementation. The scope follows the business problem rather than a fixed service bundle."},
+        {"q": "Do you replace our existing agencies or marketing team?", "a": "Not unless there is a reason to change them. We can work alongside internal teams and existing agencies, take ownership of a missing workstream or coordinate specialists around a wider commercial problem. Good existing capability should be used, not replaced for the sake of it."},
+        {"q": "How is Commview different from an outsourced marketing agency?", "a": "Commview starts with the business constraint rather than a predefined channel or service package. Senior operators stay close to the work and can connect GTM, Growth, Product and Operational AI where the problem crosses those boundaries. We can also work alongside an existing agency when that is the most effective setup."}
+      ]
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "theme": "dark",
+      "heading": "You lead marketing. We help you move it.",
+      "body": "Tell us what is stuck, late or sitting on your desk. We will work out what experience and capacity the problem needs.",
+      "ctas": [{"label": "Talk to us", "href": "/contact", "style": "primary"}],
+      "tagline": ["Insight.", "Momentum.", "Impact."]
+    }
+  ],
+  "notes": "CMO Support proposition. Search intent is outsourced marketing, not outsourced CMO. Do not target outsourced CMO because /fractional-cmo owns senior leadership intent. Do not target growth marketing agency because /growth owns that cluster. GTM Leadership cyan #00E5FF. Design should feel editorial, senior and embedded, not like a generic agency landing page. No card soup, no generic stock photography, no black-neon AI aesthetic."
+}
