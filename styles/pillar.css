@@ -268,10 +268,12 @@
 /* ===== v1.2 additions: signal hero, matrix table, stat context, bullet points ===== */
 
 /* hero signal: gradient slash + checklist (replaces a diagram on service pages) */
-.p-signal { position: relative; min-height: clamp(260px, 30vw, 360px); display: flex; align-items: center; justify-content: flex-end; overflow: hidden; }
-.p-signal__beam { position: absolute; right: 6%; top: -10%; width: 42%; height: 120%; transform: skewX(-16deg); border-radius: var(--radius-lg); background: linear-gradient(160deg, var(--brand-cyan), var(--brand-blue) 55%, var(--c)); filter: drop-shadow(0 0 60px color-mix(in srgb, var(--brand-blue) 42%, transparent)); opacity: 0.92; }
-.p-signal__points { position: relative; z-index: 1; margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-4); max-width: 46%; }
-.p-signal__points li { position: relative; padding-top: var(--space-3); border-top: 1px solid var(--slate-dark); font-size: 14px; font-weight: 600; color: var(--slate-light); }
+.p-signal { position: relative; min-height: clamp(280px, 30vw, 380px); display: grid; align-items: center; justify-items: end; overflow: hidden; }
+.p-signal__beam { position: absolute; inset: -10% 4% -10% auto; width: 40%; transform: skewX(-14deg); border-radius: var(--radius-lg); background: linear-gradient(160deg, var(--brand-cyan), var(--brand-blue) 55%, var(--c)); filter: drop-shadow(0 0 60px color-mix(in srgb, var(--brand-blue) 42%, transparent)); opacity: 0.9; }
+/* checklist sits in a tidy contained panel over the beam, so it never clashes with the skewed edge */
+.p-signal__points { position: relative; z-index: 1; margin: 0 6% 0 0; padding: var(--space-6); list-style: none; display: grid; gap: var(--space-4); width: min(330px, 78%); background: color-mix(in srgb, var(--brand-charcoal) 60%, transparent); backdrop-filter: blur(4px); border: 1px solid color-mix(in srgb, var(--brand-polar) 12%, transparent); border-radius: var(--radius-lg); }
+.p-signal__points li { padding-top: var(--space-4); border-top: 1px solid color-mix(in srgb, var(--brand-polar) 14%, transparent); font-size: 14px; font-weight: 600; line-height: 1.35; color: var(--brand-polar); }
+.p-signal__points li:first-child { padding-top: 0; border-top: 0; }
 
 /* bullet points on grid cells and stepper steps */
 .p-cell__points, .p-step__points { margin: var(--space-3) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); }
@@ -302,8 +304,8 @@
 .p-mark--partial { color: var(--slate); }
 
 @media (max-width: 640px) {
-  .p-signal { min-height: 180px; justify-content: flex-start; }
-  .p-signal__beam { right: auto; left: 2%; width: 48%; }
-  .p-signal__points { max-width: 60%; }
+  .p-signal { min-height: 220px; justify-items: stretch; }
+  .p-signal__beam { inset: -8% 0 -8% auto; right: -6%; width: 46%; }
+  .p-signal__points { width: auto; margin: 0; }
   .p-matrix th, .p-matrix td { padding: var(--space-3) var(--space-2); }
 }
