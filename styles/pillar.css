@@ -264,3 +264,46 @@
   .p-logos__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .p-sec { padding-block: var(--space-16); }
 }
+
+/* ===== v1.2 additions: signal hero, matrix table, stat context, bullet points ===== */
+
+/* hero signal: gradient slash + checklist (replaces a diagram on service pages) */
+.p-signal { position: relative; min-height: clamp(260px, 30vw, 360px); display: flex; align-items: center; justify-content: flex-end; overflow: hidden; }
+.p-signal__beam { position: absolute; right: 6%; top: -10%; width: 42%; height: 120%; transform: skewX(-16deg); border-radius: var(--radius-lg); background: linear-gradient(160deg, var(--brand-cyan), var(--brand-blue) 55%, var(--c)); filter: drop-shadow(0 0 60px color-mix(in srgb, var(--brand-blue) 42%, transparent)); opacity: 0.92; }
+.p-signal__points { position: relative; z-index: 1; margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-4); max-width: 46%; }
+.p-signal__points li { position: relative; padding-top: var(--space-3); border-top: 1px solid var(--slate-dark); font-size: 14px; font-weight: 600; color: var(--slate-light); }
+
+/* bullet points on grid cells and stepper steps */
+.p-cell__points, .p-step__points { margin: var(--space-3) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); }
+.p-cell__points li, .p-step__points li { position: relative; padding-left: var(--space-5, 20px); font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
+.p-cell__points li::before, .p-step__points li::before { content: ""; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; border-bottom: 1.6px solid var(--c); border-right: 1.6px solid var(--c); transform: rotate(45deg); }
+.dark .p-cell__points li, .dark .p-step__points li { color: var(--slate-light); }
+
+/* stat context sub-line */
+.p-stat__ctx { display: block; margin-top: var(--space-2); font-size: 12px; line-height: 1.4; color: var(--text-secondary); }
+.dark .p-stat__ctx { color: var(--slate); }
+
+/* comparison matrix table */
+.p-matrix__wrap { margin-top: var(--space-8); overflow-x: auto; }
+.p-matrix { width: 100%; border-collapse: collapse; font-size: 14px; }
+.p-matrix th, .p-matrix td { padding: var(--space-4) var(--space-4); text-align: center; border-bottom: 1px solid var(--border-subtle); }
+.dark .p-matrix th, .dark .p-matrix td { border-bottom-color: var(--slate-dark); }
+.p-matrix thead th { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: var(--text-secondary); }
+.dark .p-matrix thead th { color: var(--slate-light); }
+.p-matrix tbody th[scope="row"] { text-align: left; font-weight: 600; color: var(--text-primary); white-space: nowrap; }
+.dark .p-matrix tbody th[scope="row"] { color: var(--brand-polar); }
+.p-matrix .is-hl { background: color-mix(in srgb, var(--c) 8%, transparent); }
+.p-matrix thead .is-hl { color: var(--c); border-bottom: 2px solid var(--c); }
+.p-matrix__note { margin-top: var(--space-4); font-size: 13px; color: var(--text-secondary); }
+.p-mark { display: inline-flex; }
+.p-mark svg { width: 20px; height: 20px; }
+.p-mark--yes { color: var(--c); }
+.p-mark--no { color: var(--border-strong); }
+.p-mark--partial { color: var(--slate); }
+
+@media (max-width: 640px) {
+  .p-signal { min-height: 180px; justify-content: flex-start; }
+  .p-signal__beam { right: auto; left: 2%; width: 48%; }
+  .p-signal__points { max-width: 60%; }
+  .p-matrix th, .p-matrix td { padding: var(--space-3) var(--space-2); }
+}

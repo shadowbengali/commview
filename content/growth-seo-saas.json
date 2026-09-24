@@ -1,0 +1,153 @@
+{
+  "slug": "growth/seo/saas",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "SaaS SEO Consultant | CommView",
+    "description": "SEO consultant for SaaS companies across feature, comparison, integration and use-case pages, with search strategy built around the SaaS buying journey.",
+    "primaryKeyword": "saas seo consultant",
+    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "breadcrumb": [
+      { "name": "Home", "href": "/" },
+      { "name": "Growth", "href": "/growth" },
+      { "name": "B2B SEO", "href": "/growth/seo" },
+      { "name": "SaaS" }
+    ],
+    "internalLinks": [
+      { "href": "/growth/seo", "purpose": "parent" },
+      { "href": "/contact", "purpose": "cta" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "SaaS SEO consultant",
+    "h1": ["More visibility.", "Better pipeline.", "Higher value SaaS growth."],
+    "accentLine": 2,
+    "sub": "Specialist SEO for B2B SaaS companies. Increase qualified pipeline with a strategy built for long sales cycles, competitive markets and high-value customers.",
+    "ctas": [
+      { "label": "Talk to us", "href": "/contact", "style": "primary" },
+      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+    ],
+    "diagram": {
+      "kind": "signal",
+      "points": [
+        "Capture bottom-of-funnel demand",
+        "Own category and comparison searches",
+        "Increase product and feature visibility",
+        "Drive pipeline, not just traffic",
+        "Built for B2B SaaS sales cycles"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "opportunity",
+      "type": "grid",
+      "variant": "icon",
+      "eyebrow": "The SaaS SEO opportunity",
+      "heading": "Buyers are searching. Make sure they find you.",
+      "intro": "Your potential customers are researching solutions, comparing vendors and looking for answers. We help you show up at the right moments with the right message, and turn search demand into pipeline.",
+      "items": [
+        { "icon": "search", "title": "High-intent demand", "body": "Capture decision-stage searches and comparison queries." },
+        { "icon": "chart", "title": "Category visibility", "body": "Own non-branded and category searches in your market." },
+        { "icon": "people", "title": "Product and feature SEO", "body": "Increase visibility for key use cases, integrations and features." },
+        { "icon": "target", "title": "Pipeline impact", "body": "Drive qualified leads, demos and revenue opportunities." }
+      ]
+    },
+    {
+      "id": "challenges",
+      "type": "grid",
+      "theme": "dark",
+      "variant": "icon",
+      "eyebrow": "Common challenges for SaaS companies",
+      "heading": "Great product. Not enough visibility or pipeline.",
+      "intro": "SaaS companies face unique SEO challenges from crowded markets to complex buyer journeys. We help you cut through the noise and attract the right customers.",
+      "items": [
+        { "icon": "chart", "title": "Crowded market", "body": "Competing with established players and well-funded competitors." },
+        { "icon": "database", "title": "Complex buying journey", "body": "Multiple stakeholders and longer sales cycles (3 to 12 months)." },
+        { "icon": "doc", "title": "Wide range of use cases", "body": "Need to rank for multiple industries, personas and applications." },
+        { "icon": "clock", "title": "Product-led and sales-led motion", "body": "Need SEO to support both self-serve and enterprise sales." }
+      ]
+    },
+    {
+      "id": "approach",
+      "type": "stepper",
+      "style": "circles",
+      "eyebrow": "Our approach",
+      "heading": "From opportunity to pipeline.",
+      "intro": "A structured, data-led approach designed for B2B SaaS growth.",
+      "steps": [
+        { "title": "Insight", "accent": "cyan", "points": ["Understand your market and buyers", "Analyse competitors and search gaps", "Identify the biggest opportunities"] },
+        { "title": "Momentum", "accent": "blue", "points": ["Build and execute the plan", "Optimise key pages and content", "Target high-intent and comparison searches", "Improve technical SEO"] },
+        { "title": "Impact", "accent": "pink", "points": ["Increase qualified traffic", "Drive demo requests and pipeline", "Measure what works", "Optimise and scale"] }
+      ]
+    },
+    {
+      "id": "focus",
+      "type": "grid",
+      "theme": "dark",
+      "variant": "icon",
+      "eyebrow": "Key areas we focus on",
+      "heading": "SEO that supports your entire SaaS growth engine.",
+      "items": [
+        { "icon": "doc", "title": "Content strategy", "body": "Use cases, comparison pages, integrations and thought leadership." },
+        { "icon": "workflow", "title": "Technical SEO", "body": "Site structure, crawlability, indexation and performance." },
+        { "icon": "people", "title": "Persona targeting", "body": "Founder, IT, security, operations and other key buyers." },
+        { "icon": "chart", "title": "Measurement and iteration", "body": "Track pipeline impact, not just traffic, and continuously optimise." }
+      ]
+    },
+    {
+      "id": "results",
+      "type": "stats",
+      "eyebrow": "Proven results",
+      "heading": "Real impact for SaaS companies.",
+      "intro": "We have helped B2B technology companies increase qualified pipeline, enter new markets and improve commercial outcomes through SEO and content strategy.",
+      "stats": [
+        { "value": "3x", "label": "Increase in qualified pipeline", "context": "B2B technology scale-up", "evidence": "verified" },
+        { "value": "60%", "label": "Reduction in CAC", "context": "B2B cybersecurity business", "evidence": "verified" },
+        { "value": "10", "label": "Markets launched", "context": "Vodafone Business V-Hub", "evidence": "verified" },
+        { "value": "£690k", "label": "Annual savings", "context": "Through AI and automation", "evidence": "verified" }
+      ]
+    },
+    {
+      "id": "compare",
+      "type": "matrix",
+      "eyebrow": "SaaS SEO vs generic SEO",
+      "heading": "SaaS requires a different approach.",
+      "columns": [
+        { "title": "SaaS SEO (CommView)", "highlight": true },
+        { "title": "Generic SEO" },
+        { "title": "Agency SEO" }
+      ],
+      "rows": [
+        { "label": "B2B SaaS expertise", "cells": ["yes", "partial", "partial"] },
+        { "label": "Long sales cycle focus", "cells": ["yes", "no", "no"] },
+        { "label": "Product and use case SEO", "cells": ["yes", "no", "partial"] },
+        { "label": "Pipeline-focused KPIs", "cells": ["yes", "partial", "yes"] },
+        { "label": "Strategic and hands-on", "cells": ["yes", "no", "no"] }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "layout": "split",
+      "eyebrow": "Frequently asked questions",
+      "heading": "Common questions.",
+      "items": [
+        { "q": "How is SaaS SEO different from B2B SEO?", "a": "SaaS SEO is often a subset of B2B SEO, but the product creates additional search surfaces such as features, integrations, alternatives, comparisons and use cases. SaaS companies also need to connect educational demand to product adoption. The strategy should reflect how software is researched, evaluated, trialled and retained." },
+        { "q": "Should we build comparison pages against our competitors?", "a": "Sometimes. Comparison pages are useful when buyers genuinely search for the comparison and your page can help them make a decision. They should explain meaningful differences, use supportable claims and acknowledge where alternatives fit. Thin pages that simply declare your product better are unlikely to build much buyer trust." },
+        { "q": "Do integration pages actually rank for SaaS?", "a": "They can when there is real search demand and the integration has enough substance to answer the query. A useful integration page explains what connects, what the combined workflow enables, who it is for and how it works. Generating hundreds of near-identical pages without genuine integrations is a different strategy entirely." }
+      ]
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "theme": "dark",
+      "heading": "Build search around the product people are buying.",
+      "body": "If your SaaS SEO programme is producing content but not enough commercial discovery, we should look at the architecture.",
+      "ctas": [
+        { "label": "Talk to us", "href": "/contact", "style": "primary" },
+        { "label": "See B2B SEO", "href": "/growth/seo", "style": "ghost" }
+      ]
+    }
+  ]
+}

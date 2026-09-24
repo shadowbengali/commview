@@ -1,0 +1,146 @@
+{
+  "slug": "growth/aeo/services",
+  "pillar": "growth",
+  "accent": "green",
+  "meta": {
+    "title": "AEO Services | Answer Engine Optimization for B2B | CommView",
+    "description": "Answer Engine Optimization services for B2B. Audit, content restructure, technical AEO and citation tracking to improve visibility in AI answers.",
+    "primaryKeyword": "answer engine optimization services",
+    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "breadcrumb": [
+      { "name": "Home", "href": "/" },
+      { "name": "Growth", "href": "/growth" },
+      { "name": "AEO", "href": "/growth/aeo" },
+      { "name": "Services" }
+    ],
+    "internalLinks": [
+      { "href": "/growth/aeo", "purpose": "parent" },
+      { "href": "/contact", "purpose": "cta" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Answer Engine Optimisation (AEO)",
+    "h1": ["Be the answer in an AI-first search world.", "Win more high-intent demand."],
+    "accentLine": 1,
+    "sub": "AEO helps your brand get discovered, cited and recommended in AI search tools like ChatGPT, Claude, Google AI Overviews and Perplexity, driving qualified traffic and pipeline.",
+    "ctas": [
+      { "label": "Talk to us", "href": "/contact", "style": "primary" },
+      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+    ],
+    "diagram": {
+      "kind": "signal",
+      "points": ["Get cited in AI search results", "Increase brand visibility and authority", "Capture new high-intent demand", "Turn AI visibility into pipeline", "Stay ahead as search behaviour changes"]
+    }
+  },
+  "sections": [
+    {
+      "id": "opportunity",
+      "type": "grid",
+      "variant": "icon",
+      "eyebrow": "The opportunity",
+      "heading": "Your buyers are asking AI. Make sure you're the answer.",
+      "intro": "Buyers are increasingly using AI tools to research problems, compare solutions and shortlist vendors. We help you get your brand, expertise and content into those answers.",
+      "items": [
+        { "icon": "search", "title": "AI search is growing", "body": "More buyers are using ChatGPT, Claude, Gemini and Perplexity to research and compare." },
+        { "icon": "people", "title": "High commercial intent", "body": "AI tools surface solutions and vendors, not just information." },
+        { "icon": "target", "title": "First-mover advantage", "body": "Most B2B companies are not yet optimised for AI search." },
+        { "icon": "chart", "title": "Drives measurable value", "body": "More qualified traffic, higher intent leads and stronger brand authority." }
+      ]
+    },
+    {
+      "id": "challenges",
+      "type": "grid",
+      "theme": "dark",
+      "variant": "icon",
+      "eyebrow": "Common challenges",
+      "heading": "Great content. Still invisible in AI search.",
+      "intro": "Traditional SEO helps, but it is not enough. AI tools use different sources, formats and signals. We help you adapt your content, structure and authority to get surfaced in the right answers.",
+      "items": [
+        { "icon": "search", "title": "Not getting cited", "body": "Your brand isn't appearing in AI-generated answers." },
+        { "icon": "doc", "title": "Content isn't structured", "body": "Valuable content isn't easy for AI tools to find, understand or cite." },
+        { "icon": "people", "title": "Missing authority signals", "body": "Limited third-party mentions, expert content and credibility." },
+        { "icon": "clock", "title": "Unclear impact", "body": "It's hard to measure AI visibility and link it to pipeline." }
+      ]
+    },
+    {
+      "id": "approach",
+      "type": "stepper",
+      "style": "circles",
+      "eyebrow": "Our approach",
+      "heading": "From audit to measurable impact.",
+      "intro": "A structured approach to help you get discovered, cited and chosen in AI search.",
+      "steps": [
+        { "title": "Insight", "accent": "cyan", "points": ["Audit your current visibility", "Understand your audience and key questions", "Identify the biggest opportunities"] },
+        { "title": "Momentum", "accent": "blue", "points": ["Optimise content and structure", "Build authority and mentions", "Close content and information gaps", "Implement structured data and technical improvements"] },
+        { "title": "Impact", "accent": "pink", "points": ["Track AI visibility and citations", "Drive qualified traffic and pipeline", "Measure what works", "Optimise and scale"] }
+      ]
+    },
+    {
+      "id": "focus",
+      "type": "grid",
+      "theme": "dark",
+      "variant": "icon",
+      "eyebrow": "Key areas we focus on",
+      "heading": "Optimised for how AI search works.",
+      "items": [
+        { "icon": "doc", "title": "Content strategy", "body": "Answer key questions with clear, structured and authoritative content." },
+        { "icon": "workflow", "title": "Technical optimisation", "body": "Structured data, clean architecture and crawlable content." },
+        { "icon": "people", "title": "Authority and mentions", "body": "Build credibility through expert content, PR and third-party sources." },
+        { "icon": "chart", "title": "Measurement", "body": "Track AI visibility, citations and traffic, and link to commercial outcomes." }
+      ]
+    },
+    {
+      "id": "results",
+      "type": "stats",
+      "eyebrow": "Proven results",
+      "heading": "More visibility. More qualified demand.",
+      "intro": "We help B2B companies increase their visibility in AI search, attract more qualified traffic and generate measurable commercial outcomes.",
+      "stats": [
+        { "value": "3x", "label": "Increase in qualified pipeline", "context": "B2B technology scale-up", "evidence": "verified" },
+        { "value": "60%", "label": "Reduction in CAC", "context": "B2B cybersecurity business", "evidence": "verified" },
+        { "value": "10", "label": "Markets launched", "context": "Vodafone Business V-Hub", "evidence": "verified" },
+        { "value": "£690k", "label": "Annual savings", "context": "Through AI and automation", "evidence": "verified" }
+      ]
+    },
+    {
+      "id": "compare",
+      "type": "matrix",
+      "eyebrow": "AEO vs traditional SEO",
+      "heading": "Different approaches. Stronger together.",
+      "columns": [
+        { "title": "Traditional SEO" },
+        { "title": "AEO (CommView)", "highlight": true }
+      ],
+      "rows": [
+        { "label": "Optimises for search engines", "cells": ["yes", "yes"] },
+        { "label": "Focus on rankings", "cells": ["yes", "no"] },
+        { "label": "Focus on AI citations and answers", "cells": ["no", "yes"] },
+        { "label": "Structured content for AI tools", "cells": ["no", "yes"] },
+        { "label": "Drives qualified traffic and pipeline", "cells": ["yes", "yes"] }
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "layout": "split",
+      "eyebrow": "Frequently asked questions",
+      "heading": "Common questions.",
+      "items": [
+        { "q": "How are AEO services different from SEO services?", "a": "SEO focuses heavily on discoverability and performance in search engines. AEO adds the question of how content, entities and evidence are interpreted and surfaced inside AI-generated answers. The disciplines overlap substantially, so Commview treats AEO as an extension of modern search strategy rather than an excuse to duplicate the same work." },
+        { "q": "How long until we get cited in AI answers?", "a": "There is no guaranteed timeline. AI systems choose and synthesise sources differently, their indexes and models change, and a technically correct page does not earn an automatic citation. We establish a baseline, improve the strongest controllable signals and track a repeatable query set so changes can be assessed over time." },
+        { "q": "Which AI engines do you optimise for?", "a": "We design for the underlying behaviours shared across AI-assisted discovery rather than promising a secret formula for one model. Depending on the audience, measurement can include systems such as ChatGPT, Google AI experiences, Perplexity and Claude. Coverage should follow where your buyers actually research and what can be measured responsibly." }
+      ]
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "theme": "dark",
+      "heading": "Find out what AI systems understand about your business.",
+      "body": "If you want to know where you are being surfaced, where you are missing and what is worth changing, start with the evidence.",
+      "ctas": [
+        { "label": "Talk to us", "href": "/contact", "style": "primary" },
+        { "label": "See AEO and AI search", "href": "/growth/aeo", "style": "ghost" }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 // Pillar-page renderer. Consumes a content/<slug>.json (typed as Page) and
 // renders it through styles/pillar.css. This is the only place pillar layout
 // lives; ChatGPT never touches it. Server Component (native <details>, no JS).
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import type { Page, Section, Heading, Rich, Diagram, Stat } from "../../lib/content/types";
+
+const ACC_VAR: Record<string, string> = { cyan: "var(--brand-cyan)", green: "var(--accent-green)", blue: "var(--accent-blue)", pink: "var(--accent-pink)" };
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
 // Unverified stats show (flagged) in dev/preview for QA, but never in production.
@@ -195,6 +197,12 @@ function DiagramView({ d }: { d?: Diagram }) {
   if (d.kind === "orb") return <OrbDiagram d={d} />;
   if (d.kind === "overlap") return <OverlapDiagram d={d} />;
   if (d.kind === "image") return <div className="p-shot"><img src={d.src} alt={d.alt} /></div>;
+  if (d.kind === "signal") return (
+    <div className="p-signal">
+      <span className="p-signal__beam" aria-hidden="true" />
+      <ul className="p-signal__points">{d.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
+    </div>
+  );
   if (d.kind === "stack") {
     const n = d.layers.length;
     const hasHead = !!(d.caption || d.sub);
@@ -283,6 +291,17 @@ function AiFlow({ s }: { s: Extract<Section, { type: "aiflow" }> }) {
   );
 }
 
+function MatrixCell({ v }: { v: "yes" | "no" | "partial" }) {
+  const label = v === "yes" ? "Yes" : v === "no" ? "No" : "Partial";
+  return (
+    <span className={"p-mark p-mark--" + v} role="img" aria-label={label}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        {v === "yes" ? <path d="M20 6L9 17l-5-5" /> : v === "no" ? <path d="M6 12h12" /> : <><circle cx="12" cy="12" r="8" strokeWidth="1.8" /><path d="M8.5 12h7" /></>}
+      </svg>
+    </span>
+  );
+}
+
 function SectionView({ s }: { s: Section }) {
   switch (s.type) {
     case "lead":
@@ -315,7 +334,8 @@ function SectionView({ s }: { s: Section }) {
                   {it.icon && <span className="p-cell__ico" aria-hidden><Icon name={it.icon} /></span>}
                   {variant === "numbered" && !it.icon && <b>{n(i)}</b>}
                   <h3>{it.title}</h3>
-                  <p>{it.body}</p>
+                  {it.body && <p>{it.body}</p>}
+                  {it.points?.length ? <ul className="p-cell__points">{it.points.map((p, j) => <li key={j}>{p}</li>)}</ul> : null}
                   {it.href && (variant === "cards"
                     ? <a className="p-cell__arw" href={it.href} aria-label={it.title}>&rarr;</a>
                     : <a className="p-cell__more" href={it.href}>Learn more &rarr;</a>)}
@@ -359,14 +379,15 @@ function SectionView({ s }: { s: Section }) {
             <SectionHead s={s} />
             <div className={"p-proc__grid p-proc--" + style} data-cols={String(s.steps.length)}>
               {s.steps.map((st, i) => (
-                <div className="p-step" key={i}>
+                <div className="p-step" key={i} style={st.accent ? ({ ["--c" as string]: ACC_VAR[st.accent] } as CSSProperties) : undefined}>
                   {style === "icons"
                     ? <div className="p-step__ico" aria-hidden><Icon name={st.icon} /></div>
                     : style === "circles"
                     ? <div className="p-step__n">{String(i + 1).padStart(2, "0")}</div>
                     : <b>{String(i + 1).padStart(2, "0")}</b>}
                   <h3>{style === "icons" ? `${i + 1}. ${st.title}` : st.title}</h3>
-                  <p>{st.body}</p>
+                  {st.body && <p>{st.body}</p>}
+                  {st.points?.length ? <ul className="p-step__points">{st.points.map((p, j) => <li key={j}>{p}</li>)}</ul> : null}
                 </div>
               ))}
             </div>
@@ -386,6 +407,7 @@ function SectionView({ s }: { s: Section }) {
                 <div className="p-stat" key={i}>
                   <b>{x.value}</b>
                   <span>{x.label}</span>
+                  {x.context && <span className="p-stat__ctx">{x.context}</span>}
                   {!IS_PROD && x.evidence === "needs-verification" && <span className="p-stat__flag">Needs verification</span>}
                 </div>
               ))}
@@ -424,6 +446,35 @@ function SectionView({ s }: { s: Section }) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      );
+    case "matrix":
+      return (
+        <section className={secClass(s)} aria-labelledby={s.id}>
+          <div className="wrap">
+            <SectionHead s={s} />
+            <div className="p-matrix__wrap">
+              <table className="p-matrix">
+                <thead>
+                  <tr>
+                    <th scope="col"><span className="sr">Criterion</span></th>
+                    {s.columns.map((c, i) => <th scope="col" key={i} className={c.highlight ? "is-hl" : undefined}>{c.title}</th>)}
+                  </tr>
+                </thead>
+                <tbody>
+                  {s.rows.map((r, ri) => (
+                    <tr key={ri}>
+                      <th scope="row">{r.label}</th>
+                      {r.cells.map((cell, ci) => (
+                        <td key={ci} className={s.columns[ci]?.highlight ? "is-hl" : undefined}><MatrixCell v={cell} /></td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {s.note && <p className="p-matrix__note">{s.note}</p>}
           </div>
         </section>
       );
