@@ -14,7 +14,7 @@ const BASE = process.env.VERIFY_BASE || "http://localhost:3000";
 const ROUTES = [
   "/", "/insights", "/what-we-do", "/how-we-work", "/contact", "/work", "/about", "/fractional-cmo",
   "/growth", "/product-strategy", "/ai-consulting",
-  "/growth/seo", "/product-strategy/consulting",
+  "/growth/seo", "/growth/outbound-lead-generation", "/product-strategy/consulting",
   "/ai-consulting/genai", "/ai-consulting/implementation",
   "/fractional-cmo/services", "/positioning", "/ideal-customer-profile-workshop",
 ];
