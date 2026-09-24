@@ -16,7 +16,7 @@ const ROUTES = [
   "/growth", "/product-strategy", "/ai-consulting",
   "/growth/seo", "/growth/outbound-lead-generation", "/product-strategy/consulting",
   "/ai-consulting/genai", "/ai-consulting/implementation",
-  "/fractional-cmo/services", "/fractional-cmo/uk", "/fractional-cmo/for-startups",
+  "/fractional-cmo/uk", "/fractional-cmo/for-startups",
   "/growth/seo/saas", "/growth/aeo/services",
   "/positioning", "/ideal-customer-profile-workshop",
 ];

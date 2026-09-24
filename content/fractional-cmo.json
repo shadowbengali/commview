@@ -39,6 +39,18 @@
         "purpose": "child"
       },
       {
+        "href": "/positioning",
+        "purpose": "related"
+      },
+      {
+        "href": "/ideal-customer-profile-workshop",
+        "purpose": "related"
+      },
+      {
+        "href": "/growth/demand-generation",
+        "purpose": "related"
+      },
+      {
         "href": "/work",
         "purpose": "related"
       },
@@ -158,6 +170,7 @@
         {
           "icon": "chart",
           "title": "Demand Generation",
+          "href": "/growth/demand-generation",
           "points": [
             "Campaign strategy and delivery",
             "Content and thought leadership",
@@ -185,6 +198,37 @@
             "AI in marketing and GTM"
           ]
         }
+      ]
+    },
+    {
+      "id": "system",
+      "type": "grid",
+      "variant": "icon",
+      "eyebrow": "The commercial system",
+      "heading": "One commercial system, connected.",
+      "intro": "Senior GTM leadership is most useful when it connects the decisions that usually get split across different people, from route to market through to pipeline and the operating rhythm around them.",
+      "items": [
+        { "icon": "target", "title": "Routes to market", "body": "Decide how the product should reach the customer, sales-led, product-led, partner-led or a mix, before choosing the channels." },
+        { "icon": "chart", "title": "Pipeline management", "body": "Make pipeline something the business can manage: stages, conversion, coverage against the revenue target and forecasting." },
+        { "icon": "people", "title": "Sales and marketing alignment", "body": "Give both teams the same view of a good opportunity, with definitions, routing and feedback that improve targeting from what happens downstream." },
+        { "icon": "sparkle", "title": "B2B positioning", "body": "Clarify the category, alternatives and value that make the choice clearer for the buyer.", "href": "/positioning" },
+        { "icon": "search", "title": "Ideal Customer Profile", "body": "Define which customers value what you sell and can justify the cost of acquiring them.", "href": "/ideal-customer-profile-workshop" }
+      ]
+    },
+    {
+      "id": "rhythm",
+      "type": "stepper",
+      "theme": "dark",
+      "style": "arrows",
+      "eyebrow": "Operating rhythm",
+      "heading": "Turn the GTM plan into a weekly operating rhythm.",
+      "intro": "Strategy only becomes useful when the business has a repeatable way to see what is happening and make decisions.",
+      "steps": [
+        { "title": "See", "body": "Use a small set of commercial measures to understand what changed." },
+        { "title": "Diagnose", "body": "Separate a real constraint from noise or a one-off result." },
+        { "title": "Decide", "body": "Make the trade-off, set the priority and name the owner." },
+        { "title": "Act", "body": "Move the work forward rather than creating another deck." },
+        { "title": "Learn", "body": "Bring the result back into the next decision." }
       ]
     },
     {
