@@ -44,8 +44,8 @@
         "purpose": "child"
       },
       {
-        "href": "/demand-generation",
-        "purpose": "child"
+        "href": "/growth/demand-generation",
+        "purpose": "related"
       },
       {
         "href": "/ideal-customer-profile-workshop",
@@ -152,7 +152,7 @@
       "ctas": [
         {
           "label": "Explore Demand Generation",
-          "href": "/demand-generation",
+          "href": "/growth/demand-generation",
           "style": "text"
         }
       ]
