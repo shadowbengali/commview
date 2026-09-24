@@ -17,7 +17,7 @@ import "../../../styles/blog.css";
 export const metadata: Metadata = {
   title: "Insight",
   description:
-    "Field notes from the work — what we see inside scale-ups, what it usually turns out to be, and what we would do about it.",
+    "Field notes from the work: what we see inside scale-ups, what it usually turns out to be, and what we would do about it.",
   alternates: { canonical: "/insights" },
 };
 
@@ -130,7 +130,7 @@ export default async function BlogIndexPage({
               having to <em>find</em> twice.
             </h1>
             <p className="bhero__lede">
-              Field notes from the work — what we see inside scale-ups, what it
+              Field notes from the work: what we see inside scale-ups, what it
               usually turns out to be, and what we would do about it. Written by
               the people doing it, not a content team.
             </p>
@@ -290,7 +290,7 @@ export default async function BlogIndexPage({
             </p>
             {subscribed ? (
               <p className="sub__note" style={{ color: "var(--brand-cyan)" }}>
-                Thanks — you&apos;re on the list.
+                Thanks. You&apos;re on the list.
               </p>
             ) : (
               <form className="sub__form" action={subscribe}>
