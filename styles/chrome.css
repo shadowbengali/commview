@@ -181,7 +181,7 @@ img { max-width: 100%; height: auto; display: block; }
   .hdr__nav[data-open="true"] { display: flex; }
   .hdr__nav a { padding-block: var(--space-3); border-bottom: var(--rule); font-size: 16px; }
   .hdr__wwd { display: none; }
-  .hdr__wwd-m { padding-block: var(--space-3); border-bottom: var(--rule); font-size: 16px; color: var(--text-secondary); }
+  .hdr__wwd-m { display: block; padding-block: var(--space-3); border-bottom: var(--rule); font-size: 16px; color: var(--text-secondary); }
   .mega { display: none; }
   .burger { display: block; order: 3; }
   .hdr__cta { order: 2; margin-left: auto; padding: 11px 16px; font-size: 14px; }
