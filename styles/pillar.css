@@ -313,3 +313,25 @@
   .p-signal__points { width: auto; margin: 0; }
   .p-matrix th, .p-matrix td { padding: var(--space-3) var(--space-2); }
 }
+
+/* ===== stages: the how-we-work Insight/Momentum/Impact treatment, shared ===== */
+.p-stages { margin-top: var(--space-12); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-12); }
+.p-stages[data-cols="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.p-stages[data-cols="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.p-stage { display: flex; flex-direction: column; }
+.p-stage__num { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: var(--text-secondary); }
+.dark .p-stage__num { color: var(--slate); }
+.p-stage__name { margin-top: var(--space-1); font-size: clamp(24px, 2.4vw, 30px); font-weight: 800; letter-spacing: -0.02em; color: var(--c); }
+.p-stage__name::after { content: ""; display: block; width: 38px; height: 3px; border-radius: 2px; background: var(--c); margin-top: var(--space-3); }
+.p-stage__lead { margin-top: var(--space-5, 20px); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-primary); }
+.dark .p-stage__lead { color: var(--brand-polar); }
+.p-stage__body { margin-top: var(--space-3); font-size: 15px; line-height: 1.6; color: var(--text-secondary); }
+.dark .p-stage__body { color: var(--slate-light); }
+.p-stage__points { margin: var(--space-4) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); }
+.p-stage__points li { position: relative; padding-left: var(--space-5, 20px); font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
+.p-stage__points li::before { content: ""; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; border-bottom: 1.6px solid var(--c); border-right: 1.6px solid var(--c); transform: rotate(45deg); }
+.dark .p-stage__points li { color: var(--slate-light); }
+.p-stage__pull { margin-top: var(--space-6); margin-bottom: 0; padding: var(--space-4); border-radius: var(--radius-md); border-left: 3px solid var(--c); background: color-mix(in srgb, var(--text-primary) 4%, transparent); font-size: 14px; line-height: 1.5; font-weight: 600; color: var(--text-primary); }
+.dark .p-stage__pull { background: color-mix(in srgb, var(--brand-polar) 6%, transparent); color: var(--brand-polar); }
+@media (max-width: 1000px) { .p-stages, .p-stages[data-cols="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); } }
+@media (max-width: 640px) { .p-stages, .p-stages[data-cols="2"], .p-stages[data-cols="4"] { grid-template-columns: minmax(0, 1fr); } }

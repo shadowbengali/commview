@@ -75,6 +75,7 @@ export type Section =
       right: { title: string; lines: string[] };
     })
   | (Base & { type: "stepper"; style?: "arrows" | "circles" | "icons"; steps: { title: string; body?: string; points?: string[]; icon?: string; accent?: "cyan" | "green" | "blue" | "pink" }[] })
+  | (Base & { type: "stages"; items: { name: string; accent?: "cyan" | "green" | "blue" | "pink"; lead?: string; body?: string; points?: string[]; pull?: string }[] })
   | (Base & {
       type: "aiflow";
       heading: Heading;

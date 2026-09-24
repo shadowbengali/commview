@@ -395,6 +395,26 @@ function SectionView({ s }: { s: Section }) {
         </section>
       );
     }
+    case "stages":
+      return (
+        <section className={secClass(s)} aria-labelledby={s.id}>
+          <div className="wrap">
+            <SectionHead s={s} />
+            <div className="p-stages" data-cols={String(s.items.length)}>
+              {s.items.map((it, i) => (
+                <article className="p-stage" key={i} style={it.accent ? ({ ["--c" as string]: ACC_VAR[it.accent] } as CSSProperties) : undefined}>
+                  <span className="p-stage__num">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="p-stage__name">{it.name}</h3>
+                  {it.lead && <p className="p-stage__lead">{it.lead}</p>}
+                  {it.body && <p className="p-stage__body">{it.body}</p>}
+                  {it.points?.length ? <ul className="p-stage__points">{it.points.map((p, j) => <li key={j}>{p}</li>)}</ul> : null}
+                  {it.pull && <p className="p-stage__pull">{it.pull}</p>}
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
     case "stats": {
       const shown: Stat[] = IS_PROD ? s.stats.filter((x) => x.evidence === "verified") : s.stats;
       if (!shown.length) return null;

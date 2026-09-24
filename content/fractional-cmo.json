@@ -6,32 +6,78 @@
     "title": "Fractional CMO Services | CommView",
     "description": "Fractional CMO services for B2B businesses needing senior marketing and GTM leadership without a full-time executive hire.",
     "primaryKeyword": "fractional cmo",
-    "secondaryKeywords": ["fractional cmo services", "fractional marketing leadership", "part-time cmo"],
-    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "secondaryKeywords": [
+      "fractional cmo services",
+      "fractional marketing leadership",
+      "part-time cmo"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
     "breadcrumb": [
-      { "name": "Home", "href": "/" },
-      { "name": "Fractional CMO" }
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Fractional CMO"
+      }
     ],
     "internalLinks": [
-      { "href": "/fractional-cmo/for-startups", "purpose": "child" },
-      { "href": "/fractional-cmo/for-scale-ups", "purpose": "child" },
-      { "href": "/fractional-cmo/uk", "purpose": "child" },
-      { "href": "/work", "purpose": "related" },
-      { "href": "/contact", "purpose": "cta" }
+      {
+        "href": "/fractional-cmo/for-startups",
+        "purpose": "child"
+      },
+      {
+        "href": "/fractional-cmo/for-scale-ups",
+        "purpose": "child"
+      },
+      {
+        "href": "/fractional-cmo/uk",
+        "purpose": "child"
+      },
+      {
+        "href": "/work",
+        "purpose": "related"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
     ]
   },
   "hero": {
     "eyebrow": "Fractional CMO services",
-    "h1": ["Senior marketing leadership.", "Real execution.", "Measurable impact."],
+    "h1": [
+      "Senior marketing leadership.",
+      "Real execution.",
+      "Measurable impact."
+    ],
     "accentLine": 1,
     "sub": "Fractional CMO services for B2B scale-ups and high-growth companies. Strategy, execution and commercial focus, without the cost or commitment of a full-time CMO.",
     "ctas": [
-      { "label": "Talk to us", "href": "/contact", "style": "primary" },
-      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      },
+      {
+        "label": "See how we work",
+        "href": "/how-we-work",
+        "style": "ghost"
+      }
     ],
     "diagram": {
       "kind": "signal",
-      "points": ["Set the direction", "Unblock growth", "Align product, marketing and sales", "Build and execute the plan", "Prove what works"]
+      "points": [
+        "Set the direction",
+        "Unblock growth",
+        "Align product, marketing and sales",
+        "Build and execute the plan",
+        "Prove what works"
+      ]
     }
   },
   "sections": [
@@ -43,9 +89,21 @@
       "heading": "The right support for where you are on your journey.",
       "intro": "Every business is different. We tailor our support to your stage, challenges and opportunities.",
       "items": [
-        { "title": "For Startups", "body": "Find the market, sharpen your proposition and build a repeatable GTM motion.", "href": "/fractional-cmo/for-startups" },
-        { "title": "For Scale-ups", "body": "Reignite growth, align your teams and scale what works.", "href": "/fractional-cmo/for-scale-ups" },
-        { "title": "For UK Businesses", "body": "Fractional CMO support for UK organisations that need senior marketing leadership.", "href": "/fractional-cmo/uk" }
+        {
+          "title": "For Startups",
+          "body": "Find the market, sharpen your proposition and build a repeatable GTM motion.",
+          "href": "/fractional-cmo/for-startups"
+        },
+        {
+          "title": "For Scale-ups",
+          "body": "Reignite growth, align your teams and scale what works.",
+          "href": "/fractional-cmo/for-scale-ups"
+        },
+        {
+          "title": "For UK Businesses",
+          "body": "Fractional CMO support for UK organisations that need senior marketing leadership.",
+          "href": "/fractional-cmo/uk"
+        }
       ]
     },
     {
@@ -57,10 +115,26 @@
       "heading": "You have the ambition. But need senior marketing leadership to make it happen.",
       "intro": "We work with founders and leadership teams who know what they want to achieve, but need an experienced operator to set the strategy, align the teams and drive execution.",
       "items": [
-        { "icon": "chart", "title": "Growth has slowed", "body": "You are not seeing the pipeline or revenue growth you expected." },
-        { "icon": "database", "title": "Marketing isn't driving results", "body": "Spend is increasing, but it is not translating into pipeline." },
-        { "icon": "people", "title": "Teams are misaligned", "body": "Product, marketing and sales are pulling in different directions." },
-        { "icon": "clock", "title": "Execution is too slow", "body": "Key initiatives take months, not weeks." }
+        {
+          "icon": "chart",
+          "title": "Growth has slowed",
+          "body": "You are not seeing the pipeline or revenue growth you expected."
+        },
+        {
+          "icon": "database",
+          "title": "Marketing isn't driving results",
+          "body": "Spend is increasing, but it is not translating into pipeline."
+        },
+        {
+          "icon": "people",
+          "title": "Teams are misaligned",
+          "body": "Product, marketing and sales are pulling in different directions."
+        },
+        {
+          "icon": "clock",
+          "title": "Execution is too slow",
+          "body": "Key initiatives take months, not weeks."
+        }
       ]
     },
     {
@@ -71,23 +145,84 @@
       "heading": "From strategy to execution.",
       "intro": "We work as an extension of your team, owning the marketing function that moves your business forward.",
       "items": [
-        { "icon": "target", "title": "GTM Strategy", "points": ["ICP and positioning", "Market and competitor insight", "Messaging and value proposition", "Go-to-market planning"] },
-        { "icon": "chart", "title": "Demand Generation", "points": ["Campaign strategy and delivery", "Content and thought leadership", "Outbound and ABM", "Pipeline and performance"] },
-        { "icon": "box", "title": "Product Marketing", "points": ["Product GTM and launch delivery", "Customer and market insight", "Sales enablement", "Usage and adoption campaigns"] },
-        { "icon": "workflow", "title": "Operational AI", "points": ["Practical AI implementation", "Workflow automation", "Reporting and dashboards", "AI in marketing and GTM"] }
+        {
+          "icon": "target",
+          "title": "GTM Strategy",
+          "points": [
+            "ICP and positioning",
+            "Market and competitor insight",
+            "Messaging and value proposition",
+            "Go-to-market planning"
+          ]
+        },
+        {
+          "icon": "chart",
+          "title": "Demand Generation",
+          "points": [
+            "Campaign strategy and delivery",
+            "Content and thought leadership",
+            "Outbound and ABM",
+            "Pipeline and performance"
+          ]
+        },
+        {
+          "icon": "box",
+          "title": "Product Marketing",
+          "points": [
+            "Product GTM and launch delivery",
+            "Customer and market insight",
+            "Sales enablement",
+            "Usage and adoption campaigns"
+          ]
+        },
+        {
+          "icon": "workflow",
+          "title": "Operational AI",
+          "points": [
+            "Practical AI implementation",
+            "Workflow automation",
+            "Reporting and dashboards",
+            "AI in marketing and GTM"
+          ]
+        }
       ]
     },
     {
       "id": "approach",
-      "type": "stepper",
-      "style": "circles",
+      "type": "stages",
       "eyebrow": "Our approach",
       "heading": "From insight to impact.",
       "intro": "No frameworks. No 40-slide decks. Work moves forward every week.",
-      "steps": [
-        { "title": "Insight", "accent": "cyan", "points": ["Understand your goals", "Find out what is actually going on", "Identify the biggest opportunities"] },
-        { "title": "Momentum", "accent": "blue", "points": ["Set a clear plan and priorities", "Get the right initiatives moving", "Align your teams", "Remove blockers"] },
-        { "title": "Impact", "accent": "pink", "points": ["Measure what works", "Optimise and scale", "Keep the momentum going", "Deliver commercial outcomes"] }
+      "items": [
+        {
+          "name": "Insight",
+          "accent": "cyan",
+          "points": [
+            "Understand your goals",
+            "Find out what is actually going on",
+            "Identify the biggest opportunities"
+          ]
+        },
+        {
+          "name": "Momentum",
+          "accent": "blue",
+          "points": [
+            "Set a clear plan and priorities",
+            "Get the right initiatives moving",
+            "Align your teams",
+            "Remove blockers"
+          ]
+        },
+        {
+          "name": "Impact",
+          "accent": "pink",
+          "points": [
+            "Measure what works",
+            "Optimise and scale",
+            "Keep the momentum going",
+            "Deliver commercial outcomes"
+          ]
+        }
       ]
     },
     {
@@ -97,10 +232,30 @@
       "heading": "Real results from real businesses.",
       "intro": "We have led marketing and GTM at global and mid-market businesses, including Vodafone Business, ADI Global, Distrelec and Travis Perkins. From new markets and product launches to scaling demand generation and reducing run costs, we focus on commercial outcomes, not vanity metrics.",
       "stats": [
-        { "value": "3x", "label": "Increase in qualified pipeline", "context": "B2B technology scale-up", "evidence": "verified" },
-        { "value": "60%", "label": "Reduction in CAC", "context": "B2B cybersecurity business", "evidence": "verified" },
-        { "value": "10", "label": "Markets launched", "context": "Vodafone Business V-Hub", "evidence": "verified" },
-        { "value": "£690k", "label": "Annual savings", "context": "Through AI and automation", "evidence": "verified" }
+        {
+          "value": "3x",
+          "label": "Increase in qualified pipeline",
+          "context": "B2B technology scale-up",
+          "evidence": "verified"
+        },
+        {
+          "value": "60%",
+          "label": "Reduction in CAC",
+          "context": "B2B cybersecurity business",
+          "evidence": "verified"
+        },
+        {
+          "value": "10",
+          "label": "Markets launched",
+          "context": "Vodafone Business V-Hub",
+          "evidence": "verified"
+        },
+        {
+          "value": "£690k",
+          "label": "Annual savings",
+          "context": "Through AI and automation",
+          "evidence": "verified"
+        }
       ]
     },
     {
@@ -109,16 +264,58 @@
       "eyebrow": "Fractional CMO vs alternatives",
       "heading": "A more flexible way to get senior marketing leadership.",
       "columns": [
-        { "title": "Fractional CMO (CommView)", "highlight": true },
-        { "title": "Full-time CMO" },
-        { "title": "Agency" }
+        {
+          "title": "Fractional CMO (CommView)",
+          "highlight": true
+        },
+        {
+          "title": "Full-time CMO"
+        },
+        {
+          "title": "Agency"
+        }
       ],
       "rows": [
-        { "label": "Strategic leadership", "cells": ["yes", "yes", "partial"] },
-        { "label": "Hands-on execution", "cells": ["yes", "partial", "yes"] },
-        { "label": "Commercial focus", "cells": ["yes", "partial", "partial"] },
-        { "label": "Flexible and scalable", "cells": ["yes", "partial", "yes"] },
-        { "label": "Lower cost and lower risk", "cells": ["yes", "no", "no"] }
+        {
+          "label": "Strategic leadership",
+          "cells": [
+            "yes",
+            "yes",
+            "partial"
+          ]
+        },
+        {
+          "label": "Hands-on execution",
+          "cells": [
+            "yes",
+            "partial",
+            "yes"
+          ]
+        },
+        {
+          "label": "Commercial focus",
+          "cells": [
+            "yes",
+            "partial",
+            "partial"
+          ]
+        },
+        {
+          "label": "Flexible and scalable",
+          "cells": [
+            "yes",
+            "partial",
+            "yes"
+          ]
+        },
+        {
+          "label": "Lower cost and lower risk",
+          "cells": [
+            "yes",
+            "no",
+            "no"
+          ]
+        }
       ]
     },
     {
@@ -128,12 +325,30 @@
       "eyebrow": "Frequently asked questions",
       "heading": "Common questions.",
       "items": [
-        { "q": "What is a fractional CMO?", "a": "A fractional CMO gives a business access to senior marketing leadership for part of the time and for as long as the role is useful. The work can include positioning, ICP, go-to-market strategy, demand generation, pipeline, measurement and sales alignment. Sometimes the problem sits inside marketing; sometimes marketing is where a product, proposition or operating problem becomes visible." },
-        { "q": "How is a fractional CMO different from an agency?", "a": "An agency usually delivers a defined scope of work. A fractional CMO takes senior responsibility for the commercial marketing decisions and stays accountable for joining the work together, bringing the right specialist operators around the problem where they are needed rather than delivering a single service." },
-        { "q": "When does a fractional CMO make sense?", "a": "When the business needs CMO-level decisions now but does not yet need, or is not yet ready for, a permanent executive. That often applies when founders are still carrying senior marketing decisions, when growth has slowed and more activity is not fixing it, or when GTM investment is increasing without enough confidence in where it should go." },
-        { "q": "What does CommView typically work on?", "a": "Engagements are shaped around the business problem rather than a generic list. Depending on the situation we can own positioning and ICP, go-to-market, growth and demand, pipeline and sales alignment, measurement and investment, and the team and operating rhythm." },
-        { "q": "Can you work with our existing team?", "a": "Yes. We give internal teams and specialist partners clearer priorities, decisions and accountability, and bring in specialist operators across GTM, Growth, Product and Operational AI where the problem requires them, rather than replacing good people." },
-        { "q": "How long do engagements usually last?", "a": "It depends on the problem and the stage. The objective is not to keep a fractional role forever. It is to give the business the leadership it needs for the stage it is in, and to agree the scope and expected outcomes before the work starts." }
+        {
+          "q": "What is a fractional CMO?",
+          "a": "A fractional CMO gives a business access to senior marketing leadership for part of the time and for as long as the role is useful. The work can include positioning, ICP, go-to-market strategy, demand generation, pipeline, measurement and sales alignment. Sometimes the problem sits inside marketing; sometimes marketing is where a product, proposition or operating problem becomes visible."
+        },
+        {
+          "q": "How is a fractional CMO different from an agency?",
+          "a": "An agency usually delivers a defined scope of work. A fractional CMO takes senior responsibility for the commercial marketing decisions and stays accountable for joining the work together, bringing the right specialist operators around the problem where they are needed rather than delivering a single service."
+        },
+        {
+          "q": "When does a fractional CMO make sense?",
+          "a": "When the business needs CMO-level decisions now but does not yet need, or is not yet ready for, a permanent executive. That often applies when founders are still carrying senior marketing decisions, when growth has slowed and more activity is not fixing it, or when GTM investment is increasing without enough confidence in where it should go."
+        },
+        {
+          "q": "What does CommView typically work on?",
+          "a": "Engagements are shaped around the business problem rather than a generic list. Depending on the situation we can own positioning and ICP, go-to-market, growth and demand, pipeline and sales alignment, measurement and investment, and the team and operating rhythm."
+        },
+        {
+          "q": "Can you work with our existing team?",
+          "a": "Yes. We give internal teams and specialist partners clearer priorities, decisions and accountability, and bring in specialist operators across GTM, Growth, Product and Operational AI where the problem requires them, rather than replacing good people."
+        },
+        {
+          "q": "How long do engagements usually last?",
+          "a": "It depends on the problem and the stage. The objective is not to keep a fractional role forever. It is to give the business the leadership it needs for the stage it is in, and to agree the scope and expected outcomes before the work starts."
+        }
       ]
     },
     {
@@ -143,8 +358,16 @@
       "heading": "Senior marketing leadership, shaped around your problem.",
       "body": "Tell us what is getting in the way and we will work out what the engagement needs.",
       "ctas": [
-        { "label": "Talk to us", "href": "/contact", "style": "primary" },
-        { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        },
+        {
+          "label": "See how we work",
+          "href": "/how-we-work",
+          "style": "ghost"
+        }
       ]
     }
   ]

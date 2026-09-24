@@ -6,25 +6,55 @@
     "title": "Fractional CMO for Startups | CommView",
     "description": "Fractional CMO services for funded startups. Get senior marketing leadership without a full-time hire. Positioning, GTM and first pipeline.",
     "primaryKeyword": "fractional cmo for startups",
-    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
     "breadcrumb": [
-      { "name": "Home", "href": "/" },
-      { "name": "Fractional CMO", "href": "/fractional-cmo" },
-      { "name": "For Startups" }
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Fractional CMO",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "For Startups"
+      }
     ],
     "internalLinks": [
-      { "href": "/fractional-cmo", "purpose": "parent" },
-      { "href": "/contact", "purpose": "cta" }
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
     ]
   },
   "hero": {
     "eyebrow": "Fractional CMO for startups",
-    "h1": ["Find the market.", "Sharpen the proposition.", "Build momentum."],
+    "h1": [
+      "Find the market.",
+      "Sharpen the proposition.",
+      "Build momentum."
+    ],
     "accentLine": 2,
     "sub": "Fractional CMO support for early-stage and growth-stage startups. Get senior marketing leadership to define your GTM, build demand and create a repeatable growth engine.",
     "ctas": [
-      { "label": "Talk to us", "href": "/contact", "style": "primary" },
-      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      },
+      {
+        "label": "See how we work",
+        "href": "/how-we-work",
+        "style": "ghost"
+      }
     ],
     "diagram": {
       "kind": "signal",
@@ -46,10 +76,26 @@
       "heading": "You've got a great product. Now you need customers.",
       "intro": "Startups often have a strong product but unclear positioning, limited demand and no repeatable GTM motion. We help you turn potential into traction.",
       "items": [
-        { "icon": "target", "title": "Unclear positioning", "body": "It's hard to stand out in a crowded market." },
-        { "icon": "people", "title": "Limited demand", "body": "You're not generating enough qualified pipeline." },
-        { "icon": "workflow", "title": "No repeatable GTM", "body": "Marketing relies on ad-hoc activity." },
-        { "icon": "chart", "title": "Competing priorities", "body": "Product, fundraising and customers all demand attention." }
+        {
+          "icon": "target",
+          "title": "Unclear positioning",
+          "body": "It's hard to stand out in a crowded market."
+        },
+        {
+          "icon": "people",
+          "title": "Limited demand",
+          "body": "You're not generating enough qualified pipeline."
+        },
+        {
+          "icon": "workflow",
+          "title": "No repeatable GTM",
+          "body": "Marketing relies on ad-hoc activity."
+        },
+        {
+          "icon": "chart",
+          "title": "Competing priorities",
+          "body": "Product, fundraising and customers all demand attention."
+        }
       ]
     },
     {
@@ -61,23 +107,64 @@
       "heading": "Senior marketing leadership without the full-time hire.",
       "intro": "We plug in as your fractional CMO, working alongside you and your team to set the strategy, build the plan and drive execution.",
       "items": [
-        { "icon": "bulb", "title": "GTM strategy", "body": "ICP, positioning, messaging and channel strategy." },
-        { "icon": "chart", "title": "Demand generation", "body": "Campaign planning, content and outbound." },
-        { "icon": "workflow", "title": "Execution support", "body": "Hands-on support to get initiatives moving." },
-        { "icon": "database", "title": "Scalable systems", "body": "Tools, processes and reporting to drive consistent results." }
+        {
+          "icon": "bulb",
+          "title": "GTM strategy",
+          "body": "ICP, positioning, messaging and channel strategy."
+        },
+        {
+          "icon": "chart",
+          "title": "Demand generation",
+          "body": "Campaign planning, content and outbound."
+        },
+        {
+          "icon": "workflow",
+          "title": "Execution support",
+          "body": "Hands-on support to get initiatives moving."
+        },
+        {
+          "icon": "database",
+          "title": "Scalable systems",
+          "body": "Tools, processes and reporting to drive consistent results."
+        }
       ]
     },
     {
       "id": "approach",
-      "type": "stepper",
-      "style": "circles",
+      "type": "stages",
       "eyebrow": "Our approach",
       "heading": "From insight to traction.",
       "intro": "A practical, hands-on approach designed for startup speed.",
-      "steps": [
-        { "title": "Insight", "accent": "cyan", "points": ["Understand your market and customers", "Assess what's working", "Identify the biggest opportunities"] },
-        { "title": "Momentum", "accent": "blue", "points": ["Set a clear plan and priorities", "Get key initiatives moving", "Align your team", "Remove blockers"] },
-        { "title": "Impact", "accent": "pink", "points": ["Generate and convert pipeline", "Prove what's working", "Optimise and scale", "Build a repeatable growth engine"] }
+      "items": [
+        {
+          "name": "Insight",
+          "accent": "cyan",
+          "points": [
+            "Understand your market and customers",
+            "Assess what's working",
+            "Identify the biggest opportunities"
+          ]
+        },
+        {
+          "name": "Momentum",
+          "accent": "blue",
+          "points": [
+            "Set a clear plan and priorities",
+            "Get key initiatives moving",
+            "Align your team",
+            "Remove blockers"
+          ]
+        },
+        {
+          "name": "Impact",
+          "accent": "pink",
+          "points": [
+            "Generate and convert pipeline",
+            "Prove what's working",
+            "Optimise and scale",
+            "Build a repeatable growth engine"
+          ]
+        }
       ]
     },
     {
@@ -88,10 +175,26 @@
       "eyebrow": "Typical use cases",
       "heading": "How we help startups grow.",
       "items": [
-        { "icon": "box", "title": "Launch a new product or feature", "body": "End-to-end GTM planning and execution." },
-        { "icon": "people", "title": "Enter a new market", "body": "Research, positioning and localised campaigns." },
-        { "icon": "target", "title": "Build demand from scratch", "body": "Content, outbound and ABM." },
-        { "icon": "chart", "title": "Prepare for fundraising", "body": "Compelling positioning, traction metrics and an investor-ready story." }
+        {
+          "icon": "box",
+          "title": "Launch a new product or feature",
+          "body": "End-to-end GTM planning and execution."
+        },
+        {
+          "icon": "people",
+          "title": "Enter a new market",
+          "body": "Research, positioning and localised campaigns."
+        },
+        {
+          "icon": "target",
+          "title": "Build demand from scratch",
+          "body": "Content, outbound and ABM."
+        },
+        {
+          "icon": "chart",
+          "title": "Prepare for fundraising",
+          "body": "Compelling positioning, traction metrics and an investor-ready story."
+        }
       ]
     },
     {
@@ -101,10 +204,30 @@
       "heading": "Early traction. Stronger pipeline. Scalable growth.",
       "intro": "We have helped startups turn strategy into measurable results, from first pipeline to scaling demand across new markets.",
       "stats": [
-        { "value": "3x", "label": "Increase in qualified pipeline", "context": "B2B technology scale-up", "evidence": "verified" },
-        { "value": "10", "label": "Markets launched", "context": "Vodafone Business V-Hub", "evidence": "verified" },
-        { "value": "60%", "label": "Reduction in CAC", "context": "B2B cybersecurity business", "evidence": "verified" },
-        { "value": "£690k", "label": "Annual savings", "context": "Through AI and automation", "evidence": "verified" }
+        {
+          "value": "3x",
+          "label": "Increase in qualified pipeline",
+          "context": "B2B technology scale-up",
+          "evidence": "verified"
+        },
+        {
+          "value": "10",
+          "label": "Markets launched",
+          "context": "Vodafone Business V-Hub",
+          "evidence": "verified"
+        },
+        {
+          "value": "60%",
+          "label": "Reduction in CAC",
+          "context": "B2B cybersecurity business",
+          "evidence": "verified"
+        },
+        {
+          "value": "£690k",
+          "label": "Annual savings",
+          "context": "Through AI and automation",
+          "evidence": "verified"
+        }
       ]
     },
     {
@@ -114,8 +237,14 @@
       "eyebrow": "Frequently asked questions",
       "heading": "Common questions.",
       "items": [
-        { "q": "How much runway do I need to hire a fractional CMO?", "a": "There is no sensible universal runway figure. You need enough runway to act on the decisions the engagement produces, not just pay for advice. If the business cannot fund any meaningful GTM activity afterwards, senior marketing leadership alone will not solve the constraint. We will say that before recommending an engagement." },
-        { "q": "Should I hire a full-time head of marketing instead?", "a": "Hire full-time when the role is clear, the workload is persistent and the business can support the right level of person. A fractional CMO makes more sense when you need senior judgement now, the model is still evolving, or an existing team needs leadership before you know what permanent structure to build." }
+        {
+          "q": "How much runway do I need to hire a fractional CMO?",
+          "a": "There is no sensible universal runway figure. You need enough runway to act on the decisions the engagement produces, not just pay for advice. If the business cannot fund any meaningful GTM activity afterwards, senior marketing leadership alone will not solve the constraint. We will say that before recommending an engagement."
+        },
+        {
+          "q": "Should I hire a full-time head of marketing instead?",
+          "a": "Hire full-time when the role is clear, the workload is persistent and the business can support the right level of person. A fractional CMO makes more sense when you need senior judgement now, the model is still evolving, or an existing team needs leadership before you know what permanent structure to build."
+        }
       ]
     },
     {
@@ -125,8 +254,16 @@
       "heading": "Start with the GTM problem.",
       "body": "If you are trying to work out what should happen next, tell us where growth, positioning or pipeline is getting stuck.",
       "ctas": [
-        { "label": "Talk to us", "href": "/contact", "style": "primary" },
-        { "label": "Explore Fractional CMO", "href": "/fractional-cmo", "style": "ghost" }
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        },
+        {
+          "label": "Explore Fractional CMO",
+          "href": "/fractional-cmo",
+          "style": "ghost"
+        }
       ]
     }
   ]

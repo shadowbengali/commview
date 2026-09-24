@@ -140,6 +140,11 @@
             "steps": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "object", "additionalProperties": false, "required": ["title"], "properties": { "title": { "type": "string" }, "body": { "type": "string" }, "points": { "type": "array", "items": { "type": "string" } }, "icon": { "type": "string" }, "accent": { "enum": ["cyan", "green", "blue", "pink"] } } } } },
           "unevaluatedProperties": false },
 
+        { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["items"],
+          "properties": { "type": { "const": "stages" },
+            "items": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "type": "object", "additionalProperties": false, "required": ["name"], "properties": { "name": { "type": "string" }, "accent": { "enum": ["cyan", "green", "blue", "pink"] }, "lead": { "type": "string" }, "body": { "type": "string" }, "points": { "type": "array", "items": { "type": "string" } }, "pull": { "type": "string" } } } } },
+          "unevaluatedProperties": false },
+
         { "allOf": [{ "$ref": "#/$defs/baseSection" }], "required": ["heading", "steps", "decision", "body"],
           "properties": { "type": { "const": "aiflow" },
             "accent": { "type": "string" },

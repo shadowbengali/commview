@@ -6,30 +6,70 @@
     "title": "Fractional CMO for B2B Scale-ups | CommView",
     "description": "Fractional CMO for B2B scale-ups. Unlock the next growth phase with senior leadership across positioning, GTM, pipeline and operating rhythm.",
     "primaryKeyword": "fractional cmo for scale-ups",
-    "secondaryKeywords": ["fractional cmo scale-up", "b2b scale-up marketing leadership", "scale-up gtm strategy"],
-    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "secondaryKeywords": [
+      "fractional cmo scale-up",
+      "b2b scale-up marketing leadership",
+      "scale-up gtm strategy"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
     "breadcrumb": [
-      { "name": "Home", "href": "/" },
-      { "name": "Fractional CMO", "href": "/fractional-cmo" },
-      { "name": "For Scale-ups" }
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Fractional CMO",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "For Scale-ups"
+      }
     ],
     "internalLinks": [
-      { "href": "/fractional-cmo", "purpose": "parent" },
-      { "href": "/contact", "purpose": "cta" }
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
     ]
   },
   "hero": {
     "eyebrow": "Fractional CMO for scale-ups",
-    "h1": ["Reignite growth.", "Align your teams.", "Move to the next stage."],
+    "h1": [
+      "Reignite growth.",
+      "Align your teams.",
+      "Move to the next stage."
+    ],
     "accentLine": 2,
     "sub": "Fractional CMO support for B2B scale-ups that have product-market fit but need senior marketing leadership to drive the next stage of growth.",
     "ctas": [
-      { "label": "Talk to us", "href": "/contact", "style": "primary" },
-      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      },
+      {
+        "label": "See how we work",
+        "href": "/how-we-work",
+        "style": "ghost"
+      }
     ],
     "diagram": {
       "kind": "signal",
-      "points": ["Rebuild demand generation", "Align product, marketing and sales", "Improve pipeline and conversion", "Scale marketing operations", "Drive measurable growth"]
+      "points": [
+        "Rebuild demand generation",
+        "Align product, marketing and sales",
+        "Improve pipeline and conversion",
+        "Scale marketing operations",
+        "Drive measurable growth"
+      ]
     }
   },
   "sections": [
@@ -41,10 +81,26 @@
       "heading": "You've made progress. Now growth has flattened.",
       "intro": "You have a strong product, customers and revenue. But growth is slower, competition is stronger and GTM is more complex. You need clearer focus, better execution and senior marketing leadership to get to the next stage.",
       "items": [
-        { "icon": "chart", "title": "Growth has slowed", "body": "Pipeline and revenue are not growing as expected." },
-        { "icon": "database", "title": "GTM has become complex", "body": "More channels, markets and stakeholders." },
-        { "icon": "people", "title": "Teams are misaligned", "body": "Product, marketing and sales are pulling in different directions." },
-        { "icon": "clock", "title": "Marketing isn't delivering", "body": "Spend is increasing but results are unclear or inconsistent." }
+        {
+          "icon": "chart",
+          "title": "Growth has slowed",
+          "body": "Pipeline and revenue are not growing as expected."
+        },
+        {
+          "icon": "database",
+          "title": "GTM has become complex",
+          "body": "More channels, markets and stakeholders."
+        },
+        {
+          "icon": "people",
+          "title": "Teams are misaligned",
+          "body": "Product, marketing and sales are pulling in different directions."
+        },
+        {
+          "icon": "clock",
+          "title": "Marketing isn't delivering",
+          "body": "Spend is increasing but results are unclear or inconsistent."
+        }
       ]
     },
     {
@@ -56,23 +112,64 @@
       "heading": "Experienced marketing leadership to unlock your next stage of growth.",
       "intro": "We work as an extension of your leadership team, setting the strategy, aligning your teams and driving execution across demand, product marketing, content and operations.",
       "items": [
-        { "icon": "target", "title": "GTM strategy", "body": "ICP, positioning, messaging and market expansion." },
-        { "icon": "chart", "title": "Demand generation", "body": "Campaign strategy, content, ABM and channel optimisation." },
-        { "icon": "workflow", "title": "Execution support", "body": "Hands-on leadership to get initiatives moving." },
-        { "icon": "database", "title": "Marketing operations", "body": "Tools, processes, reporting and AI implementation." }
+        {
+          "icon": "target",
+          "title": "GTM strategy",
+          "body": "ICP, positioning, messaging and market expansion."
+        },
+        {
+          "icon": "chart",
+          "title": "Demand generation",
+          "body": "Campaign strategy, content, ABM and channel optimisation."
+        },
+        {
+          "icon": "workflow",
+          "title": "Execution support",
+          "body": "Hands-on leadership to get initiatives moving."
+        },
+        {
+          "icon": "database",
+          "title": "Marketing operations",
+          "body": "Tools, processes, reporting and AI implementation."
+        }
       ]
     },
     {
       "id": "approach",
-      "type": "stepper",
-      "style": "circles",
+      "type": "stages",
       "eyebrow": "Our approach",
       "heading": "From insight to impact.",
       "intro": "A practical, hands-on approach designed for scale-up speed.",
-      "steps": [
-        { "title": "Insight", "accent": "cyan", "points": ["Understand your market, customers and growth blockers", "Assess what's working and not", "Identify the biggest opportunities"] },
-        { "title": "Momentum", "accent": "blue", "points": ["Set a clear plan and priorities", "Get key initiatives moving", "Align your teams", "Remove blockers"] },
-        { "title": "Impact", "accent": "pink", "points": ["Measure what works", "Optimise and scale", "Keep the momentum going", "Deliver commercial outcomes"] }
+      "items": [
+        {
+          "name": "Insight",
+          "accent": "cyan",
+          "points": [
+            "Understand your market, customers and growth blockers",
+            "Assess what's working and not",
+            "Identify the biggest opportunities"
+          ]
+        },
+        {
+          "name": "Momentum",
+          "accent": "blue",
+          "points": [
+            "Set a clear plan and priorities",
+            "Get key initiatives moving",
+            "Align your teams",
+            "Remove blockers"
+          ]
+        },
+        {
+          "name": "Impact",
+          "accent": "pink",
+          "points": [
+            "Measure what works",
+            "Optimise and scale",
+            "Keep the momentum going",
+            "Deliver commercial outcomes"
+          ]
+        }
       ]
     },
     {
@@ -83,10 +180,26 @@
       "eyebrow": "Typical use cases",
       "heading": "Where we help scale-ups most.",
       "items": [
-        { "icon": "box", "title": "Enter new markets", "body": "Research, positioning and campaigns." },
-        { "icon": "chart", "title": "Rebuild demand generation", "body": "Content, outbound, ABM and paid." },
-        { "icon": "layers", "title": "Launch new products or features", "body": "GTM planning and execution." },
-        { "icon": "people", "title": "Prepare for the next stage of growth", "body": "Organisational alignment and scalable systems." }
+        {
+          "icon": "box",
+          "title": "Enter new markets",
+          "body": "Research, positioning and campaigns."
+        },
+        {
+          "icon": "chart",
+          "title": "Rebuild demand generation",
+          "body": "Content, outbound, ABM and paid."
+        },
+        {
+          "icon": "layers",
+          "title": "Launch new products or features",
+          "body": "GTM planning and execution."
+        },
+        {
+          "icon": "people",
+          "title": "Prepare for the next stage of growth",
+          "body": "Organisational alignment and scalable systems."
+        }
       ]
     },
     {
@@ -96,10 +209,30 @@
       "heading": "Real impact for B2B scale-ups.",
       "intro": "We have helped scale-ups across the UK and Europe build demand, enter new markets and improve pipeline and conversion through clearer positioning, better execution and smarter use of AI and automation.",
       "stats": [
-        { "value": "3x", "label": "Increase in qualified pipeline", "context": "B2B technology scale-up", "evidence": "verified" },
-        { "value": "60%", "label": "Reduction in CAC", "context": "B2B cybersecurity business", "evidence": "verified" },
-        { "value": "10", "label": "Markets launched", "context": "Vodafone Business V-Hub", "evidence": "verified" },
-        { "value": "£690k", "label": "Annual savings", "context": "Through AI and automation", "evidence": "verified" }
+        {
+          "value": "3x",
+          "label": "Increase in qualified pipeline",
+          "context": "B2B technology scale-up",
+          "evidence": "verified"
+        },
+        {
+          "value": "60%",
+          "label": "Reduction in CAC",
+          "context": "B2B cybersecurity business",
+          "evidence": "verified"
+        },
+        {
+          "value": "10",
+          "label": "Markets launched",
+          "context": "Vodafone Business V-Hub",
+          "evidence": "verified"
+        },
+        {
+          "value": "£690k",
+          "label": "Annual savings",
+          "context": "Through AI and automation",
+          "evidence": "verified"
+        }
       ]
     },
     {
@@ -108,16 +241,58 @@
       "eyebrow": "Fractional CMO vs alternatives",
       "heading": "A more flexible way to get senior marketing leadership.",
       "columns": [
-        { "title": "Fractional CMO (CommView)", "highlight": true },
-        { "title": "Full-time CMO" },
-        { "title": "Agency" }
+        {
+          "title": "Fractional CMO (CommView)",
+          "highlight": true
+        },
+        {
+          "title": "Full-time CMO"
+        },
+        {
+          "title": "Agency"
+        }
       ],
       "rows": [
-        { "label": "Strategic leadership", "cells": ["yes", "yes", "partial"] },
-        { "label": "Hands-on execution", "cells": ["yes", "partial", "yes"] },
-        { "label": "Commercial focus", "cells": ["yes", "partial", "partial"] },
-        { "label": "Flexible and scalable", "cells": ["yes", "partial", "yes"] },
-        { "label": "Lower cost and lower risk", "cells": ["yes", "no", "no"] }
+        {
+          "label": "Strategic leadership",
+          "cells": [
+            "yes",
+            "yes",
+            "partial"
+          ]
+        },
+        {
+          "label": "Hands-on execution",
+          "cells": [
+            "yes",
+            "partial",
+            "yes"
+          ]
+        },
+        {
+          "label": "Commercial focus",
+          "cells": [
+            "yes",
+            "partial",
+            "partial"
+          ]
+        },
+        {
+          "label": "Flexible and scalable",
+          "cells": [
+            "yes",
+            "partial",
+            "yes"
+          ]
+        },
+        {
+          "label": "Lower cost and lower risk",
+          "cells": [
+            "yes",
+            "no",
+            "no"
+          ]
+        }
       ]
     },
     {
@@ -127,9 +302,18 @@
       "eyebrow": "Frequently asked questions",
       "heading": "Common questions.",
       "items": [
-        { "q": "At what ARR does a scale-up typically need a fractional CMO?", "a": "ARR alone is a poor trigger. The stronger signal is that GTM decisions have become strategically important, the existing team needs senior leadership, and a permanent CMO is either premature or unnecessarily rigid. A scale-up can reach that point at very different revenue levels depending on market, sales motion and team." },
-        { "q": "Fractional CMO or promoting our existing marketing lead?", "a": "Promote the internal lead when they are ready to own the strategic, commercial and organisational parts of the role, not simply because they know the company. A fractional CMO can also work alongside that person, giving them support and experience while the business tests what the senior role actually needs to become." },
-        { "q": "How long does a typical scale-up engagement last?", "a": "It depends on the constraint. A focused GTM problem can be addressed over a shorter engagement, while embedded leadership usually lasts longer because decisions, execution and measurement need to run through several cycles. We define the outcome and working rhythm first rather than selling a fixed-duration fractional CMO package." }
+        {
+          "q": "At what ARR does a scale-up typically need a fractional CMO?",
+          "a": "ARR alone is a poor trigger. The stronger signal is that GTM decisions have become strategically important, the existing team needs senior leadership, and a permanent CMO is either premature or unnecessarily rigid. A scale-up can reach that point at very different revenue levels depending on market, sales motion and team."
+        },
+        {
+          "q": "Fractional CMO or promoting our existing marketing lead?",
+          "a": "Promote the internal lead when they are ready to own the strategic, commercial and organisational parts of the role, not simply because they know the company. A fractional CMO can also work alongside that person, giving them support and experience while the business tests what the senior role actually needs to become."
+        },
+        {
+          "q": "How long does a typical scale-up engagement last?",
+          "a": "It depends on the constraint. A focused GTM problem can be addressed over a shorter engagement, while embedded leadership usually lasts longer because decisions, execution and measurement need to run through several cycles. We define the outcome and working rhythm first rather than selling a fixed-duration fractional CMO package."
+        }
       ]
     },
     {
@@ -139,8 +323,16 @@
       "heading": "Find the constraint before adding more marketing.",
       "body": "If growth has flattened, start with what is actually happening rather than another campaign.",
       "ctas": [
-        { "label": "Talk to us", "href": "/contact", "style": "primary" },
-        { "label": "Explore Fractional CMO", "href": "/fractional-cmo", "style": "ghost" }
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        },
+        {
+          "label": "Explore Fractional CMO",
+          "href": "/fractional-cmo",
+          "style": "ghost"
+        }
       ]
     }
   ]

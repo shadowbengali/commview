@@ -6,30 +6,70 @@
     "title": "Fractional CMO UK | Manchester-Based | CommView",
     "description": "UK-based fractional CMO for B2B scale-ups. Manchester-based, working with businesses across the UK and internationally on GTM, growth and pipeline.",
     "primaryKeyword": "fractional cmo uk",
-    "secondaryKeywords": ["uk fractional cmo", "fractional cmo manchester", "fractional cmo london"],
-    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "secondaryKeywords": [
+      "uk fractional cmo",
+      "fractional cmo manchester",
+      "fractional cmo london"
+    ],
+    "schemaTypes": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
     "breadcrumb": [
-      { "name": "Home", "href": "/" },
-      { "name": "Fractional CMO", "href": "/fractional-cmo" },
-      { "name": "UK" }
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Fractional CMO",
+        "href": "/fractional-cmo"
+      },
+      {
+        "name": "UK"
+      }
     ],
     "internalLinks": [
-      { "href": "/fractional-cmo", "purpose": "parent" },
-      { "href": "/contact", "purpose": "cta" }
+      {
+        "href": "/fractional-cmo",
+        "purpose": "parent"
+      },
+      {
+        "href": "/contact",
+        "purpose": "cta"
+      }
     ]
   },
   "hero": {
     "eyebrow": "Fractional CMO in the UK",
-    "h1": ["Senior marketing leadership for UK businesses.", "Practical. Flexible.", "Results-driven."],
+    "h1": [
+      "Senior marketing leadership for UK businesses.",
+      "Practical. Flexible.",
+      "Results-driven."
+    ],
     "accentLine": 2,
     "sub": "Fractional CMO support for UK organisations that need experienced marketing leadership without the cost or commitment of a full-time CMO.",
     "ctas": [
-      { "label": "Talk to us", "href": "/contact", "style": "primary" },
-      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+      {
+        "label": "Talk to us",
+        "href": "/contact",
+        "style": "primary"
+      },
+      {
+        "label": "See how we work",
+        "href": "/how-we-work",
+        "style": "ghost"
+      }
     ],
     "diagram": {
       "kind": "signal",
-      "points": ["Local market expertise", "UK-focused GTM strategies", "Hands-on execution support", "Flexible and scalable engagements", "Measurable commercial outcomes"]
+      "points": [
+        "Local market expertise",
+        "UK-focused GTM strategies",
+        "Hands-on execution support",
+        "Flexible and scalable engagements",
+        "Measurable commercial outcomes"
+      ]
     }
   },
   "sections": [
@@ -41,10 +81,26 @@
       "heading": "Local expertise. Global experience.",
       "intro": "We work with UK B2B companies from high-growth startups to established scale-ups, bringing global experience and local market understanding to define strategy, align teams and deliver measurable growth.",
       "items": [
-        { "icon": "target", "title": "UK market focus", "body": "Local market knowledge and buyer understanding." },
-        { "icon": "chart", "title": "Proven B2B experience", "body": "Sectors across technology, professional services and industrial markets." },
-        { "icon": "refresh", "title": "Flexible engagement", "body": "Part-time, project-based or ongoing support." },
-        { "icon": "doc", "title": "Practical and hands-on", "body": "Strategy and execution, not just advice." }
+        {
+          "icon": "target",
+          "title": "UK market focus",
+          "body": "Local market knowledge and buyer understanding."
+        },
+        {
+          "icon": "chart",
+          "title": "Proven B2B experience",
+          "body": "Sectors across technology, professional services and industrial markets."
+        },
+        {
+          "icon": "refresh",
+          "title": "Flexible engagement",
+          "body": "Part-time, project-based or ongoing support."
+        },
+        {
+          "icon": "doc",
+          "title": "Practical and hands-on",
+          "body": "Strategy and execution, not just advice."
+        }
       ]
     },
     {
@@ -56,23 +112,64 @@
       "heading": "UK businesses face growing complexity.",
       "intro": "Longer sales cycles, more channels, higher customer expectations and increased competition make senior marketing leadership critical, but a full-time CMO is not always the right answer.",
       "items": [
-        { "icon": "chart", "title": "Growth has stalled", "body": "Pipeline and revenue are not growing as expected." },
-        { "icon": "database", "title": "More channels", "body": "Multiple campaigns and markets to manage." },
-        { "icon": "people", "title": "Teams are misaligned", "body": "Product, marketing and sales are pulling in different directions." },
-        { "icon": "clock", "title": "Execution is slow", "body": "Key initiatives take months, not weeks." }
+        {
+          "icon": "chart",
+          "title": "Growth has stalled",
+          "body": "Pipeline and revenue are not growing as expected."
+        },
+        {
+          "icon": "database",
+          "title": "More channels",
+          "body": "Multiple campaigns and markets to manage."
+        },
+        {
+          "icon": "people",
+          "title": "Teams are misaligned",
+          "body": "Product, marketing and sales are pulling in different directions."
+        },
+        {
+          "icon": "clock",
+          "title": "Execution is slow",
+          "body": "Key initiatives take months, not weeks."
+        }
       ]
     },
     {
       "id": "approach",
-      "type": "stepper",
-      "style": "circles",
+      "type": "stages",
       "eyebrow": "Our approach",
       "heading": "From insight to impact.",
       "intro": "A practical, hands-on approach designed for UK businesses.",
-      "steps": [
-        { "title": "Insight", "accent": "cyan", "points": ["Understand your goals", "Analyse your market and competition", "Identify the biggest opportunities"] },
-        { "title": "Momentum", "accent": "blue", "points": ["Set a clear plan and priorities", "Get key initiatives moving", "Align your teams", "Remove blockers"] },
-        { "title": "Impact", "accent": "pink", "points": ["Measure what works", "Optimise and scale", "Keep the momentum going", "Deliver commercial outcomes"] }
+      "items": [
+        {
+          "name": "Insight",
+          "accent": "cyan",
+          "points": [
+            "Understand your goals",
+            "Analyse your market and competition",
+            "Identify the biggest opportunities"
+          ]
+        },
+        {
+          "name": "Momentum",
+          "accent": "blue",
+          "points": [
+            "Set a clear plan and priorities",
+            "Get key initiatives moving",
+            "Align your teams",
+            "Remove blockers"
+          ]
+        },
+        {
+          "name": "Impact",
+          "accent": "pink",
+          "points": [
+            "Measure what works",
+            "Optimise and scale",
+            "Keep the momentum going",
+            "Deliver commercial outcomes"
+          ]
+        }
       ]
     },
     {
@@ -83,10 +180,26 @@
       "eyebrow": "What we can own",
       "heading": "End-to-end marketing leadership for UK businesses.",
       "items": [
-        { "icon": "target", "title": "GTM strategy", "body": "ICP, positioning, messaging and market expansion." },
-        { "icon": "chart", "title": "Demand generation", "body": "Campaign strategy, content, ABM and channel optimisation." },
-        { "icon": "box", "title": "Product marketing", "body": "Launch planning, customer and market insight." },
-        { "icon": "workflow", "title": "Operational AI", "body": "Practical AI implementation to improve efficiency and scale output." }
+        {
+          "icon": "target",
+          "title": "GTM strategy",
+          "body": "ICP, positioning, messaging and market expansion."
+        },
+        {
+          "icon": "chart",
+          "title": "Demand generation",
+          "body": "Campaign strategy, content, ABM and channel optimisation."
+        },
+        {
+          "icon": "box",
+          "title": "Product marketing",
+          "body": "Launch planning, customer and market insight."
+        },
+        {
+          "icon": "workflow",
+          "title": "Operational AI",
+          "body": "Practical AI implementation to improve efficiency and scale output."
+        }
       ]
     },
     {
@@ -96,10 +209,30 @@
       "heading": "Real outcomes for UK businesses.",
       "intro": "We have led marketing and GTM at global and mid-market businesses, including Vodafone Business, ADI Global, Distrelec and Travis Perkins. From new markets and product launches to scaling demand and reducing run costs, we focus on commercial outcomes.",
       "stats": [
-        { "value": "3x", "label": "Increase in qualified pipeline", "context": "B2B technology scale-up", "evidence": "verified" },
-        { "value": "60%", "label": "Reduction in CAC", "context": "B2B cybersecurity business", "evidence": "verified" },
-        { "value": "10", "label": "Markets launched", "context": "Vodafone Business V-Hub", "evidence": "verified" },
-        { "value": "£690k", "label": "Annual savings", "context": "Through AI and automation", "evidence": "verified" }
+        {
+          "value": "3x",
+          "label": "Increase in qualified pipeline",
+          "context": "B2B technology scale-up",
+          "evidence": "verified"
+        },
+        {
+          "value": "60%",
+          "label": "Reduction in CAC",
+          "context": "B2B cybersecurity business",
+          "evidence": "verified"
+        },
+        {
+          "value": "10",
+          "label": "Markets launched",
+          "context": "Vodafone Business V-Hub",
+          "evidence": "verified"
+        },
+        {
+          "value": "£690k",
+          "label": "Annual savings",
+          "context": "Through AI and automation",
+          "evidence": "verified"
+        }
       ]
     },
     {
@@ -108,16 +241,58 @@
       "eyebrow": "Fractional CMO vs alternatives",
       "heading": "A more flexible way to get senior marketing leadership.",
       "columns": [
-        { "title": "Fractional CMO (CommView)", "highlight": true },
-        { "title": "Full-time CMO" },
-        { "title": "Agency" }
+        {
+          "title": "Fractional CMO (CommView)",
+          "highlight": true
+        },
+        {
+          "title": "Full-time CMO"
+        },
+        {
+          "title": "Agency"
+        }
       ],
       "rows": [
-        { "label": "Strategic leadership", "cells": ["yes", "yes", "partial"] },
-        { "label": "Hands-on execution", "cells": ["yes", "partial", "yes"] },
-        { "label": "UK market focus", "cells": ["yes", "partial", "partial"] },
-        { "label": "Flexible and scalable", "cells": ["yes", "partial", "yes"] },
-        { "label": "Lower cost and lower risk", "cells": ["yes", "no", "no"] }
+        {
+          "label": "Strategic leadership",
+          "cells": [
+            "yes",
+            "yes",
+            "partial"
+          ]
+        },
+        {
+          "label": "Hands-on execution",
+          "cells": [
+            "yes",
+            "partial",
+            "yes"
+          ]
+        },
+        {
+          "label": "UK market focus",
+          "cells": [
+            "yes",
+            "partial",
+            "partial"
+          ]
+        },
+        {
+          "label": "Flexible and scalable",
+          "cells": [
+            "yes",
+            "partial",
+            "yes"
+          ]
+        },
+        {
+          "label": "Lower cost and lower risk",
+          "cells": [
+            "yes",
+            "no",
+            "no"
+          ]
+        }
       ]
     },
     {
@@ -127,9 +302,18 @@
       "eyebrow": "Frequently asked questions",
       "heading": "Common questions.",
       "items": [
-        { "q": "Do you only work with UK clients?", "a": "No. Commview is based in Manchester and works primarily with B2B businesses, but the model can support international businesses and multi-market work. Our experience includes GTM and digital programmes across the UK, Europe and wider international markets, so geography does not need to dictate the engagement." },
-        { "q": "Do you meet clients in person?", "a": "Yes, where it improves the work. Workshops, leadership decisions and periods of embedded delivery can benefit from being in the room. Other work is usually faster remotely. We agree the working model around the engagement rather than requiring clients to buy a fixed number of office days." },
-        { "q": "Do I need to be based in London to hire a fractional CMO?", "a": "No. Commview is Manchester-based and can work with businesses across the UK. Location matters far less than access to the right stakeholders, data and decisions. Where in-person work is useful, we agree when and where it will make the biggest difference." }
+        {
+          "q": "Do you only work with UK clients?",
+          "a": "No. Commview is based in Manchester and works primarily with B2B businesses, but the model can support international businesses and multi-market work. Our experience includes GTM and digital programmes across the UK, Europe and wider international markets, so geography does not need to dictate the engagement."
+        },
+        {
+          "q": "Do you meet clients in person?",
+          "a": "Yes, where it improves the work. Workshops, leadership decisions and periods of embedded delivery can benefit from being in the room. Other work is usually faster remotely. We agree the working model around the engagement rather than requiring clients to buy a fixed number of office days."
+        },
+        {
+          "q": "Do I need to be based in London to hire a fractional CMO?",
+          "a": "No. Commview is Manchester-based and can work with businesses across the UK. Location matters far less than access to the right stakeholders, data and decisions. Where in-person work is useful, we agree when and where it will make the biggest difference."
+        }
       ]
     },
     {
@@ -139,8 +323,16 @@
       "heading": "UK-based. Built for the problem.",
       "body": "Tell us what is getting in the way and we will work out what the engagement needs.",
       "ctas": [
-        { "label": "Talk to us", "href": "/contact", "style": "primary" },
-        { "label": "Explore Fractional CMO", "href": "/fractional-cmo", "style": "ghost" }
+        {
+          "label": "Talk to us",
+          "href": "/contact",
+          "style": "primary"
+        },
+        {
+          "label": "Explore Fractional CMO",
+          "href": "/fractional-cmo",
+          "style": "ghost"
+        }
       ]
     }
   ]
