@@ -31,7 +31,8 @@ export type Diagram =
   | { kind: "orb"; caption?: string; sub?: string; core: string; nodes: string[]; checklist?: string[] }
   | { kind: "overlap"; caption?: string; sub?: string; leftLabel: string; rightLabel: string; centreLabel?: string }
   | { kind: "stack"; caption?: string; sub?: string; layers: string[]; highlight?: number }
-  | { kind: "image"; caption?: string; sub?: string; src: string; alt: string };
+  | { kind: "image"; caption?: string; sub?: string; src: string; alt: string }
+  | { kind: "signal"; caption?: string; sub?: string; points: string[] };
 
 export type Hero = {
   eyebrow: string;
@@ -63,7 +64,7 @@ type Base = {
 
 export type Section =
   | (Base & { type: "lead"; ctas?: Cta[] })
-  | (Base & { type: "grid"; variant?: "numbered" | "icon" | "cards"; align?: "center"; items: { title: string; body: string; href?: string; icon?: string }[] })
+  | (Base & { type: "grid"; variant?: "numbered" | "icon" | "cards"; align?: "center"; items: { title: string; body?: string; points?: string[]; href?: string; icon?: string }[] })
   | (Base & {
       type: "venn";
       body?: Rich;
@@ -73,7 +74,7 @@ export type Section =
       left: { title: string; lines: string[] };
       right: { title: string; lines: string[] };
     })
-  | (Base & { type: "stepper"; style?: "arrows" | "circles" | "icons"; steps: { title: string; body: string; icon?: string }[] })
+  | (Base & { type: "stepper"; style?: "arrows" | "circles" | "icons"; steps: { title: string; body?: string; points?: string[]; icon?: string; accent?: "cyan" | "green" | "blue" | "pink" }[] })
   | (Base & {
       type: "aiflow";
       heading: Heading;
@@ -87,6 +88,7 @@ export type Section =
   | (Base & { type: "stats"; stats: Stat[] })
   | (Base & { type: "callout"; accentLine?: number; body: Rich; icon?: "ai" | "spark" | "none" })
   | (Base & { type: "comparison"; columns: { title: string; items: string[] }[] })
+  | (Base & { type: "matrix"; columns: { title: string; highlight?: boolean }[]; rows: { label: string; cells: ("yes" | "no" | "partial")[] }[]; note?: string })
   | (Base & { type: "logos"; logos: { name: string; asset?: string; alt: string }[] })
   | (Base & { type: "faq"; layout?: "stacked" | "split"; items: { q: string; a: string }[] })
   | (Base & { type: "cta"; body?: Rich; ctas: Cta[]; tagline?: string[] });

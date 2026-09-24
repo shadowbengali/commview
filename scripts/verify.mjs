@@ -16,7 +16,9 @@ const ROUTES = [
   "/growth", "/product-strategy", "/ai-consulting",
   "/growth/seo", "/growth/outbound-lead-generation", "/product-strategy/consulting",
   "/ai-consulting/genai", "/ai-consulting/implementation",
-  "/fractional-cmo/services", "/positioning", "/ideal-customer-profile-workshop",
+  "/fractional-cmo/services", "/fractional-cmo/uk", "/fractional-cmo/for-startups",
+  "/growth/seo/saas", "/growth/aeo/services",
+  "/positioning", "/ideal-customer-profile-workshop",
 ];
 const WIDTHS = [360, 390, 430, 768, 900, 1024, 1280, 1440, 1920];
 
