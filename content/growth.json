@@ -13,6 +13,8 @@
       { "href": "/growth/seo", "purpose": "child" },
       { "href": "/growth/demand-generation", "purpose": "child" },
       { "href": "/growth/aeo", "purpose": "related" },
+      { "href": "/insights/why-has-b2b-growth-flattened", "purpose": "insight" },
+      { "href": "/insights/why-isnt-b2b-website-converting", "purpose": "insight" },
       { "href": "/diagnostic", "purpose": "cta" }
     ]
   },
@@ -47,8 +49,8 @@
       "eyebrow": "A different approach",
       "heading": ["More signal.", "Less noise.", "Real growth."],
       "intro": [
-        "B2B growth marketing isn’t about adding more activity. It’s about understanding what is and isn’t working, then focusing time and investment where they can make the biggest commercial difference.",
-        "That means looking beyond channel metrics. Traffic can rise while conversion falls. Lead volume can increase while Sales sees less value. Content can perform well in search without influencing a single buying decision.",
+        "B2B growth marketing isn’t about adding more activity. It’s about [understanding what is and isn’t working](/insights/why-has-b2b-growth-flattened), then focusing time and investment where they can make the biggest commercial difference.",
+        "That means looking beyond channel metrics. Traffic can rise while [conversion falls](/insights/why-isnt-b2b-website-converting). Lead volume can increase while Sales sees less value. Content can perform well in search without influencing a single buying decision.",
         "The job is to connect the evidence and find the constraint before deciding what to do next."
       ]
     },

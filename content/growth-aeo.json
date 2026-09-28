@@ -53,10 +53,6 @@
         "purpose": "parent"
       },
       {
-        "href": "/insights/what-is-aeo",
-        "purpose": "insight"
-      },
-      {
         "href": "/contact",
         "purpose": "cta"
       }

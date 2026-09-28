@@ -61,15 +61,11 @@
         "purpose": "child"
       },
       {
-        "href": "/insights/ai-for-business",
+        "href": "/insights/can-ai-actually-reduce-costs",
         "purpose": "insight"
       },
       {
-        "href": "/insights/can-ai-reduce-our-costs",
-        "purpose": "insight"
-      },
-      {
-        "href": "/insights/responsible-ai",
+        "href": "/insights/if-ai-becomes-the-interface",
         "purpose": "insight"
       },
       {
@@ -372,19 +368,14 @@
       "heading": "Operational AI thinking beyond this page.",
       "items": [
         {
-          "title": "AI for business",
-          "body": "How to think about AI as an operating tool rather than a strategy in itself.",
-          "href": "/insights/ai-for-business"
-        },
-        {
-          "title": "Can AI reduce our costs?",
+          "title": "Can AI Actually Reduce Your Costs? A B2B Reality Check",
           "body": "Where AI can create real operating leverage and where the business case is weaker.",
-          "href": "/insights/can-ai-reduce-our-costs"
+          "href": "/insights/can-ai-actually-reduce-costs"
         },
         {
-          "title": "Responsible AI",
-          "body": "How to keep judgement, controls and accountability around AI-enabled work.",
-          "href": "/insights/responsible-ai"
+          "title": "If AI Becomes the Interface, Would You Still Build a Traditional App?",
+          "body": "What it means for product decisions if AI becomes how people interact with software.",
+          "href": "/insights/if-ai-becomes-the-interface"
         },
         {
           "title": "AI consulting in the UK",

@@ -44,10 +44,6 @@
         "purpose": "related"
       },
       {
-        "href": "/insights/product-roadmap-guide",
-        "purpose": "insight"
-      },
-      {
         "href": "/insights/should-we-build-this-feature",
         "purpose": "insight"
       },
@@ -202,7 +198,7 @@
         },
         {
           "q": "How do we prioritise between competing customer requests?",
-          "a": "Start by separating the requested feature from the underlying customer problem. Compare how often and how severely the problem appears in the target market, its strategic fit, expected value, evidence, risk, dependencies and delivery cost. Prioritisation frameworks can organise the evidence, but product judgement still has to make the trade-off."
+          "a": "Start by separating the requested feature from the underlying customer problem. Compare how often and how severely the problem appears in the target market, its strategic fit, expected value, evidence, risk, dependencies and delivery cost. [Prioritisation frameworks](/insights/should-we-build-this-feature) can organise the evidence, but product judgement still has to make the trade-off."
         }
       ]
     },

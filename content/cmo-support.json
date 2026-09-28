@@ -26,6 +26,7 @@
       {"href": "/growth", "purpose": "related"},
       {"href": "/product-strategy", "purpose": "related"},
       {"href": "/ai-consulting", "purpose": "related"},
+      {"href": "/insights/b2b-gtm-stack-buyer-no-longer-exists", "purpose": "insight"},
       {"href": "/contact", "purpose": "cta"}
     ]
   },
@@ -82,7 +83,7 @@
       "heading": "Give us the problem. We assemble the right experience around it.",
       "intro": "CMO Support is not a fixed outsourced marketing department. The work starts with the constraint and brings in the operators needed to solve it.",
       "items": [
-        {"title": "GTM Leadership", "body": "Positioning, ICP, routes to market, launches, proposition and the commercial decisions connecting Product, Marketing and Sales.", "href": "/fractional-cmo"},
+        {"title": "GTM Leadership", "body": "Positioning, ICP, [routes to market](/insights/b2b-gtm-stack-buyer-no-longer-exists), launches, proposition and the commercial decisions connecting Product, Marketing and Sales.", "href": "/fractional-cmo"},
         {"title": "Growth", "body": "SEO, AEO, demand generation, outbound, paid media, content and conversion work where the priority is measurable commercial growth.", "href": "/growth"},
         {"title": "Product", "body": "Product strategy, discovery, MVP decisions, roadmaps and product GTM where the marketing problem starts further upstream.", "href": "/product-strategy"},
         {"title": "Operational AI", "body": "AI implementation, workflow automation and practical changes to how marketing and wider business teams operate.", "href": "/ai-consulting"}

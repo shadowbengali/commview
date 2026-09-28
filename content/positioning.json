@@ -47,15 +47,15 @@
         "purpose": "related"
       },
       {
-        "href": "/insights/b2b-positioning",
+        "href": "/insights/b2b-gtm-stack-buyer-no-longer-exists",
         "purpose": "insight"
       },
       {
-        "href": "/insights/positioning-or-product-problem",
+        "href": "/insights/are-we-targeting-wrong-customers",
         "purpose": "insight"
       },
       {
-        "href": "/insights/why-customers-choose-competitors",
+        "href": "/insights/why-isnt-b2b-website-converting",
         "purpose": "insight"
       },
       {
@@ -115,15 +115,15 @@
         },
         {
           "title": "The wrong competitors keep appearing",
-          "body": "Buyers compare you with alternatives you did not think you were competing against."
+          "body": "Buyers compare you with [alternatives you did not think you were competing against](/insights/b2b-gtm-stack-buyer-no-longer-exists)."
         },
         {
           "title": "Marketing creates interest but Sales struggles",
-          "body": "The message can earn attention without creating enough commercial preference to close."
+          "body": "The message can [earn attention without creating enough commercial preference](/insights/why-isnt-b2b-website-converting) to close."
         },
         {
           "title": "Every audience gets the same story",
-          "body": "The proposition is so broad that nobody can see why it is specifically relevant to them."
+          "body": "The proposition is so broad that nobody can see [why it is specifically relevant to them](/insights/are-we-targeting-wrong-customers)."
         }
       ]
     },

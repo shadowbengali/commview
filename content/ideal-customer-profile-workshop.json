@@ -47,7 +47,7 @@
         "purpose": "related"
       },
       {
-        "href": "/insights/ideal-customer-profile",
+        "href": "/insights/are-we-targeting-wrong-customers",
         "purpose": "insight"
       },
       {
@@ -192,7 +192,7 @@
       "items": [
         {
           "q": "What if we already have an ICP?",
-          "a": "An existing ICP is useful evidence, not a reason to avoid revisiting it. We can test whether it still reflects the customers you win, retain and create value for, and whether Sales and Marketing actually use it. If the market, product or growth stage has changed, the ICP may need to change too."
+          "a": "An existing ICP is useful evidence, not a reason to avoid revisiting it. We can test [whether it still reflects the customers you win](/insights/are-we-targeting-wrong-customers), retain and create value for, and whether Sales and Marketing actually use it. If the market, product or growth stage has changed, the ICP may need to change too."
         },
         {
           "q": "How is an ICP different from a buyer persona?",

@@ -55,6 +55,18 @@
         "purpose": "related"
       },
       {
+        "href": "/insights/b2b-gtm-stack-buyer-no-longer-exists",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/are-we-targeting-wrong-customers",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/why-has-b2b-growth-flattened",
+        "purpose": "insight"
+      },
+      {
         "href": "/work",
         "purpose": "related"
       },
@@ -134,7 +146,7 @@
         {
           "icon": "chart",
           "title": "Growth has slowed",
-          "body": "You are not seeing the pipeline or revenue growth you expected."
+          "body": "You are not seeing the [pipeline or revenue growth](/insights/why-has-b2b-growth-flattened) you expected."
         },
         {
           "icon": "database",
@@ -216,7 +228,7 @@
         { "icon": "chart", "title": "Pipeline management", "body": "Make pipeline something the business can manage: stages, conversion, coverage against the revenue target and forecasting." },
         { "icon": "people", "title": "Sales and marketing alignment", "body": "Give both teams the same view of a good opportunity, with definitions, routing and feedback that improve targeting from what happens downstream." },
         { "icon": "sparkle", "title": "B2B positioning", "body": "Clarify the category, alternatives and value that make the choice clearer for the buyer.", "href": "/positioning" },
-        { "icon": "search", "title": "Ideal Customer Profile", "body": "Define which customers value what you sell and can justify the cost of acquiring them.", "href": "/ideal-customer-profile-workshop" }
+        { "icon": "search", "title": "Ideal Customer Profile", "body": "Define [which customers value what you sell](/insights/are-we-targeting-wrong-customers) and can justify the cost of acquiring them.", "href": "/ideal-customer-profile-workshop" }
       ]
     },
     {
@@ -375,7 +387,7 @@
       "items": [
         {
           "q": "What is a fractional CMO?",
-          "a": "A fractional CMO gives a business access to senior marketing leadership for part of the time and for as long as the role is useful. The work can include positioning, ICP, go-to-market strategy, demand generation, pipeline, measurement and sales alignment. Sometimes the problem sits inside marketing; sometimes marketing is where a product, proposition or operating problem becomes visible."
+          "a": "A fractional CMO gives a business access to senior marketing leadership for part of the time and for as long as the role is useful. The work can include positioning, ICP, [go-to-market strategy](/insights/b2b-gtm-stack-buyer-no-longer-exists), demand generation, pipeline, measurement and sales alignment. Sometimes the problem sits inside marketing; sometimes marketing is where a product, proposition or operating problem becomes visible."
         },
         {
           "q": "How is a fractional CMO different from an agency?",

@@ -51,11 +51,15 @@
         "purpose": "child"
       },
       {
-        "href": "/insights/product-market-fit",
+        "href": "/insights/should-we-build-this-feature",
         "purpose": "insight"
       },
       {
-        "href": "/insights/product-roadmap-guide",
+        "href": "/insights/why-arent-customers-using-new-features",
+        "purpose": "insight"
+      },
+      {
+        "href": "/insights/if-ai-becomes-the-interface",
         "purpose": "insight"
       },
       {
@@ -370,14 +374,19 @@
       "heading": "Product thinking beyond this page.",
       "items": [
         {
-          "title": "Product-market fit",
-          "body": "Explore how to think about product-market fit as evidence rather than a one-off milestone.",
-          "href": "/insights/product-market-fit"
+          "title": "Should you build this feature?",
+          "body": "A B2B prioritisation framework for deciding which feature requests are actually worth building.",
+          "href": "/insights/should-we-build-this-feature"
         },
         {
-          "title": "Product roadmap guide",
-          "body": "Explore how strategy, evidence and prioritisation should shape a useful product roadmap.",
-          "href": "/insights/product-roadmap-guide"
+          "title": "Why aren't customers using your new features?",
+          "body": "Work through the root causes when a shipped feature does not get the adoption it should.",
+          "href": "/insights/why-arent-customers-using-new-features"
+        },
+        {
+          "title": "If AI becomes the interface",
+          "body": "What it means for product decisions if AI, rather than a traditional app, becomes the interface.",
+          "href": "/insights/if-ai-becomes-the-interface"
         },
         {
           "title": "Our work",

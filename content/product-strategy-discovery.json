@@ -48,6 +48,10 @@
         "purpose": "related"
       },
       {
+        "href": "/insights/why-arent-customers-using-new-features",
+        "purpose": "insight"
+      },
+      {
         "href": "/contact",
         "purpose": "cta"
       }
@@ -91,7 +95,7 @@
       "eyebrow": "WHAT IS DISCOVERY?",
       "heading": "What Product Discovery Is",
       "intro": [
-        "Product discovery is the evidence-gathering and decision work that happens before or alongside delivery. Its purpose is to understand the customer problem, test important assumptions and reduce the risk of committing significant effort to the wrong solution.",
+        "Product discovery is the evidence-gathering and decision work that happens before or alongside delivery. Its purpose is to understand the customer problem, test important assumptions and reduce the risk of committing significant effort to [the wrong solution](/insights/why-arent-customers-using-new-features).",
         "Good discovery ends in a decision, not an ever-growing research repository."
       ],
       "ctas": [

@@ -51,11 +51,7 @@
         "purpose": "related"
       },
       {
-        "href": "/insights/can-ai-reduce-our-costs",
-        "purpose": "insight"
-      },
-      {
-        "href": "/insights/ai-for-business-efficiency",
+        "href": "/insights/can-ai-actually-reduce-costs",
         "purpose": "insight"
       },
       {
@@ -204,7 +200,7 @@
       "items": [
         {
           "q": "Can AI actually reduce our operating costs?",
-          "a": "AI can reduce operating costs when it removes enough repetitive effort, delay or rework to outweigh the cost of [AI implementation](/ai-consulting/implementation), software, oversight and maintenance. It is not automatic. We baseline the current process, estimate the plausible change, test the intervention and measure the real result before recommending wider rollout."
+          "a": "[AI can reduce operating costs](/insights/can-ai-actually-reduce-costs) when it removes enough repetitive effort, delay or rework to outweigh the cost of [AI implementation](/ai-consulting/implementation), software, oversight and maintenance. It is not automatic. We baseline the current process, estimate the plausible change, test the intervention and measure the real result before recommending wider rollout."
         },
         {
           "q": "What operations functions benefit most from AI?",
