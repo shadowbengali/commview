@@ -81,7 +81,7 @@ const blogIndexQuery = groq`{
   "featured": *[_type == "post" && featured == true && !(_id in path("drafts.**"))]
     | order(publishedAt desc)[0] ${postCardProjection},
   "latest": *[_type == "post" && featured != true && !(_id in path("drafts.**"))]
-    | order(publishedAt desc)[0...6] ${postCardProjection},
+    | order(publishedAt desc) ${postCardProjection},
   "topics": *[_type == "category"] | order(order asc){
     title,
     "slug": slug.current,

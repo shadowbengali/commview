@@ -15,9 +15,9 @@ import "../../../styles/blog.css";
 // approve or rewrite before launch. It is NOT invented; it is the mock's draft.
 
 export const metadata: Metadata = {
-  title: "Insight",
+  title: { absolute: "B2B Growth, GTM, Product & AI Insights | Commview" },
   description:
-    "Field notes from the work: what we see inside scale-ups, what it usually turns out to be, and what we would do about it.",
+    "Field notes and practical thinking on B2B growth, GTM leadership, product strategy and operational AI from people doing the work.",
   alternates: { canonical: "/insights" },
 };
 
@@ -123,7 +123,6 @@ export default async function BlogIndexPage({
         <div className="wrap bhero__grid">
           <div>
             <p className="eyebrow-x">Insight</p>
-            {/* TODO: placeholder hero copy (mock draft) — approve or rewrite. */}
             <h1 className="bhero__h1" id="bhero-h">
               Answers we keep
               <br />
@@ -214,7 +213,6 @@ export default async function BlogIndexPage({
         <div className="wrap">
           <div className="sechead">
             <h2 id="latest-h">Latest</h2>
-            <a href="/insights">See everything</a>
           </div>
           {latest.length > 0 ? (
             <div className="cards">
@@ -251,8 +249,7 @@ export default async function BlogIndexPage({
                   href={`/insights/category/${t.slug}`}
                 >
                   <b>{t.title}</b>
-                  {/* TODO: topic descriptions are mock drafts — approve or rewrite. */}
-                  <span>{t.description || "TODO: topic description"}</span>
+                  <span>{t.description}</span>
                   <u>{pieces(t.count)}</u>
                 </a>
               ))}
@@ -265,20 +262,20 @@ export default async function BlogIndexPage({
       <section className="close dark" aria-labelledby="close-h">
         <div className="wrap close__grid">
           <div>
-            {/* TODO: placeholder closing copy (mock draft) — approve or rewrite. */}
+            <p className="eyebrow-x">FROM INSIGHT TO IMPACT</p>
             <h2 className="close__h" id="close-h">
-              Reading about it only gets you so far.
+              Something isn&apos;t working?
             </h2>
             <p className="close__p">
-              If something here sounds like your business, bring us the question.
-              We will tell you what we think is actually going on.
+              Start with the problem. We&apos;ll help you work out what&apos;s
+              actually going on, what matters most and what to do next.
             </p>
             <div className="close__row">
-              <a className="btn btn--cyan btn--lg" href="/contact">
-                Talk to us
+              <a className="btn btn--cyan btn--lg" href="/diagnostic">
+                Take the Diagnostic
               </a>
-              <a className="btn btn--ghost btn--lg" href="/diagnostic">
-                Take the diagnostic
+              <a className="btn btn--ghost btn--lg" href="/contact">
+                Talk to us
               </a>
             </div>
           </div>
