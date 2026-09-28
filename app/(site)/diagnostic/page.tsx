@@ -86,6 +86,28 @@ export default function DiagnosticEntryPage() {
           <div className="dg-routes">
             <h2 className="dg-routes__h">How would you like to do it?</h2>
 
+            {/* Question diagnostic — the text version (this build). Leads the
+                pair while voice is still coming soon. */}
+            <div className="dg-card" aria-labelledby="dg-q-h">
+              <div className="dg-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <path d="M5 5h14v10H9l-4 4z" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <h3 className="dg-card__h" id="dg-q-h">Answer questions</h3>
+              <p className="dg-card__p">
+                Prefer to type? Work through the same diagnostic at your own pace.
+                Your answers determine what we ask next.
+              </p>
+              <a className="btn btn--ink dg-card__cta" href="/diagnostic/questions">
+                Start question diagnostic
+                <span aria-hidden="true"> &rarr;</span>
+              </a>
+              <p className="dg-card__foot">
+                Best if you&rsquo;d rather think through your answers as you go.
+              </p>
+            </div>
+
             {/* Voice — built later. Shown as coming soon so the design intent is
                 preserved without a dead control. */}
             <div className="dg-card dg-card--voice dark" aria-labelledby="dg-voice-h">
@@ -106,27 +128,6 @@ export default function DiagnosticEntryPage() {
               </span>
               <p className="dg-card__foot">
                 Best if you&rsquo;d rather explain what&rsquo;s happening naturally.
-              </p>
-            </div>
-
-            {/* Question diagnostic — the text version (this build). */}
-            <div className="dg-card" aria-labelledby="dg-q-h">
-              <div className="dg-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                  <path d="M5 5h14v10H9l-4 4z" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h3 className="dg-card__h" id="dg-q-h">Answer questions</h3>
-              <p className="dg-card__p">
-                Prefer to type? Work through the same diagnostic at your own pace.
-                Your answers determine what we ask next.
-              </p>
-              <a className="btn btn--ink dg-card__cta" href="/diagnostic/questions">
-                Start question diagnostic
-                <span aria-hidden="true"> &rarr;</span>
-              </a>
-              <p className="dg-card__foot">
-                Best if you&rsquo;d rather think through your answers as you go.
               </p>
             </div>
           </div>
