@@ -1,0 +1,142 @@
+/* ============================================================================
+   Business Diagnostic — entry page. Uses the site design system: light surface,
+   cyan/charcoal accents, existing button + wrap + eyebrow patterns. The immersive
+   runner has its own styles appended when built.
+   ========================================================================== */
+.dg-hero { padding-block: var(--space-16) var(--space-24); }
+.dg-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-24);
+  align-items: start;
+}
+
+.dg-h1 {
+  font-size: 56px;
+  line-height: 58px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: var(--space-4) 0 var(--space-6);
+}
+.dg-lead {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--text-secondary);
+  max-width: 46ch;
+  margin-bottom: var(--space-4);
+}
+.dg-lead strong { color: var(--text-primary); font-weight: 600; }
+
+.dg-meta {
+  list-style: none;
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+}
+.dg-meta li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.dg-meta svg { width: 18px; height: 18px; color: var(--brand-cyan); flex: none; }
+
+/* ---- route chooser ---- */
+.dg-routes__h {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-6);
+}
+.dg-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+.dg-card--voice { border-color: transparent; }
+.dg-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-4);
+  color: var(--brand-cyan);
+  background: rgba(0, 229, 255, 0.1);
+}
+.dg-card__icon svg { width: 22px; height: 22px; }
+.dg-card--voice .dg-card__icon { background: rgba(0, 229, 255, 0.14); }
+.dg-card__h { font-size: 22px; line-height: 28px; font-weight: 700; margin-bottom: var(--space-2); }
+.dg-card__p { font-size: 15px; line-height: 24px; color: var(--text-secondary); margin-bottom: var(--space-6); }
+.dg-card--voice .dg-card__p { color: var(--slate-light); }
+.dg-card__cta { margin-bottom: var(--space-4); }
+.dg-card__foot { font-size: 13px; color: var(--text-secondary); }
+.dg-card--voice .dg-card__foot { color: var(--slate); }
+
+/* voice "coming soon" — disabled affordance, honest */
+.dg-card__cta--soon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--slate);
+  border: 1px solid var(--slate-dark);
+  border-radius: var(--radius-md);
+  padding: 14px 22px;
+  cursor: not-allowed;
+}
+.dg-soon {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-charcoal);
+  background: var(--brand-cyan);
+  border-radius: var(--radius-pill);
+  padding: 3px 8px;
+}
+
+/* ---- lower bands ---- */
+.dg-band {
+  text-align: center;
+  margin-top: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--border-subtle);
+}
+.dg-band__h { font-size: 16px; font-weight: 700; }
+.dg-band__p { font-size: 15px; line-height: 24px; color: var(--text-secondary); max-width: 60ch; margin: var(--space-2) auto 0; }
+
+.dg-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding: var(--space-4) var(--space-6);
+  background: var(--slate-light);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+.dg-note svg { width: 18px; height: 18px; flex: none; color: var(--text-secondary); }
+
+@media (max-width: 900px) {
+  .dg-hero__grid { grid-template-columns: 1fr; gap: var(--space-12); }
+  .dg-h1 { font-size: 40px; line-height: 44px; }
+}
+@media (max-width: 640px) {
+  .dg-hero { padding-block: var(--space-12) var(--space-16); }
+  .dg-h1 { font-size: 32px; line-height: 36px; }
+  .dg-meta { gap: var(--space-4); }
+}
