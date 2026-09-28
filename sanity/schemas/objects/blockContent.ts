@@ -37,7 +37,7 @@ export const blockContent = defineType({
                 type: "url",
                 title: "URL",
                 validation: (rule) =>
-                  rule.uri({ scheme: ["http", "https", "mailto"] }),
+                  rule.uri({ scheme: ["http", "https", "mailto"], allowRelative: true }),
               },
             ],
           },
