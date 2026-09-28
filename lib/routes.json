@@ -13,6 +13,7 @@
     "/work",
     "/contact",
     "/diagnostic",
+    "/diagnostic/questions",
     "/diagnostic/results",
     "/agencies",
     "/agencies/how-it-works",

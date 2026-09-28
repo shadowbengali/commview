@@ -1,84 +1,108 @@
-// COMMVIEW Business Diagnostic — content model for the branching (adaptive)
-// text version. This is the SHAPE the authored question bank fills; no question
-// copy is invented in code (house rule). The runtime engine (engine.ts) walks
-// this graph from `start`, following each answer's `next`, accumulating the
-// evidence shown in the "What we've heard" panel and the section progress shown
-// in "Building the picture".
+// COMMVIEW Business Diagnostic — types for the v1 deterministic, adaptive text
+// diagnostic. Routing and evidence capture are deterministic; there is NO
+// numeric "health/maturity" score. A reading is selected from explicit evidence
+// conditions, and where evidence is insufficient the tool says so.
 //
-// Scoring/teaser copy is deliberately left out here until the authored bank
-// arrives, so the results model can match how the bank expresses its readings.
+// Content lives in content.ts (authored, verbatim). Pure logic lives in
+// engine.ts. Nothing here invents copy.
 
-export type DiagnosticSectionId =
-  | "business-context"
-  | "market-customers"
-  | "growth-revenue"
-  | "product-value"
-  | "operations-efficiency";
+export type BranchKey =
+  | "gtm"
+  | "product"
+  | "operations"
+  | "cross_functional"
+  | "unknown";
 
-export interface DiagnosticSection {
-  id: DiagnosticSectionId;
-  /** Sidebar + eyebrow label, e.g. "Growth & revenue". */
+export type QuestionType =
+  | "free_text"
+  | "single_select"
+  | "multi_select"
+  | "compound";
+
+/** A selectable option. `evidence` is the one line it adds to "What we've heard"
+ *  (null = adds nothing). `next` overrides the question's routing; `branch`/
+ *  `signal` feed the dominant-branch resolver. */
+export interface Option {
+  value: string;
   label: string;
-}
-
-/** One entry that an answer contributes to the "What we've heard" panel. */
-export interface EvidenceItem {
-  title: string; // e.g. "Growth has flattened"
-  sub?: string; // e.g. "Noticed over the last six months."
-}
-
-export interface DiagnosticOption {
-  id: string;
-  label: string; // "Fewer opportunities entering the pipeline"
-  description?: string; // "We're generating fewer leads than before."
-  /** What picking this option adds to the evidence panel (optional). */
-  evidence?: EvidenceItem;
-  /**
-   * Where to go after this option: another question id, a section id (jump to
-   * its first question) or "end" to finish. Falls back to the question's own
-   * `next` when omitted.
-   */
+  evidence: string | null;
   next?: string;
-  /** When true, selecting this reveals a free-text box (e.g. "Something else"). */
-  freeText?: boolean;
+  branch?: BranchKey;
+  signal?: BranchKey;
 }
 
-export type QuestionType = "single" | "multi" | "text";
-
-export interface DiagnosticQuestion {
+/** Chips offered under a free-text question. */
+export interface StarterOption {
   id: string;
-  section: DiagnosticSectionId;
-  /** Optional context line above the prompt: "You mentioned growth has stalled." */
-  lead?: string;
-  /** The question itself: "Which best describes what you're seeing?" */
-  prompt: string;
+  label: string;
+  evidence: string | null;
+}
+
+/** A field inside a compound question (several sub-questions on one screen). */
+export interface CompoundField {
+  id: string;
+  question: string;
+  type: "single_select" | "multi_select";
+  options: Option[];
+  maxSelections?: number;
+}
+
+/** Routing: a fixed next id, or a resolver that picks by dominant branch. */
+export type NextStep =
+  | string
+  | { resolver: "dominant_branch"; branches: Record<BranchKey, string> };
+
+export interface Question {
+  id: string;
+  section: string; // one of SECTION_LABELS
   type: QuestionType;
-  /** Options for single/multi questions. */
-  options?: DiagnosticOption[];
-  /** Placeholder for a `text` question. */
+  eyebrow?: string;
+  question: string;
+  help?: string;
   placeholder?: string;
-  /** Evidence added regardless of the specific option chosen (optional). */
-  evidence?: EvidenceItem;
-  /** Default next step when the chosen option does not specify its own. */
-  next?: string;
-  /** A `text` (or "not sure") answer may be skippable. */
-  optional?: boolean;
+  // free_text
+  starterOptions?: StarterOption[];
+  allowNone?: boolean;
+  noneLabel?: string;
+  /** Evidence note for free_text; in v1 (no AI) the raw answer is used. */
+  evidence?: string;
+  // select
+  options?: Option[];
+  maxSelections?: number;
+  // compound
+  fields?: CompoundField[];
+  next?: NextStep;
 }
 
-export interface DiagnosticContent {
-  /** Five sections, in the order shown in "Building the picture". */
-  sections: DiagnosticSection[];
-  /** Id of the first question. */
+export interface DiagnosticConfig {
   start: string;
-  /** Approximate total, powering "3 of ~10". */
-  estimatedQuestions: number;
-  /** Every question, keyed by id. */
-  questions: Record<string, DiagnosticQuestion>;
+  estimatedTotal: number;
+  hardCap: number;
+  questions: Record<string, Question>;
 }
 
-/** A single recorded answer in the run. */
-export interface DiagnosticAnswer {
+/** A results reading — an evidence-pattern classification, never a score. */
+export interface Reading {
+  id: string;
+  headline: string;
+  weakLink: string;
+  summary: string;
+}
+
+// ---- runtime state ----
+
+/** One recorded answer. `values` holds selected option values (single = one).
+ *  `fields` holds a compound question's per-field selections. `text` holds
+ *  free-text. */
+export interface Answer {
   questionId: string;
-  optionIds?: string[];
+  values?: string[];
+  fields?: Record<string, string[]>;
   text?: string;
+}
+
+export interface RunState {
+  /** Ordered list of question ids visited (for Back + progress). */
+  path: string[];
+  answers: Record<string, Answer>;
 }
