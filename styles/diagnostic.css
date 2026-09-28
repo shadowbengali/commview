@@ -168,9 +168,15 @@
   outline: none;
 }
 .dg-run__help { margin-top: var(--space-3); font-size: 16px; color: var(--text-secondary); }
+.dg-run__lead { margin-bottom: var(--space-3); font-size: 15px; color: var(--text-secondary); }
 
-/* options */
-.dg-opts { margin-top: var(--space-8); display: grid; gap: var(--space-3); }
+/* options — laid out side by side so answers stay above the fold */
+.dg-opts {
+  margin-top: var(--space-6);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--space-3);
+}
 .dg-opt {
   display: flex;
   align-items: flex-start;

@@ -32,6 +32,9 @@ export function Runner() {
   const [draft, setDraft] = useState<Draft>(emptyDraft());
   const [reflectionChoice, setReflectionChoice] = useState<string>("");
   const [correction, setCorrection] = useState<string>("");
+  // Compound questions are shown one field per screen (one question at a time),
+  // committed together only when the last field is answered.
+  const [subIndex, setSubIndex] = useState(0);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
 
   // restore an in-progress run (best-effort; refresh shouldn't lose answers)
@@ -70,6 +73,7 @@ export function Runner() {
           }
         : emptyDraft()
     );
+    setSubIndex(0);
     headingRef.current?.focus();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentId]);
@@ -277,28 +281,64 @@ export function Runner() {
 
   // ----- QUESTION -----
   if (!question) return null;
-  const valid = isValid(question, draft);
+  const isCompound = question.type === "compound";
+  const fields = question.fields ?? [];
+  const field = isCompound ? fields[Math.min(subIndex, fields.length - 1)] : null;
+  const heading = isCompound && field ? field.question : question.question;
+  const valid = isCompound && field ? fieldValid(field, draft) : isValid(question, draft);
+  const canBack = state.path.length > 0 || subIndex > 0;
+
+  const stepContinue = () => {
+    if (isCompound && subIndex < fields.length - 1) {
+      setSubIndex(subIndex + 1);
+      headingRef.current?.focus();
+      return;
+    }
+    onContinue();
+  };
+  const stepBack = () => {
+    if (isCompound && subIndex > 0) {
+      setSubIndex(subIndex - 1);
+      headingRef.current?.focus();
+      return;
+    }
+    onBack();
+  };
 
   return (
     <Shell sections={sections} evidence={evidence} pct={pct} showAside>
       <div className="dg-run__main">
         {question.eyebrow ? <p className="dg-run__eyebrow">{question.eyebrow}</p> : null}
+        {isCompound ? <p className="dg-run__lead">{question.question}</p> : null}
         <h2 className="dg-run__q" tabIndex={-1} ref={headingRef}>
-          {question.question}
+          {heading}
         </h2>
-        {question.help ? <p className="dg-run__help">{question.help}</p> : null}
+        {!isCompound && question.help ? <p className="dg-run__help">{question.help}</p> : null}
 
-        <QuestionBody question={question} draft={draft} setDraft={setDraft} />
+        {isCompound && field ? (
+          <OptionList
+            name={field.id}
+            multi={field.type === "multi_select"}
+            max={field.maxSelections}
+            options={field.options}
+            selected={draft.fields[field.id] ?? []}
+            onChange={(vals) =>
+              setDraft({ ...draft, fields: { ...draft.fields, [field.id]: vals } })
+            }
+          />
+        ) : (
+          <QuestionBody question={question} draft={draft} setDraft={setDraft} />
+        )}
 
         <div className="dg-run__actions">
-          {state.path.length > 0 ? (
-            <button type="button" className="btn btn--ghost" onClick={onBack}>
+          {canBack ? (
+            <button type="button" className="btn btn--ghost" onClick={stepBack}>
               <span aria-hidden="true">&larr; </span>Back
             </button>
           ) : (
             <span />
           )}
-          <button type="button" className="btn btn--cyan" disabled={!valid} onClick={onContinue}>
+          <button type="button" className="btn btn--cyan" disabled={!valid} onClick={stepContinue}>
             Continue<span aria-hidden="true"> &rarr;</span>
           </button>
         </div>
@@ -308,6 +348,14 @@ export function Runner() {
 }
 
 // ---------- validation ----------
+function fieldValid(
+  field: { id: string; type: "single_select" | "multi_select" },
+  d: Draft
+): boolean {
+  const sel = d.fields[field.id] ?? [];
+  return field.type === "single_select" ? sel.length === 1 : sel.length >= 1;
+}
+
 function isValid(q: Question, d: Draft): boolean {
   switch (q.type) {
     case "free_text":
