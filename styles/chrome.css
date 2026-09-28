@@ -170,6 +170,8 @@ img { max-width: 100%; height: auto; display: block; }
 .ftr__meta a:hover { color: var(--brand-polar); }
 .ftr__strap { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-cyan); }
 .ftr__bottom { margin-top: var(--space-12); display: flex; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+.ftr__legal { margin-top: var(--space-6); display: flex; gap: var(--space-6); flex-wrap: wrap; align-items: center; }
+.ftr__legal a:hover { color: var(--brand-polar); }
 
 /* header collapses before the nav + CTA can crowd the logo */
 @media (max-width: 860px) {

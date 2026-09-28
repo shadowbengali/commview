@@ -9,12 +9,15 @@ import "../../styles/fonts.css";
 import "../../styles/tokens.css";
 import "../../styles/components.css";
 import "../../styles/chrome.css";
+import "../../styles/consent.css";
 
 import Script from "next/script";
 
 import { LogoSprite } from "@/components/site/LogoSprite";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { ConsentManager } from "@/components/site/ConsentManager";
+import { consentInitScript } from "@/lib/consent";
 
 // Google Tag Manager container, scoped to the public site only. Living in the
 // (site) layout (not the root) deliberately keeps GTM off /studio, so logged-in
@@ -37,6 +40,14 @@ export default function SiteLayout({
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"
+      />
+      {/* Google Consent Mode defaults (basic mode) — a plain inline script so it
+          executes during HTML parse, guaranteed ahead of the deferred GTM tag
+          below. Optional storage defaults to denied until the visitor chooses;
+          a returning visitor's stored choice is applied here synchronously. */}
+      <script
+        id="consent-init"
+        dangerouslySetInnerHTML={{ __html: consentInitScript() }}
       />
       {GTM_ID && (
         // GTM <noscript> fallback — rendered first so it sits as high in the
@@ -70,6 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <SiteHeader />
       {children}
       <SiteFooter />
+      <ConsentManager />
     </>
   );
 }

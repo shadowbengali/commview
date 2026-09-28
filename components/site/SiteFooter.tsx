@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 
 import { Logo } from "./Logo";
+import { CookieSettingsButton } from "./CookieSettingsButton";
 
 const slate: CSSProperties = { color: "var(--slate)" };
 const cyan: CSSProperties = { color: "var(--brand-cyan)" };
@@ -40,6 +41,12 @@ export function SiteFooter() {
           </address>
           <span className="ftr__strap">Insight → Momentum → Impact</span>
         </div>
+        <nav className="ftr__legal small dim" aria-label="Legal">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/cookies">Cookies</a>
+          <CookieSettingsButton />
+        </nav>
       </div>
     </footer>
   );

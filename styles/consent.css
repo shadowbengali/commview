@@ -1,0 +1,178 @@
+/* ============================================================================
+   Cookie consent — native Commview banner + preferences dialog.
+   Restrained, editorial, brand-consistent. Charcoal surface, cyan accent,
+   existing button system. No SaaS card, no gradients, no cookie imagery.
+   ========================================================================== */
+
+/* ---- compact first-visit banner ---- */
+.cc-banner {
+  position: fixed;
+  z-index: 60;
+  left: var(--space-6);
+  right: var(--space-6);
+  bottom: var(--space-6);
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.cc-banner__in {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 720px;
+  background: var(--brand-charcoal);
+  color: var(--brand-polar);
+  border: 1px solid var(--slate-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-overlay);
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cc-banner__text { flex: 1 1 320px; min-width: 0; }
+.cc-banner__h {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-cyan);
+  margin-bottom: var(--space-2);
+}
+.cc-banner__p {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--slate-light);
+}
+.cc-banner__actions {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cc-link { color: var(--brand-cyan); text-decoration: underline; text-underline-offset: 2px; }
+.cc-link:hover { color: var(--brand-polar); }
+
+/* text-style tertiary action, comparable but visually lighter than the two
+   real buttons — Accept and Reject keep equal, prominent weight. */
+.cc-textbtn {
+  background: none;
+  border: 0;
+  padding: 6px 4px;
+  color: var(--slate-light);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cc-textbtn:hover { color: var(--brand-cyan); }
+
+/* ---- preferences dialog ---- */
+.cc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: rgba(11, 15, 20, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+.cc-panel {
+  width: 100%;
+  max-width: 560px;
+  background: var(--brand-charcoal);
+  color: var(--brand-polar);
+  border: 1px solid var(--slate-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-overlay);
+  padding: var(--space-8);
+  margin: auto;
+}
+.cc-panel__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.cc-panel__h { font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.01em; }
+.cc-panel__intro {
+  margin-top: var(--space-3);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--slate-light);
+}
+.cc-close {
+  flex: none;
+  background: none;
+  border: 0;
+  color: var(--slate);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  line-height: 0;
+}
+.cc-close:hover { color: var(--brand-polar); }
+
+.cc-cats { list-style: none; margin: var(--space-6) 0; }
+.cc-cat { padding: var(--space-4) 0; border-top: 1px solid var(--slate-dark); }
+.cc-cat:first-child { border-top: 0; }
+.cc-cat__row { display: flex; align-items: center; gap: var(--space-3); }
+.cc-cat__name { font-size: 16px; font-weight: 600; }
+.cc-cat__state { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); }
+.cc-cat__state--on { color: var(--accent-green); }
+.cc-cat__desc { margin-top: var(--space-2); font-size: 13px; line-height: 20px; color: var(--slate); }
+
+/* toggle switch */
+.cc-switch { position: relative; margin-left: auto; display: inline-flex; cursor: pointer; }
+.cc-switch--locked { cursor: not-allowed; }
+.cc-switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: inherit; }
+.cc-switch__track {
+  width: 44px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--slate-dark);
+  border: 1px solid var(--border-strong);
+  transition: background-color 160ms ease, border-color 160ms ease;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+}
+.cc-switch__thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--slate-light);
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+.cc-switch input:checked + .cc-switch__track { background: var(--brand-cyan); border-color: var(--brand-cyan); }
+.cc-switch input:checked + .cc-switch__track .cc-switch__thumb { transform: translateX(20px); background: var(--brand-charcoal); }
+.cc-switch input:disabled + .cc-switch__track { opacity: 0.7; }
+.cc-switch input:focus-visible + .cc-switch__track { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+.cc-panel__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* footer cookie-settings control */
+.ftr__cookie {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--slate);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ftr__cookie:hover { color: var(--brand-polar); }
+
+@media (max-width: 640px) {
+  .cc-banner { left: 0; right: 0; bottom: 0; }
+  .cc-banner__in { border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-bottom: 0; }
+  .cc-banner__actions { width: 100%; }
+  .cc-banner__actions .btn { flex: 1 1 auto; justify-content: center; }
+  .cc-panel { padding: var(--space-6); }
+  .cc-panel__actions .btn { flex: 1 1 auto; justify-content: center; }
+}
