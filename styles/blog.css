@@ -119,3 +119,20 @@
   .sub__form { flex-direction: column; }
   .sub__form .btn { justify-content: center; }
 }
+
+/* ===== Insight category archive (/insights/category/[slug]) ===== */
+/* Breadcrumb (mirrors the article breadcrumb; kept in blog.css so the category
+   page needs only this stylesheet, avoiding an article.css ".close" clash). */
+.icat-hero .crumb { padding-top: var(--space-8); }
+.icat-hero .crumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); list-style: none; margin: 0; padding: 0; font-size: 13px; color: var(--text-secondary); }
+.icat-hero .crumb li::after { content: "/"; margin-left: var(--space-2); opacity: .45; }
+.icat-hero .crumb li:last-child::after { content: none; }
+.icat-hero .crumb a:hover { color: var(--text-primary); }
+.icat-hero .crumb [aria-current] { color: var(--text-primary); }
+.icat-hero { padding-block: clamp(28px, 4vw, 52px) clamp(20px, 2.5vw, 36px); }
+.icat-hero .eyebrow-x { margin-top: var(--space-6); }
+.icat-h1 { font-size: var(--t-chapter); line-height: 1.04; font-weight: 700; letter-spacing: -0.03em; margin-top: var(--space-3); text-wrap: balance; }
+.icat-intro { margin-top: var(--space-5); max-width: 62ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.6; color: var(--text-secondary); }
+.icat-empty { padding-block: clamp(32px, 4vw, 56px); }
+.icat-empty__h { font-size: var(--t-section); line-height: 1.1; }
+.icat-empty .close__row { margin-top: var(--space-6); }

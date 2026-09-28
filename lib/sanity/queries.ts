@@ -105,6 +105,37 @@ export async function getBlogIndex(): Promise<BlogIndex> {
 }
 
 // ---------------------------------------------------------------------------
+// Blog (Insight) — category archive route (/insights/category/[slug]).
+// ---------------------------------------------------------------------------
+
+export interface CategoryPage {
+  category: { title: string; slug: string; colour: CapabilityColour; description: string | null } | null;
+  posts: PostCard[];
+}
+
+const categoryPageQuery = groq`{
+  "category": *[_type == "category" && slug.current == $slug][0]{
+    title, "slug": slug.current, colour, description
+  },
+  "posts": *[_type == "post" && !(_id in path("drafts.**")) && category->slug.current == $slug]
+    | order(publishedAt desc) ${postCardProjection}
+}`;
+
+const EMPTY_CATEGORY: CategoryPage = { category: null, posts: [] };
+
+// One category archive: the category doc (for title/colour) plus its published
+// posts, newest first. Intro/CTA copy is frontend config keyed by slug. Returns
+// empties (not an error) when Sanity is unconfigured/unreachable.
+export async function getCategoryPage(slug: string): Promise<CategoryPage> {
+  if (!sanityConfigured) return EMPTY_CATEGORY;
+  try {
+    return await client.fetch<CategoryPage>(categoryPageQuery, { slug });
+  } catch {
+    return EMPTY_CATEGORY;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Blog — single article route.
 // ---------------------------------------------------------------------------
 
