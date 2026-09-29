@@ -206,7 +206,10 @@ export default function AgenciesPage() {
                 <span>A broader conversation</span>
               </div>
             </div>
-            <span className="agy-diagram__stem" />
+            <div className="agy-connect" aria-hidden="true">
+              <span className="agy-connect__h" />
+              <span className="agy-connect__v" />
+            </div>
             <div className="agy-node agy-node--cv">
               <span className="agy-node__wordmark">commview</span>
               <span>Specialist delivery and senior expertise when you need it</span>
