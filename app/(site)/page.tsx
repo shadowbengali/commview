@@ -161,7 +161,7 @@ export default function HomePage() {
                 We find the answer. Then we help you do something about it.
               </p>
               <div className="hero__cta">
-                <a className="btn btn--cyan btn--lg" href="#">
+                <a className="btn btn--cyan btn--lg" href="/contact">
                   Talk to us
                 </a>
               </div>
@@ -294,7 +294,7 @@ export default function HomePage() {
 
               <div className="problem__cta">
                 <span className="problem__cta-rule" aria-hidden="true"></span>
-                <a className="btn btn--cyan btn--lg btn--wide" href="#diagnostic">
+                <a className="btn btn--cyan btn--lg btn--wide" href="/diagnostic">
                   Take the Diagnostic
                 </a>
                 <p className="small dim">
@@ -463,6 +463,7 @@ export default function HomePage() {
                   "Operating rhythm",
                 ]}
                 explore="Explore GTM Leadership"
+                href="/fractional-cmo"
               >
                 <p>
                   We work out how customers actually buy, where the current route
@@ -492,6 +493,7 @@ export default function HomePage() {
                   "Analytics",
                 ]}
                 explore="Explore Growth"
+                href="/growth"
                 hidden
               >
                 <p>
@@ -519,6 +521,7 @@ export default function HomePage() {
                   "Launch",
                 ]}
                 explore="Explore Product"
+                href="/product-strategy"
                 hidden
               >
                 <p>
@@ -545,6 +548,7 @@ export default function HomePage() {
                   "Workflow automation",
                 ]}
                 explore="Explore Operational AI"
+                href="/ai-consulting"
                 hidden
               >
                 <p>
@@ -616,7 +620,7 @@ export default function HomePage() {
               </div>
 
               <div className="diag__cta">
-                <a className="btn btn--cyan btn--lg" href="#">
+                <a className="btn btn--cyan btn--lg" href="/diagnostic">
                   Take the Diagnostic
                 </a>
                 <p className="diag__terms">
@@ -696,13 +700,13 @@ export default function HomePage() {
             </div>
 
             <div className="proof__cta">
-              <a className="btn btn--ink btn--lg" href="#">
+              <a className="btn btn--ink btn--lg" href="/contact">
                 Talk to us
               </a>
               <a
                 className="explore"
                 style={{ ["--accent" as string]: "var(--brand-blue)" } as CSSProperties}
-                href="#"
+                href="/work"
               >
                 See our work
               </a>
@@ -747,7 +751,7 @@ export default function HomePage() {
               <a
                 className="explore"
                 style={{ ["--accent" as string]: "var(--brand-cyan)" } as CSSProperties}
-                href="#"
+                href="/about"
               >
                 More about Commview
               </a>
@@ -770,7 +774,7 @@ export default function HomePage() {
               <a
                 className="btn btn--ghost"
                 style={{ marginTop: "var(--space-8)" }}
-                href="#"
+                href="/agencies"
               >
                 Commview for Agencies
               </a>
@@ -811,7 +815,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="final__cta">
-              <a className="btn btn--cyan btn--lg" href="#">
+              <a className="btn btn--cyan btn--lg" href="/contact">
                 Talk to us
               </a>
               <p className="small dim">No pitch deck. No obligation.</p>
@@ -875,6 +879,7 @@ function CapPanel({
   q,
   chips,
   explore,
+  href,
   hidden,
   children,
 }: {
@@ -885,6 +890,7 @@ function CapPanel({
   q: string;
   chips: string[];
   explore: string;
+  href: string;
   hidden?: boolean;
   children: ReactNode;
 }) {
@@ -903,7 +909,7 @@ function CapPanel({
         </p>
         <p className="detail__q">{q}</p>
         <div className="detail__body">{children}</div>
-        <a className="explore" href="#">
+        <a className="explore" href={href}>
           {explore}
         </a>
       </div>
