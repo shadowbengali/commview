@@ -144,7 +144,7 @@
 /* ============================================================================
    Business Diagnostic — the runner (question flow, progress aside, teaser).
    ========================================================================== */
-.dg-run { padding-block: var(--space-12) var(--space-24); }
+.dg-run { padding-block: var(--space-8) var(--space-24); }
 .dg-run__grid {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -161,8 +161,8 @@
   margin-bottom: var(--space-3);
 }
 .dg-run__q {
-  font-size: 34px;
-  line-height: 40px;
+  font-size: 27px;
+  line-height: 33px;
   font-weight: 800;
   letter-spacing: -0.02em;
   outline: none;
@@ -172,16 +172,16 @@
 
 /* options — laid out side by side so answers stay above the fold */
 .dg-opts {
-  margin-top: var(--space-6);
+  margin-top: var(--space-5);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-2);
 }
 .dg-opt {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-3);
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-3) var(--space-4);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -193,9 +193,8 @@
 .dg-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .dg-opt__mark {
   flex: none;
-  width: 20px;
-  height: 20px;
-  margin-top: 2px;
+  width: 18px;
+  height: 18px;
   border: 1.5px solid var(--border-strong);
   border-radius: 50%;
   display: grid;
@@ -211,7 +210,7 @@
   border-radius: inherit;
   background: var(--brand-charcoal);
 }
-.dg-opt__label { font-size: 16px; line-height: 24px; }
+.dg-opt__label { font-size: 15px; line-height: 22px; }
 .dg-opt input:focus-visible + .dg-opt__mark { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 .dg-opts__hint { font-size: 13px; color: var(--text-secondary); margin-top: var(--space-1); }
 
@@ -258,8 +257,8 @@
 
 /* actions */
 .dg-run__actions {
-  margin-top: var(--space-12);
-  padding-top: var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   justify-content: space-between;
@@ -389,6 +388,6 @@
 @media (max-width: 900px) {
   .dg-run__grid { grid-template-columns: 1fr; }
   .dg-aside { position: static; order: -1; }
-  .dg-run__q { font-size: 28px; line-height: 34px; }
+  .dg-run__q { font-size: 24px; line-height: 30px; }
   .dg-result__headline { font-size: 30px; line-height: 36px; }
 }
