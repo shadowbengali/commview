@@ -148,6 +148,14 @@ export default function AgenciesPage() {
     ],
   };
 
+  // Capability cards inside the hero "commview" panel (short descriptions).
+  const heroCaps = [
+    { c: "var(--accent-green)", h: "Growth", d: "SEO, AEO, email, social, content and demand", i: <path d="M4 20h16M7.5 20v-6M12 20V8M16.5 20v-10" strokeLinecap="round" /> },
+    { c: "var(--brand-cyan)", h: "GTM Leadership", d: "Positioning, ICP, proposition and go-to-market", i: <><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="1" /></> },
+    { c: "var(--brand-blue)", h: "Product", d: "Strategy, discovery, roadmaps and adoption", i: <path d="M12 2.5l8.5 4.8v9.4L12 21.5l-8.5-4.8V7.3L12 2.5zM3.5 7.3L12 12l8.5-4.7M12 12v9.5" strokeLinejoin="round" /> },
+    { c: "var(--accent-pink)", h: "Operational AI", d: "Workflows, automation and operational redesign", i: <path d="M13 2.5L4.5 13.5H11l-1 8 8.5-11H12l1-7.5z" strokeLinejoin="round" /> },
+  ];
+
   return (
     <main id="main">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -158,65 +166,114 @@ export default function AgenciesPage() {
           <div className="agy-hero__lead">
             <p className="eyebrow-x">For agencies</p>
             <h1 className="agy-hero__h1" id="agy-h1">
-              More capability when you need it.
+              Say yes to more client work.
               <br />
-              <span className="dim">Without adding permanent headcount.</span>
+              <span className="dim">Without building every capability in-house.</span>
             </h1>
             <p className="agy-hero__body">
-              Bring Commview into client work when you need specialist delivery,
-              senior expertise or simply more experienced hands.
+              Bring Commview in when a client needs capability or capacity your
+              team doesn&rsquo;t have available.
             </p>
             <p className="agy-hero__body">
-              From SEO, email and social to GTM, Product, Growth and Operational
-              AI, we can work behind your agency, alongside your team or directly
-              with the client under an agreed model.
+              From SEO, email and social delivery to GTM, Product, Growth and
+              Operational AI, we work behind your agency, alongside your team or in
+              the room with the client.
             </p>
             <div className="agy-hero__cta">
-              <a className="btn btn--cyan btn--lg" href={CONTACT}>Talk to us</a>
+              <a className="btn btn--cyan btn--lg" href={CONTACT}>
+                Talk to us<span aria-hidden="true"> &rarr;</span>
+              </a>
               <a className="btn btn--ghost btn--lg" href="#capabilities">
                 See what we can support<span aria-hidden="true"> &darr;</span>
               </a>
             </div>
-            <ul className="agy-strip">
-              {["White-label", "Co-branded", "Behind the scenes", "Client-facing"].map((s) => (
-                <li key={s}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                    <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {s}
-                </li>
-              ))}
-            </ul>
+            <p className="agy-tagline">
+              <span className="agy-tagline__dash" aria-hidden="true" />
+              Your client. Your relationship. We add the capability.
+            </p>
           </div>
 
-          <div className="agy-diagram" aria-hidden="true">
-            <div className="agy-diagram__row">
-              <div className="agy-node agy-node--agency dark">
-                <span className="agy-node__ico">
+          {/* Coded capability-flow diagram: Commview feeds capability up into the
+              agency, which leads the client relationship. */}
+          <div className="agy-fig" aria-hidden="true">
+            <div className="agy-fig__client">
+              <span className="agy-fig__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 21V6l7-3 7 3v15M9 21v-4h6v4M8.5 8h1M14.5 8h1M8.5 11.5h1M14.5 11.5h1M8.5 15h1M14.5 15h1" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </span>
+              <b>Your client</b>
+              <span>A broader conversation</span>
+            </div>
+
+            <span className="agy-fig__up">
+              <svg viewBox="0 0 16 44" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M8 44V6M3 11l5-5 5 5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </span>
+
+            <div className="agy-fig__mid">
+              <div className="agy-fig__note agy-fig__note--l">
+                <span className="agy-fig__note-ico">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.4" /><path d="M4 19a5 5 0 0 1 10 0M14.5 19a4 4 0 0 1 5.5-3.7" strokeLinecap="round" /></svg>
                 </span>
-                <b>Your agency</b>
-                <span>You lead the client relationship</span>
+                <span className="agy-fig__note-t">More you<br />can deliver</span>
               </div>
-              <div className="agy-node agy-node--client">
-                <span className="agy-node__ico">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 20V8l7-4 7 4v12M9 20v-5h6v5" strokeLinejoin="round" /></svg>
+
+              <div className="agy-fig__agency dark">
+                <div className="agy-fig__agency-head">
+                  <span className="agy-fig__ico agy-fig__ico--cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.4" /><path d="M4 19a5 5 0 0 1 10 0M14.5 19a4 4 0 0 1 5.5-3.7" strokeLinecap="round" /></svg>
+                  </span>
+                  <div>
+                    <b>Your agency</b>
+                    <span>You lead the client relationship</span>
+                  </div>
+                </div>
+                <div className="agy-fig__pills">
+                  {["SEO", "Email", "Social", "Content", "Paid media", "Creative"].map((p) => (
+                    <span key={p}>{p}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="agy-fig__note agy-fig__note--r">
+                <span className="agy-fig__note-ico">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 17l6-6 4 4 6-7M15 8h5v5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </span>
-                <b>Your client</b>
-                <span>A broader conversation</span>
+                <span className="agy-fig__note-t">More client<br />problems<br />you can solve</span>
               </div>
             </div>
-            <div className="agy-connect" aria-hidden="true">
-              <span className="agy-connect__prong agy-connect__prong--l" />
-              <span className="agy-connect__prong agy-connect__prong--r" />
-              <span className="agy-connect__bar" />
-              <span className="agy-connect__drop" />
+
+            <div className="agy-fig__link">
+              <svg viewBox="0 0 300 42" fill="none" preserveAspectRatio="none">
+                <g stroke="var(--brand-cyan)" strokeWidth="1.6" strokeDasharray="3 4" opacity="0.7">
+                  <path d="M40 42V22 Q40 8 60 8" />
+                  <path d="M150 42V6" />
+                  <path d="M260 42V22 Q260 8 240 8" />
+                </g>
+                <g fill="var(--brand-cyan)">
+                  <circle cx="40" cy="42" r="3" /><circle cx="150" cy="42" r="3" /><circle cx="260" cy="42" r="3" />
+                </g>
+              </svg>
             </div>
-            <div className="agy-node agy-node--cv">
-              <span className="agy-node__wordmark">commview</span>
-              <span>Specialist delivery and senior expertise when you need it</span>
+
+            <div className="agy-fig__cv">
+              <div className="agy-fig__cv-head">
+                <span className="agy-fig__spark">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 5.6L19 9l-5.4 1.4L12 16l-1.6-5.6L5 9l5.4-1.4L12 2z" /></svg>
+                </span>
+                <b>commview</b>
+              </div>
+              <p className="agy-fig__cv-sub">Specialist delivery and senior expertise when you need it</p>
+              <div className="agy-fig__caps">
+                {heroCaps.map((cap) => (
+                  <div className="agy-fig__cap" key={cap.h} style={cvar(cap.c)}>
+                    <span className="agy-fig__cap-ico">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">{cap.i}</svg>
+                    </span>
+                    <b>{cap.h}</b>
+                    <span>{cap.d}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="agy-diagram__cap">Behind the scenes, alongside your team or in the room with the client.</p>
           </div>
         </div>
       </section>

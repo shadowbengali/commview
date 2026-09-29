@@ -10,39 +10,57 @@
 
 /* ---- hero ---- */
 .agy-hero { padding-block: var(--space-16) var(--space-12); }
-.agy-hero__grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-16); align-items: center; }
+.agy-hero__grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--space-12); align-items: center; }
 .agy-hero__h1 { font-size: 48px; line-height: 52px; font-weight: 800; letter-spacing: -0.02em; margin: var(--space-4) 0 var(--space-6); }
 .agy-hero__h1 .dim { color: var(--text-secondary); }
 .agy-hero__body { font-size: 17px; line-height: 28px; color: var(--text-secondary); max-width: 50ch; margin-bottom: var(--space-4); }
 .agy-hero__cta { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-6); }
-.agy-strip { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-6); margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--border-subtle); }
-.agy-strip li { display: flex; align-items: center; gap: var(--space-2); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); }
-.agy-strip svg { width: 16px; height: 16px; color: var(--brand-cyan); }
+.agy-tagline { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-8); font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.agy-tagline__dash { width: 28px; height: 2px; background: var(--brand-cyan); flex: none; }
 
-/* hero diagram */
-.agy-diagram { display: flex; flex-direction: column; align-items: center; }
-.agy-diagram__row { display: flex; gap: var(--space-4); width: 100%; }
-.agy-node { flex: 1; border-radius: var(--radius-lg); padding: var(--space-5); border: 1px solid var(--border-subtle); }
-.agy-node b { display: block; font-size: 16px; margin-top: var(--space-2); }
-.agy-node span:not(.agy-node__ico):not(.agy-node__wordmark) { display: block; font-size: 13px; line-height: 18px; color: var(--text-secondary); margin-top: 2px; }
-.agy-node__ico { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: var(--radius-pill); background: rgba(0,229,255,0.12); color: var(--brand-cyan); }
-.agy-node__ico svg { width: 18px; height: 18px; }
-.agy-node--agency { background: var(--brand-charcoal); color: var(--brand-polar); border-color: transparent; }
-.agy-node--agency span:not(.agy-node__ico) { color: var(--slate); }
-.agy-node--client { background: var(--surface-raised); }
-/* branch connector: prongs down from each box, a bar clear of the text, then a
-   single drop into Commview (org-chart bracket) */
-.agy-connect { position: relative; width: 100%; height: 34px; margin-top: var(--space-2); }
-.agy-connect span { position: absolute; background: var(--border-strong); opacity: 0.45; }
-.agy-connect__prong { top: 0; height: 18px; width: 2px; }
-.agy-connect__prong--l { left: 25%; }
-.agy-connect__prong--r { left: 75%; }
-.agy-connect__bar { top: 16px; left: 25%; right: 25%; height: 2px; }
-.agy-connect__drop { top: 16px; bottom: 0; left: 50%; margin-left: -1px; width: 2px; }
-.agy-node--cv { width: 86%; text-align: center; background: rgba(0,229,255,0.1); border: 1px solid var(--brand-cyan); }
-.agy-node__wordmark { display: block; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-charcoal); }
-.agy-node--cv span:not(.agy-node__wordmark) { color: var(--text-secondary); margin-top: var(--space-2); }
-.agy-diagram__cap { margin-top: var(--space-4); font-size: 13px; line-height: 19px; color: var(--text-secondary); text-align: center; max-width: 34ch; }
+/* ---- hero capability-flow diagram (coded) ---- */
+.agy-fig { position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.agy-fig__ico { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: var(--radius-pill); background: var(--slate-light); color: var(--text-primary); flex: none; }
+.agy-fig__ico svg { width: 18px; height: 18px; }
+.agy-fig__ico--cyan { background: rgba(0,229,255,0.14); color: var(--brand-cyan); }
+
+.agy-fig__client { width: 60%; text-align: center; background: var(--surface-raised); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-raised); }
+.agy-fig__client b { display: block; font-size: 16px; margin-top: var(--space-2); }
+.agy-fig__client > span:last-child { display: block; font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+
+.agy-fig__up { color: var(--border-strong); }
+.agy-fig__up svg { width: 16px; height: 40px; display: block; }
+
+.agy-fig__mid { position: relative; width: 100%; display: flex; justify-content: center; }
+.agy-fig__agency { width: 70%; border-radius: var(--radius-lg); padding: var(--space-5); background: var(--brand-charcoal); color: var(--brand-polar); box-shadow: var(--shadow-overlay); }
+.agy-fig__agency-head { display: flex; align-items: center; gap: var(--space-3); }
+.agy-fig__agency-head b { display: block; font-size: 16px; }
+.agy-fig__agency-head > div span { display: block; font-size: 13px; color: var(--slate); }
+.agy-fig__pills { margin-top: var(--space-4); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+.agy-fig__pills span { text-align: center; font-size: 12px; padding: 7px 4px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.06); border: 1px solid var(--slate-dark); color: var(--slate-light); }
+
+.agy-fig__note { position: absolute; top: 50%; transform: translateY(-50%); width: 14%; min-width: 82px; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; }
+.agy-fig__note--l { left: 0; }
+.agy-fig__note--r { right: 0; }
+.agy-fig__note-ico { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: var(--radius-pill); background: rgba(0,229,255,0.12); color: var(--brand-cyan); }
+.agy-fig__note-ico svg { width: 20px; height: 20px; }
+.agy-fig__note-t { font-size: 12px; font-weight: 700; line-height: 15px; color: var(--text-secondary); }
+
+.agy-fig__link { width: 70%; height: 42px; margin-top: -2px; }
+.agy-fig__link svg { width: 100%; height: 100%; display: block; }
+
+.agy-fig__cv { width: 92%; border-radius: var(--radius-lg); padding: var(--space-6); background: linear-gradient(180deg, rgba(0,229,255,0.10), rgba(0,229,255,0.03)); border: 1px solid rgba(0,229,255,0.4); }
+.agy-fig__cv-head { display: flex; align-items: center; justify-content: center; gap: var(--space-2); }
+.agy-fig__cv-head b { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-charcoal); }
+.agy-fig__spark { color: var(--brand-cyan); display: inline-flex; }
+.agy-fig__spark svg { width: 18px; height: 18px; }
+.agy-fig__cv-sub { text-align: center; font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+.agy-fig__caps { margin-top: var(--space-5); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+.agy-fig__cap { background: var(--surface-raised); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: var(--space-4); }
+.agy-fig__cap-ico { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: var(--radius-sm); color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); margin-bottom: var(--space-2); }
+.agy-fig__cap-ico svg { width: 17px; height: 17px; }
+.agy-fig__cap b { display: block; font-size: 14px; font-weight: 700; }
+.agy-fig__cap > span:last-child { display: block; font-size: 12px; line-height: 17px; color: var(--text-secondary); margin-top: 2px; }
 
 /* ---- three reasons ---- */
 .agy-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-8); }
@@ -115,10 +133,15 @@
   .agy-hero__h1 { font-size: 36px; line-height: 40px; }
   .agy-h2 { font-size: 27px; line-height: 33px; }
   .agy-faq { grid-template-columns: 1fr; }
+  .agy-fig { max-width: 580px; margin-inline: auto; }
+}
+@media (max-width: 640px) {
+  .agy-fig__note { display: none; }
+  .agy-fig__client { width: 78%; }
+  .agy-fig__agency, .agy-fig__link { width: 92%; }
+  .agy-fig__cv { width: 100%; }
 }
 @media (max-width: 560px) {
   .agy-caps, .agy-models { grid-template-columns: 1fr; }
-  .agy-diagram__row { flex-direction: column; }
-  .agy-connect__prong, .agy-connect__bar { display: none; }
-  .agy-node--cv { width: 100%; }
+  .agy-fig__caps { grid-template-columns: 1fr; }
 }
