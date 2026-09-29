@@ -18,9 +18,10 @@ const ICON = {
 
 const MENU: Col[] = [
   {
-    title: "GTM Leadership", href: "/fractional-cmo", accent: "cyan", icon: "chart",
+    title: "GTM Leadership", href: "/gtm-leadership", accent: "cyan", icon: "chart",
     tag: "Clearer positioning, sharper focus and a go-to-market engine that delivers.",
     links: [
+      ["GTM Leadership", "/gtm-leadership"],
       ["Fractional CMO", "/fractional-cmo"],
       ["CMO Support", "/cmo-support"],
       ["B2B Positioning", "/positioning"],

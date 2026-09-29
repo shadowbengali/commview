@@ -1,0 +1,246 @@
+{
+  "slug": "gtm-leadership",
+  "pillar": "gtm-leadership",
+  "accent": "cyan",
+  "meta": {
+    "title": "B2B Go-to-Market Strategy & GTM Leadership | Commview",
+    "description": "B2B go-to-market strategy and hands-on GTM leadership across Product, Marketing and Sales. Find what's blocking growth and build a GTM model that works.",
+    "primaryKeyword": "go-to-market strategy",
+    "secondaryKeywords": [
+      "b2b go-to-market strategy",
+      "gtm strategy",
+      "gtm leadership",
+      "gtm consultant",
+      "go-to-market consultant",
+      "b2b growth strategy",
+      "product launch strategy",
+      "sales and marketing alignment",
+      "market expansion strategy",
+      "fractional gtm leadership"
+    ],
+    "schemaTypes": ["Service", "FAQPage", "BreadcrumbList"],
+    "breadcrumb": [
+      { "name": "Home", "href": "/" },
+      { "name": "GTM Leadership", "href": "/gtm-leadership" }
+    ],
+    "internalLinks": [
+      { "href": "/how-we-work", "purpose": "related" },
+      { "href": "/fractional-cmo", "purpose": "related" },
+      { "href": "/contact", "purpose": "cta" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "GTM LEADERSHIP",
+    "h1": ["B2B Go-to-Market Strategy", "& GTM Leadership"],
+    "accentLine": 1,
+    "sub": [
+      "Your product works. Why isn't growth following?",
+      "You don't need another GTM framework. Commview works across Product, Marketing and Sales to understand what's getting in the way of growth, fix it and build a go-to-market model around how your customers actually buy."
+    ],
+    "ctas": [
+      { "label": "Talk to us", "href": "/contact", "style": "primary" },
+      { "label": "See how we work", "href": "/how-we-work", "style": "ghost" }
+    ],
+    "diagram": {
+      "kind": "stack",
+      "caption": "ONE GTM MODEL",
+      "sub": "Product, Marketing and Sales, connected.",
+      "layers": ["PRODUCT", "MARKETING", "SALES", "GROWTH"],
+      "highlight": 3
+    }
+  },
+  "sections": [
+    {
+      "id": "trust",
+      "type": "logos",
+      "theme": "dark",
+      "tight": true,
+      "logos": [
+        { "name": "Vodafone Business", "alt": "Vodafone Business" },
+        { "name": "ADI Global", "alt": "ADI Global" },
+        { "name": "Distrelec", "alt": "Distrelec" },
+        { "name": "Travis Perkins", "alt": "Travis Perkins" }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "grid",
+      "variant": "icon",
+      "eyebrow": "The challenge",
+      "heading": ["When your go-to-market", "strategy isn't delivering"],
+      "intro": [
+        "Most GTM problems don't sit neatly inside one team.",
+        "Marketing generates leads, but Sales says they're poor. Sales is having conversations, but deals aren't moving. The product is strong, but customers don't immediately understand why they should choose it. A new market launches, but the playbook that worked before doesn't travel.",
+        "Or perhaps growth has simply flattened and nobody can quite agree why.",
+        "These aren't always Marketing problems or Sales problems. They're often symptoms of something breaking across the go-to-market system."
+      ],
+      "items": [
+        { "icon": "chart", "title": "Growth has slowed", "body": "What worked to get you here isn't getting you to the next stage." },
+        { "icon": "database", "title": "Demand isn't becoming revenue", "body": "Activity is happening, but too little of it is turning into pipeline and customers." },
+        { "icon": "target", "title": "Your positioning isn't landing", "body": "You know why the product matters. Your customers aren't seeing it quickly enough." },
+        { "icon": "people", "title": "Product, Marketing and Sales aren't aligned", "body": "Different teams are working from different assumptions about the customer, proposition and journey." }
+      ]
+    },
+    {
+      "id": "bigger-picture",
+      "type": "lead",
+      "theme": "alt",
+      "eyebrow": "The bigger picture",
+      "heading": ["Go-to-market leadership", "across the whole", "commercial journey"],
+      "intro": [
+        "A go-to-market strategy isn't a marketing plan.",
+        "It connects who you're selling to, the problem you're solving, how you position the product, where customers discover you, how they evaluate you, what Sales needs to convert them and what happens after they buy.",
+        "That's why we work across Product, Marketing and Sales, rather than optimising one function in isolation.",
+        "The aim isn't more activity."
+      ],
+      "callout": "Product → Market → Customer → Revenue"
+    },
+    {
+      "id": "what-we-do",
+      "type": "stepper",
+      "theme": "dark",
+      "style": "arrows",
+      "eyebrow": "That we do",
+      "heading": ["B2B go-to-market strategy", "built around how your customers buy"],
+      "intro": [
+        "There's no standard Commview GTM playbook because there shouldn't be one.",
+        "We start with the business, the product and the customer, then work out what needs to change."
+      ],
+      "steps": [
+        { "title": "Market & ICP", "body": "Identify the customers worth pursuing, understand where the strongest opportunities sit and focus resources on the segments most likely to buy." },
+        { "title": "Positioning & Proposition", "body": "Turn product capability into a proposition built around the outcomes customers actually care about." },
+        { "title": "Discovery & Demand", "body": "Map how customers really discover, research and buy, then determine the channels and motions that should support it." },
+        { "title": "Evaluation", "body": "Look at where demand comes from, how it converts, where money is being wasted and what genuinely drives pipeline and revenue." },
+        { "title": "Sales & Conversion", "body": "Connect positioning, insight and buying behaviour into the messaging, proof and commercial context Sales needs to win." },
+        { "title": "Customer & Growth", "body": "Connect Product and commercial teams around the launch, route to market and feedback needed to scale into new markets." }
+      ]
+    },
+    {
+      "id": "systems",
+      "type": "callout",
+      "theme": "dark",
+      "heading": "GTM systems, data & AI",
+      "body": [
+        "Your CRM, marketing technology and AI should support the commercial model, not dictate it.",
+        "We look at the data, tooling, automation, measurement and workflows behind GTM and identify where technology can remove friction, improve decisions and create leverage across the whole journey."
+      ]
+    },
+    {
+      "id": "one-model",
+      "type": "venn",
+      "eyebrow": "The difference",
+      "heading": ["Product, Marketing and Sales", "need one GTM model"],
+      "body": [
+        "A lot of businesses don't have a lead problem. They have a gap problem.",
+        "A gap between what Product has built and what Marketing is saying. A gap between the leads Marketing generates and the opportunities Sales wants. A gap between what customers care about and what the business thinks they care about. And increasingly, a gap between how the company sells and how customers actually buy.",
+        "Commview works across those gaps. We bring together customer insight, product thinking, positioning, demand, sales, data and technology so the commercial journey works as one system rather than a collection of functions."
+      ],
+      "pull": "One system, not a collection of functions.",
+      "left": { "title": "Product", "lines": ["What's built", "Capability", "Roadmap"] },
+      "right": { "title": "Sales", "lines": ["Pipeline", "Conversion", "Deals"] },
+      "caption": "Commview works across the joins between Product, Marketing and Sales."
+    },
+    {
+      "id": "how-we-work",
+      "type": "stages",
+      "theme": "alt",
+      "eyebrow": "How we work",
+      "heading": ["Go-to-market consulting", "that gets implemented"],
+      "intro": [
+        "You don't need six months of discovery followed by a 40-slide strategy deck.",
+        "Our work moves through three stages."
+      ],
+      "items": [
+        { "name": "Insight", "accent": "cyan", "lead": "Find out what's actually going on.", "body": "We look at the customer, data, product, proposition, pipeline, channels, systems and people to understand where growth is getting stuck." },
+        { "name": "Momentum", "accent": "blue", "lead": "Get something moving.", "body": "We prioritise what matters, make changes and put ideas into the market quickly enough to learn from them." },
+        { "name": "Impact", "accent": "pink", "lead": "Prove it made a difference.", "body": "We measure what changed, what worked and where to go next." }
+      ]
+    },
+    {
+      "id": "insight-impact",
+      "type": "lead",
+      "heading": "From Insight to Impact.",
+      "intro": "No frameworks for the sake of frameworks. No recommendations that sit in a folder. Work moves forward every week.",
+      "ctas": [{ "label": "See how we work", "href": "/how-we-work", "style": "ghost" }]
+    },
+    {
+      "id": "experience",
+      "type": "lead",
+      "theme": "alt",
+      "eyebrow": "Real-world experience",
+      "heading": ["B2B GTM experience from", "strategy through to execution"],
+      "intro": [
+        "Commview brings experience across Product, digital, demand generation, ecommerce and go-to-market in complex B2B organisations.",
+        "That includes taking a B2B proposition from 2 to 10 markets, generating 6,000+ marketing-qualified leads and 1,000+ sales-qualified leads, contributing to £3m in marketing-influenced pipeline, and working across the product, technology and commercial systems supporting the customer journey.",
+        "We've worked across businesses including Vodafone Business, ADI Global, Distrelec and Travis Perkins, giving us experience of GTM from both sides: building the strategy and dealing with what happens when it meets the real organisation."
+      ]
+    },
+    {
+      "id": "vs-cmo",
+      "type": "comparison",
+      "eyebrow": "Which do you need?",
+      "heading": ["Do you need GTM Leadership", "or a Fractional CMO?"],
+      "intro": [
+        "They're related, but they're not the same thing.",
+        "Sometimes the answer is one. Sometimes it's a combination."
+      ],
+      "columns": [
+        {
+          "title": "GTM Leadership",
+          "items": [
+            "For businesses that need to improve how the company takes a product to market.",
+            "The problem may cross Product, Marketing, Sales, customer journey, positioning, systems or commercial strategy."
+          ]
+        },
+        {
+          "title": "Fractional CMO",
+          "items": [
+            "For businesses that specifically need experienced leadership of the Marketing function without hiring a full-time CMO.",
+            "[Explore Fractional CMO](/fractional-cmo)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who-for",
+      "type": "lead",
+      "theme": "alt",
+      "eyebrow": "Who it's for",
+      "heading": ["Go-to-market support", "for B2B scale-ups"],
+      "intro": [
+        "Commview is built for B2B businesses that have moved beyond proving the product but haven't yet built the commercial machine of a large organisation.",
+        "You may have customers, a team and a product that works, but growth has become harder.",
+        "You don't necessarily need another agency. You need someone who can get inside the business, work across functions and help work out what needs to change next."
+      ]
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "layout": "split",
+      "eyebrow": "FAQ",
+      "heading": ["B2B go-to-market", "strategy FAQs"],
+      "items": [
+        { "q": "What is a B2B go-to-market strategy?", "a": "A B2B go-to-market strategy defines how a business takes its product or service to the right customers and turns demand into revenue. It connects the target market, ICP, positioning, proposition, buyer journey, channels, Sales motion, customer experience and measurement rather than treating each as a separate activity." },
+        { "q": "What does a GTM consultant do?", "a": "A GTM consultant helps identify why a company's current route to market isn't producing the expected results and works with the business to improve it. Depending on the problem, that can involve customer research, ICP and segmentation, positioning, demand generation, sales enablement, product launches, commercial processes, technology and measurement." },
+        { "q": "When should we review our go-to-market strategy?", "a": "Common triggers include slowing growth, poor lead-to-sale conversion, entering a new market, launching a new product, changing buyer behaviour, increasing acquisition costs or persistent disagreement between Product, Marketing and Sales about where the problem sits." },
+        { "q": "What's the difference between GTM strategy and marketing strategy?", "a": "Marketing strategy is one part of go-to-market. GTM is broader. It connects the product and proposition with Marketing, Sales, routes to market, buyer behaviour and the commercial process required to acquire and grow customers." },
+        { "q": "Can Commview help implement the GTM strategy?", "a": "Yes. Commview isn't designed around producing a strategy and handing it back to the business. We can work alongside your existing teams and partners to turn the priorities into actual changes, test them and measure the impact." },
+        { "q": "Do you replace our existing marketing or sales agencies?", "a": "Not necessarily. If you've already got good specialist partners, we'd rather make them more effective. Commview can provide the strategic and commercial layer across internal teams and external partners, helping make sure everyone is working towards the same outcomes." }
+      ]
+    },
+    {
+      "id": "final",
+      "type": "cta",
+      "theme": "dark",
+      "eyebrow": "Let's talk",
+      "heading": "Something isn't working in your GTM.",
+      "body": [
+        "Maybe you know exactly what it is. Maybe Marketing, Sales and Product all have different answers.",
+        "Either way, we'll start by finding out what's actually going on."
+      ],
+      "ctas": [{ "label": "Talk to us", "href": "/contact", "style": "primary" }],
+      "tagline": ["Insight.", "Momentum.", "Impact."]
+    }
+  ],
+  "notes": "GTM Leadership pillar hub. Distinct from /fractional-cmo (Marketing-function leadership). Copy per approved brief; COMMVIEW normalised to Commview in prose per brand rule. Section 5 operating model rendered with the pillar venn (Product/Sales, Commview across the join) plus prose covering Marketing and the gaps; a bespoke three-way visual is a possible future upgrade."
+}
