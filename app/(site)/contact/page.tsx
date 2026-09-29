@@ -139,8 +139,16 @@ export default function ContactPage() {
           <h2 id="ct-close-h">Let&rsquo;s have a conversation.</h2>
           <p className="ct-close__body">
             Email us at <ContactEmail className="ct-link ct-link--bright" />
-            {/* TODO(client): add the verified Commview LinkedIn company URL, then wire the link below. */}
-            {" "}or connect on LinkedIn <span className="ct-close__todo">(LinkedIn URL to be supplied)</span>.
+            {" "}or connect on{" "}
+            <a
+              className="ct-link ct-link--bright"
+              href="https://www.linkedin.com/company/commview"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            .
           </p>
         </div>
       </section>

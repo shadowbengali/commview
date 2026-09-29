@@ -35,7 +35,12 @@ export function SiteFooter() {
               hello@commview.co.uk
             </a>{" "}
             ·{" "}
-            <a href="#" rel="me" style={cyan}>
+            <a
+              href="https://www.linkedin.com/company/commview"
+              target="_blank"
+              rel="me noopener noreferrer"
+              style={cyan}
+            >
               LinkedIn
             </a>
           </address>
