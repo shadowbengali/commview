@@ -23,14 +23,20 @@ export const metadata: Metadata = {
 
 const REASONS = [
   {
+    c: "var(--accent-green)",
+    icon: <path d="M12 3l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5" strokeLinejoin="round" />,
     h: "You've sold work you need help delivering.",
     p: "The client needs SEO, email, social, content or another specialist workstream, but you don't have the capacity or capability available internally. We can work inside the existing strategy and delivery structure without you having to recruit around every brief.",
   },
   {
+    c: "var(--brand-cyan)",
+    icon: <><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="1" /></>,
     h: "The brief has moved beyond the original scope.",
     p: "A channel brief can expose a bigger commercial problem. What started as SEO might uncover weak positioning. Paid media might reveal the wrong ICP. A website project might raise questions about proposition or product adoption. We can help solve the wider problem rather than forcing it back into the service originally sold.",
   },
   {
+    c: "var(--brand-blue)",
+    icon: <><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.4" /><path d="M4 19a5 5 0 0 1 10 0M14.5 19a4 4 0 0 1 5.5-3.7" strokeLinecap="round" /></>,
     h: "You need senior expertise in the room.",
     p: "Sometimes the client conversation needs someone who has operated at that level before. Bring us into a pitch, workshop, strategy session or important client conversation when deeper GTM, Growth, Product or AI experience strengthens what your agency can offer.",
   },
@@ -84,18 +90,38 @@ const CAPABILITIES = [
 ];
 
 const MAPPINGS = [
-  { colour: "var(--brand-blue)", asked: "More traffic", found: "Positioning / ICP" },
-  { colour: "var(--accent-green)", asked: "More leads", found: "Conversion / Sales" },
-  { colour: "var(--accent-blue)", asked: "A new website", found: "Proposition / Product" },
-  { colour: "var(--accent-orange)", asked: "AI strategy", found: "Workflow / Operations" },
-  { colour: "var(--accent-pink)", asked: "Email campaigns", found: "Customer journey" },
+  {
+    colour: "var(--brand-blue)", asked: "More traffic", found: "Positioning / ICP",
+    icon: <><circle cx="11" cy="11" r="7" /><path d="M21 21l-4-4" strokeLinecap="round" /></>,
+    fic: <><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="3.5" /></>,
+  },
+  {
+    colour: "var(--accent-green)", asked: "More leads", found: "Conversion / Sales",
+    icon: <path d="M4 20h16M7.5 20v-6M12 20V8M16.5 20v-10" strokeLinecap="round" />,
+    fic: <path d="M4 5h16l-6 7v5l-4 2v-7L4 5z" strokeLinejoin="round" />,
+  },
+  {
+    colour: "var(--accent-blue)", asked: "A new website", found: "Proposition / Product",
+    icon: <><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" strokeLinecap="round" /></>,
+    fic: <path d="M12 2.5l8 4.5v9L12 20.5 4 16v-9l8-4.5zM4 7l8 4.5L20 7M12 11.5v9" strokeLinejoin="round" />,
+  },
+  {
+    colour: "var(--accent-orange)", asked: "AI strategy", found: "Workflow / Operations",
+    icon: <><circle cx="12" cy="12" r="8.5" /><path d="M12 3.5v17M3.5 12h17" strokeLinecap="round" /></>,
+    fic: <path d="M20 12a8 8 0 1 1-2.3-5.6M20 3.5V8h-4.5" strokeLinecap="round" strokeLinejoin="round" />,
+  },
+  {
+    colour: "var(--accent-pink)", asked: "Email campaigns", found: "Customer journey",
+    icon: <><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" /><path d="M4 7l8 6 8-6" strokeLinecap="round" strokeLinejoin="round" /></>,
+    fic: <><circle cx="12" cy="8" r="3" /><path d="M6 20a6 6 0 0 1 12 0" strokeLinecap="round" /></>,
+  },
 ];
 
 const MODELS = [
-  { h: "Behind the scenes", p: "We work with your team while you continue to own the client relationship and lead the engagement." },
-  { h: "White-label", p: "Where appropriate, Commview operates as part of your delivery capability without needing to appear as a separate supplier to the client." },
-  { h: "Co-branded", p: "Your agency and Commview are both visible, with each business bringing its respective expertise to the engagement." },
-  { h: "Client-facing", p: "We work directly with the client as your specialist partner, with the relationship, responsibilities and commercial boundaries agreed before the work begins." },
+  { icon: <path d="M2 12s3.6-7 10-7 10 7 10 7M9.7 9.7a3 3 0 0 0 4.2 4.2M3 3l18 18" strokeLinecap="round" strokeLinejoin="round" />, h: "Behind the scenes", p: "We work with your team while you continue to own the client relationship and lead the engagement." },
+  { icon: <><path d="M11 3H5a2 2 0 0 0-2 2v6l9 9 8-8-9-9z" strokeLinejoin="round" /><circle cx="7.5" cy="7.5" r="1.3" /></>, h: "White-label", p: "Where appropriate, Commview operates as part of your delivery capability without needing to appear as a separate supplier to the client." },
+  { icon: <><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="6" /></>, h: "Co-branded", p: "Your agency and Commview are both visible, with each business bringing its respective expertise to the engagement." },
+  { icon: <><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.4" /><path d="M4 19a5 5 0 0 1 10 0M14.5 19a4 4 0 0 1 5.5-3.7" strokeLinecap="round" /></>, h: "Client-facing", p: "We work directly with the client as your specialist partner, with the relationship, responsibilities and commercial boundaries agreed before the work begins." },
 ];
 
 const STEPS = [
@@ -281,21 +307,26 @@ export default function AgenciesPage() {
       {/* ===== WHERE WE FIT ===== */}
       <section className="agy-sec" aria-labelledby="agy-fit-h">
         <div className="wrap">
-          <p className="eyebrow-x">Where we fit</p>
-          <h2 className="agy-h2" id="agy-fit-h">
-            Sometimes you need capacity.
-            <br />
-            Sometimes you need capability.
-          </h2>
-          <p className="agy-intro">
-            You don't need to hire around every client brief. Commview can add
-            experienced delivery when the team is stretched, specialist capability
-            when the work needs it, or senior thinking when the conversation moves
-            beyond the original scope.
-          </p>
+          <div className="agy-fit__head">
+            <p className="eyebrow-x">Where we fit</p>
+            <h2 className="agy-h2" id="agy-fit-h">
+              Sometimes you need capacity.
+              <br />
+              Sometimes you need capability.
+            </h2>
+            <p className="agy-intro">
+              You don't need to hire around every client brief. Commview can add
+              experienced delivery when the team is stretched, specialist
+              capability when the work needs it, or senior thinking when the
+              conversation moves beyond the original scope.
+            </p>
+          </div>
           <div className="agy-cards">
             {REASONS.map((r) => (
-              <article className="agy-card" key={r.h}>
+              <article className="agy-card" key={r.h} style={cvar(r.c)}>
+                <span className="agy-card__ico">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">{r.icon}</svg>
+                </span>
                 <h3>{r.h}</h3>
                 <p>{r.p}</p>
               </article>
@@ -367,11 +398,17 @@ export default function AgenciesPage() {
             </div>
             {MAPPINGS.map((m) => (
               <div className="agy-map__row" key={m.asked} style={cvar(m.colour)}>
-                <span className="agy-map__asked">{m.asked}</span>
+                <span className="agy-map__asked">
+                  <svg className="agy-map__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">{m.icon}</svg>
+                  {m.asked}
+                </span>
                 <svg className="agy-map__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                   <path d="M4 12h15M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <span className="agy-map__found">{m.found}</span>
+                <span className="agy-map__found">
+                  <svg className="agy-map__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">{m.fic}</svg>
+                  {m.found}
+                </span>
               </div>
             ))}
           </div>
@@ -391,6 +428,9 @@ export default function AgenciesPage() {
           <div className="agy-models">
             {MODELS.map((m) => (
               <article className="agy-model" key={m.h}>
+                <span className="agy-model__ico">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">{m.icon}</svg>
+                </span>
                 <h3>{m.h}</h3>
                 <p>{m.p}</p>
               </article>
