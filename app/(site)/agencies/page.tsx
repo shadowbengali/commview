@@ -207,8 +207,10 @@ export default function AgenciesPage() {
               </div>
             </div>
             <div className="agy-connect" aria-hidden="true">
-              <span className="agy-connect__h" />
-              <span className="agy-connect__v" />
+              <span className="agy-connect__prong agy-connect__prong--l" />
+              <span className="agy-connect__prong agy-connect__prong--r" />
+              <span className="agy-connect__bar" />
+              <span className="agy-connect__drop" />
             </div>
             <div className="agy-node agy-node--cv">
               <span className="agy-node__wordmark">commview</span>

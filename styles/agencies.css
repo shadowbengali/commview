@@ -30,10 +30,15 @@
 .agy-node--agency { background: var(--brand-charcoal); color: var(--brand-polar); border-color: transparent; }
 .agy-node--agency span:not(.agy-node__ico) { color: var(--slate); }
 .agy-node--client { background: var(--surface-raised); }
-/* branch connector: a bar links both boxes' centres, dropping into Commview */
-.agy-connect { position: relative; width: 100%; height: 30px; }
-.agy-connect__h { position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--border-strong); opacity: 0.45; }
-.agy-connect__v { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; margin-left: -1px; background: var(--border-strong); opacity: 0.45; }
+/* branch connector: prongs down from each box, a bar clear of the text, then a
+   single drop into Commview (org-chart bracket) */
+.agy-connect { position: relative; width: 100%; height: 34px; margin-top: var(--space-2); }
+.agy-connect span { position: absolute; background: var(--border-strong); opacity: 0.45; }
+.agy-connect__prong { top: 0; height: 18px; width: 2px; }
+.agy-connect__prong--l { left: 25%; }
+.agy-connect__prong--r { left: 75%; }
+.agy-connect__bar { top: 16px; left: 25%; right: 25%; height: 2px; }
+.agy-connect__drop { top: 16px; bottom: 0; left: 50%; margin-left: -1px; width: 2px; }
 .agy-node--cv { width: 86%; text-align: center; background: rgba(0,229,255,0.1); border: 1px solid var(--brand-cyan); }
 .agy-node__wordmark { display: block; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-charcoal); }
 .agy-node--cv span:not(.agy-node__wordmark) { color: var(--text-secondary); margin-top: var(--space-2); }
@@ -114,6 +119,6 @@
 @media (max-width: 560px) {
   .agy-caps, .agy-models { grid-template-columns: 1fr; }
   .agy-diagram__row { flex-direction: column; }
-  .agy-connect__h { display: none; }
+  .agy-connect__prong, .agy-connect__bar { display: none; }
   .agy-node--cv { width: 100%; }
 }
