@@ -387,7 +387,7 @@
 
 @media (max-width: 900px) {
   .dg-run__grid { grid-template-columns: 1fr; }
-  .dg-aside { position: static; order: -1; }
+  .dg-aside { position: static; }
   .dg-run__q { font-size: 24px; line-height: 30px; }
   .dg-result__headline { font-size: 30px; line-height: 36px; }
 }
