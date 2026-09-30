@@ -4,7 +4,7 @@ import { LegalPage, LegalContact } from "@/components/legal/LegalPage";
 
 import "../../../styles/legal.css";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
   title: { absolute: "Website Terms of Use | Commview" },

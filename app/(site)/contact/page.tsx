@@ -10,7 +10,7 @@ import "../../../styles/contact.css";
 // visual interest is typography, whitespace and one brand graphic, not cards or
 // a diagnostic flow. Form delivery lives in app/api/contact/route.ts.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact Commview | Talk to a B2B GTM, Growth, Product & AI Consultant" },

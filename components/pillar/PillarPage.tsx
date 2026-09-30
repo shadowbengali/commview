@@ -6,7 +6,7 @@ import type { Page, Section, Heading, Rich, Diagram, Stat } from "../../lib/cont
 
 const ACC_VAR: Record<string, string> = { cyan: "var(--brand-cyan)", green: "var(--accent-green)", blue: "var(--accent-blue)", pink: "var(--accent-pink)" };
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 // Unverified stats show (flagged) in dev/preview for QA, but never in production.
 const IS_PROD = process.env.VERCEL_ENV === "production";
 

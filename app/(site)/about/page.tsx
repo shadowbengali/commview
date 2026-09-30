@@ -8,7 +8,7 @@ import "../../../styles/about.css";
 // experience logos mark where network members gained experience: not clients,
 // partners or endorsers. No fabricated founder photo.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {

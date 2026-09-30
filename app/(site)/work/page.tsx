@@ -10,7 +10,7 @@ import "../../../styles/work.css";
 // system. The unit of evidence is the problem/workstream. Current engagements
 // are anonymous (no logos); proven work carries company wordmarks + outcomes.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {

@@ -7,7 +7,7 @@ import "../../../styles/diagnostic.css";
 // shown here as "coming soon") and the question diagnostic, which is the text
 // version. Copy is verbatim from the approved mock; nothing invented.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
   title: { absolute: "Commview Business Diagnostic | Find the real constraint" },
