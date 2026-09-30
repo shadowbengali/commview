@@ -21,7 +21,8 @@ const STRENGTH_LABEL: Record<EvidenceStrength, string> = {
   moderate: "Moderate evidence",
   limited: "Limited evidence",
 };
-const STRENGTH_FILL: Record<EvidenceStrength, number> = { limited: 1, moderate: 2, strong: 3 };
+const STRENGTH_SEGMENTS = 8;
+const STRENGTH_FILL: Record<EvidenceStrength, number> = { limited: 2, moderate: 4, strong: 7 };
 
 function EvidenceList({ items, tone }: { items: EvidenceItem[]; tone: "point" | "complicate" }) {
   return (
@@ -112,18 +113,20 @@ export function Report({
             <p className="dr-read__area">{spine.primaryArea}</p>
             <p className="dr-read__strength">{STRENGTH_LABEL[spine.evidenceStrength]}</p>
             <div className="dr-strength" aria-hidden="true">
-              {[1, 2, 3].map((n) => (
-                <span key={n} className={n <= STRENGTH_FILL[spine.evidenceStrength] ? "is-on" : ""} />
+              {Array.from({ length: STRENGTH_SEGMENTS }).map((_, i) => (
+                <span key={i} className={i < STRENGTH_FILL[spine.evidenceStrength] ? "is-on" : ""} />
               ))}
             </div>
             <div className="dr-read__stats">
-              <div>
+              <div className="dr-stat">
+                <span className="dr-stat__top">Based on</span>
                 <b>{spine.answersAnalysed}</b>
-                <span>Answers analysed</span>
+                <span className="dr-stat__unit">answers</span>
               </div>
-              <div>
+              <div className="dr-stat">
+                <span className="dr-stat__top">Important gaps</span>
                 <b>{spine.gapsRemaining}</b>
-                <span>Important gaps remain</span>
+                <span className="dr-stat__unit">remain</span>
               </div>
             </div>
           </aside>
