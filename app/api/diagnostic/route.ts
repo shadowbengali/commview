@@ -85,13 +85,15 @@ export async function POST(req: Request) {
       //    properties are not created in HubSpot, this fails without losing the
       //    contact above.
       try {
+        // Consent is stored in Supabase (marketing_consent); no HubSpot
+        // `subscribed` property needed here.
+        void marketingConsent;
         await crm.identify({
           email,
           properties: {
             diagnostic_reading: reading.headline,
             diagnostic_weak_link: reading.weakLink,
             lead_source: "diagnostic",
-            ...(marketingConsent ? { subscribed: "true" } : {}),
           },
         });
         hubspotTag = "ok";
