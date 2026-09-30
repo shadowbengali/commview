@@ -1,112 +1,56 @@
 import { NextResponse } from "next/server";
 
-import { buildResult } from "@/lib/diagnostic/engine";
+import { buildSpine } from "@/lib/diagnostic/spine";
 import type { RunState } from "@/lib/diagnostic/types";
-import { insertSubmission, saveAi, storeConfigured } from "@/lib/diagnostic/store";
-import { generateDiagnostic } from "@/lib/diagnostic/ai";
-import { crm } from "@/lib/crm";
+import { createSubmission, storeConfigured } from "@/lib/diagnostic/store";
 
-// POST /api/diagnostic — gated diagnostic submission.
-// The client sends the full run (path + answers) plus the lead fields. We
-// recompute the reading server-side (never trust the client for it), store the
-// submission in Supabase, generate the tailored ChatGPT output, cache it on the
-// row, upsert the lead to HubSpot, and return the id for the result page.
+// POST /api/diagnostic — diagnostic completion.
+// The client sends the full run (path + answers). We recompute the deterministic
+// spine server-side (never trust the client for it), store an anonymous
+// submission, and return its id. The report page shows the free teaser from the
+// spine; the AI analysis and the lead's details are attached later, on unlock.
 
 export const runtime = "nodejs";
-export const maxDuration = 30;
-
-function clean(v: unknown, max = 300) {
-  return String(v ?? "").replace(/[<>]/g, "").trim().slice(0, max);
-}
+export const maxDuration = 20;
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    // honeypot
-    if (body.website) return NextResponse.json({ ok: true });
-
     const state: RunState = {
       path: Array.isArray(body?.state?.path) ? body.state.path : [],
-      answers: body?.state?.answers && typeof body.state.answers === "object" ? body.state.answers : {},
+      answers:
+        body?.state?.answers && typeof body.state.answers === "object" ? body.state.answers : {},
     };
     if (!state.path.length) {
       return NextResponse.json({ error: "Empty diagnostic" }, { status: 400 });
-    }
-
-    const email = clean(body.email, 200);
-    const firstName = clean(body.firstName, 120);
-    const phone = clean(body.phone, 40);
-    const company = clean(body.company, 200);
-    const marketingConsent = !!body.consent;
-
-    if (!email || !email.includes("@") || !firstName || !phone) {
-      return NextResponse.json({ error: "Missing name, email or phone" }, { status: 400 });
     }
 
     if (!storeConfigured()) {
       return NextResponse.json({ error: "Storage not configured" }, { status: 503 });
     }
 
-    // Recompute the deterministic reading + evidence from the answers.
-    const { reading, evidence } = buildResult(state);
-    const freeText = clean(state.answers.problem_open?.text, 2000) || undefined;
+    const spine = buildSpine(state);
+    const freeText = String(state.answers.problem_open?.text ?? "")
+      .replace(/[<>]/g, "")
+      .trim()
+      .slice(0, 2000);
 
-    // 1. store the submission
-    const id = await insertSubmission({
+    const id = await createSubmission({
       answers: state.answers,
-      evidence,
-      reading,
-      freeText,
-      firstName,
-      email,
-      phone,
-      company,
-      marketingConsent,
+      evidence: spine.evidence,
+      readingId: spine.readingId,
+      weakLink: spine.weakLink,
+      freeText: freeText || undefined,
+      spine,
+      primaryArea: spine.primaryArea,
+      evidenceStrength: spine.evidenceStrength,
+      journeyType: spine.journey.type,
     });
-
-    // 2. generate the tailored output and cache it on the row
-    const ai = await generateDiagnostic({ reading, evidence, freeText });
-    await saveAi(id, ai);
-
-    // 3. upsert the lead to HubSpot (best-effort; a missing custom property must
-    //    not break the result flow).
-    if (process.env.HUBSPOT_PRIVATE_APP_TOKEN) {
-      // Create/update the contact with standard fields first (always valid), so
-      // the contact always lands, then tag with the diagnostic properties
-      // best-effort (consent itself is stored in Supabase).
-      try {
-        await crm.identify({
-          email,
-          firstName,
-          company: company || undefined,
-          properties: { phone },
-        });
-      } catch (e) {
-        console.error("Diagnostic: HubSpot contact create failed", e);
-      }
-      try {
-        await crm.identify({
-          email,
-          properties: {
-            diagnostic_reading: reading.headline,
-            diagnostic_weak_link: reading.weakLink,
-          },
-        });
-      } catch (e) {
-        console.error("Diagnostic: HubSpot tagging failed", e);
-      }
-      // Lead source: last-touch + first-touch, isolated from the tagging above.
-      try {
-        await crm.setLeadSource(email, "diagnostic");
-      } catch (e) {
-        console.error("Diagnostic: HubSpot lead source stamp failed", e);
-      }
-    }
 
     return NextResponse.json({ id });
   } catch (e) {
-    console.error("Diagnostic submission failed", e);
-    return NextResponse.json({ error: "Could not submit" }, { status: 500 });
+    console.error("Diagnostic completion failed", e);
+    return NextResponse.json({ error: "Could not save" }, { status: 500 });
   }
 }

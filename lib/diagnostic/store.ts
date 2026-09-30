@@ -1,21 +1,27 @@
-// Supabase data seam for the diagnostic. Server-only. Uses the REST API over
-// fetch with the service-role key (no vendor SDK, per repo convention). All
-// access is server-side; RLS on the table has no public policies so the anon
-// key can't reach it.
+// Supabase data seam for the diagnostic. Server-only, REST over fetch with the
+// service-role key (no vendor SDK, per repo convention). RLS is on with no public
+// policies, so the anon key can't reach the table.
+//
+// Lifecycle: a row is created at completion (anonymous) with the deterministic
+// spine; the AI analysis and the lead's details are attached on unlock.
 
-import type { Answer, Reading } from "./types";
+import type { Answer } from "./types";
+import type { Spine } from "./spine";
+import type { Analysis } from "./ai";
 
-export interface AiOutput {
-  narrative: string[];
-  moves: { horizon: string; title: string; detail: string }[];
-  insights: { slug: string; title: string }[];
-}
-
-export interface SubmissionInput {
+export interface CreateInput {
   answers: Record<string, Answer>;
   evidence: string[];
-  reading: Reading;
+  readingId: string;
+  weakLink: string;
   freeText?: string;
+  spine: Spine;
+  primaryArea: string;
+  evidenceStrength: string;
+  journeyType: string;
+}
+
+export interface UnlockInput {
   firstName?: string;
   email?: string;
   phone?: string;
@@ -28,7 +34,7 @@ export interface SubmissionRow {
   created_at: string;
   answers: Record<string, Answer>;
   evidence: string[];
-  reading: string; // reading id
+  reading: string;
   weak_link: string;
   free_text: string | null;
   first_name: string | null;
@@ -36,7 +42,13 @@ export interface SubmissionRow {
   phone: string | null;
   company: string | null;
   marketing_consent: boolean;
-  ai: AiOutput | null;
+  spine: Spine | null;
+  analysis: Analysis | null;
+  analysis_version: number | null;
+  primary_area: string | null;
+  evidence_strength: string | null;
+  journey_type: string | null;
+  unlocked_at: string | null;
 }
 
 const URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -56,8 +68,8 @@ function headers(extra: Record<string, string> = {}) {
   };
 }
 
-/** Insert a submission and return its new id. */
-export async function insertSubmission(input: SubmissionInput): Promise<string> {
+/** Create an anonymous submission at completion; returns the new id. */
+export async function createSubmission(input: CreateInput): Promise<string> {
   if (!storeConfigured()) throw new Error("Supabase not configured");
   const res = await fetch(`${URL}/rest/v1/${TABLE}`, {
     method: "POST",
@@ -65,14 +77,14 @@ export async function insertSubmission(input: SubmissionInput): Promise<string> 
     body: JSON.stringify({
       answers: input.answers,
       evidence: input.evidence,
-      reading: input.reading.id,
-      weak_link: input.reading.weakLink,
+      reading: input.readingId,
+      weak_link: input.weakLink,
       free_text: input.freeText ?? null,
-      first_name: input.firstName ?? null,
-      email: input.email ?? null,
-      phone: input.phone ?? null,
-      company: input.company ?? null,
-      marketing_consent: input.marketingConsent,
+      spine: input.spine,
+      primary_area: input.primaryArea,
+      evidence_strength: input.evidenceStrength,
+      journey_type: input.journeyType,
+      marketing_consent: false,
     }),
   });
   if (!res.ok) throw new Error(`Supabase insert failed: ${res.status} ${await res.text()}`);
@@ -80,17 +92,35 @@ export async function insertSubmission(input: SubmissionInput): Promise<string> 
   return rows[0].id;
 }
 
-/** Cache the generated AI output against a row. */
-export async function saveAi(id: string, ai: AiOutput): Promise<void> {
+/** Attach the lead's details on unlock. */
+export async function unlockSubmission(id: string, input: UnlockInput): Promise<void> {
+  if (!storeConfigured()) throw new Error("Supabase not configured");
+  const res = await fetch(`${URL}/rest/v1/${TABLE}?id=eq.${encodeURIComponent(id)}`, {
+    method: "PATCH",
+    headers: headers({ Prefer: "return=minimal" }),
+    body: JSON.stringify({
+      first_name: input.firstName ?? null,
+      email: input.email ?? null,
+      phone: input.phone ?? null,
+      company: input.company ?? null,
+      marketing_consent: input.marketingConsent,
+      unlocked_at: new Date().toISOString(),
+    }),
+  });
+  if (!res.ok) throw new Error(`Supabase unlock failed: ${res.status} ${await res.text()}`);
+}
+
+/** Cache the generated AI analysis against a row. */
+export async function saveAnalysis(id: string, analysis: Analysis, version: number): Promise<void> {
   if (!storeConfigured()) return;
   await fetch(`${URL}/rest/v1/${TABLE}?id=eq.${encodeURIComponent(id)}`, {
     method: "PATCH",
     headers: headers({ Prefer: "return=minimal" }),
-    body: JSON.stringify({ ai }),
+    body: JSON.stringify({ analysis, analysis_version: version }),
   });
 }
 
-/** Fetch one submission (for the result page). */
+/** Fetch one submission (for the result page and the unlock route). */
 export async function getSubmission(id: string): Promise<SubmissionRow | null> {
   if (!storeConfigured()) return null;
   const res = await fetch(

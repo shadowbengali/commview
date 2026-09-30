@@ -198,7 +198,7 @@ export function progressPercent(state: RunState, currentId: string | null): numb
 }
 
 // ---- reading selection (deterministic) ----
-function evidenceWeakness(state: RunState): number {
+export function evidenceWeakness(state: RunState): number {
   let n = 0;
   if (has(state, "problem_area", "unknown")) n++;
   if (has(state, "change_signals", "dont_know")) n++;
@@ -217,7 +217,7 @@ function evidenceWeakness(state: RunState): number {
   return n;
 }
 
-function disagreementSignals(state: RunState): number {
+export function disagreementSignals(state: RunState): number {
   let n = 0;
   if (has(state, "sales_view", "disagreement")) n++;
   if (["different", "no"].includes(first(state, "alignment") ?? "")) n++;
