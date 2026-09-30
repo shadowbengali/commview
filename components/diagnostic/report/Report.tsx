@@ -70,7 +70,9 @@ export function Report({
     year: "numeric",
   }).format(new Date(createdAt));
 
-  const headline = analysis?.headline ?? spine.headline;
+  // Headline stays deterministic — short and on-brand. The AI writes the prose
+  // around it, not the verdict itself.
+  const headline = spine.headline;
   const initialRead =
     analysis?.initialRead ?? `The strongest signal appears to sit around ${spine.weakLink.toLowerCase()}.`;
   const summary = analysis?.summary?.length ? analysis.summary : [spine.summary];

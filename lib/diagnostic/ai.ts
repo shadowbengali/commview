@@ -230,7 +230,8 @@ Hard rules:
 - Ground everything in the findings provided. Never invent metrics, time periods, causes, customer behaviour, sales feedback, product changes or commercial impact that are not in the findings.
 - Keep the reading, weak link, evidence strength and journey exactly as given. Do not restate a numeric score; there is none.
 - Distinguish fact from hypothesis. Use "appears to", "suggests", "points towards", "worth investigating", "based on what you've told us", "we'd want to test", "we don't yet know" whenever certainty is limited.
-- Never manufacture contradictions to fill space. If there is one real insight, return one. Maximum three.
+- Give three investigation_priorities when the evidence genuinely supports three distinct areas worth separating (it usually does), fewer only when it does not. Prefer three.
+- For insights, return two or three when there are real tensions across the answers; never manufacture a contradiction to fill space, and never exceed three.
 - The recommended first move is a single, specific move. Do NOT produce a "this week / this month / this quarter" plan or a 90-day plan.
 - Only include what_not_to_do_yet when there is a genuine premature action worth warning against; otherwise return null.
 - Write like a senior operator, concise and direct. Never use: leverage, optimise, synergies, unlock, transform, holistic, robust, comprehensive strategy, "it is important to note".
