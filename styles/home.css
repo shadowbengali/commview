@@ -68,6 +68,10 @@
 .trust__names span { display: inline-flex; align-items: center; gap: var(--space-6); }
 .trust__names span::after { content: ""; width: 1px; height: 18px; background: var(--border-subtle); }
 .trust__names span:last-child::after { display: none; }
+.trust__logos { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: var(--space-6) var(--space-8); flex-wrap: wrap; flex: 1 1 320px; }
+.trust__logos li { display: flex; align-items: center; }
+.trust__logos img { height: 26px; width: auto; max-width: 120px; object-fit: contain; filter: grayscale(1); opacity: 0.6; }
+.trust__word { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-secondary); opacity: 0.72; }
 
 /* ===== problem ===== */
 .problem { padding-block: clamp(56px, 7vw, 104px); overflow: hidden; }
@@ -340,6 +344,9 @@
   .venn-legend span { grid-column: 2; font-size: 12px; line-height: 1.4; color: var(--text-secondary); }
   .trust__names { gap: var(--space-4); font-size: 14px; }
   .trust__names span { gap: var(--space-4); }
+  .trust__logos { gap: var(--space-4) var(--space-6); }
+  .trust__logos img { height: 22px; max-width: 100px; }
+  .trust__word { font-size: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tp__track, .tp__viewport { transition: none; }

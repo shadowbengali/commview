@@ -11,6 +11,22 @@ import "../../styles/home.css";
 
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
+// Experience logos for the "Experience built at" strip, matched to the About
+// page set. They mark where network members gained experience, not clients.
+const TRUST_LOGOS = [
+  { src: "/logos/experience/vodafone.svg", alt: "Vodafone" },
+  { src: "/logos/experience/google.svg", alt: "Google" },
+  { src: "/logos/experience/microsoft.svg", alt: "Microsoft" },
+  { src: "/logos/experience/apple.svg", alt: "Apple" },
+  { src: "/logos/experience/capgemini.svg", alt: "Capgemini" },
+  { src: "/logos/experience/accenture.svg", alt: "Accenture" },
+  { src: "/logos/experience/travis-perkins.svg", alt: "Travis Perkins" },
+  { src: "/logos/experience/resideo.svg", alt: "Resideo" },
+  { src: "/logos/experience/adi.png", alt: "ADI Global Distribution" },
+  { src: "/logos/experience/distrelec.jpg", alt: "Distrelec" },
+  { src: "/logos/experience/barclays.svg", alt: "Barclays" },
+];
+
 // The homepage JSON-LD is stored with the final domain as a token; swap in the
 // active site URL so entity @ids/urls match the live deploy. The contact email
 // (hello@commview.co.uk) has no https:// prefix, so it is left untouched.
@@ -175,12 +191,14 @@ export default function HomePage() {
             <h2 className="eyebrow-x" id="trust-h">
               Experience built at
             </h2>
-            <p className="trust__names">
-              <span>Vodafone Business</span>
-              <span>ADI Global</span>
-              <span>Distrelec</span>
-              <span>Travis Perkins</span>
-            </p>
+            <ul className="trust__logos">
+              {TRUST_LOGOS.map((l) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <li key={l.alt}><img src={l.src} alt={l.alt} loading="lazy" /></li>
+              ))}
+              {/* Sophos: no logo asset on file yet, so a matching text wordmark. */}
+              <li><span className="trust__word">Sophos</span></li>
+            </ul>
           </div>
         </section>
 
