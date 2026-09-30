@@ -1,15 +1,31 @@
 import type { MetadataRoute } from "next";
 
-// TEMPORARY — pre-launch. Block every crawler/indexer (Google, Bing/Meta,
-// GPTBot, ClaudeBot, PerplexityBot, etc.) until the site is ready to index.
-// To go live: restore `allow: "/"` with the /studio,/api,/diagnostic/result
-// disallows and the sitemap line (see git history), and lift the noindex in
-// app/layout.tsx + the X-Robots-Tag header in next.config.ts.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
+
+// Public site open to search engines and AI answer engines; only the private
+// surfaces (Studio, API, gated diagnostic results) are blocked.
+const DISALLOW = ["/studio", "/api", "/diagnostic/result"];
+
+// AI answer-engine / crawler user-agents we explicitly welcome (AEO).
+const AI_BOTS = [
+  "GPTBot", // OpenAI crawler (training)
+  "OAI-SearchBot", // ChatGPT search
+  "ChatGPT-User", // ChatGPT user-initiated browsing
+  "PerplexityBot", // Perplexity crawler
+  "Perplexity-User", // Perplexity user-initiated fetch
+  "Google-Extended", // Gemini / Vertex AI
+  "ClaudeBot", // Anthropic crawler
+  "Claude-User", // Claude user-initiated browsing
+  "anthropic-ai", // Anthropic (legacy token)
+];
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      disallow: "/",
-    },
+    rules: [
+      { userAgent: "*", allow: "/", disallow: DISALLOW },
+      { userAgent: AI_BOTS, allow: "/", disallow: DISALLOW },
+    ],
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

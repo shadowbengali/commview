@@ -10,13 +10,8 @@ export const metadata: Metadata = {
   title: { default: "COMMVIEW", template: "%s — COMMVIEW" },
   description:
     "Operator-led fractional GTM, Growth, Product and Operational AI.",
-  // TEMPORARY — pre-launch: keep the whole site out of every index until the
-  // content is live. Remove this block to allow indexing.
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
-  },
+  // Indexable by default. Gated/private pages (e.g. /diagnostic/result/[id])
+  // set their own noindex in their page metadata.
 };
 
 export default function RootLayout({

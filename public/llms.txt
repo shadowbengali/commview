@@ -1,0 +1,32 @@
+# Commview
+
+> Commview is an operator-led B2B consultancy for scale-ups, offering fractional
+> leadership across four capabilities: GTM Leadership, Growth, Product and
+> Operational AI. British English throughout. Company no. 17456529.
+
+## Capabilities
+
+- [GTM Leadership](https://www.commview.co.uk/gtm-leadership): go-to-market leadership and commercial strategy for B2B scale-ups.
+- [Growth](https://www.commview.co.uk/growth): B2B growth, demand generation, conversion and lead generation.
+- [Product](https://www.commview.co.uk/product-strategy): product strategy, discovery, roadmaps and fractional product leadership.
+- [Operational AI](https://www.commview.co.uk/ai-consulting): applying AI and automation to business operations and workflows.
+
+## Company
+
+- [What We Do](https://www.commview.co.uk/what-we-do): the four capabilities and how they fit together.
+- [How We Work](https://www.commview.co.uk/how-we-work): the engagement approach — insight, momentum, impact.
+- [About](https://www.commview.co.uk/about): who Commview is and the experience behind it.
+- [Work](https://www.commview.co.uk/work): selected work and outcomes.
+- [Contact](https://www.commview.co.uk/contact): start a conversation. info@commview.co.uk.
+
+## Tools
+
+- [Business Diagnostic](https://www.commview.co.uk/diagnostic): a short diagnostic that reads back where a commercial or operational problem is likely to sit.
+
+## Insights
+
+- [Insights](https://www.commview.co.uk/insights): articles on B2B GTM, growth, product and operational AI.
+
+## Sitemap
+
+- [XML sitemap](https://www.commview.co.uk/sitemap.xml)
