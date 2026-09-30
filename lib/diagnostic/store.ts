@@ -9,7 +9,6 @@ export interface AiOutput {
   narrative: string[];
   moves: { horizon: string; title: string; detail: string }[];
   insights: { slug: string; title: string }[];
-  debug?: string; // temporary: why AI fell back (removed once confirmed working)
 }
 
 export interface SubmissionInput {

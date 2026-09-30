@@ -91,7 +91,7 @@ export async function generateDiagnostic(input: AiInput): Promise<AiOutput> {
   const insights = await matchedInsights(input.reading);
 
   if (!aiConfigured()) {
-    return { ...fallback(input.reading, input.evidence), insights, debug: "no OPENAI_API_KEY" };
+    return { ...fallback(input.reading, input.evidence), insights };
   }
 
   const user = JSON.stringify({
@@ -138,9 +138,10 @@ export async function generateDiagnostic(input: AiInput): Promise<AiOutput> {
             detail: String(m.detail ?? ""),
           }))
       : [];
-    if (!narrative.length || moves.length < 3) throw new Error(`thin output (model=${MODEL}): ${JSON.stringify(parsed).slice(0, 200)}`);
+    if (!narrative.length || moves.length < 3) throw new Error("thin output");
     return { narrative, moves, insights };
   } catch (err) {
-    return { ...fallback(input.reading, input.evidence), insights, debug: String(err).slice(0, 300) };
+    console.error("Diagnostic AI generation failed, using fallback:", err);
+    return { ...fallback(input.reading, input.evidence), insights };
   }
 }
