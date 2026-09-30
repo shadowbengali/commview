@@ -222,3 +222,20 @@ export async function getPostSlugs(): Promise<string[]> {
     return [];
   }
 }
+
+// ---------------------------------------------------------------------------
+// Insight titles by slug — used by the diagnostic result to render its matched
+// article links with real titles.
+// ---------------------------------------------------------------------------
+const postTitlesBySlugsQuery = groq`*[_type == "post" && slug.current in $slugs && !(_id in path("drafts.**"))]{ "slug": slug.current, title }`;
+
+export async function getPostTitlesBySlugs(
+  slugs: string[]
+): Promise<{ slug: string; title: string }[]> {
+  if (!sanityConfigured || !slugs.length) return [];
+  try {
+    return await client.fetch(postTitlesBySlugsQuery, { slugs });
+  } catch {
+    return [];
+  }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 
 import { DIAGNOSTIC } from "@/lib/diagnostic/content";
 import {
@@ -35,6 +35,10 @@ export function Runner() {
   // Compound questions are shown one field per screen (one question at a time),
   // committed together only when the last field is answered.
   const [subIndex, setSubIndex] = useState(0);
+  // Email gate on the result screen.
+  const [gate, setGate] = useState({ firstName: "", email: "", company: "", consent: false, website: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const headingRef = useRef<HTMLHeadingElement | null>(null);
 
   // restore an in-progress run (best-effort; refresh shouldn't lose answers)
@@ -131,6 +135,40 @@ export function Runner() {
     setCorrection("");
   }, []);
 
+  const submitGate = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault();
+      setSubmitError("");
+      setSubmitting(true);
+      try {
+        const res = await fetch("/api/diagnostic", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            state,
+            firstName: gate.firstName,
+            email: gate.email,
+            company: gate.company,
+            consent: gate.consent,
+            website: gate.website,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.id) throw new Error(data.error || "Failed");
+        try {
+          sessionStorage.removeItem(STORE_KEY);
+        } catch {
+          /* ignore */
+        }
+        window.location.href = `/diagnostic/result/${data.id}`;
+      } catch {
+        setSubmitError("Something went wrong generating your diagnostic. Please try again.");
+        setSubmitting(false);
+      }
+    },
+    [state, gate]
+  );
+
   // ----- REFLECTION -----
   if (currentId === REFLECTION) {
     const summary = composeReflection(state);
@@ -211,6 +249,8 @@ export function Runner() {
   // ----- RESULT (free teaser) -----
   if (currentId === RESULT) {
     const { reading, evidence: shown, investigateFirst } = buildResult(state);
+    // The email gate only shows once capture is enabled (Supabase/OpenAI live).
+    const captureEnabled = process.env.NEXT_PUBLIC_DIAGNOSTIC_CAPTURE === "true";
     return (
       <section className="dg-result" aria-labelledby="dg-result-h">
         <div className="wrap dg-result__wrap">
@@ -252,24 +292,61 @@ export function Runner() {
             <p className="dg-result__body">{investigateFirst}</p>
           </div>
 
-          <div className="dg-result__cta dark">
-            <h3 className="dg-result__ctah">Want us to go deeper?</h3>
-            <p className="dg-result__ctap">
-              Your Diagnostic is an initial view based on what you&rsquo;ve told us.
-              The next step is validating it against the data, customers and people
-              inside the business.
-            </p>
-            <div className="dg-result__row">
-              <a className="btn btn--cyan btn--lg" href="/contact">
-                Talk to Commview<span aria-hidden="true"> &rarr;</span>
-              </a>
-              {/* Email capture arrives with the HubSpot/storage phase. */}
-              <span className="dg-card__cta--soon" aria-disabled="true">
-                Email me my Diagnostic
-                <span className="dg-soon">Coming soon</span>
-              </span>
+          {!captureEnabled ? (
+            <div className="dg-result__cta dark">
+              <h3 className="dg-result__ctah">Want us to go deeper?</h3>
+              <p className="dg-result__ctap">
+                This is an initial view based on what you&rsquo;ve told us. The next
+                step is validating it against the data, customers and people inside
+                the business.
+              </p>
+              <div className="dg-result__row">
+                <a className="btn btn--cyan btn--lg" href="/contact?source=diagnostic">
+                  Talk to Commview<span aria-hidden="true"> &rarr;</span>
+                </a>
+              </div>
             </div>
+          ) : (
+          <div className="dg-gate dark">
+            <h3 className="dg-gate__h">Get your full diagnostic</h3>
+            <p className="dg-gate__p">
+              We&rsquo;ll tailor the full read to your answers, with the moves
+              we&rsquo;d prioritise and what to read next.
+            </p>
+            <form className="dg-gate__form" onSubmit={submitGate}>
+              <div className="dg-gate__grid">
+                <label className="dg-gate__field">
+                  <span className="sr">First name</span>
+                  <input type="text" name="firstName" placeholder="First name" autoComplete="given-name" required value={gate.firstName} onChange={(e) => setGate({ ...gate, firstName: e.target.value })} />
+                </label>
+                <label className="dg-gate__field">
+                  <span className="sr">Work email</span>
+                  <input type="email" name="email" placeholder="Work email" autoComplete="email" required value={gate.email} onChange={(e) => setGate({ ...gate, email: e.target.value })} />
+                </label>
+                <label className="dg-gate__field">
+                  <span className="sr">Company</span>
+                  <input type="text" name="company" placeholder="Company" autoComplete="organization" value={gate.company} onChange={(e) => setGate({ ...gate, company: e.target.value })} />
+                </label>
+              </div>
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" value={gate.website} onChange={(e) => setGate({ ...gate, website: e.target.value })} className="dg-gate__hp" />
+              <label className="dg-gate__consent">
+                <input type="checkbox" required checked={gate.consent} onChange={(e) => setGate({ ...gate, consent: e.target.checked })} />
+                <span>Send me my diagnostic and occasional Commview insights. Unsubscribe anytime.</span>
+              </label>
+              {submitError ? <p className="dg-gate__err">{submitError}</p> : null}
+              <div className="dg-gate__actions">
+                <button type="submit" className="btn btn--cyan btn--lg" disabled={submitting}>
+                  {submitting ? "Generating your diagnostic…" : "Get my full diagnostic"}
+                </button>
+                <a className="btn btn--ghost btn--lg" href="/contact?source=diagnostic">Talk to Commview</a>
+              </div>
+              <p className="dg-gate__note">
+                We use your details to prepare and send your diagnostic. See our{" "}
+                <a href="/privacy">Privacy Policy</a>.
+              </p>
+            </form>
           </div>
+          )}
 
           <button type="button" className="dg-restart" onClick={restart}>
             Start the Diagnostic again
