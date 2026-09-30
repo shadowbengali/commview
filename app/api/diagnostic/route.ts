@@ -69,30 +69,23 @@ export async function POST(req: Request) {
 
     // 3. upsert the lead to HubSpot (best-effort; a missing custom property must
     //    not break the result flow).
-    let hubspot = "skipped";
     try {
-      if (!process.env.HUBSPOT_PRIVATE_APP_TOKEN) {
-        hubspot = "no HUBSPOT_PRIVATE_APP_TOKEN (noop)";
-      } else {
-        await crm.identify({
-          email,
-          firstName,
-          company: company || undefined,
-          properties: {
-            diagnostic_reading: reading.headline,
-            diagnostic_weak_link: reading.weakLink,
-            lead_source: "diagnostic",
-            ...(marketingConsent ? { subscribed: "true" } : {}),
-          },
-        });
-        hubspot = "ok";
-      }
+      await crm.identify({
+        email,
+        firstName,
+        company: company || undefined,
+        properties: {
+          diagnostic_reading: reading.headline,
+          diagnostic_weak_link: reading.weakLink,
+          lead_source: "diagnostic",
+          ...(marketingConsent ? { subscribed: "true" } : {}),
+        },
+      });
     } catch (e) {
-      hubspot = "error: " + String(e).slice(0, 220);
       console.error("Diagnostic: HubSpot upsert failed", e);
     }
 
-    return NextResponse.json({ id, _hubspot: hubspot });
+    return NextResponse.json({ id });
   } catch (e) {
     console.error("Diagnostic submission failed", e);
     return NextResponse.json({ error: "Could not submit" }, { status: 500 });
