@@ -36,11 +36,12 @@ export async function POST(req: Request) {
 
     const email = clean(body.email, 200);
     const firstName = clean(body.firstName, 120);
+    const phone = clean(body.phone, 40);
     const company = clean(body.company, 200);
     const marketingConsent = !!body.consent;
 
-    if (!email || !email.includes("@") || !firstName) {
-      return NextResponse.json({ error: "Missing name or email" }, { status: 400 });
+    if (!email || !email.includes("@") || !firstName || !phone) {
+      return NextResponse.json({ error: "Missing name, email or phone" }, { status: 400 });
     }
 
     if (!storeConfigured()) {
@@ -59,6 +60,7 @@ export async function POST(req: Request) {
       freeText,
       firstName,
       email,
+      phone,
       company,
       marketingConsent,
     });
@@ -74,7 +76,12 @@ export async function POST(req: Request) {
       // the contact always lands, then tag with the diagnostic properties
       // best-effort (consent itself is stored in Supabase).
       try {
-        await crm.identify({ email, firstName, company: company || undefined });
+        await crm.identify({
+          email,
+          firstName,
+          company: company || undefined,
+          properties: { phone },
+        });
       } catch (e) {
         console.error("Diagnostic: HubSpot contact create failed", e);
       }

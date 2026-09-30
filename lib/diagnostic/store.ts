@@ -18,6 +18,7 @@ export interface SubmissionInput {
   freeText?: string;
   firstName?: string;
   email?: string;
+  phone?: string;
   company?: string;
   marketingConsent: boolean;
 }
@@ -32,6 +33,7 @@ export interface SubmissionRow {
   free_text: string | null;
   first_name: string | null;
   email: string | null;
+  phone: string | null;
   company: string | null;
   marketing_consent: boolean;
   ai: AiOutput | null;
@@ -68,6 +70,7 @@ export async function insertSubmission(input: SubmissionInput): Promise<string> 
       free_text: input.freeText ?? null,
       first_name: input.firstName ?? null,
       email: input.email ?? null,
+      phone: input.phone ?? null,
       company: input.company ?? null,
       marketing_consent: input.marketingConsent,
     }),

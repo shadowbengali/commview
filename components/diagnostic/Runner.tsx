@@ -36,7 +36,7 @@ export function Runner() {
   // committed together only when the last field is answered.
   const [subIndex, setSubIndex] = useState(0);
   // Email gate on the result screen.
-  const [gate, setGate] = useState({ firstName: "", email: "", company: "", consent: false, website: "" });
+  const [gate, setGate] = useState({ firstName: "", email: "", phone: "", company: "", consent: false, website: "" });
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const headingRef = useRef<HTMLHeadingElement | null>(null);
@@ -148,6 +148,7 @@ export function Runner() {
             state,
             firstName: gate.firstName,
             email: gate.email,
+            phone: gate.phone,
             company: gate.company,
             consent: gate.consent,
             website: gate.website,
@@ -322,6 +323,10 @@ export function Runner() {
                 <label className="dg-gate__field">
                   <span className="sr">Work email</span>
                   <input type="email" name="email" placeholder="Work email" autoComplete="email" required value={gate.email} onChange={(e) => setGate({ ...gate, email: e.target.value })} />
+                </label>
+                <label className="dg-gate__field">
+                  <span className="sr">Phone</span>
+                  <input type="tel" name="phone" placeholder="Phone" autoComplete="tel" required value={gate.phone} onChange={(e) => setGate({ ...gate, phone: e.target.value })} />
                 </label>
                 <label className="dg-gate__field">
                   <span className="sr">Company</span>
