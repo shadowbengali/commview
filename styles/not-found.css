@@ -45,11 +45,8 @@
   text-align: left;
 }
 .nf__cap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-6) var(--space-6);
+  display: block;
+  padding: var(--space-6) var(--space-8);
   border: 1px solid var(--border-subtle);
   border-left: 3px solid var(--c);
   border-radius: var(--radius-md);
@@ -66,9 +63,6 @@
 .nf__cap:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
-}
-.nf__cap-arrow {
-  color: var(--c);
 }
 
 @media (max-width: 560px) {

@@ -25,8 +25,7 @@ export default function NotFound() {
           {CAPABILITIES.map((c) => (
             <li key={c.href} style={{ ["--c" as string]: c.c }}>
               <a className="nf__cap" href={c.href}>
-                <span>{c.label}</span>
-                <span className="nf__cap-arrow" aria-hidden="true">&rarr;</span>
+                {c.label}
               </a>
             </li>
           ))}
