@@ -91,7 +91,7 @@ export async function generateDiagnostic(input: AiInput): Promise<AiOutput> {
   const insights = await matchedInsights(input.reading);
 
   if (!aiConfigured()) {
-    return { ...fallback(input.reading, input.evidence), insights };
+    return { ...fallback(input.reading, input.evidence), insights, debug: "no OPENAI_API_KEY" };
   }
 
   const user = JSON.stringify({
@@ -121,7 +121,10 @@ export async function generateDiagnostic(input: AiInput): Promise<AiOutput> {
         ],
       }),
     });
-    if (!res.ok) throw new Error(`OpenAI ${res.status}`);
+    if (!res.ok) {
+      const body = await res.text();
+      throw new Error(`OpenAI ${res.status} (model=${MODEL}): ${body.slice(0, 220)}`);
+    }
     const data = await res.json();
     const parsed = JSON.parse(data.choices?.[0]?.message?.content ?? "{}");
     const narrative: string[] = Array.isArray(parsed.narrative) ? parsed.narrative.filter((s: unknown) => typeof s === "string") : [];
@@ -135,9 +138,9 @@ export async function generateDiagnostic(input: AiInput): Promise<AiOutput> {
             detail: String(m.detail ?? ""),
           }))
       : [];
-    if (!narrative.length || moves.length < 3) throw new Error("thin output");
+    if (!narrative.length || moves.length < 3) throw new Error(`thin output (model=${MODEL}): ${JSON.stringify(parsed).slice(0, 200)}`);
     return { narrative, moves, insights };
-  } catch {
-    return { ...fallback(input.reading, input.evidence), insights };
+  } catch (err) {
+    return { ...fallback(input.reading, input.evidence), insights, debug: String(err).slice(0, 300) };
   }
 }
