@@ -31,16 +31,19 @@ async function upsert(contact: CrmContact): Promise<void> {
 
   // 404 means the contact does not exist yet — create it.
   if (res.status === 404) {
-    await fetch(`${BASE}/crm/v3/objects/contacts`, {
+    const createRes = await fetch(`${BASE}/crm/v3/objects/contacts`, {
       method: "POST",
       headers: headers(),
       body: JSON.stringify({ properties }),
     });
+    if (!createRes.ok) {
+      throw new Error(`HubSpot create failed: ${createRes.status} ${(await createRes.text()).slice(0, 220)}`);
+    }
     return;
   }
 
   if (!res.ok) {
-    throw new Error(`HubSpot upsert failed: ${res.status}`);
+    throw new Error(`HubSpot update failed: ${res.status} ${(await res.text()).slice(0, 220)}`);
   }
 }
 
