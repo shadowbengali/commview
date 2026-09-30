@@ -153,13 +153,15 @@ export default function AboutPage() {
           <p className="eyebrow-x ab-eye">Experience from inside the room</p>
           <h2 id="ab-exp-h">Experience earned by doing the work.</h2>
           <div className="ab-exp__body">
-            <p>Across the Commview network, our experience has been built inside organisations including Vodafone, Google, Microsoft, Apple, Capgemini, Accenture, Barclays, Travis Perkins, Resideo, ADI Global and Distrelec.</p>
+            <p>Across the Commview network, our experience has been built inside organisations including Vodafone, Google, Microsoft, Apple, Capgemini, Accenture, Barclays, Travis Perkins, Resideo, ADI Global, Distrelec and Sophos.</p>
             <p>That experience spans paid acquisition, GTM, product, commercial strategy, cybersecurity, finance, customer experience and large-scale digital and business transformation. It includes people who&rsquo;ve led acquisition, launched products, transformed operating models and, in the case of Barclays, helped launch its first mobile banking app.</p>
           </div>
           <ul className="ab-logos">
             {LOGOS.map((l) => (
               <li key={l.alt}><img src={l.src} alt={l.alt} loading="lazy" /></li>
             ))}
+            {/* Sophos: no logo asset on file yet, so a matching text wordmark. */}
+            <li><span className="ab-logos__word">Sophos</span></li>
           </ul>
           <p className="ab-exp__note">The logos aren&rsquo;t the proposition. The experience behind them is. They mark where network members gained experience, not endorsement, partnership or client status.</p>
         </div>
@@ -230,7 +232,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== FOUNDER ===== */}
+      {/* ===== FOUNDER (hidden for now per request; kept in source) ===== */}
+      {false && (
       <section className="ab-founder" aria-labelledby="ab-founder-h">
         <div className="wrap ab-founder__grid">
           <div className="ab-founder__lead">
@@ -255,6 +258,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ===== OPERATING PHILOSOPHY ===== */}
       <section className="ab-phil" aria-labelledby="ab-phil-h">
