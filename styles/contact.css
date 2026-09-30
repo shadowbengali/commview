@@ -40,16 +40,17 @@
 .cf__field { display: grid; gap: var(--space-2); }
 .cf__field label { font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-primary); }
 .cf__opt { color: var(--text-secondary); font-weight: 400; }
-.cf__field input, .cf__field textarea {
+.cf__field input, .cf__field textarea, .cf__field select {
   font: inherit; font-size: 16px; color: var(--text-primary); background: transparent;
   border: 0; border-bottom: 1.5px solid var(--border-strong); border-radius: 0;
   padding: var(--space-2) var(--space-1); width: 100%; resize: vertical;
   transition: border-color 140ms ease;
 }
 .cf__field textarea { min-height: 3em; line-height: 1.5; }
+.cf__field select { cursor: pointer; color-scheme: dark; }
 .cf__field input::placeholder, .cf__field textarea::placeholder { color: var(--text-secondary); }
-.cf__field input:focus, .cf__field textarea:focus { outline: none; border-bottom-color: var(--brand-cyan); }
-.cf__field input:focus-visible, .cf__field textarea:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+.cf__field input:focus, .cf__field textarea:focus, .cf__field select:focus { outline: none; border-bottom-color: var(--brand-cyan); }
+.cf__field input:focus-visible, .cf__field textarea:focus-visible, .cf__field select:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 .cf__actions { margin-top: var(--space-2); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
 .cf__status { margin: 0; font-size: 14px; }
 .cf__hint { color: var(--text-secondary); }

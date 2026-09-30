@@ -84,9 +84,27 @@ export function ContactForm() {
         </div>
       </div>
 
+      <div className="cf__row">
+        <div className="cf__field">
+          <label htmlFor="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autoComplete="tel" required />
+        </div>
+        <div className="cf__field">
+          <label htmlFor="company">Company <span className="cf__opt">(optional)</span></label>
+          <input id="company" name="company" type="text" autoComplete="organization" />
+        </div>
+      </div>
+
       <div className="cf__field">
-        <label htmlFor="company">Company <span className="cf__opt">(optional)</span></label>
-        <input id="company" name="company" type="text" autoComplete="organization" />
+        <label htmlFor="area">Which area is this about? <span className="cf__opt">(optional)</span></label>
+        <select id="area" name="area" defaultValue="">
+          <option value="">Select an area…</option>
+          <option>GTM Leadership</option>
+          <option>Growth</option>
+          <option>Product</option>
+          <option>Operational AI</option>
+          <option>Not sure</option>
+        </select>
       </div>
 
       <div className="cf__actions">

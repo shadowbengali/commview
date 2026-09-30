@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
 
-// Contact form delivery. Adapted from PR #10: Resend via REST (no SDK dep),
-// honeypot, input sanitisation, and a truthful result — we only report success
-// when the mail provider confirms it. The "problem/service" field from PR #10 is
-// dropped: the simplified brief has no service picker.
+import { crm } from "@/lib/crm";
+
+// Contact form delivery. Resend via REST (no SDK dep), honeypot, input
+// sanitisation, and a truthful result — we only report success when the mail
+// provider confirms it. Every enquiry is also captured in HubSpot (best-effort,
+// via the CRM seam) so follow-up can be triggered/tracked, not just sat in an
+// inbox. Phone is required; an optional pillar picker feeds a HubSpot property.
 
 export const runtime = "nodejs";
 
@@ -25,9 +28,11 @@ export async function POST(req: Request) {
     const outcome = clean(body.outcome);
     const name = clean(body.name, 120);
     const email = clean(body.email, 200);
+    const phone = clean(body.phone, 40);
     const company = clean(body.company, 200);
+    const area = clean(body.area, 60);
 
-    if (!situation || !outcome || !name || !email || !email.includes("@")) {
+    if (!situation || !outcome || !name || !email || !email.includes("@") || !phone) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -39,10 +44,36 @@ export async function POST(req: Request) {
 
     const text = [
       "New enquiry from the CommView contact form", "",
-      `Name: ${name}`, `Work email: ${email}`, `Company: ${company || "Not supplied"}`, "",
+      `Name: ${name}`, `Work email: ${email}`, `Phone: ${phone}`,
+      `Company: ${company || "Not supplied"}`, `Area: ${area || "Not specified"}`, "",
       "WHAT'S HAPPENING", situation, "",
       "WHAT THEY'D LIKE TO BE DIFFERENT", outcome,
     ].join("\n");
+
+    // Capture the lead in HubSpot before sending, so it lands even if the mail
+    // provider is down. Best-effort: a CRM hiccup must never break the enquiry.
+    if (process.env.HUBSPOT_PRIVATE_APP_TOKEN) {
+      // Standard fields + confirmed properties first, so the contact always lands.
+      try {
+        await crm.identify({
+          email,
+          firstName: name,
+          company: company || undefined,
+          properties: { phone, lead_source: "contact" },
+        });
+      } catch (e) {
+        console.error("Contact: HubSpot contact upsert failed", e);
+      }
+      // Optional pillar interest is a custom property; tag it separately so a
+      // missing property never drops the contact or the lead_source above.
+      if (area) {
+        try {
+          await crm.identify({ email, properties: { pillar_interest: area } });
+        } catch (e) {
+          console.error("Contact: HubSpot pillar tagging failed", e);
+        }
+      }
+    }
 
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
