@@ -19,6 +19,10 @@ export interface Crm {
   identify(contact: CrmContact): Promise<void>;
   track(event: CrmEvent): Promise<void>;
   subscribe(email: string, source: string): Promise<void>;
+  // Stamp where a lead came from. Records last-touch on `lead_source` (always)
+  // and first-touch on `original_lead_source` (only if not already set), so a
+  // single field answers "most recent channel" and another answers "origin".
+  setLeadSource(email: string, source: string): Promise<void>;
 }
 
 import { hubspotCrm } from "./hubspot";

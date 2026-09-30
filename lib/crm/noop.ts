@@ -19,4 +19,9 @@ export const noopCrm: Crm = {
       console.info("[crm:noop] subscribe", email, "from", source);
     }
   },
+  async setLeadSource(email, source) {
+    if (process.env.NODE_ENV !== "production") {
+      console.info("[crm:noop] setLeadSource", email, "=", source);
+    }
+  },
 };

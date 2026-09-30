@@ -47,6 +47,36 @@ async function upsert(contact: CrmContact): Promise<void> {
   }
 }
 
+// Read a single property off a contact (by email). Returns "" when the contact
+// or the property is absent, or on any error — callers treat that as "unknown".
+async function readProperty(email: string, property: string): Promise<string> {
+  try {
+    const res = await fetch(
+      `${BASE}/crm/v3/objects/contacts/${encodeURIComponent(
+        email
+      )}?idProperty=email&properties=${encodeURIComponent(property)}`,
+      { headers: headers() }
+    );
+    if (!res.ok) return "";
+    const data = await res.json();
+    return String(data?.properties?.[property] ?? "");
+  } catch {
+    return "";
+  }
+}
+
+// Stamp lead source with first-touch preservation. The last-touch write and the
+// first-touch write are separate PATCHes on purpose: if the custom
+// `original_lead_source` property is missing in the portal, that failure must
+// not stop `lead_source` (the always-updated field) from landing.
+async function stampLeadSource(email: string, source: string): Promise<void> {
+  await upsert({ email, properties: { lead_source: source } });
+  const existing = await readProperty(email, "original_lead_source");
+  if (!existing) {
+    await upsert({ email, properties: { original_lead_source: source } });
+  }
+}
+
 export const hubspotCrm: Crm = {
   async identify(contact) {
     await upsert(contact);
@@ -64,7 +94,13 @@ export const hubspotCrm: Crm = {
     });
   },
 
-  async subscribe(email, source) {
-    await upsert({ email, properties: { subscribed: "true", source } });
+  async subscribe(email) {
+    // The newsletter is one lead channel among the others, so it flows through
+    // the same lead_source field rather than a separate `source` property.
+    await stampLeadSource(email, "newsletter");
+  },
+
+  async setLeadSource(email, source) {
+    await stampLeadSource(email, source);
   },
 };

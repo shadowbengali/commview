@@ -84,11 +84,16 @@ export async function POST(req: Request) {
           properties: {
             diagnostic_reading: reading.headline,
             diagnostic_weak_link: reading.weakLink,
-            lead_source: "diagnostic",
           },
         });
       } catch (e) {
         console.error("Diagnostic: HubSpot tagging failed", e);
+      }
+      // Lead source: last-touch + first-touch, isolated from the tagging above.
+      try {
+        await crm.setLeadSource(email, "diagnostic");
+      } catch (e) {
+        console.error("Diagnostic: HubSpot lead source stamp failed", e);
       }
     }
 

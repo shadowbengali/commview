@@ -53,19 +53,26 @@ export async function POST(req: Request) {
     // Capture the lead in HubSpot before sending, so it lands even if the mail
     // provider is down. Best-effort: a CRM hiccup must never break the enquiry.
     if (process.env.HUBSPOT_PRIVATE_APP_TOKEN) {
-      // Standard fields + confirmed properties first, so the contact always lands.
+      // Standard fields first, so the contact always lands.
       try {
         await crm.identify({
           email,
           firstName: name,
           company: company || undefined,
-          properties: { phone, lead_source: "contact" },
+          properties: { phone },
         });
       } catch (e) {
         console.error("Contact: HubSpot contact upsert failed", e);
       }
+      // Lead source: last-touch + first-touch, isolated so it can't drop the
+      // base contact above.
+      try {
+        await crm.setLeadSource(email, "contact");
+      } catch (e) {
+        console.error("Contact: HubSpot lead source stamp failed", e);
+      }
       // Optional pillar interest is a custom property; tag it separately so a
-      // missing property never drops the contact or the lead_source above.
+      // missing property never drops the contact above.
       if (area) {
         try {
           await crm.identify({ email, properties: { pillar_interest: area } });
