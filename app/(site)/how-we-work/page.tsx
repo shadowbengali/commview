@@ -8,7 +8,7 @@ import "../../../styles/how-we-work.css";
 // revised design). Header/footer come from the shared (site) chrome.
 // Not a pillar/service page, so it deliberately does not use the content schema.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {

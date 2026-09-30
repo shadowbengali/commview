@@ -8,7 +8,7 @@ import "../../../../styles/outbound.css";
 // green accent. One primary visual (the outbound operating system) + editorial
 // sections. Owns "outbound lead generation"; distinct from /growth/b2b-lead-generation.
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
 
 export const metadata: Metadata = {
   title: { absolute: "B2B Outbound Lead Generation | CommView" },

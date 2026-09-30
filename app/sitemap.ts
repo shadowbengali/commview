@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { allPages } from "@/lib/content/pages";
 import { getAllPostSlugs } from "@/lib/sanity/queries";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
 
 // Generated at build time from the real, built pages: the static app routes, the
 // content-driven pillar/service pages, the four Insights categories and every

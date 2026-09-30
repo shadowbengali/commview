@@ -30,7 +30,7 @@ const TRUST_LOGOS = [
 // The homepage JSON-LD is stored with the final domain as a token; swap in the
 // active site URL so entity @ids/urls match the live deploy. The contact email
 // (hello@commview.co.uk) has no https:// prefix, so it is left untouched.
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
 const homeJsonLd = HOME_JSON_LD.replaceAll("https://commview.co.uk", SITE);
 
 export const metadata: Metadata = {

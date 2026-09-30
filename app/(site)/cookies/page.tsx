@@ -4,7 +4,7 @@ import { LegalPage, LegalContact } from "@/components/legal/LegalPage";
 
 import "../../../styles/legal.css";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | Commview" },

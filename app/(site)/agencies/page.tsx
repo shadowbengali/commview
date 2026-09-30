@@ -9,7 +9,7 @@ import "../../../styles/agencies.css";
 // in the experience strip are the ones already approved on the site (operator
 // experience, not Commview clients).
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview-green.vercel.app";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://commview.co.uk";
 const CONTACT = "/contact?source=agencies";
 
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
