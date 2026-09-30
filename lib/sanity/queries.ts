@@ -239,3 +239,17 @@ export async function getPostTitlesBySlugs(
     return [];
   }
 }
+
+// ---------------------------------------------------------------------------
+// All published post slugs (+ last-modified) for the sitemap.
+// ---------------------------------------------------------------------------
+const allPostSlugsQuery = groq`*[_type == "post" && !(_id in path("drafts.**")) && defined(slug.current)]{ "slug": slug.current, "updated": _updatedAt }`;
+
+export async function getAllPostSlugs(): Promise<{ slug: string; updated: string }[]> {
+  if (!sanityConfigured) return [];
+  try {
+    return await client.fetch(allPostSlugsQuery);
+  } catch {
+    return [];
+  }
+}
