@@ -24,6 +24,24 @@ const STRENGTH_LABEL: Record<EvidenceStrength, string> = {
 const STRENGTH_SEGMENTS = 8;
 const STRENGTH_FILL: Record<EvidenceStrength, number> = { limited: 2, moderate: 4, strong: 7 };
 
+// Category icons for the insight cards, cycled by position (matches the
+// reference: magnifier, cube, people).
+const INSIGHT_ICONS = [
+  <svg key="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" />
+    <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
+  </svg>,
+  <svg key="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" strokeLinejoin="round" />
+    <path d="M4 7.5l8 4.5 8-4.5M12 12v9" strokeLinejoin="round" />
+  </svg>,
+  <svg key="u" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <circle cx="9" cy="8" r="3" />
+    <path d="M3.5 20a5.5 5.5 0 0 1 11 0" strokeLinecap="round" />
+    <path d="M16 5.5a3 3 0 0 1 0 5.5M21 20a5.5 5.5 0 0 0-4-5.3" strokeLinecap="round" />
+  </svg>,
+];
+
 function EvidenceList({ items, tone }: { items: EvidenceItem[]; tone: "point" | "complicate" }) {
   return (
     <ul className={`dr-ev dr-ev--${tone}`}>
@@ -170,7 +188,10 @@ export function Report({
                 <div className={`dr-cards dr-cards--${analysis.insights.length}`}>
                   {analysis.insights.map((c, i) => (
                     <article className="dr-card" key={i}>
-                      <span className="dr-card__num">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="dr-card__top">
+                        <span className="dr-card__num">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="dr-card__icon">{INSIGHT_ICONS[i % INSIGHT_ICONS.length]}</span>
+                      </span>
                       <h3 className="dr-card__h">{c.headline}</h3>
                       <p className="dr-card__p">{c.explanation}</p>
                     </article>
