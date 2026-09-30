@@ -36,11 +36,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    // The enquiry succeeds if it lands in EITHER channel — HubSpot (the CRM of
+    // record) or email — and only fails if both are unavailable. So a missing
+    // mail key never loses a lead.
+    let captured = false;
+    let emailed = false;
     const key = process.env.RESEND_API_KEY;
-    if (!key) {
-      console.error("Contact form: RESEND_API_KEY is not configured");
-      return NextResponse.json({ error: "Mail service unavailable" }, { status: 503 });
-    }
 
     const text = [
       "New enquiry from the CommView contact form", "",
@@ -61,6 +62,7 @@ export async function POST(req: Request) {
           company: company || undefined,
           properties: { phone },
         });
+        captured = true;
       } catch (e) {
         console.error("Contact: HubSpot contact upsert failed", e);
       }
@@ -82,20 +84,30 @@ export async function POST(req: Request) {
       }
     }
 
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        from: FROM,
-        to: [TO],
-        reply_to: email,
-        subject: `CommView enquiry from ${name}${company ? ` · ${company}` : ""}`,
-        text,
-      }),
-    });
+    // Email notification — best-effort. Only attempted when a mail key is set.
+    if (key) {
+      try {
+        const response = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+          body: JSON.stringify({
+            from: FROM,
+            to: [TO],
+            reply_to: email,
+            subject: `CommView enquiry from ${name}${company ? ` · ${company}` : ""}`,
+            text,
+          }),
+        });
+        if (response.ok) emailed = true;
+        else console.error("Contact form: mail provider rejected request", response.status);
+      } catch (e) {
+        console.error("Contact form: mail send failed", e);
+      }
+    }
 
-    if (!response.ok) {
-      console.error("Contact form: mail provider rejected request", response.status);
+    // Fail only if the enquiry reached neither channel.
+    if (!captured && !emailed) {
+      console.error("Contact form: neither HubSpot nor email delivered the enquiry");
       return NextResponse.json({ error: "Could not send" }, { status: 502 });
     }
 
