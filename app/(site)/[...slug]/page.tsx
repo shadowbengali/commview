@@ -9,7 +9,10 @@ import { allPages, pageBySlug } from "../../../lib/content/pages";
 // Any content/<slug>.json renders at its slug path — flat or nested — with no
 // per-page route. Bespoke routes (/, /what-we-do, /fractional-cmo, /insights)
 // take precedence and are not in this set.
-export const dynamicParams = false;
+// Allow unknown slugs to render on demand so the page can call notFound() and
+// hit the (site) not-found boundary (which carries the header/footer), instead
+// of falling through to Next's bare root 404.
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return allPages().map((p) => ({ slug: p.slug.split("/") }));
