@@ -69,25 +69,16 @@ export async function POST(req: Request) {
 
     // 3. upsert the lead to HubSpot (best-effort; a missing custom property must
     //    not break the result flow).
-    let hubspotBase = "skipped";
-    let hubspotTag = "skipped";
     if (process.env.HUBSPOT_PRIVATE_APP_TOKEN) {
-      // 1. Create/update the contact with standard fields only — these always
-      //    exist in HubSpot, so the contact always lands.
+      // Create/update the contact with standard fields first (always valid), so
+      // the contact always lands, then tag with the diagnostic properties
+      // best-effort (consent itself is stored in Supabase).
       try {
         await crm.identify({ email, firstName, company: company || undefined });
-        hubspotBase = "ok";
       } catch (e) {
-        hubspotBase = "error: " + String(e).slice(0, 220);
         console.error("Diagnostic: HubSpot contact create failed", e);
       }
-      // 2. Best-effort tagging with the diagnostic properties. If these custom
-      //    properties are not created in HubSpot, this fails without losing the
-      //    contact above.
       try {
-        // Consent is stored in Supabase (marketing_consent); no HubSpot
-        // `subscribed` property needed here.
-        void marketingConsent;
         await crm.identify({
           email,
           properties: {
@@ -96,16 +87,12 @@ export async function POST(req: Request) {
             lead_source: "diagnostic",
           },
         });
-        hubspotTag = "ok";
       } catch (e) {
-        hubspotTag = "error: " + String(e).slice(0, 220);
         console.error("Diagnostic: HubSpot tagging failed", e);
       }
-    } else {
-      hubspotBase = "no HUBSPOT_PRIVATE_APP_TOKEN";
     }
 
-    return NextResponse.json({ id, _hubspot: { base: hubspotBase, tag: hubspotTag } });
+    return NextResponse.json({ id });
   } catch (e) {
     console.error("Diagnostic submission failed", e);
     return NextResponse.json({ error: "Could not submit" }, { status: 500 });
