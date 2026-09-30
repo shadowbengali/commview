@@ -91,7 +91,7 @@ export function ContactForm() {
 
       <div className="cf__actions">
         <button className="btn btn--cyan btn--lg" type="submit" disabled={status === "sending"}>
-          {status === "sending" ? "Sending…" : "Send to Commview"}
+          {status === "sending" ? "Sending…" : "Send to CommView"}
         </button>
         <p className="cf__status" role="status" aria-live="polite">
           {status === "error" ? (

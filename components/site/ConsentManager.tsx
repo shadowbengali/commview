@@ -10,7 +10,7 @@ import {
   type ConsentChoice,
 } from "@/lib/consent";
 
-// The Commview cookie consent manager: a compact first-visit banner plus an
+// The CommView cookie consent manager: a compact first-visit banner plus an
 // accessible preferences dialog. It reads/writes a single first-party cookie
 // and drives Google Consent Mode via gtag('consent','update', ...). The pre-GTM
 // init script (lib/consent.ts) has already set the denied-by-default state, so

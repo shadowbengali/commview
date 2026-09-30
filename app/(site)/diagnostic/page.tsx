@@ -10,9 +10,9 @@ import "../../../styles/diagnostic.css";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Commview Business Diagnostic | Find the real constraint" },
+  title: { absolute: "CommView Business Diagnostic | Find the real constraint" },
   description:
-    "You already know the symptom. The Commview Business Diagnostic helps work out what's actually causing it, across GTM, growth, product and operations.",
+    "You already know the symptom. The CommView Business Diagnostic helps work out what's actually causing it, across GTM, growth, product and operations.",
   alternates: { canonical: "/diagnostic" },
 };
 
@@ -37,7 +37,7 @@ export default function DiagnosticEntryPage() {
         <div className="wrap dg-hero__grid">
           {/* ---- left: the pitch ---- */}
           <div className="dg-hero__lead">
-            <p className="eyebrow-x">Commview Business Diagnostic</p>
+            <p className="eyebrow-x">CommView Business Diagnostic</p>
             <h1 className="dg-h1" id="dg-h1">
               Something isn&rsquo;t working.
               <br />

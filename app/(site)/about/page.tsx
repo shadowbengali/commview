@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 import "../../../styles/about.css";
 
-// /about — Commview as an operator-led network, built to the approved mock-up.
+// /about — CommView as an operator-led network, built to the approved mock-up.
 // Copy from content/about-page-build-brief.md (content source of truth). The
 // experience logos mark where network members gained experience: not clients,
 // partners or endorsers. No fabricated founder photo.
@@ -12,9 +12,9 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {
-  title: { absolute: "About Commview | B2B GTM, Growth, Product & AI Operators" },
+  title: { absolute: "About CommView | B2B GTM, Growth, Product & AI Operators" },
   description:
-    "Meet Commview, an operator-led network bringing experienced GTM, growth, product, AI and transformation expertise around complex B2B problems.",
+    "Meet CommView, an operator-led network bringing experienced GTM, growth, product, AI and transformation expertise around complex B2B problems.",
   alternates: { canonical: "/about" },
 };
 
@@ -47,6 +47,7 @@ const LOGOS = [
   { src: "/logos/experience/adi.png", alt: "ADI Global Distribution" },
   { src: "/logos/experience/distrelec.jpg", alt: "Distrelec" },
   { src: "/logos/experience/barclays.svg", alt: "Barclays" },
+  { src: "/logos/experience/sophos.svg", alt: "Sophos" },
 ];
 
 const DISCIPLINES_L = [
@@ -75,7 +76,7 @@ export default function AboutPage() {
       {
         "@type": "Organization",
         "@id": `${SITE}/#organisation`,
-        name: "Commview",
+        name: "CommView",
         url: SITE,
         description: "An operator-led network bringing experienced GTM, growth, product, AI and transformation expertise around complex B2B problems.",
         founder: { "@type": "Person", name: "Asad Ali", jobTitle: "Founder" },
@@ -103,7 +104,7 @@ export default function AboutPage() {
               Experience,<br /><span className="ab-grad">assembled around</span><br />the problem.
             </h1>
             <div className="ab-hero__body">
-              <p>Commview brings together experienced operators across GTM, growth, product, AI and transformation. People who have built products, launched propositions, grown businesses and led transformation inside some of the world&rsquo;s largest organisations.</p>
+              <p>CommView brings together experienced operators across GTM, growth, product, AI and transformation. People who have built products, launched propositions, grown businesses and led transformation inside some of the world&rsquo;s largest organisations.</p>
               <p className="ab-hero__sub">You bring the problem. We bring the right experience around it.</p>
             </div>
           </div>
@@ -126,13 +127,13 @@ export default function AboutPage() {
       {/* ===== THE COMMVIEW DIFFERENCE ===== */}
       <section className="ab-diff" aria-labelledby="ab-diff-h">
         <div className="wrap">
-          <p className="eyebrow-x ab-eye">The Commview difference</p>
+          <p className="eyebrow-x ab-eye">The CommView difference</p>
           <h2 id="ab-diff-h">Not an agency. Not a traditional consultancy.<br />A network of operators.</h2>
           <div className="ab-diff__grid">
             <div className="ab-diff__body">
               <p>Most businesses don&rsquo;t need another team standing on the outside telling them what to do. And they don&rsquo;t always need another permanent senior hire.</p>
               <p>Sometimes they need access to someone who&rsquo;s solved this kind of problem before.</p>
-              <p>Commview brings together experienced operators from different disciplines and puts the right expertise around the problem. We stay close to the work, help make decisions and get involved in delivery.</p>
+              <p>CommView brings together experienced operators from different disciplines and puts the right expertise around the problem. We stay close to the work, help make decisions and get involved in delivery.</p>
             </div>
             <ul className="ab-principles">
               {PRINCIPLES.map((p) => (
@@ -153,15 +154,13 @@ export default function AboutPage() {
           <p className="eyebrow-x ab-eye">Experience from inside the room</p>
           <h2 id="ab-exp-h">Experience earned by doing the work.</h2>
           <div className="ab-exp__body">
-            <p>Across the Commview network, our experience has been built inside organisations including Vodafone, Google, Microsoft, Apple, Capgemini, Accenture, Barclays, Travis Perkins, Resideo, ADI Global, Distrelec and Sophos.</p>
+            <p>Across the CommView network, our experience has been built inside organisations including Vodafone, Google, Microsoft, Apple, Capgemini, Accenture, Barclays, Travis Perkins, Resideo, ADI Global, Distrelec and Sophos.</p>
             <p>That experience spans paid acquisition, GTM, product, commercial strategy, cybersecurity, finance, customer experience and large-scale digital and business transformation. It includes people who&rsquo;ve led acquisition, launched products, transformed operating models and, in the case of Barclays, helped launch its first mobile banking app.</p>
           </div>
           <ul className="ab-logos">
             {LOGOS.map((l) => (
               <li key={l.alt}><img src={l.src} alt={l.alt} loading="lazy" /></li>
             ))}
-            {/* Sophos: no logo asset on file yet, so a matching text wordmark. */}
-            <li><span className="ab-logos__word">Sophos</span></li>
           </ul>
           <p className="ab-exp__note">The logos aren&rsquo;t the proposition. The experience behind them is. They mark where network members gained experience, not endorsement, partnership or client status.</p>
         </div>
@@ -176,7 +175,7 @@ export default function AboutPage() {
             <div className="ab-net__body">
               <p>Business problems rarely stay neatly inside one function.</p>
               <p>A growth problem might turn out to be positioning. A product problem might actually be GTM. An AI opportunity might require process redesign before it requires any technology.</p>
-              <p>That&rsquo;s why Commview isn&rsquo;t built around a fixed team or a single discipline. We diagnose what&rsquo;s actually happening, then bring together the experience the problem requires.</p>
+              <p>That&rsquo;s why CommView isn&rsquo;t built around a fixed team or a single discipline. We diagnose what&rsquo;s actually happening, then bring together the experience the problem requires.</p>
             </div>
             <a className="btn btn--cyan" href="/contact">Talk to us</a>
           </div>
@@ -207,7 +206,7 @@ export default function AboutPage() {
             <p className="eyebrow-x ab-eye">A simpler, more effective model</p>
             <h2 id="ab-model-h">No pyramid. Just the right people doing the work.</h2>
             <div className="ab-model__body">
-              <p>Traditional consulting models often separate the people who understand the problem from the people delivering the work. Commview is deliberately different.</p>
+              <p>Traditional consulting models often separate the people who understand the problem from the people delivering the work. CommView is deliberately different.</p>
               <p>We keep the core small and bring specialist experience into an engagement when it&rsquo;s needed. No unnecessary layers. No permanent bench to keep busy. No handing the work down through a hierarchy.</p>
             </div>
           </div>
@@ -221,7 +220,7 @@ export default function AboutPage() {
               </ol>
             </div>
             <div className="ab-compare__card ab-compare__card--new">
-              <span className="ab-compare__title">Commview model</span>
+              <span className="ab-compare__title">CommView model</span>
               <ol className="ab-steps">
                 {COMMVIEW_MODEL.map((t) => (
                   <li key={t}><span className="ab-steps__dot" />{t}</li>
@@ -238,13 +237,13 @@ export default function AboutPage() {
         <div className="wrap ab-founder__grid">
           <div className="ab-founder__lead">
             <p className="eyebrow-x ab-eye">Founded by an operator</p>
-            <h2 id="ab-founder-h">Why I started Commview</h2>
+            <h2 id="ab-founder-h">Why I started CommView</h2>
             <div className="ab-founder__body">
               <p>Across 15+ years in product, GTM, growth and digital, including Vodafone Business, ADI Global, Distrelec and Travis Perkins, I kept seeing the same pattern.</p>
               <p>The problems holding businesses back rarely belonged to one function. Marketing problems were sometimes product problems. Product problems were sometimes GTM problems. Businesses bought more technology when the real problem was the process underneath it. Strategies were created by one team and handed to another team to somehow make work.</p>
-              <p>Commview came from wanting to work differently. Start with the problem. Bring the right experience around it. Stay close enough to delivery to make a difference. Then measure whether anything actually changed.</p>
+              <p>CommView came from wanting to work differently. Start with the problem. Bring the right experience around it. Stay close enough to delivery to make a difference. Then measure whether anything actually changed.</p>
             </div>
-            <p className="ab-founder__by"><strong>Asad Ali</strong><span>Founder, Commview</span></p>
+            <p className="ab-founder__by"><strong>Asad Ali</strong><span>Founder, CommView</span></p>
           </div>
           <div className="ab-founder__aside">
             {/* TODO(client): supply an approved photograph of Asad; placeholder until then (no fabricated portrait). */}
@@ -253,7 +252,7 @@ export default function AboutPage() {
             </div>
             <figure className="ab-quote">
               <blockquote>&ldquo;The best person for the problem matters more than the department they sit in.&rdquo;</blockquote>
-              <figcaption><strong>Asad Ali</strong><span>Founder, Commview</span></figcaption>
+              <figcaption><strong>Asad Ali</strong><span>Founder, CommView</span></figcaption>
             </figure>
           </div>
         </div>

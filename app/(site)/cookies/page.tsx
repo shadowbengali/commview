@@ -7,9 +7,9 @@ import "../../../styles/legal.css";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Cookie Policy | Commview" },
+  title: { absolute: "Cookie Policy | CommView" },
   description:
-    "How Commview uses cookies and similar technologies, including website analytics, and how you can control your preferences.",
+    "How CommView uses cookies and similar technologies, including website analytics, and how you can control your preferences.",
   alternates: { canonical: "/cookies" },
 };
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const COOKIES = [
   {
     name: "commview_consent",
-    provider: "Commview (first party)",
+    provider: "CommView (first party)",
     category: "Necessary",
     purpose: "Remembers your cookie preferences so we do not ask again on every visit.",
     duration: "6 months",
@@ -60,7 +60,7 @@ export default function CookiesPage() {
       />
 
       <p>
-        This policy explains how Commview Limited uses cookies and similar
+        This policy explains how CommView Limited uses cookies and similar
         technologies on commview.co.uk and how you can control your preferences.
       </p>
 
@@ -79,7 +79,7 @@ export default function CookiesPage() {
       </p>
 
       <h2>How we use cookies</h2>
-      <p>Commview may use cookies and similar technologies to:</p>
+      <p>CommView may use cookies and similar technologies to:</p>
       <ul>
         <li>operate and secure the website</li>
         <li>remember your cookie preferences</li>
@@ -104,7 +104,7 @@ export default function CookiesPage() {
 
       <h2>Analytics cookies</h2>
       <p>
-        We use Google Analytics 4 to understand how visitors use the Commview website.
+        We use Google Analytics 4 to understand how visitors use the CommView website.
       </p>
       <p>
         This helps us understand things such as which pages are visited, how visitors
@@ -136,7 +136,7 @@ export default function CookiesPage() {
 
       <h2>Google Search Console</h2>
       <p>
-        We use Google Search Console to understand how Commview appears and performs
+        We use Google Search Console to understand how CommView appears and performs
         in Google Search.
       </p>
       <p>
@@ -177,7 +177,7 @@ export default function CookiesPage() {
       </div>
 
       <h2>Your cookie choices</h2>
-      <p>When you first visit Commview, you can:</p>
+      <p>When you first visit CommView, you can:</p>
       <ul>
         <li>accept all optional cookies</li>
         <li>reject optional cookies</li>
@@ -200,7 +200,7 @@ export default function CookiesPage() {
       </p>
       <p>
         Where third-party technology uses optional cookies or accesses information on
-        your device through the Commview website, it is controlled by the appropriate
+        your device through the CommView website, it is controlled by the appropriate
         cookie preference where required.
       </p>
 
@@ -213,7 +213,7 @@ export default function CookiesPage() {
 
       <h2>More information</h2>
       <p>
-        For more information about how Commview handles personal information, read our{" "}
+        For more information about how CommView handles personal information, read our{" "}
         <a href="/privacy">Privacy Policy</a>.
       </p>
       <p>For questions about cookies:</p>

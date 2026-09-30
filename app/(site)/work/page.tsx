@@ -14,9 +14,9 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {
-  title: { absolute: "B2B Consulting Case Studies | GTM, Growth, Product & AI | Commview" },
+  title: { absolute: "B2B Consulting Case Studies | GTM, Growth, Product & AI | CommView" },
   description:
-    "See how Commview has solved B2B GTM, growth, product and operational AI problems, plus the live work we're tackling now.",
+    "See how CommView has solved B2B GTM, growth, product and operational AI problems, plus the live work we're tackling now.",
   alternates: { canonical: "/work" },
 };
 

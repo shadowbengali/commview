@@ -7,7 +7,7 @@ import "../../../styles/agencies.css";
 // site design system (like /contact and /work). Copy verbatim from the approved
 // brief: UK English, no em dashes, no agency-replacement framing. Company names
 // in the experience strip are the ones already approved on the site (operator
-// experience, not Commview clients).
+// experience, not CommView clients).
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 const CONTACT = "/contact?source=agencies";
@@ -15,7 +15,7 @@ const CONTACT = "/contact?source=agencies";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {
-  title: { absolute: "For Agencies | Specialist B2B Delivery & Expertise | Commview" },
+  title: { absolute: "For Agencies | Specialist B2B Delivery & Expertise | CommView" },
   description:
     "Extend your agency's capabilities with experienced support across SEO, Growth, GTM, Product and AI. Behind the scenes, white-labelled or client-facing.",
   alternates: { canonical: "/agencies" },
@@ -119,8 +119,8 @@ const MAPPINGS = [
 
 const MODELS = [
   { icon: <path d="M2 12s3.6-7 10-7 10 7 10 7M9.7 9.7a3 3 0 0 0 4.2 4.2M3 3l18 18" strokeLinecap="round" strokeLinejoin="round" />, h: "Behind the scenes", p: "We work with your team while you continue to own the client relationship and lead the engagement." },
-  { icon: <><path d="M11 3H5a2 2 0 0 0-2 2v6l9 9 8-8-9-9z" strokeLinejoin="round" /><circle cx="7.5" cy="7.5" r="1.3" /></>, h: "White-label", p: "Where appropriate, Commview operates as part of your delivery capability without needing to appear as a separate supplier to the client." },
-  { icon: <><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="6" /></>, h: "Co-branded", p: "Your agency and Commview are both visible, with each business bringing its respective expertise to the engagement." },
+  { icon: <><path d="M11 3H5a2 2 0 0 0-2 2v6l9 9 8-8-9-9z" strokeLinejoin="round" /><circle cx="7.5" cy="7.5" r="1.3" /></>, h: "White-label", p: "Where appropriate, CommView operates as part of your delivery capability without needing to appear as a separate supplier to the client." },
+  { icon: <><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="6" /></>, h: "Co-branded", p: "Your agency and CommView are both visible, with each business bringing its respective expertise to the engagement." },
   { icon: <><circle cx="9" cy="8" r="3" /><circle cx="16" cy="9" r="2.4" /><path d="M4 19a5 5 0 0 1 10 0M14.5 19a4 4 0 0 1 5.5-3.7" strokeLinecap="round" /></>, h: "Client-facing", p: "We work directly with the client as your specialist partner, with the relationship, responsibilities and commercial boundaries agreed before the work begins." },
 ];
 
@@ -132,11 +132,11 @@ const STEPS = [
 ];
 
 const FAQS = [
-  { q: "Will you approach our client directly?", a: "Not unless that's the model we've agreed. We define the relationship before the work starts. If we're working behind your agency, we stay behind your agency. If the engagement is client-facing, everyone knows the role Commview is there to play." },
+  { q: "Will you approach our client directly?", a: "Not unless that's the model we've agreed. We define the relationship before the work starts. If we're working behind your agency, we stay behind your agency. If the engagement is client-facing, everyone knows the role CommView is there to play." },
   { q: "Can you white-label your work?", a: "Yes, where it makes sense. We can work behind the scenes, white-labelled, co-branded or client-facing depending on the engagement and what works best for the agency-client relationship." },
   { q: "Can you just provide delivery capacity?", a: "Yes. Not every engagement needs a strategy project. If you need experienced support across SEO, AEO/GEO, email, social, content, demand generation or another workstream, we can work inside the existing plan and delivery structure." },
-  { q: "What if the work turns into something bigger?", a: "That's often where Commview is most useful. If a channel problem exposes something in positioning, GTM, Product, Growth or operations, we can bring in the right experience rather than forcing the problem back into the original scope." },
-  { q: "Do you only work with marketing agencies?", a: "No. The model can work with digital, creative, development, technology and other specialist agencies where Commview's capabilities complement what the agency already does." },
+  { q: "What if the work turns into something bigger?", a: "That's often where CommView is most useful. If a channel problem exposes something in positioning, GTM, Product, Growth or operations, we can bring in the right experience rather than forcing the problem back into the original scope." },
+  { q: "Do you only work with marketing agencies?", a: "No. The model can work with digital, creative, development, technology and other specialist agencies where CommView's capabilities complement what the agency already does." },
   { q: "How do you charge?", a: "It depends on the engagement. A defined project, additional delivery capacity and ongoing embedded support need different commercial models. We agree the scope, responsibilities and commercial relationship with the agency before work starts." },
 ];
 
@@ -148,9 +148,9 @@ export default function AgenciesPage() {
     "@graph": [
       {
         "@type": "Service",
-        name: "Commview for Agencies",
+        name: "CommView for Agencies",
         serviceType: "Specialist B2B delivery and consulting support for agencies",
-        provider: { "@type": "Organization", name: "Commview", url: `${SITE}/` },
+        provider: { "@type": "Organization", name: "CommView", url: `${SITE}/` },
         areaServed: "GB",
         description:
           "Experienced delivery capacity and specialist capability across Growth, GTM Leadership, Product and Operational AI for agencies, behind the scenes, white-labelled, co-branded or client-facing.",
@@ -197,7 +197,7 @@ export default function AgenciesPage() {
               <span className="dim">Without building every capability in-house.</span>
             </h1>
             <p className="agy-hero__body">
-              Bring Commview in when a client needs capability or capacity your
+              Bring CommView in when a client needs capability or capacity your
               team doesn&rsquo;t have available.
             </p>
             <p className="agy-hero__body">
@@ -219,7 +219,7 @@ export default function AgenciesPage() {
             </p>
           </div>
 
-          {/* Coded capability-flow diagram: Commview feeds capability up into the
+          {/* Coded capability-flow diagram: CommView feeds capability up into the
               agency, which leads the client relationship. */}
           <div className="agy-fig" aria-hidden="true">
             <div className="agy-fig__client">
@@ -315,7 +315,7 @@ export default function AgenciesPage() {
               Sometimes you need capability.
             </h2>
             <p className="agy-intro">
-              You don't need to hire around every client brief. Commview can add
+              You don't need to hire around every client brief. CommView can add
               experienced delivery when the team is stretched, specialist
               capability when the work needs it, or senior thinking when the
               conversation moves beyond the original scope.
@@ -422,7 +422,7 @@ export default function AgenciesPage() {
           <h2 className="agy-h2" id="agy-models-h">Your client stays your client.</h2>
           <p className="agy-intro">
             We're there to strengthen what you can offer, not create a route around
-            you. Before the work starts, we agree how Commview fits into the
+            you. Before the work starts, we agree how CommView fits into the
             relationship, who owns what and how visible we should be to the client.
           </p>
           <div className="agy-models">
@@ -450,7 +450,7 @@ export default function AgenciesPage() {
             <p className="eyebrow-x">Experience built at</p>
             <h2 className="agy-h2" id="agy-exp-h">Experienced operators behind the work.</h2>
             <p className="agy-body">
-              Commview brings together experienced operators across GTM, Growth,
+              CommView brings together experienced operators across GTM, Growth,
               Product and Operational AI. We bring in the experience the work
               requires rather than expecting one person to pretend they can do
               everything.
@@ -461,7 +461,7 @@ export default function AgenciesPage() {
               ))}
             </ul>
             <p className="agy-exp__note">
-              Experience built inside these organisations, not Commview client work.
+              Experience built inside these organisations, not CommView client work.
             </p>
           </div>
           <div className="agy-steps">
@@ -486,7 +486,7 @@ export default function AgenciesPage() {
       <section className="agy-sec agy-sec--alt" aria-labelledby="agy-faq-h">
         <div className="wrap">
           <p className="eyebrow-x">Common questions</p>
-          <h2 className="agy-h2" id="agy-faq-h">Working with Commview</h2>
+          <h2 className="agy-h2" id="agy-faq-h">Working with CommView</h2>
           <div className="agy-faq">
             {FAQS.map((f) => (
               <details className="agy-faq__item" key={f.q}>
@@ -510,7 +510,7 @@ export default function AgenciesPage() {
           <h2 className="agy-final__h" id="agy-final-h">Need another pair of experienced hands?</h2>
           <p className="agy-final__body">
             Tell us what the client needs, what you're already covering and where
-            the gap is. We'll tell you quickly whether Commview is a good fit and
+            the gap is. We'll tell you quickly whether CommView is a good fit and
             how we'd suggest working together.
           </p>
           <div className="agy-final__row">

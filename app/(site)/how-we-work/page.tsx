@@ -14,7 +14,7 @@ const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProp
 export const metadata: Metadata = {
   title: { absolute: "How We Work | Insight, Momentum, Impact | CommView" },
   description:
-    "See how Commview diagnoses business problems, gets the right work moving and measures what changes. Senior thinking and hands-on delivery.",
+    "See how CommView diagnoses business problems, gets the right work moving and measures what changes. Senior thinking and hands-on delivery.",
   alternates: { canonical: "/how-we-work" },
 };
 
@@ -92,19 +92,19 @@ const COMMITMENTS = [
 
 const FAQ = [
   {
-    q: "How does Commview work with clients?",
+    q: "How does CommView work with clients?",
     a: "We start by understanding the problem, the evidence and what is happening inside the business. From there, we identify what needs to change, help execute it and measure whether it made a difference. The exact approach depends on the problem rather than following a fixed consulting methodology.",
   },
   {
-    q: "Does Commview provide strategy or execution?",
+    q: "Does CommView provide strategy or execution?",
     a: "Both. Strategy and execution stay connected. The person helping diagnose the problem and decide what needs to change stays close to the work required to make it happen. Where specialist expertise is needed, we bring the right people into the work.",
   },
   {
-    q: "How long does a Commview engagement last?",
+    q: "How long does a CommView engagement last?",
     a: "It depends on the problem. Some work is a focused project with a defined outcome, while fractional leadership or more complex transformation may require ongoing involvement. We agree the scope and expected outcomes before the work starts rather than forcing every problem into the same engagement model.",
   },
   {
-    q: "Can Commview work with our existing team or agency?",
+    q: "Can CommView work with our existing team or agency?",
     a: "Yes. We can work alongside internal marketing, sales, product and technology teams as well as existing agencies and specialist partners. Often our role is to connect the work across those functions, establish what matters commercially and help everyone work towards the same outcome.",
   },
   {
@@ -272,7 +272,7 @@ export default function HowWeWorkPage() {
           <div className="hw-team__body">
             <p>We&rsquo;re not here to replace good people.</p>
             <p>If you already have a marketing team, sales team, product people, developers, designers or specialist agencies, we work with them.</p>
-            <p>Sometimes the biggest problem isn&rsquo;t capability. It&rsquo;s that everyone is solving a slightly different problem. Commview can sit across those functions, connect the commercial decisions and help get everyone moving towards the same outcome.</p>
+            <p>Sometimes the biggest problem isn&rsquo;t capability. It&rsquo;s that everyone is solving a slightly different problem. CommView can sit across those functions, connect the commercial decisions and help get everyone moving towards the same outcome.</p>
           </div>
         </div>
       </section>
@@ -283,7 +283,7 @@ export default function HowWeWorkPage() {
           <div className="hw-head">
             <div>
               <p className="eyebrow-x hw-eye" style={{ color: "var(--accent-pink)" }}>Our commitment</p>
-              <h2 id="hw-commit-h">What you won&rsquo;t get<br />from Commview.</h2>
+              <h2 id="hw-commit-h">What you won&rsquo;t get<br />from CommView.</h2>
             </div>
             <div className="hw-head__intro hw-head__intro--dark">
               <p>We&rsquo;re clear about how we work. And we&rsquo;re equally clear about what you won&rsquo;t get.</p>
@@ -308,7 +308,7 @@ export default function HowWeWorkPage() {
           <div className="hw-faq__head">
             <div>
               <p className="eyebrow-x hw-eye">FAQ</p>
-              <h2 id="hw-faq-h">Working with Commview</h2>
+              <h2 id="hw-faq-h">Working with CommView</h2>
             </div>
             <p>Straight answers to the questions we hear most often in initial conversations.</p>
           </div>

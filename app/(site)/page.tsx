@@ -25,6 +25,7 @@ const TRUST_LOGOS = [
   { src: "/logos/experience/adi.png", alt: "ADI Global Distribution" },
   { src: "/logos/experience/distrelec.jpg", alt: "Distrelec" },
   { src: "/logos/experience/barclays.svg", alt: "Barclays" },
+  { src: "/logos/experience/sophos.svg", alt: "Sophos" },
 ];
 
 // The homepage JSON-LD is stored with the final domain as a token; swap in the
@@ -196,8 +197,6 @@ export default function HomePage() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <li key={l.alt}><img src={l.src} alt={l.alt} loading="lazy" /></li>
               ))}
-              {/* Sophos: no logo asset on file yet, so a matching text wordmark. */}
-              <li><span className="trust__word">Sophos</span></li>
             </ul>
           </div>
         </section>
@@ -585,7 +584,7 @@ export default function HomePage() {
             <div className="diag__pitch">
               <p className="eyebrow-x">Still not sure what's actually wrong?</p>
               <h2 id="diag-h">
-                Take the Commview
+                Take the CommView
                 <br />
                 <em>Business Diagnostic.</em>
               </h2>
@@ -654,7 +653,7 @@ export default function HomePage() {
                 <span className="ui__dot"></span>
                 <span className="ui__dot"></span>
                 <span className="ui__dot"></span>
-                <span className="ui__title">Commview Business Diagnostic</span>
+                <span className="ui__title">CommView Business Diagnostic</span>
               </div>
               <div className="ui__body">
                 <p className="ui__step">Question 01 / 08</p>
@@ -771,7 +770,7 @@ export default function HomePage() {
                 style={{ ["--accent" as string]: "var(--brand-cyan)" } as CSSProperties}
                 href="/about"
               >
-                More about Commview
+                More about CommView
               </a>
             </div>
           </div>
@@ -794,7 +793,7 @@ export default function HomePage() {
                 style={{ marginTop: "var(--space-8)" }}
                 href="/agencies"
               >
-                Commview for Agencies
+                CommView for Agencies
               </a>
             </div>
             <div>

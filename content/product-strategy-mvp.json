@@ -114,7 +114,7 @@
       "theme": "dark",
       "targetKeyword": "mvp development process",
       "eyebrow": "THE METHOD",
-      "heading": "The Commview MVP Development Process",
+      "heading": "The CommView MVP Development Process",
       "intro": "The amount of build should follow the uncertainty you need to remove.",
       "style": "arrows",
       "steps": [
@@ -178,7 +178,7 @@
       "items": [
         {
           "q": "How much does MVP development cost?",
-          "a": "MVP development cost depends on what must be tested and how much product, design and engineering work is genuinely required to create credible evidence. A prototype, concierge workflow and production application have very different economics. Commview scopes the riskiest assumption first so the investment follows the learning need rather than an arbitrary feature list."
+          "a": "MVP development cost depends on what must be tested and how much product, design and engineering work is genuinely required to create credible evidence. A prototype, concierge workflow and production application have very different economics. CommView scopes the riskiest assumption first so the investment follows the learning need rather than an arbitrary feature list."
         },
         {
           "q": "How long does MVP development take?",

@@ -11,7 +11,7 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 const cvar = (c: string): CSSProperties => ({ ["--c" as string]: c }) as CSSProperties;
 
 export const metadata: Metadata = {
-  title: { absolute: "B2B Consulting Services | GTM, Growth, Product & AI | Commview" },
+  title: { absolute: "B2B Consulting Services | GTM, Growth, Product & AI | CommView" },
   description:
     "B2B consulting services spanning GTM leadership, growth, product and operational AI. We diagnose what is holding growth back, then help fix it.",
   alternates: { canonical: "/what-we-do" },
@@ -122,19 +122,19 @@ const FAQ = [
     a: "A good B2B consultant helps you work out what is actually holding the business back, then helps fix it. That means diagnosing the real problem before prescribing a solution, making the commercial decisions with you and staying close to the work as it happens rather than handing over a document and leaving.",
   },
   {
-    q: "What B2B consulting services does Commview provide?",
-    a: "Commview works across four connected areas: GTM Leadership, Growth, Product and Operational AI. Most engagements use more than one, because business problems rarely sit inside a single function. We start from the problem rather than the service, then bring the right combination of the four to solve it.",
+    q: "What B2B consulting services does CommView provide?",
+    a: "CommView works across four connected areas: GTM Leadership, Growth, Product and Operational AI. Most engagements use more than one, because business problems rarely sit inside a single function. We start from the problem rather than the service, then bring the right combination of the four to solve it.",
   },
   {
     q: "Do I need to know which service I need before contacting you?",
     a: "No. You do not need to diagnose the problem before asking for help. If you know growth has slowed, the marketing is not landing or the team is stretched, that is enough to start. We work out where the constraint sits and what is worth looking at first.",
   },
   {
-    q: "Does Commview only provide strategy?",
+    q: "Does CommView only provide strategy?",
     a: "No. Strategy and execution stay connected. The person helping make the strategic decision stays close enough to the work to see whether it is working and to change course if it is not. Where a problem needs deeper specialist expertise, we bring the right specialist into the work.",
   },
   {
-    q: "Can Commview work alongside our existing team?",
+    q: "Can CommView work alongside our existing team?",
     a: "Yes. We can work alongside your internal marketing, sales, product and technology teams, as well as existing agencies and specialist partners. Often the most useful thing we do is connect the work across those functions so everyone is solving the same problem and moving towards the same outcome.",
   },
 ];
@@ -157,7 +157,7 @@ export default function WhatWeDoPage() {
         provider: { "@id": `${SITE}/#organisation` },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "Commview services",
+          name: "CommView services",
           itemListElement: PILLARS.map((p) => ({
             "@type": "Offer",
             itemOffered: { "@type": "Service", name: p.label, url: `${SITE}${p.explore.href}` },
@@ -317,7 +317,7 @@ export default function WhatWeDoPage() {
             <p className="eyebrow-x wwd-close__eye">Not sure which service you need?</p>
             <h2 id="wwd-close-h" className="wwd-close__h">You don't need to be.</h2>
             <div className="wwd-close__body">
-              <p>Often you just know that something isn't working as well as it should. The Commview Business Diagnostic looks across GTM Leadership, Growth, Product and Operational AI to identify strengths, weaknesses, blind spots and where we'd investigate first.</p>
+              <p>Often you just know that something isn't working as well as it should. The CommView Business Diagnostic looks across GTM Leadership, Growth, Product and Operational AI to identify strengths, weaknesses, blind spots and where we'd investigate first.</p>
             </div>
             <div className="wwd-close__row">
               <a className="btn btn--cyan btn--lg" href="/diagnostic">Take the Diagnostic</a>

@@ -1,4 +1,4 @@
-// Native Commview consent manager — shared constants, types and the pre-GTM
+// Native CommView consent manager — shared constants, types and the pre-GTM
 // init script. No external CMP. This module is the single source of truth for
 // the cookie name, version and shape, so the inline init script (set before GTM
 // loads) and the React UI (components/site/ConsentManager.tsx) always agree.

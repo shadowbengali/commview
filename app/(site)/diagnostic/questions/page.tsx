@@ -10,9 +10,9 @@ import "../../../../styles/diagnostic.css";
 // free result is instant and needs no server round-trip.
 
 export const metadata: Metadata = {
-  title: { absolute: "Business Diagnostic | Commview" },
+  title: { absolute: "Business Diagnostic | CommView" },
   description:
-    "Work through the Commview Business Diagnostic. Your answers determine what we ask next, and you get an initial read on where the real constraint sits.",
+    "Work through the CommView Business Diagnostic. Your answers determine what we ask next, and you get an initial read on where the real constraint sits.",
   alternates: { canonical: "/diagnostic/questions" },
 };
 

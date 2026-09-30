@@ -41,7 +41,7 @@ export function LegalPage({
 export function LegalContact() {
   return (
     <p className="lgl__contact">
-      Commview Limited
+      CommView Limited
       <br />
       Company number: 17456529
       <br />

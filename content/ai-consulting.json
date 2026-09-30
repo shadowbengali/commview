@@ -147,7 +147,7 @@
       "type": "lead",
       "targetKeyword": "ai for business",
       "eyebrow": "AI FOR BUSINESS",
-      "heading": "How Commview Thinks About AI in Business",
+      "heading": "How CommView Thinks About AI in Business",
       "intro": [
         "AI is not a strategy in itself. It is another way to change how work gets done.",
         "That means we do not start with a model, platform or list of fashionable use cases. We start with the operation. Where is time being lost? Which work repeats? Where are people moving information between systems? Where does slow access to information hold up a decision?",
@@ -203,7 +203,7 @@
       "targetKeyword": "ai consulting services",
       "eyebrow": "AI CONSULTING SERVICES",
       "heading": "Operational AI Services From Opportunity to Implementation",
-      "intro": "The pillar is broad because the work does not stop at identifying a use case. Commview can help diagnose the opportunity, design the workflow, implement it and make sure it becomes part of the way the business operates.",
+      "intro": "The pillar is broad because the work does not stop at identifying a use case. CommView can help diagnose the opportunity, design the workflow, implement it and make sure it becomes part of the way the business operates.",
       "items": [
         {
           "title": "AI for Business Operations",
@@ -293,7 +293,7 @@
       "theme": "alt",
       "targetKeyword": "ai consulting vs mckinsey",
       "eyebrow": "A DIFFERENT KIND OF AI CONSULTING",
-      "heading": "Where Commview Is Different From the Big Consultancies",
+      "heading": "Where CommView Is Different From the Big Consultancies",
       "intro": "A scale-up usually does not need a transformation programme before it can improve the way work gets done. The engagement should be proportionate to the problem.",
       "columns": [
         {
@@ -305,7 +305,7 @@
           ]
         },
         {
-          "title": "Commview",
+          "title": "CommView",
           "items": [
             "Operator-led and hands-on",
             "Start with a specific operational constraint",
@@ -379,12 +379,12 @@
         },
         {
           "title": "AI consulting in the UK",
-          "body": "Explore Commview's AI consulting approach for UK B2B scale-ups.",
+          "body": "Explore CommView's AI consulting approach for UK B2B scale-ups.",
           "href": "/ai-consulting/uk"
         },
         {
           "title": "Our work",
-          "body": "See how Commview approaches commercial and operational problems across the four capabilities.",
+          "body": "See how CommView approaches commercial and operational problems across the four capabilities.",
           "href": "/work"
         }
       ]
@@ -399,11 +399,11 @@
       "items": [
         {
           "q": "What is AI consulting?",
-          "a": "AI consulting helps a business identify where artificial intelligence can create useful operational or commercial change, then plan and implement it. For Commview, that starts with the work rather than the technology. We examine the workflow, the problem, the available data and the consequence of errors before deciding whether AI belongs in the solution."
+          "a": "AI consulting helps a business identify where artificial intelligence can create useful operational or commercial change, then plan and implement it. For CommView, that starts with the work rather than the technology. We examine the workflow, the problem, the available data and the consequence of errors before deciding whether AI belongs in the solution."
         },
         {
           "q": "How much does AI consulting cost?",
-          "a": "AI consulting costs depend on the scope of the problem, the systems involved and whether the work covers diagnosis, implementation or a broader operating change. Commview does not publish a fixed price because a focused workflow project and a cross-functional transformation are materially different engagements. We scope the work around the outcome required."
+          "a": "AI consulting costs depend on the scope of the problem, the systems involved and whether the work covers diagnosis, implementation or a broader operating change. CommView does not publish a fixed price because a focused workflow project and a cross-functional transformation are materially different engagements. We scope the work around the outcome required."
         },
         {
           "q": "What is the difference between AI consulting and an AI agency?",
@@ -449,5 +449,5 @@
       ]
     }
   ],
-  "notes": "Operational AI accent is pink (#EC4899 via design tokens). Keep the established Commview dark/light editorial language. Maximum two major visual devices. Hero visual should feel like an operating system, not AI decoration: AI sits at the centre of real work such as reporting, workflows, content, lead scoring and sales intelligence, with the message that it must earn its place. Main in-page visual is the operational method from friction to measured change. Avoid robots, brains, circuit boards, glowing neural networks, generic SaaS dashboards and decorative AI imagery. Keep typography, spacing and section rhythm consistent with the existing Commview pillar pages."
+  "notes": "Operational AI accent is pink (#EC4899 via design tokens). Keep the established CommView dark/light editorial language. Maximum two major visual devices. Hero visual should feel like an operating system, not AI decoration: AI sits at the centre of real work such as reporting, workflows, content, lead scoring and sales intelligence, with the message that it must earn its place. Main in-page visual is the operational method from friction to measured change. Avoid robots, brains, circuit boards, glowing neural networks, generic SaaS dashboards and decorative AI imagery. Keep typography, spacing and section rhythm consistent with the existing CommView pillar pages."
 }

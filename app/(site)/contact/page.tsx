@@ -13,9 +13,9 @@ import "../../../styles/contact.css";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact Commview | Talk to a B2B GTM, Growth, Product & AI Consultant" },
+  title: { absolute: "Contact CommView | Talk to a B2B GTM, Growth, Product & AI Consultant" },
   description:
-    "Tell Commview what's not working. Start with the business problem and we'll work out what should happen next. Based in Manchester, working with B2B businesses across the UK.",
+    "Tell CommView what's not working. Start with the business problem and we'll work out what should happen next. Based in Manchester, working with B2B businesses across the UK.",
   alternates: { canonical: "/contact" },
 };
 

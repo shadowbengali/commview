@@ -141,7 +141,7 @@ export const HOME_JSON_LD = String.raw`
     {
       "@type": "Quiz",
       "@id": "https://www.commview.co.uk/#diagnostic",
-      "name": "Commview Business Diagnostic",
+      "name": "CommView Business Diagnostic",
       "about": {
         "@id": "https://www.commview.co.uk/#organisation"
       },

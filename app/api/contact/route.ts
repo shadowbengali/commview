@@ -8,7 +8,7 @@ import { NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 const TO = process.env.CONTACT_TO_EMAIL || "info@commview.co.uk";
-const FROM = process.env.CONTACT_FROM_EMAIL || "Commview website <website@commview.co.uk>";
+const FROM = process.env.CONTACT_FROM_EMAIL || "CommView website <website@commview.co.uk>";
 
 function clean(value: unknown, max = 4000) {
   return String(value ?? "").replace(/[<>]/g, "").trim().slice(0, max);
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     }
 
     const text = [
-      "New enquiry from the Commview contact form", "",
+      "New enquiry from the CommView contact form", "",
       `Name: ${name}`, `Work email: ${email}`, `Company: ${company || "Not supplied"}`, "",
       "WHAT'S HAPPENING", situation, "",
       "WHAT THEY'D LIKE TO BE DIFFERENT", outcome,
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
         from: FROM,
         to: [TO],
         reply_to: email,
-        subject: `Commview enquiry from ${name}${company ? ` · ${company}` : ""}`,
+        subject: `CommView enquiry from ${name}${company ? ` · ${company}` : ""}`,
         text,
       }),
     });

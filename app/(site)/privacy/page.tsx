@@ -7,9 +7,9 @@ import "../../../styles/legal.css";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Privacy Policy | Commview" },
+  title: { absolute: "Privacy Policy | CommView" },
   description:
-    "How Commview Limited collects, uses, stores and protects personal information when you use our website or contact us.",
+    "How CommView Limited collects, uses, stores and protects personal information when you use our website or contact us.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -31,14 +31,14 @@ export default function PrivacyPage() {
       />
 
       <p>
-        Commview Limited respects your privacy. This policy explains what personal
+        CommView Limited respects your privacy. This policy explains what personal
         information we collect, why we use it, who we may share it with and the
         rights you have over your information.
       </p>
 
       <h2>Who we are</h2>
       <p>
-        Commview Limited is a company registered in England and Wales under company
+        CommView Limited is a company registered in England and Wales under company
         number 17456529.
       </p>
       <p>
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
       </p>
 
       <h2>Information we collect</h2>
-      <p>The information we collect depends on how you interact with Commview.</p>
+      <p>The information we collect depends on how you interact with CommView.</p>
       <p>
         If you contact us or submit an enquiry, we may collect information including
         your name, email address, telephone number where provided, company and job
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
 
       <h2>Cookies and analytics</h2>
       <p>
-        We use Google Analytics 4 to understand how visitors use the Commview
+        We use Google Analytics 4 to understand how visitors use the CommView
         website and Google Tag Manager to manage website tags.
       </p>
       <p>
@@ -146,7 +146,7 @@ export default function PrivacyPage() {
         </li>
         <li>Supabase for application and data infrastructure where applicable</li>
         <li>
-          OpenAI for AI functionality used within the Commview Business Diagnostic
+          OpenAI for AI functionality used within the CommView Business Diagnostic
           where applicable
         </li>
       </ul>
@@ -170,13 +170,13 @@ export default function PrivacyPage() {
         transfer, appropriate safeguards will be used.
       </p>
 
-      <h2>The Commview Business Diagnostic</h2>
+      <h2>The CommView Business Diagnostic</h2>
       {/* DEVELOPER NOTE — do not render publicly. Before /diagnostic is released,
           review this section against the final implementation: audio retention,
           transcript retention, structured answers, report storage, HubSpot
           transfer, OpenAI processing and retention periods. */}
       <p>
-        The Commview Business Diagnostic uses conversational AI to help understand
+        The CommView Business Diagnostic uses conversational AI to help understand
         business challenges and generate relevant findings.
       </p>
       <p>
@@ -187,7 +187,7 @@ export default function PrivacyPage() {
       <p>
         The Diagnostic may use OpenAI technology to process conversational input and
         generate responses. Relevant information and Diagnostic results may also be
-        stored using Commview&apos;s application infrastructure, including Supabase.
+        stored using CommView&apos;s application infrastructure, including Supabase.
       </p>
       <p>We design the Diagnostic to minimise unnecessary personal information.</p>
       <p>

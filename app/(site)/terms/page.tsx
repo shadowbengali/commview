@@ -7,9 +7,9 @@ import "../../../styles/legal.css";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 
 export const metadata: Metadata = {
-  title: { absolute: "Website Terms of Use | Commview" },
+  title: { absolute: "Website Terms of Use | CommView" },
   description:
-    "Terms governing your use of the Commview website, its content and information about our consulting services.",
+    "Terms governing your use of the CommView website, its content and information about our consulting services.",
   alternates: { canonical: "/terms" },
 };
 
@@ -31,13 +31,13 @@ export default function TermsPage() {
       />
 
       <p>
-        These terms apply when you use the Commview website. By using the website,
+        These terms apply when you use the CommView website. By using the website,
         you agree to use it lawfully and in accordance with these terms.
       </p>
 
-      <h2>About Commview</h2>
+      <h2>About CommView</h2>
       <p>
-        This website is operated by Commview Limited, a company registered in England
+        This website is operated by CommView Limited, a company registered in England
         and Wales under company number 17456529.
       </p>
       <p>
@@ -47,7 +47,7 @@ export default function TermsPage() {
 
       <h2>Using this website</h2>
       <p>
-        You may use this website for lawful purposes and to learn about Commview, our
+        You may use this website for lawful purposes and to learn about CommView, our
         services, thinking and experience.
       </p>
       <p>You must not knowingly:</p>
@@ -86,7 +86,7 @@ export default function TermsPage() {
 
       <h2>Our consulting services</h2>
       <p>
-        Descriptions of Commview&apos;s services on this website are provided for
+        Descriptions of CommView&apos;s services on this website are provided for
         general information and do not constitute an offer or create a client
         relationship.
       </p>
@@ -103,9 +103,9 @@ export default function TermsPage() {
 
       <h2>Intellectual property</h2>
       <p>
-        Unless otherwise stated, the content created by Commview on this website,
+        Unless otherwise stated, the content created by CommView on this website,
         including its copy, graphics, branding, layouts, original frameworks and
-        other materials, belongs to Commview Limited or is used under appropriate
+        other materials, belongs to CommView Limited or is used under appropriate
         licence.
       </p>
       <p>
@@ -122,7 +122,7 @@ export default function TermsPage() {
         remain the property of their respective owners.
       </p>
       <p>
-        References to organisations where members of the Commview network have
+        References to organisations where members of the CommView network have
         previously worked describe professional experience and do not imply
         endorsement, partnership or a current client relationship unless explicitly
         stated.
@@ -136,7 +136,7 @@ export default function TermsPage() {
         or privacy practices.
       </p>
       <p>
-        A link does not necessarily mean that Commview endorses the organisation,
+        A link does not necessarily mean that CommView endorses the organisation,
         product, service or views expressed on that website.
       </p>
 
@@ -156,7 +156,7 @@ export default function TermsPage() {
         unlawful to do so.
       </p>
       <p>
-        To the extent permitted by law, Commview Limited is not responsible for
+        To the extent permitted by law, CommView Limited is not responsible for
         losses arising solely from reliance on general information published on this
         website where that information was not provided as part of a separately
         agreed professional engagement.

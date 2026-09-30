@@ -15,7 +15,7 @@ import "../../../styles/blog.css";
 // approve or rewrite before launch. It is NOT invented; it is the mock's draft.
 
 export const metadata: Metadata = {
-  title: { absolute: "B2B Growth, GTM, Product & AI Insights | Commview" },
+  title: { absolute: "B2B Growth, GTM, Product & AI Insights | CommView" },
   description:
     "Field notes and practical thinking on B2B growth, GTM leadership, product strategy and operational AI from people doing the work.",
   alternates: { canonical: "/insights" },

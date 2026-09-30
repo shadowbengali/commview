@@ -254,7 +254,7 @@ export function Runner() {
     return (
       <section className="dg-result" aria-labelledby="dg-result-h">
         <div className="wrap dg-result__wrap">
-          <p className="dg-run__eyebrow">Your Commview Diagnostic</p>
+          <p className="dg-run__eyebrow">Your CommView Diagnostic</p>
           <h2 className="dg-result__headline" id="dg-result-h" tabIndex={-1} ref={headingRef}>
             {reading.headline}
           </h2>
@@ -302,7 +302,7 @@ export function Runner() {
               </p>
               <div className="dg-result__row">
                 <a className="btn btn--cyan btn--lg" href="/contact?source=diagnostic">
-                  Talk to Commview<span aria-hidden="true"> &rarr;</span>
+                  Talk to CommView<span aria-hidden="true"> &rarr;</span>
                 </a>
               </div>
             </div>
@@ -331,14 +331,14 @@ export function Runner() {
               <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" value={gate.website} onChange={(e) => setGate({ ...gate, website: e.target.value })} className="dg-gate__hp" />
               <label className="dg-gate__consent">
                 <input type="checkbox" required checked={gate.consent} onChange={(e) => setGate({ ...gate, consent: e.target.checked })} />
-                <span>Send me my diagnostic and occasional Commview insights. Unsubscribe anytime.</span>
+                <span>Send me my diagnostic and occasional CommView insights. Unsubscribe anytime.</span>
               </label>
               {submitError ? <p className="dg-gate__err">{submitError}</p> : null}
               <div className="dg-gate__actions">
                 <button type="submit" className="btn btn--cyan btn--lg" disabled={submitting}>
                   {submitting ? "Generating your diagnostic…" : "Get my full diagnostic"}
                 </button>
-                <a className="btn btn--ghost btn--lg" href="/contact?source=diagnostic">Talk to Commview</a>
+                <a className="btn btn--ghost btn--lg" href="/contact?source=diagnostic">Talk to CommView</a>
               </div>
               <p className="dg-gate__note">
                 We use your details to prepare and send your diagnostic. See our{" "}

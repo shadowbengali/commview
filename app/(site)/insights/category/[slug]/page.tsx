@@ -25,9 +25,9 @@ const CATEGORIES: Record<string, CatConfig> = {
     name: "GTM Leadership",
     intro:
       "Go-to-market problems rarely sit neatly inside Sales or Marketing. We look at positioning, ideal customers, buying behaviour, commercial alignment and the systems connecting them, with a focus on what actually helps B2B businesses turn market opportunity into revenue.",
-    metaTitle: "B2B GTM Leadership Insights | Commview",
+    metaTitle: "B2B GTM Leadership Insights | CommView",
     metaDescription:
-      "Practical thinking on B2B go-to-market strategy, positioning, ideal customers, buying behaviour and commercial alignment from Commview.",
+      "Practical thinking on B2B go-to-market strategy, positioning, ideal customers, buying behaviour and commercial alignment from CommView.",
     cta: {
       eyebrow: "GTM LEADERSHIP",
       heading: "Not sure where the GTM problem actually sits?",
@@ -40,7 +40,7 @@ const CATEGORIES: Record<string, CatConfig> = {
     name: "Growth",
     intro:
       "Growth doesn't usually stop because a business suddenly forgot how to market itself. We look at the constraints behind stalled B2B growth, from acquisition and conversion to market headroom, customer fit and the commercial system around them.",
-    metaTitle: "B2B Growth Insights | Commview",
+    metaTitle: "B2B Growth Insights | CommView",
     metaDescription:
       "Practical B2B growth insights covering acquisition, conversion, growth constraints, customer fit and building repeatable growth engines.",
     cta: {
@@ -55,7 +55,7 @@ const CATEGORIES: Record<string, CatConfig> = {
     name: "Product",
     intro:
       "Good product decisions start with the problem, not the feature. We write about discovery, prioritisation, adoption, roadmaps and the evidence needed to decide what to build, what to change and what not to build at all.",
-    metaTitle: "B2B Product Strategy Insights | Commview",
+    metaTitle: "B2B Product Strategy Insights | CommView",
     metaDescription:
       "Practical thinking on B2B product strategy, discovery, prioritisation, roadmaps, feature adoption and making better product decisions.",
     cta: {
@@ -70,7 +70,7 @@ const CATEGORIES: Record<string, CatConfig> = {
     name: "Operational AI",
     intro:
       "AI creates value when it improves real work. We look at where AI and automation can reduce cost, remove repetitive work, improve decisions and change how software is used, without starting with the technology and searching for a problem.",
-    metaTitle: "Operational AI Insights | Commview",
+    metaTitle: "Operational AI Insights | CommView",
     metaDescription:
       "Practical thinking on AI, automation, workflow redesign, AI ROI and applying AI to real business operations.",
     cta: {
@@ -138,7 +138,7 @@ export default async function CategoryArchivePage({ params }: { params: Promise<
           ) : (
             <div className="icat-empty">
               <h2 className="icat-empty__h">Nothing published here yet.</h2>
-              <p className="icat-intro">We&apos;re working on it. Explore the latest Commview Insights in the meantime.</p>
+              <p className="icat-intro">We&apos;re working on it. Explore the latest CommView Insights in the meantime.</p>
               <div className="close__row">
                 <a className="btn btn--ink btn--lg" href="/insights">View all Insights</a>
               </div>

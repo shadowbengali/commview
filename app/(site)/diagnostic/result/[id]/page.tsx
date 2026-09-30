@@ -10,7 +10,7 @@ import "../../../../../styles/diagnostic.css";
 // the stored submission. Always noindex (personal + gated), shareable by link.
 
 export const metadata: Metadata = {
-  title: { absolute: "Your Business Diagnostic | Commview" },
+  title: { absolute: "Your Business Diagnostic | CommView" },
   robots: { index: false, follow: false },
 };
 
@@ -34,7 +34,7 @@ export default async function DiagnosticResultPage({
     <main id="main">
       <section className="dgr">
         <div className="wrap dgr__wrap">
-          <p className="dg-run__eyebrow">Your Commview Diagnostic</p>
+          <p className="dg-run__eyebrow">Your CommView Diagnostic</p>
           {row.first_name ? <p className="dgr__hi">Prepared for {row.first_name}.</p> : null}
           <h1 className="dgr__headline">{reading?.headline ?? "Your diagnostic"}</h1>
 
@@ -105,7 +105,7 @@ export default async function DiagnosticResultPage({
               the business.
             </p>
             <a className="btn btn--cyan btn--lg" href="/contact?source=diagnostic">
-              Talk to Commview<span aria-hidden="true"> &rarr;</span>
+              Talk to CommView<span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
         </div>
