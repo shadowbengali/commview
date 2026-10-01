@@ -34,16 +34,24 @@ export function TrackedLink({
   event,
   props,
   className,
+  target,
   children,
 }: {
   href: string;
   event: string;
   props?: Record<string, string>;
   className?: string;
+  target?: string;
   children: React.ReactNode;
 }) {
   return (
-    <a href={href} className={className} onClick={() => track(event, props)}>
+    <a
+      href={href}
+      className={className}
+      target={target}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
+      onClick={() => track(event, props)}
+    >
       {children}
     </a>
   );

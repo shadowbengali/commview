@@ -9,7 +9,7 @@ import { UNLOCK_FLAG } from "./UnlockGate";
 // session flag before reloading). Invites them to book a call. Dismissable; it
 // does not reappear on later visits to the same report.
 
-const CALENDAR_URL = "https://calendar.app.google/Hx4AQi6bJurZL8jU7";
+export const CALENDAR_URL = "https://calendar.app.google/Hx4AQi6bJurZL8jU7";
 
 export function UnlockedModal({ primaryArea }: { primaryArea: string }) {
   const [open, setOpen] = useState(false);

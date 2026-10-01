@@ -3,7 +3,7 @@ import type { EvidenceItem, EvidenceStrength, JourneyType, Spine } from "@/lib/d
 
 import { JourneyRail } from "./JourneyRail";
 import { UnlockGate } from "./UnlockGate";
-import { UnlockedModal } from "./UnlockedModal";
+import { UnlockedModal, CALENDAR_URL } from "./UnlockedModal";
 import { ViewTracker, TrackedLink, PrintButton } from "./ReportClient";
 
 // The full report presentation. Pure props in, so it can be rendered from the
@@ -279,9 +279,10 @@ export function Report({
               </p>
               <div className="dr-next__row">
                 <TrackedLink
-                  href={`/contact?source=diagnostic&ref=${id}`}
-                  event="diagnostic_contact_clicked"
-                  props={{ primary_area: spine.primaryArea }}
+                  href={CALENDAR_URL}
+                  target="_blank"
+                  event="diagnostic_book_call_clicked"
+                  props={{ primary_area: spine.primaryArea, source: "next_step" }}
                   className="btn btn--cyan btn--lg"
                 >
                   Talk to Commview<span aria-hidden="true"> &rarr;</span>
