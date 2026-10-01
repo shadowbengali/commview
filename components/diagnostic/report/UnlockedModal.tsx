@@ -74,7 +74,7 @@ export function UnlockedModal({ primaryArea }: { primaryArea: string }) {
             rel="noopener noreferrer"
             onClick={() => track("diagnostic_book_call_clicked", { primary_area: primaryArea })}
           >
-            Book a call<span aria-hidden="true"> &rarr;</span>
+            Book a call
           </a>
           <button type="button" className="dr-modal__later" onClick={() => setOpen(false)}>
             Maybe later
