@@ -111,28 +111,32 @@ export function UnlockGate({
       </div>
 
       <div className="wrap dr-gate__wrap">
-        <div className="dr-gate__intro">
+        <div className="dr-gate__head">
           <p className="dr-eyebrow">The full read</p>
           <h2 className="dr-gate__h" id="dr-gate-h">
             Unlock the rest of your diagnostic
           </h2>
-          <p className="dr-gate__p">
-            You&rsquo;ve seen where the signal appears. The full read is tailored to your answers
-            and includes:
-          </p>
-          <ul className="dr-gate__list">
-            {UNLOCKS.map((u) => (
-              <li key={u}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
-                  <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {u}
-              </li>
-            ))}
-          </ul>
         </div>
 
-        <form className="dr-gate__form" onSubmit={onSubmit} noValidate>
+        <div className="dr-gate__cols">
+          <div className="dr-gate__intro">
+            <p className="dr-gate__p">
+              You&rsquo;ve seen where the signal appears. The full read is tailored to your answers
+              and includes:
+            </p>
+            <ul className="dr-gate__list">
+              {UNLOCKS.map((u) => (
+                <li key={u}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+                    <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {u}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <form className="dr-gate__form" onSubmit={onSubmit} noValidate>
           <div className="dr-gate__hp" aria-hidden="true">
             <label htmlFor="dr-website">Leave this field empty</label>
             <input
@@ -189,7 +193,8 @@ export function UnlockGate({
             We use your details to prepare your diagnostic and follow up. See our{" "}
             <a href="/privacy">Privacy Policy</a>.
           </p>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
   );
