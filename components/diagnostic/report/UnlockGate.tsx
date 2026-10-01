@@ -4,15 +4,27 @@ import { useState, type FormEvent } from "react";
 
 import { track } from "@/lib/analytics";
 
-// The unlock gate. Sits where the interpretation would be. On submit it posts the
-// lead's details, the server generates + stores the analysis, and the page
-// reloads to server-render the full report. The locked content never exists in
-// the DOM until then, so this is a real gate, not a blur.
+// The unlock gate. Sits where the interpretation would be, over a blurred,
+// gradient "ghost" of the locked report so the value is visible but unreadable.
+// On submit it posts the lead's details, the server generates + stores the
+// analysis, and the page reloads to server-render the full report. The real
+// content never exists in the DOM until then — the ghost is fake placeholder.
 
 const UNLOCKS = [
   "What doesn’t quite add up across your answers",
   "Where we’d investigate first, and why",
   "The one first move we’d make",
+];
+
+// Flag read by UnlockedModal after the post-unlock reload, so the "talk to an
+// expert" modal shows once, immediately after unlocking.
+export const UNLOCK_FLAG = "commview_dg_unlocked";
+
+// Fake, unreadable teaser lines behind the blur (never the real analysis).
+const GHOST_CARDS = [
+  ["If the problem were only one thing", "the other signals wouldn’t move together the way they do here, which is worth a closer look before acting."],
+  ["Two changes landed in the same window", "that doesn’t prove cause, but it makes the relationship worth testing rather than assuming."],
+  ["The constraint may not sit in one place", "the evidence points across more than one area, so we’d establish the primary one first."],
 ];
 
 export function UnlockGate({
@@ -50,6 +62,11 @@ export function UnlockGate({
         primary_area: primaryArea,
         evidence_strength: evidenceStrength,
       });
+      try {
+        sessionStorage.setItem(UNLOCK_FLAG, id);
+      } catch {
+        /* ignore */
+      }
       window.location.reload();
     } catch {
       setStatus("error");
@@ -58,6 +75,21 @@ export function UnlockGate({
 
   return (
     <section className="dr-gate" aria-labelledby="dr-gate-h">
+      {/* Blurred placeholder of the locked report — decorative only. */}
+      <div className="dr-gate__ghost" aria-hidden="true">
+        <span className="dr-ghost__eyebrow">What doesn’t quite add up</span>
+        <h3 className="dr-ghost__h">The parts worth a closer look.</h3>
+        <div className="dr-ghost__cards">
+          {GHOST_CARDS.map(([t, p], i) => (
+            <div className="dr-ghost__card" key={i}>
+              <span className="dr-ghost__num">{String(i + 1).padStart(2, "0")}</span>
+              <p className="dr-ghost__ct">{t}</p>
+              <p className="dr-ghost__cp">{p}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="wrap dr-gate__wrap">
         <div className="dr-gate__intro">
           <p className="dr-eyebrow">The full read</p>

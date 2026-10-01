@@ -555,11 +555,59 @@
 
 /* ---- Unlock gate ---- */
 .dr-gate {
-  background: var(--brand-charcoal);
+  position: relative;
+  overflow: hidden;
   color: var(--brand-polar);
   padding-block: clamp(48px, 7vw, 96px);
+  background:
+    radial-gradient(62% 80% at 82% 8%, color-mix(in srgb, var(--brand-blue) 48%, transparent), transparent 70%),
+    radial-gradient(55% 75% at 6% 95%, color-mix(in srgb, var(--accent-pink) 26%, transparent), transparent 72%),
+    linear-gradient(160deg, color-mix(in srgb, var(--brand-blue) 14%, var(--brand-charcoal)), var(--brand-charcoal) 62%);
 }
+/* Blurred placeholder of the locked report, behind the form. */
+.dr-gate__ghost {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  padding: clamp(40px, 6vw, 88px) var(--space-6) 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  filter: blur(9px);
+  opacity: 0.16;
+  pointer-events: none;
+  user-select: none;
+}
+.dr-ghost__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-cyan);
+}
+.dr-ghost__h {
+  margin: var(--space-3) 0 var(--space-6);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--brand-polar);
+}
+.dr-ghost__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.dr-ghost__card {
+  border: 1px solid var(--slate-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.dr-ghost__num { font-size: 13px; font-weight: 700; color: var(--brand-cyan); }
+.dr-ghost__ct { margin: var(--space-3) 0; font-size: 19px; font-weight: 700; color: var(--brand-polar); }
+.dr-ghost__cp { margin: 0; font-size: 15px; line-height: 1.6; color: var(--slate-light); }
+
 .dr-gate__wrap {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(32px, 5vw, 72px);
@@ -599,12 +647,14 @@
 .dr-gate__list svg { width: 20px; height: 20px; color: var(--c); }
 
 .dr-gate__form {
-  background: color-mix(in srgb, var(--brand-polar) 5%, transparent);
-  border: 1px solid var(--slate-dark);
+  background: color-mix(in srgb, var(--brand-charcoal) 80%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brand-polar) 14%, transparent);
   border-radius: var(--radius-lg);
   padding: clamp(24px, 3vw, 36px);
   display: grid;
   gap: var(--space-4);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-overlay);
 }
 .dr-gate__row {
   display: grid;
@@ -681,8 +731,92 @@
 }
 
 /* ---- print → clean PDF ---- */
+/* ---- Post-unlock "talk to an expert" modal ---- */
+.dr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+  background: color-mix(in srgb, var(--brand-charcoal) 72%, transparent);
+  backdrop-filter: blur(4px);
+  animation: dr-modal-in 160ms ease-out;
+}
+.dr-modal__card {
+  position: relative;
+  width: min(100%, 460px);
+  border: 1px solid color-mix(in srgb, var(--brand-polar) 12%, transparent);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 4vw, 40px);
+  color: var(--brand-polar);
+  background:
+    radial-gradient(70% 60% at 85% 0%, color-mix(in srgb, var(--brand-blue) 40%, transparent), transparent 70%),
+    var(--brand-charcoal);
+  box-shadow: var(--shadow-overlay);
+}
+.dr-modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--brand-polar) 8%, transparent);
+  color: var(--slate-light);
+  cursor: pointer;
+}
+.dr-modal__close:hover { color: var(--brand-polar); background: color-mix(in srgb, var(--brand-polar) 14%, transparent); }
+.dr-modal__close svg { width: 18px; height: 18px; }
+.dr-modal__close:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.dr-modal__eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-cyan);
+}
+.dr-modal__h {
+  margin: var(--space-3) 0 var(--space-3);
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+}
+.dr-modal__p {
+  margin: 0 0 var(--space-6);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate-light);
+}
+.dr-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+.dr-modal__later {
+  border: 0;
+  background: none;
+  color: var(--slate-light);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+.dr-modal__later:hover { color: var(--brand-polar); }
+@keyframes dr-modal-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media print {
-  .hdr, .ftr, .dr-next, .dr-gate, .btn, [data-consent-root] { display: none !important; }
+  .hdr, .ftr, .dr-next, .dr-gate, .dr-modal, .btn, [data-consent-root] { display: none !important; }
   .dr, .dr-summary, .dr-journey, .dr-investigate, .dr-avoid, .dr-move {
     background: #fff !important;
     color: #000 !important;

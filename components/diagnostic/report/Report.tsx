@@ -3,6 +3,7 @@ import type { EvidenceItem, EvidenceStrength, JourneyType, Spine } from "@/lib/d
 
 import { JourneyRail } from "./JourneyRail";
 import { UnlockGate } from "./UnlockGate";
+import { UnlockedModal } from "./UnlockedModal";
 import { ViewTracker, TrackedLink, PrintButton } from "./ReportClient";
 
 // The full report presentation. Pure props in, so it can be rendered from the
@@ -179,6 +180,8 @@ export function Report({
 
       {unlocked && analysis ? (
         <>
+          <UnlockedModal primaryArea={spine.primaryArea} />
+
           {/* SECTION 3 — AI INTERPRETATION */}
           {analysis.insights.length ? (
             <section className="dr-insights dark">
