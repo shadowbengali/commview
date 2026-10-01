@@ -7,6 +7,7 @@ const slate: CSSProperties = { color: "var(--slate)" };
 const cyan: CSSProperties = { color: "var(--brand-cyan)" };
 
 export function SiteFooter() {
+  const year = new Date().getFullYear();
   return (
     <footer className="ftr dark">
       <div className="wrap">
@@ -52,6 +53,10 @@ export function SiteFooter() {
           <a href="/cookies">Cookies</a>
           <CookieSettingsButton />
         </nav>
+        <p className="ftr__fineprint small dim">
+          &copy; {year} CommView Limited. Registered in England &amp; Wales, company no. 17456529.
+          ICO registration ZC261617.
+        </p>
       </div>
     </footer>
   );
