@@ -55,6 +55,8 @@
 .cf__status { margin: 0; font-size: 14px; }
 .cf__hint { color: var(--text-secondary); }
 .cf__err { color: var(--accent-pink); }
+.cf__fielderr { display: block; margin-top: var(--space-1); font-size: 13px; color: var(--accent-pink); }
+.cf__field input[aria-invalid="true"], .cf__field textarea[aria-invalid="true"] { border-bottom-color: var(--accent-pink); }
 .cf__inline { color: inherit; font-weight: 600; text-decoration: underline; }
 .cf__done { border-left: 3px solid var(--brand-cyan); padding-left: var(--space-6); }
 .cf__done h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }

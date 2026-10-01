@@ -693,6 +693,8 @@
 }
 .dr-gate__consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--brand-cyan); }
 .dr-gate__err { margin: 0; font-size: 14px; color: var(--accent-pink); }
+.dr-gate__fielderr { display: block; margin-top: var(--space-2); font-size: 13px; color: var(--accent-pink); }
+.dr-gate__field input[aria-invalid="true"] { border-color: var(--accent-pink); }
 .dr-gate__note { margin: 0; font-size: 13px; color: var(--slate); }
 .dr-gate__note a { color: inherit; text-decoration: underline; }
 .dr-gate__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

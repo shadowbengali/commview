@@ -20,6 +20,9 @@ const UNLOCKS = [
 // expert" modal shows once, immediately after unlocking.
 export const UNLOCK_FLAG = "commview_dg_unlocked";
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+type GateErrors = Partial<Record<"firstName" | "email" | "phone" | "consent", string>>;
+
 // Fake, unreadable teaser lines behind the blur (never the real analysis).
 const GHOST_CARDS = [
   ["If the problem were only one thing", "the other signals wouldn’t move together the way they do here, which is worth a closer look before acting."],
@@ -45,10 +48,27 @@ export function UnlockGate({
     website: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
-  const set = (k: keyof typeof form, v: string | boolean) => setForm((f) => ({ ...f, [k]: v }));
+  const [errors, setErrors] = useState<GateErrors>({});
+  const set = (k: keyof typeof form, v: string | boolean) => {
+    setForm((f) => ({ ...f, [k]: v }));
+    setErrors((e) => (e[k as keyof GateErrors] ? { ...e, [k]: undefined } : e));
+  };
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
+
+    const found: GateErrors = {};
+    if (!form.firstName.trim()) found.firstName = "Enter your first name.";
+    if (!form.email.trim()) found.email = "Enter your work email.";
+    else if (!EMAIL_RE.test(form.email.trim())) found.email = "Enter a valid email address.";
+    if (!form.phone.trim()) found.phone = "Enter a phone number.";
+    if (!form.consent) found.consent = "Please tick the box so we can send your diagnostic.";
+    if (Object.keys(found).length) {
+      setErrors(found);
+      setStatus("idle");
+      return;
+    }
+    setErrors({});
     setStatus("sending");
     try {
       const res = await fetch("/api/diagnostic/unlock", {
@@ -129,17 +149,20 @@ export function UnlockGate({
           <div className="dr-gate__row">
             <label className="dr-gate__field">
               <span>First name</span>
-              <input type="text" autoComplete="given-name" required value={form.firstName} onChange={(e) => set("firstName", e.target.value)} />
+              <input type="text" autoComplete="given-name" aria-invalid={errors.firstName ? true : undefined} value={form.firstName} onChange={(e) => set("firstName", e.target.value)} />
+              {errors.firstName ? <span className="dr-gate__fielderr" role="alert">{errors.firstName}</span> : null}
             </label>
             <label className="dr-gate__field">
               <span>Work email</span>
-              <input type="email" autoComplete="email" required value={form.email} onChange={(e) => set("email", e.target.value)} />
+              <input type="email" autoComplete="email" aria-invalid={errors.email ? true : undefined} value={form.email} onChange={(e) => set("email", e.target.value)} />
+              {errors.email ? <span className="dr-gate__fielderr" role="alert">{errors.email}</span> : null}
             </label>
           </div>
           <div className="dr-gate__row">
             <label className="dr-gate__field">
               <span>Phone</span>
-              <input type="tel" autoComplete="tel" required value={form.phone} onChange={(e) => set("phone", e.target.value)} />
+              <input type="tel" autoComplete="tel" aria-invalid={errors.phone ? true : undefined} value={form.phone} onChange={(e) => set("phone", e.target.value)} />
+              {errors.phone ? <span className="dr-gate__fielderr" role="alert">{errors.phone}</span> : null}
             </label>
             <label className="dr-gate__field">
               <span>Company <em>(optional)</em></span>
@@ -148,9 +171,10 @@ export function UnlockGate({
           </div>
 
           <label className="dr-gate__consent">
-            <input type="checkbox" required checked={form.consent} onChange={(e) => set("consent", e.target.checked)} />
+            <input type="checkbox" checked={form.consent} onChange={(e) => set("consent", e.target.checked)} />
             <span>Send me my diagnostic and occasional Commview insights. Unsubscribe anytime.</span>
           </label>
+          {errors.consent ? <span className="dr-gate__fielderr" role="alert">{errors.consent}</span> : null}
 
           {status === "error" ? (
             <p className="dr-gate__err" role="alert">
