@@ -285,7 +285,7 @@ export function Report({
                   props={{ primary_area: spine.primaryArea, source: "next_step" }}
                   className="btn btn--cyan btn--lg"
                 >
-                  Talk to Commview<span aria-hidden="true"> &rarr;</span>
+                  Talk to Commview
                 </TrackedLink>
                 <PrintButton className="btn btn--ghost btn--lg" primaryArea={spine.primaryArea}>
                   Download as PDF
