@@ -10,10 +10,28 @@ import { track } from "@/lib/analytics";
 // analysis, and the page reloads to server-render the full report. The real
 // content never exists in the DOM until then — the ghost is fake placeholder.
 
+const ICON_CHART = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <path d="M6 20v-6M12 20V7M18 20v-9" strokeLinecap="round" />
+  </svg>
+);
+const ICON_TARGET = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <circle cx="12" cy="12" r="7" />
+    <path d="M12 2v3M12 19v3M2 12h3M19 12h3" strokeLinecap="round" />
+    <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none" />
+  </svg>
+);
+const ICON_BOLT = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" strokeLinejoin="round" />
+  </svg>
+);
+
 const UNLOCKS = [
-  "What doesn’t quite add up across your answers",
-  "Where we’d investigate first, and why",
-  "The one first move we’d make",
+  { icon: ICON_CHART, title: "What doesn’t quite add up", desc: "The gaps and contradictions in your answers." },
+  { icon: ICON_TARGET, title: "Where we’d investigate first", desc: "The key areas to look at, and why." },
+  { icon: ICON_BOLT, title: "The one first move we’d make", desc: "A practical next step based on what we’ve seen." },
 ];
 
 // Flag read by UnlockedModal after the post-unlock reload, so the "talk to an
@@ -112,29 +130,28 @@ export function UnlockGate({
 
       <div className="wrap dr-gate__wrap">
         <div className="dr-gate__head">
-          <p className="dr-eyebrow">The full read</p>
+          <p className="dr-eyebrow dr-gate__eyebrow">The full read</p>
           <h2 className="dr-gate__h" id="dr-gate-h">
             Unlock the rest of your diagnostic
           </h2>
+          <p className="dr-gate__p">
+            You&rsquo;ve seen where the signal appears. The full read is tailored to your answers
+            and includes:
+          </p>
         </div>
 
         <div className="dr-gate__cols">
-          <div className="dr-gate__intro">
-            <p className="dr-gate__p">
-              You&rsquo;ve seen where the signal appears. The full read is tailored to your answers
-              and includes:
-            </p>
-            <ul className="dr-gate__list">
-              {UNLOCKS.map((u) => (
-                <li key={u}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
-                    <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {u}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="dr-gate__list">
+            {UNLOCKS.map((u) => (
+              <li key={u.title}>
+                <span className="dr-gate__ico" aria-hidden="true">{u.icon}</span>
+                <div className="dr-gate__btext">
+                  <p className="dr-gate__bt">{u.title}</p>
+                  <p className="dr-gate__bd">{u.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
 
           <form className="dr-gate__form" onSubmit={onSubmit} noValidate>
           <div className="dr-gate__hp" aria-hidden="true">
@@ -153,24 +170,24 @@ export function UnlockGate({
           <div className="dr-gate__row">
             <label className="dr-gate__field">
               <span>First name</span>
-              <input type="text" autoComplete="given-name" aria-invalid={errors.firstName ? true : undefined} value={form.firstName} onChange={(e) => set("firstName", e.target.value)} />
+              <input type="text" placeholder="Your first name" autoComplete="given-name" aria-invalid={errors.firstName ? true : undefined} value={form.firstName} onChange={(e) => set("firstName", e.target.value)} />
               {errors.firstName ? <span className="dr-gate__fielderr" role="alert">{errors.firstName}</span> : null}
             </label>
             <label className="dr-gate__field">
               <span>Work email</span>
-              <input type="email" autoComplete="email" aria-invalid={errors.email ? true : undefined} value={form.email} onChange={(e) => set("email", e.target.value)} />
+              <input type="email" placeholder="you@company.com" autoComplete="email" aria-invalid={errors.email ? true : undefined} value={form.email} onChange={(e) => set("email", e.target.value)} />
               {errors.email ? <span className="dr-gate__fielderr" role="alert">{errors.email}</span> : null}
             </label>
           </div>
           <div className="dr-gate__row">
             <label className="dr-gate__field">
               <span>Phone</span>
-              <input type="tel" autoComplete="tel" aria-invalid={errors.phone ? true : undefined} value={form.phone} onChange={(e) => set("phone", e.target.value)} />
+              <input type="tel" placeholder="e.g. 07123 456789" autoComplete="tel" aria-invalid={errors.phone ? true : undefined} value={form.phone} onChange={(e) => set("phone", e.target.value)} />
               {errors.phone ? <span className="dr-gate__fielderr" role="alert">{errors.phone}</span> : null}
             </label>
             <label className="dr-gate__field">
               <span>Company <em>(optional)</em></span>
-              <input type="text" autoComplete="organization" value={form.company} onChange={(e) => set("company", e.target.value)} />
+              <input type="text" placeholder="Your company name" autoComplete="organization" value={form.company} onChange={(e) => set("company", e.target.value)} />
             </label>
           </div>
 

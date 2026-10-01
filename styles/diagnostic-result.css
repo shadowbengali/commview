@@ -640,7 +640,13 @@
   z-index: 2;
 }
 .dr-gate__head {
-  margin-bottom: clamp(28px, 4vw, 48px);
+  margin-bottom: clamp(32px, 5vw, 56px);
+  text-align: center;
+}
+.dr-gate__eyebrow {
+  display: inline-block;
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid color-mix(in srgb, var(--brand-cyan) 55%, transparent);
 }
 .dr-gate__cols {
   display: grid;
@@ -649,41 +655,66 @@
   align-items: center;
 }
 .dr-gate__h {
-  margin: var(--space-3) 0 0;
-  font-size: clamp(30px, 4.2vw, 48px);
-  line-height: 1.05;
+  margin: var(--space-4) auto 0;
+  font-size: clamp(30px, 4.4vw, 50px);
+  line-height: 1.04;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--brand-polar);
+  text-wrap: balance;
 }
 .dr-gate__p {
-  margin: 0 0 var(--space-6);
+  margin: var(--space-4) auto 0;
   font-size: 17px;
   line-height: 1.6;
   color: var(--slate-light);
-  max-width: 48ch;
+  max-width: 62ch;
 }
 .dr-gate__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--space-3);
 }
 .dr-gate__list li {
   display: grid;
-  grid-template-columns: 22px 1fr;
-  gap: var(--space-3);
-  align-items: start;
-  font-size: 16px;
-  line-height: 1.45;
+  grid-template-columns: 64px 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-6) 0;
+}
+.dr-gate__list li:not(:last-child) {
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-polar) 10%, transparent);
+}
+.dr-gate__ico {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  color: var(--brand-cyan);
+  border: 1.5px solid color-mix(in srgb, var(--brand-cyan) 45%, transparent);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--brand-cyan) 14%, transparent), transparent);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--brand-cyan) 22%, transparent);
+}
+.dr-gate__ico svg { width: 26px; height: 26px; }
+.dr-gate__bt {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--brand-polar);
 }
-.dr-gate__list svg { width: 20px; height: 20px; color: var(--c); }
+.dr-gate__bd {
+  margin: var(--space-1) 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--slate-light);
+}
 
 .dr-gate__form {
   background: color-mix(in srgb, var(--brand-charcoal) 80%, transparent);
-  border: 1px solid color-mix(in srgb, var(--brand-polar) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brand-cyan) 45%, transparent);
   border-radius: var(--radius-lg);
   padding: clamp(24px, 3vw, 36px);
   display: grid;
@@ -726,6 +757,7 @@
   background: color-mix(in srgb, var(--brand-polar) 6%, transparent);
   color: var(--brand-polar);
 }
+.dr-gate__field input::placeholder { color: var(--slate); }
 .dr-gate__field input:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
