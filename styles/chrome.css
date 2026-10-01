@@ -172,7 +172,7 @@ img { max-width: 100%; height: auto; display: block; }
 .ftr__bottom { margin-top: var(--space-12); display: flex; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
 .ftr__legal { margin-top: var(--space-6); display: flex; gap: var(--space-6); flex-wrap: wrap; align-items: center; }
 .ftr__legal a:hover { color: var(--brand-polar); }
-.ftr__fineprint { margin-top: var(--space-6); max-width: 80ch; font-size: 13px; }
+.ftr__fineprint { margin-top: var(--space-6); font-size: 13px; }
 
 /* header collapses before the nav + CTA can crowd the logo */
 @media (max-width: 860px) {

@@ -54,8 +54,8 @@ export function SiteFooter() {
           <CookieSettingsButton />
         </nav>
         <p className="ftr__fineprint small dim">
-          &copy; {year} CommView Limited. Registered in England &amp; Wales, company no. 17456529.
-          ICO registration ZC261617.
+          &copy; {year} CommView Ltd | Registered in England &amp; Wales (Company No. 17456529). | ICO
+          Registration Number: ZC261617.
         </p>
       </div>
     </footer>
