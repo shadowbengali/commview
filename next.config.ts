@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
     // Sanity's image CDN is the only remote source.
     remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
   },
+  // Inline the page's CSS into <style> in the head instead of render-blocking
+  // external stylesheets, which removes round-trips on the critical path and
+  // improves LCP. The site's CSS is small, so the HTML-size trade-off is a win.
+  experimental: { inlineCss: true },
   // Section decision: visible label "Insight", canonical URLs live under
   // /insights (SEO plan). /blog was live briefly, so 301 it across.
   async redirects() {
