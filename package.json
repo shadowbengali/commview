@@ -33,5 +33,9 @@
     "playwright": "^1.49.1",
     "png-to-ico": "^3.0.2",
     "typescript": "^5.7.3"
-  }
+  },
+  "browserslist": [
+    "last 3 years",
+    "not dead"
+  ]
 }
