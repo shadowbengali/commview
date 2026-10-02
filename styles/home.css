@@ -353,3 +353,74 @@
   .tp__q { transition: none; }
   .btn:hover { transform: none; }
 }
+
+/* ============================================================================
+   PROBLEM / REALITY — symptoms → the reality box → the four capabilities.
+   Connector wires are drawn from the live DOM by HomeInteractions (desktop
+   only). Each card carries its accent as --c.
+   ========================================================================== */
+.reality { background: var(--surface-raised); padding-block: clamp(56px, 8vw, 104px); }
+.reality__in { position: relative; text-align: center; }
+.reality__tick { display: block; width: 40px; height: 3px; margin: 0 auto var(--space-6); border-radius: 2px; background: var(--brand-cyan); }
+.reality h2 { font-size: clamp(30px, 5vw, 54px); line-height: 1.04; font-weight: 800; letter-spacing: -0.03em; color: var(--text-primary); text-wrap: balance; }
+
+/* connector overlay */
+.reality .wires { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; }
+
+/* symptom cards (top row) */
+.reality__symptoms {
+  list-style: none; margin: clamp(36px, 5vw, 56px) 0 clamp(72px, 9vw, 116px); padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+}
+.reality__symptom {
+  position: relative; z-index: 1; display: grid; grid-template-columns: auto 1fr; gap: var(--space-3);
+  align-items: start; text-align: left;
+  background: var(--surface-raised); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-raised);
+}
+.reality__symptom i { width: 11px; height: 11px; margin-top: 6px; border-radius: 50%; background: var(--c); flex: none; }
+.reality__symptom span { font-size: 15px; line-height: 1.5; color: var(--text-secondary); }
+.reality__symptom b { color: var(--text-primary); font-weight: 700; }
+
+/* the reality box (centre) */
+.reality__core {
+  position: relative; z-index: 1; max-width: 480px; margin: 0 auto;
+  background: var(--brand-charcoal); color: var(--brand-polar);
+  border-radius: var(--radius-lg); padding: clamp(28px, 4vw, 44px); box-shadow: var(--shadow-overlay);
+}
+.reality__core-k { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--slate); }
+.reality__core-h { margin: var(--space-3) 0; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; color: var(--brand-polar); }
+.reality__core-p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--slate-light); }
+
+/* capability cards (bottom row) */
+.reality__caps {
+  list-style: none; margin: clamp(72px, 9vw, 116px) 0 clamp(36px, 5vw, 56px); padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+}
+.reality__cap {
+  position: relative; z-index: 1; display: grid; grid-template-columns: auto 1fr; gap: var(--space-4) var(--space-4);
+  align-items: center; text-align: left;
+  background: var(--surface-raised); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-raised);
+}
+.reality__cap-ico {
+  grid-row: span 2; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+  color: var(--c); background: color-mix(in srgb, var(--c) 12%, transparent);
+}
+.reality__cap-ico svg { width: 24px; height: 24px; }
+.reality__cap-t { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-primary); align-self: end; }
+.reality__cap-s { margin: 0; font-size: 13px; line-height: 1.45; color: var(--text-secondary); align-self: start; }
+
+/* closing lines */
+.reality__foot { margin: 0 auto; max-width: 54ch; font-size: clamp(20px, 2.4vw, 30px); line-height: 1.2; font-weight: 800; letter-spacing: -0.02em; color: var(--text-secondary); }
+.reality__foot b { color: var(--text-primary); }
+.reality__sub { margin: var(--space-4) auto 0; max-width: 60ch; font-size: 16px; line-height: 1.6; color: var(--text-secondary); }
+.reality__cta { margin-top: clamp(28px, 4vw, 44px); display: grid; justify-items: center; gap: var(--space-3); }
+
+@media (max-width: 1020px) {
+  .reality__symptoms, .reality__caps { grid-template-columns: repeat(2, 1fr); margin-block: clamp(28px, 5vw, 44px); }
+  .reality .wires { display: none; }
+}
+@media (max-width: 560px) {
+  .reality__symptoms, .reality__caps { grid-template-columns: 1fr; }
+}

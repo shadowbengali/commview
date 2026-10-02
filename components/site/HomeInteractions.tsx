@@ -114,12 +114,17 @@ export function HomeInteractions() {
       cleanups.push(() => btn.removeEventListener("click", handler));
     });
 
-    // ---- Connector wires: each symptom curves into the overlap ------------
+    // ---- Connector wires: the symptoms curve down into the reality box, which
+    //      then fans out to the four capabilities. Measured from the live DOM so
+    //      the lines stay aligned at any width (hidden when stacked on mobile).
     const wires = document.getElementById("wires");
-    const core = document.getElementById("venn-core");
+    const core = document.getElementById("reality-core");
     if (wires && core) {
-      const cards = Array.prototype.slice.call(
-        document.querySelectorAll(".symptom")
+      const symptoms = Array.prototype.slice.call(
+        document.querySelectorAll(".reality__symptom")
+      ) as HTMLElement[];
+      const caps = Array.prototype.slice.call(
+        document.querySelectorAll(".reality__cap")
       ) as HTMLElement[];
       const host = wires.parentElement as HTMLElement;
 
@@ -129,23 +134,37 @@ export function HomeInteractions() {
           return;
         }
         const box = host.getBoundingClientRect();
-        const target = core.getBoundingClientRect();
-        const tx = target.left - box.left + target.width / 2;
-        const ty = target.top - box.top;
+        const c = core.getBoundingClientRect();
+        const cx = c.left - box.left + c.width / 2;
+        const cTop = c.top - box.top;
+        const cBot = c.bottom - box.top;
         wires.setAttribute(
           "viewBox",
           "0 0 " + Math.round(box.width) + " " + Math.round(box.height)
         );
         let out = "";
-        cards.forEach((card) => {
+        // symptoms (above) curve down into the top of the box
+        symptoms.forEach((card) => {
           const r = card.getBoundingClientRect();
           const x = r.left - box.left + r.width / 2;
           const y = r.bottom - box.top;
           const colour = getComputedStyle(card).getPropertyValue("--c").trim();
-          const midY = y + (ty - y) * 0.55;
+          const midY = y + (cTop - y) * 0.55;
           out +=
-            '<path d="M ' + x + " " + y + " C " + x + " " + midY + ", " + tx + " " + midY + ", " + tx + " " + (ty - 4) +
-            '" fill="none" stroke="' + colour + '" stroke-width="1.5" stroke-opacity=".8" stroke-linecap="round"/>' +
+            '<path d="M ' + x + " " + y + " C " + x + " " + midY + ", " + cx + " " + midY + ", " + cx + " " + (cTop - 4) +
+            '" fill="none" stroke="' + colour + '" stroke-width="1.5" stroke-opacity=".75" stroke-linecap="round"/>' +
+            '<circle cx="' + x + '" cy="' + y + '" r="2.5" fill="' + colour + '"/>';
+        });
+        // the box fans out to each capability (below)
+        caps.forEach((card) => {
+          const r = card.getBoundingClientRect();
+          const x = r.left - box.left + r.width / 2;
+          const y = r.top - box.top;
+          const colour = getComputedStyle(card).getPropertyValue("--c").trim();
+          const midY = cBot + (y - cBot) * 0.5;
+          out +=
+            '<path d="M ' + cx + " " + (cBot + 4) + " C " + cx + " " + midY + ", " + x + " " + midY + ", " + x + " " + (y - 2) +
+            '" fill="none" stroke="' + colour + '" stroke-width="1.5" stroke-opacity=".55" stroke-linecap="round"/>' +
             '<circle cx="' + x + '" cy="' + y + '" r="2.5" fill="' + colour + '"/>';
         });
         wires.innerHTML = out;

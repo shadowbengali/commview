@@ -201,123 +201,106 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ============ PROBLEM ============ */}
-        <section className="problem" aria-labelledby="problem-h">
-          <div className="wrap problem__in">
-            <span className="problem__tick" aria-hidden="true"></span>
-            <h2 id="problem-h">You know something isn't working.</h2>
+        {/* ============ PROBLEM / REALITY ============ */}
+        <section className="reality" aria-labelledby="reality-h">
+          <div className="wrap reality__in">
+            <span className="reality__tick" aria-hidden="true"></span>
+            <h2 id="reality-h">You know something isn&rsquo;t working.</h2>
 
-            <ul className="symptoms">
-              <li className="symptom" style={cvar("var(--accent-green)")}>
+            <ul className="reality__symptoms">
+              <li className="reality__symptom" style={cvar("var(--accent-green)")}>
                 <i aria-hidden="true"></i>
                 <span>
-                  Maybe <b>growth</b> has <b>slowed</b>.
+                  <b>Growth</b> has <b>slowed</b>, but you don&rsquo;t know why.
                 </span>
               </li>
-              <li className="symptom" style={cvar("var(--brand-cyan)")}>
+              <li className="reality__symptom" style={cvar("var(--brand-cyan)")}>
                 <i aria-hidden="true"></i>
                 <span>
-                  Maybe you're spending more on marketing without seeing{" "}
-                  <b>more pipeline</b>.
+                  You&rsquo;re <b>winning customers</b>, but losing too many along the way.
                 </span>
               </li>
-              <li className="symptom" style={cvar("var(--brand-blue)")}>
+              <li className="reality__symptom" style={cvar("var(--brand-blue)")}>
                 <i aria-hidden="true"></i>
                 <span>
-                  Maybe Sales says the <b>leads aren't good enough</b>.
+                  Customers asked for <b>what you built</b>. They&rsquo;re not using it.
                 </span>
               </li>
-              <li className="symptom" style={cvar("var(--accent-pink)")}>
+              <li className="reality__symptom" style={cvar("var(--accent-pink)")}>
                 <i aria-hidden="true"></i>
                 <span>
-                  Maybe something that should take two weeks{" "}
-                  <b>takes two months</b>.
+                  Your team is <b>still doing manually</b> what shouldn&rsquo;t take <b>that long</b>.
                 </span>
               </li>
             </ul>
 
             <svg className="wires" id="wires" aria-hidden="true"></svg>
 
-            <figure className="venn">
-              <svg
-                viewBox="0 0 760 586"
-                role="img"
-                aria-label="The four disciplines overlap: GTM Leadership, Growth, Product and Operational AI, meeting where the real problem sits."
-              >
-                <g className="venn__fields">
-                  <ellipse cx="380" cy="200" rx="178" ry="146" fill="var(--brand-cyan)" />
-                  <ellipse cx="248" cy="310" rx="178" ry="146" fill="var(--accent-green)" />
-                  <ellipse cx="512" cy="310" rx="178" ry="146" fill="var(--brand-blue)" />
-                  <ellipse cx="380" cy="420" rx="178" ry="146" fill="var(--accent-pink)" />
-                </g>
-                <g className="venn__labels">
-                  <text x="380" y="126" className="venn__name">GTM LEADERSHIP</text>
-                  <text x="380" y="150" className="venn__caps">Positioning · ICP · Pipeline</text>
+            <div className="reality__core" id="reality-core">
+              <p className="reality__core-k">The reality</p>
+              <h3 className="reality__core-h">The problem rarely sits neatly inside one team.</h3>
+              <p className="reality__core-p">
+                Growth, product, commercial and operational issues are connected. To find the real
+                cause, you have to look across the whole picture.
+              </p>
+            </div>
 
-                  <text x="196" y="300" className="venn__name">GROWTH</text>
-                  <text x="196" y="324" className="venn__caps">Content · Conversion · Analytics</text>
-
-                  <text x="566" y="300" className="venn__name">PRODUCT</text>
-                  <text x="566" y="324" className="venn__caps">Requirements · User journeys · Launch</text>
-
-                  <text x="380" y="478" className="venn__name">OPERATIONAL AI</text>
-                  <text x="380" y="502" className="venn__caps">Reporting · Lead scoring · Automation</text>
-                </g>
-                <g id="venn-core">
-                  <circle cx="380" cy="310" r="62" fill="var(--brand-charcoal)" />
-                  <text x="380" y="303" className="venn__core">THE PROBLEMS</text>
-                  <text x="380" y="323" className="venn__core">OVERLAP</text>
-                </g>
-              </svg>
-            </figure>
-
-            <ul className="venn-legend">
-              <li style={cvar("var(--brand-cyan)")}>
-                <i aria-hidden="true"></i>
-                <b>GTM Leadership</b>
-                <span>Positioning · ICP · Pipeline</span>
+            <ul className="reality__caps">
+              <li className="reality__cap" style={cvar("var(--brand-cyan)")}>
+                <span className="reality__cap-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <circle cx="9" cy="8" r="3" />
+                    <path d="M3.5 19a5.5 5.5 0 0 1 11 0" strokeLinecap="round" />
+                    <path d="M16 6a2.6 2.6 0 0 1 0 5M20.5 19a5 5 0 0 0-3.5-4.8" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <p className="reality__cap-t">GTM Leadership</p>
+                <p className="reality__cap-s">Market &middot; ICP &middot; Proposition &middot; Commercial model</p>
               </li>
-              <li style={cvar("var(--accent-green)")}>
-                <i aria-hidden="true"></i>
-                <b>Growth</b>
-                <span>Content · Conversion · Analytics</span>
+              <li className="reality__cap" style={cvar("var(--accent-green)")}>
+                <span className="reality__cap-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M6 20v-5M12 20V8M18 20v-9" />
+                  </svg>
+                </span>
+                <p className="reality__cap-t">Growth</p>
+                <p className="reality__cap-s">Demand &middot; Conversion &middot; Revenue</p>
               </li>
-              <li style={cvar("var(--brand-blue)")}>
-                <i aria-hidden="true"></i>
-                <b>Product</b>
-                <span>Requirements · User journeys · Launch</span>
+              <li className="reality__cap" style={cvar("var(--brand-blue)")}>
+                <span className="reality__cap-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round">
+                    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" />
+                    <path d="M4 7.5l8 4.5 8-4.5M12 12v9" />
+                  </svg>
+                </span>
+                <p className="reality__cap-t">Product</p>
+                <p className="reality__cap-s">Value &middot; Adoption &middot; Priorities</p>
               </li>
-              <li style={cvar("var(--accent-pink)")}>
-                <i aria-hidden="true"></i>
-                <b>Operational AI</b>
-                <span>Reporting · Lead scoring · Automation</span>
+              <li className="reality__cap" style={cvar("var(--accent-pink)")}>
+                <span className="reality__cap-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                    <circle cx="12" cy="12" r="3.2" />
+                    <path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12H5M19 12h2.5M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <p className="reality__cap-t">Operational AI</p>
+                <p className="reality__cap-s">Process &middot; Workflows &middot; Automation</p>
               </li>
             </ul>
 
-            <div className="pivot">
-              <p className="pivot__a">The difficult part isn't always fixing it.</p>
-              <p className="pivot__b">It's working out what's actually wrong.</p>
-              <div className="pivot__tail">
-                <p>
-                  Most businesses don't have neat GTM problems, Growth problems,
-                  Product problems or AI problems.
-                </p>
-                <p>The problems overlap.</p>
-                <p>
-                  That's why we look across the business before deciding what
-                  needs to change.
-                </p>
-              </div>
+            <p className="reality__foot">
+              <b>The problem determines the work.</b> Not the other way around.
+            </p>
+            <p className="reality__sub">
+              We help established B2B businesses find what&rsquo;s actually going on, get something
+              moving, and prove it made a difference.
+            </p>
 
-              <div className="problem__cta">
-                <span className="problem__cta-rule" aria-hidden="true"></span>
-                <a className="btn btn--cyan btn--lg btn--wide" href="/diagnostic">
-                  Take the Diagnostic
-                </a>
-                <p className="small dim">
-                  Takes around 5 minutes. No sales call required.
-                </p>
-              </div>
+            <div className="reality__cta">
+              <a className="btn btn--cyan btn--lg btn--wide" href="/diagnostic">
+                Take the Diagnostic
+              </a>
+              <p className="small dim">Takes around 5 minutes. No sales call required.</p>
             </div>
           </div>
         </section>
