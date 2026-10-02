@@ -4,7 +4,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import type { Page, Section, Heading, Rich, Diagram, Stat } from "../../lib/content/types";
 
-const ACC_VAR: Record<string, string> = { cyan: "var(--brand-cyan)", green: "var(--accent-green)", blue: "var(--accent-blue)", pink: "var(--accent-pink)" };
+const ACC_VAR: Record<string, string> = { cyan: "var(--brand-cyan)", green: "var(--accent-green)", blue: "var(--brand-blue)", pink: "var(--accent-pink)" };
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk";
 // Unverified stats show (flagged) in dev/preview for QA, but never in production.

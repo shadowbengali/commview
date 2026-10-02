@@ -7,7 +7,7 @@ import "../../styles/not-found.css";
 const CAPABILITIES = [
   { label: "GTM Leadership", href: "/gtm-leadership", c: "var(--brand-cyan)" },
   { label: "Growth", href: "/growth", c: "var(--accent-green)" },
-  { label: "Product", href: "/product-strategy", c: "var(--accent-blue)" },
+  { label: "Product", href: "/product-strategy", c: "var(--brand-blue)" },
   { label: "Operational AI", href: "/ai-consulting", c: "var(--accent-pink)" },
 ];
 

@@ -4,7 +4,7 @@
 
 .acc-cyan    { --c: var(--brand-cyan); }
 .acc-green   { --c: var(--accent-green); }
-.acc-blue    { --c: var(--accent-blue); }
+.acc-blue    { --c: var(--brand-blue); }
 .acc-pink    { --c: var(--accent-pink); }
 .acc-neutral { --c: var(--accent-neutral); }
 

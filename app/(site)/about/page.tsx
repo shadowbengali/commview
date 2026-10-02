@@ -52,7 +52,7 @@ const LOGOS = [
 
 const DISCIPLINES_L = [
   { label: "GTM", c: "var(--brand-cyan)" },
-  { label: "Product", c: "var(--accent-blue)" },
+  { label: "Product", c: "var(--brand-blue)" },
   { label: "Growth", c: "var(--accent-green)" },
   { label: "Operational AI", c: "var(--accent-pink)" },
 ];

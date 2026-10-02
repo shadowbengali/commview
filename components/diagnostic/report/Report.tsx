@@ -13,7 +13,7 @@ import { ViewTracker, TrackedLink, PrintButton } from "./ReportClient";
 // Journey model -> functional accent. Cross-functional uses purple, per the brief.
 const ACCENT: Record<JourneyType, string> = {
   commercial: "var(--brand-cyan)",
-  product: "var(--accent-blue)",
+  product: "var(--brand-blue)",
   operations: "var(--accent-pink)",
   cross_functional: "var(--brand-blue)",
 };
