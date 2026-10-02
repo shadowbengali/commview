@@ -61,27 +61,29 @@ export const metadata: Metadata = {
   },
 };
 
-const QUESTIONS: string[] = [
-  "Why isn't the marketing working?",
-  "Why do customers keep choosing the competition?",
-  "Where should we spend the next £100k?",
-  "Why has the deal stalled?",
-  "Why can't we find more customers?",
-  "Why does it take so long to launch a campaign?",
-  "Why aren't customers using the new features?",
-  "Can we charge more for this?",
-  "Why are we getting leads but not closing them?",
-  "Why has growth flattened?",
-  "Why isn't the website converting?",
-  "Why does every launch feel like we're starting again?",
-  "Which marketing is actually making us money?",
-  "Do we need more leads, or are we wasting the ones we have?",
-  "Should we build this feature at all?",
-  "Why do Sales and Marketing disagree about the leads?",
-  "Are we targeting the wrong customers?",
-  "Is the positioning wrong, or is the product wrong?",
-  "Can AI actually reduce our costs?",
-  "Why are we paying three agencies and still joining the dots ourselves?",
+// Each question is coloured by the capability it belongs to, cycling
+// GTM Leadership (cyan) → Growth (green) → Product (blue) → Operational AI (pink).
+const QUESTIONS: { q: string; c: string }[] = [
+  { q: "Why do customers keep choosing the competition?", c: "var(--brand-cyan)" },
+  { q: "Why isn't the marketing working?", c: "var(--accent-green)" },
+  { q: "Why aren't customers using the new features?", c: "var(--brand-blue)" },
+  { q: "Can AI actually reduce our costs?", c: "var(--accent-pink)" },
+  { q: "Are we targeting the wrong customers?", c: "var(--brand-cyan)" },
+  { q: "Why has growth flattened?", c: "var(--accent-green)" },
+  { q: "Should we build this feature at all?", c: "var(--brand-blue)" },
+  { q: "Why does it take so long to launch a campaign?", c: "var(--accent-pink)" },
+  { q: "Why do Sales and Marketing disagree about the leads?", c: "var(--brand-cyan)" },
+  { q: "Do we need more leads, or are we wasting the ones we have?", c: "var(--accent-green)" },
+  { q: "Is the positioning wrong, or is the product wrong?", c: "var(--brand-blue)" },
+  { q: "Why are we paying three agencies and still joining the dots ourselves?", c: "var(--accent-pink)" },
+  { q: "Where should we spend the next £100k?", c: "var(--brand-cyan)" },
+  { q: "Why isn't the website converting?", c: "var(--accent-green)" },
+  { q: "Can we charge more for this?", c: "var(--brand-blue)" },
+  { q: "Which work could we automate without making the process worse?", c: "var(--accent-pink)" },
+  { q: "Why has the deal stalled?", c: "var(--brand-cyan)" },
+  { q: "Which marketing is actually making us money?", c: "var(--accent-green)" },
+  { q: "Why does every launch feel like we're starting again?", c: "var(--brand-blue)" },
+  { q: "Where is manual work costing us time every week?", c: "var(--accent-pink)" },
 ];
 
 function Chevron() {
@@ -144,13 +146,14 @@ export default function HomePage() {
               </p>
               <div className="tp__viewport">
                 <ul className="tp__track" id="tp-track">
-                  {QUESTIONS.map((q, n) => (
+                  {QUESTIONS.map((item, n) => (
                     <li
                       key={n}
                       className="tp__q"
+                      style={cvar(item.c)}
                       {...(n === 0 ? { "data-live": "true" } : {})}
                     >
-                      <span>{q}</span>
+                      <span>{item.q}</span>
                     </li>
                   ))}
                 </ul>
