@@ -6,7 +6,38 @@
 .hero { position: relative; overflow: hidden; display: flex; align-items: center;
   min-height: clamp(520px, calc(100svh - 92px), 880px);
   padding-block: clamp(40px, 5vw, 72px) clamp(40px, 5vw, 72px); }
-.hero__slash { position: absolute; top: -10%; right: -4%; width: 42%; height: 120%; opacity: .85; pointer-events: none; }
+/* Capability rail on the right edge. Bars sit dim; the active capability lights
+   up in sync with the teleprompter. Labels appear on wide screens only (in the
+   right margin, so they never crowd the hero CTA); narrower = colour strips. */
+.hero__rail { position: absolute; top: 0; right: 0; height: 100%; z-index: 2; display: flex; }
+.rail__bar {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 6px; height: 100%; text-decoration: none;
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+  transition: background 600ms ease, box-shadow 600ms ease, width 400ms ease;
+}
+.rail__bar + .rail__bar { margin-left: 2px; }
+.rail__bar[data-active] {
+  background: color-mix(in srgb, var(--c) 34%, transparent);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--c) 42%, transparent);
+}
+.rail__label {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  white-space: nowrap; color: color-mix(in srgb, var(--c) 52%, var(--slate));
+  display: none; transition: color 600ms ease;
+}
+.rail__bar[data-active] .rail__label { color: var(--c); }
+/* keep hero content clear of the colour strips */
+.hero > .wrap { padding-right: 40px; }
+@media (prefers-reduced-motion: reduce) {
+  .rail__bar { transition: none; }
+}
+@media (min-width: 1536px) {
+  .rail__bar { width: 26px; }
+  .rail__bar + .rail__bar { margin-left: 4px; }
+  .rail__label { display: block; }
+}
 .hero__grid {
   position: relative; display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;

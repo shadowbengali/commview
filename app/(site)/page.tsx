@@ -86,6 +86,23 @@ const QUESTIONS: { q: string; c: string }[] = [
   { q: "Where is manual work costing us time every week?", c: "var(--accent-pink)" },
 ];
 
+// The four capability bars on the right edge of the hero. The active one lights
+// up in sync with the teleprompter (matched by `cap`).
+const CAPABILITIES = [
+  { id: "gtm", label: "GTM Leadership", href: "/gtm-leadership", c: "var(--brand-cyan)" },
+  { id: "growth", label: "Growth", href: "/growth", c: "var(--accent-green)" },
+  { id: "product", label: "Product", href: "/product-strategy", c: "var(--brand-blue)" },
+  { id: "ops", label: "Operational AI", href: "/ai-consulting", c: "var(--accent-pink)" },
+];
+// Maps a question's accent to its capability id so the teleprompter can light
+// the matching bar.
+const CAP_BY_COLOUR: Record<string, string> = {
+  "var(--brand-cyan)": "gtm",
+  "var(--accent-green)": "growth",
+  "var(--brand-blue)": "product",
+  "var(--accent-pink)": "ops",
+};
+
 function Chevron() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -112,22 +129,19 @@ export default function HomePage() {
       <main id="main">
         {/* ============ HERO ============ */}
         <section className="hero dark" aria-labelledby="hero-h">
-          <svg
-            className="hero__slash"
-            viewBox="0 0 400 800"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <defs>
-              <linearGradient id="g-slash" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stopColor="#00E5FF" stopOpacity=".30" />
-                <stop offset="1" stopColor="#5B4DF5" stopOpacity=".05" />
-              </linearGradient>
-            </defs>
-            <polygon points="286,0 400,0 176,800 62,800" fill="url(#g-slash)" />
-            <polygon points="344,0 358,0 134,800 120,800" fill="#00E5FF" opacity=".55" />
-            <polygon points="372,0 378,0 154,800 148,800" fill="#5B4DF5" opacity=".7" />
-          </svg>
+          <nav className="hero__rail" id="hero-rail" aria-label="Our four capabilities">
+            {CAPABILITIES.map((cap) => (
+              <a
+                key={cap.id}
+                className="rail__bar"
+                data-cap={cap.id}
+                href={cap.href}
+                style={cvar(cap.c)}
+              >
+                <span className="rail__label">{cap.label}</span>
+              </a>
+            ))}
+          </nav>
 
           <div className="wrap hero__grid">
             <div className="hero__col">
@@ -151,6 +165,7 @@ export default function HomePage() {
                       key={n}
                       className="tp__q"
                       style={cvar(item.c)}
+                      data-cap={CAP_BY_COLOUR[item.c]}
                       {...(n === 0 ? { "data-live": "true" } : {})}
                     >
                       <span>{item.q}</span>

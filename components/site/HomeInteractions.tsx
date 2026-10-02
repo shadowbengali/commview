@@ -19,6 +19,11 @@ export function HomeInteractions() {
     if (track && live && rail && counter) {
       const rows = Array.prototype.slice.call(track.children) as HTMLElement[];
       const originals = rows.map((r) => r.firstElementChild!.textContent || "");
+      // Capability bars on the right edge of the hero — the active question's
+      // capability bar lights up.
+      const bars = Array.prototype.slice.call(
+        document.querySelectorAll(".hero__rail .rail__bar")
+      ) as HTMLElement[];
 
       rows.forEach((row) => {
         const span = row.firstElementChild as HTMLElement;
@@ -49,6 +54,11 @@ export function HomeInteractions() {
         viewport.style.setProperty("--fade-start", liveRow.offsetHeight + "px");
         for (let n = 0; n < all.length; n++) {
           all[n].setAttribute("data-live", n === i ? "true" : "false");
+        }
+        const activeCap = (all[i] as HTMLElement).dataset.cap;
+        for (let b = 0; b < bars.length; b++) {
+          if (bars[b].dataset.cap === activeCap) bars[b].setAttribute("data-active", "");
+          else bars[b].removeAttribute("data-active");
         }
         const idx = i % rows.length;
         for (let k = 0; k < ticks.length; k++) {
