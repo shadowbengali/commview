@@ -73,7 +73,7 @@ export function HomeInteractions() {
             place(false);
           }, 1250);
         }
-      }, 5200);
+      }, 3800);
 
       cleanups.push(() => {
         clearInterval(timer);
