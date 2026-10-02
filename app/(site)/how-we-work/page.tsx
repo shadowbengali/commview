@@ -50,7 +50,7 @@ const SLABS = [
 
 const FLOW = [
   { icon: "search", name: "Understand", body: "Get close to the business, the customer and the evidence.", c: "var(--brand-cyan)" },
-  { icon: "doc", name: "Diagnose", body: "Identify the constraint and decide what is worth moving first.", c: "var(--accent-blue)" },
+  { icon: "doc", name: "Diagnose", body: "Identify the constraint and decide what is worth moving first.", c: "var(--brand-blue)" },
   { icon: "bolt", name: "Do", body: "Start shipping work rather than spending months planning it.", c: "var(--brand-blue)" },
   { icon: "chart", name: "Measure", body: "See what changed, learn from it and decide what moves next.", c: "var(--accent-pink)" },
 ];

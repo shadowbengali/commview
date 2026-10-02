@@ -96,7 +96,7 @@ const MAPPINGS = [
     fic: <><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="3.5" /></>,
   },
   {
-    colour: "var(--accent-blue)", asked: "More leads", found: "Conversion / Sales",
+    colour: "var(--brand-blue)", asked: "More leads", found: "Conversion / Sales",
     icon: <path d="M4 20h16M7.5 20v-6M12 20V8M16.5 20v-10" strokeLinecap="round" />,
     fic: <path d="M4 5h16l-6 7v5l-4 2v-7L4 5z" strokeLinejoin="round" />,
   },
