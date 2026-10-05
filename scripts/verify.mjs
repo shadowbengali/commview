@@ -21,6 +21,8 @@ const ROUTES = [
   "/positioning", "/ideal-customer-profile-workshop",
   "/insights/category/gtm-leadership", "/insights/category/growth",
   "/insights/category/product", "/insights/category/operational-ai",
+  "/diagnostic", "/diagnostic/questions",
+  "/privacy", "/terms", "/cookies",
 ];
 const WIDTHS = [360, 390, 430, 768, 900, 1024, 1280, 1440, 1920];
 
@@ -87,18 +89,78 @@ for (const route of ROUTES) {
     document.querySelectorAll('script[type="application/ld+json"]').forEach((s) => {
       try { JSON.parse(s.textContent); } catch (e) { ld.push("PARSE ERROR: " + e.message); }
     });
+
+    // --- Agent accessibility: discernible names. Mirrors the "links must have
+    // discernible text" audit and the label/alt variants. A control's name is
+    // worthless if it lives in a hidden child, so visible text ignores
+    // aria-hidden subtrees (that bit it us once with the hero rail labels).
+    const visible = (el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.width < 1 || rect.height < 1) return false;
+      const s = getComputedStyle(el);
+      return s.visibility !== "hidden" && s.display !== "none";
+    };
+    const accText = (el) => {
+      let t = "";
+      el.childNodes.forEach((n) => {
+        if (n.nodeType === 3) t += n.textContent;
+        else if (n.nodeType === 1 && n.getAttribute("aria-hidden") !== "true") t += accText(n);
+      });
+      return t.trim();
+    };
+    const accName = (el) => {
+      const al = (el.getAttribute("aria-label") || "").trim();
+      if (al) return al;
+      const lb = el.getAttribute("aria-labelledby");
+      if (lb) {
+        const txt = lb.split(/\s+/).map((id) => document.getElementById(id)?.textContent || "").join(" ").trim();
+        if (txt) return txt;
+      }
+      return accText(el)
+        || (el.getAttribute("title") || "").trim()
+        || (el.querySelector("img[alt]")?.getAttribute("alt") || "").trim()
+        || (el.querySelector("svg title")?.textContent || "").trim();
+    };
+    const sel = (el) =>
+      el.tagName.toLowerCase()
+      + (el.id ? "#" + el.id : "")
+      + (typeof el.className === "string" && el.className.trim() ? "." + el.className.trim().split(/\s+/).join(".") : "");
+
+    const unnamed = [];
+    document.querySelectorAll('a[href], button, [role="link"], [role="button"]').forEach((el) => {
+      if (!visible(el) || el.getAttribute("aria-hidden") === "true") return;
+      if (!accName(el)) unnamed.push(sel(el));
+    });
+    const unlabelled = [];
+    document.querySelectorAll("input, select, textarea").forEach((el) => {
+      if (el.type === "hidden" || !visible(el)) return;
+      const labelled =
+        (el.id && document.querySelector(`label[for="${CSS.escape(el.id)}"]`))
+        || el.closest("label")
+        || (el.getAttribute("aria-label") || "").trim()
+        || el.getAttribute("aria-labelledby");
+      if (!labelled) unlabelled.push(sel(el));
+    });
+
     return {
       h1: document.querySelectorAll("h1").length,
       jump,
       imgNoAlt: [...document.querySelectorAll("img")].filter((i) => !i.hasAttribute("alt")).length,
       ldErrors: ld,
+      unnamed,
+      unlabelled,
     };
   });
-  console.log(route, "| h1:", r.h1, "| jump:", r.jump || "none", "| img no-alt:", r.imgNoAlt);
+  console.log(
+    route, "| h1:", r.h1, "| jump:", r.jump || "none", "| img no-alt:", r.imgNoAlt,
+    "| unnamed:", r.unnamed.length, "| unlabelled:", r.unlabelled.length
+  );
   if (r.h1 !== 1) fail(route, "h1 count", r.h1);
   if (r.jump) fail(route, "heading jump", r.jump);
   if (r.imgNoAlt) fail(route, "img missing alt", r.imgNoAlt);
   if (r.ldErrors.length) fail(route, "json-ld", r.ldErrors.join(" | "));
+  if (r.unnamed.length) fail(route, "links/buttons without a discernible name", r.unnamed.join(" | "));
+  if (r.unlabelled.length) fail(route, "form controls without a label", r.unlabelled.join(" | "));
   await p.close();
 }
 
