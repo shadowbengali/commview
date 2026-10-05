@@ -256,7 +256,7 @@ export function Runner() {
       <div className="dg-run__main">
         {question.eyebrow ? <p className="dg-run__eyebrow">{question.eyebrow}</p> : null}
         {isCompound ? <p className="dg-run__lead">{question.question}</p> : null}
-        <h2 className="dg-run__q" tabIndex={-1} ref={headingRef}>
+        <h2 className="dg-run__q" id="dg-question-heading" tabIndex={-1} ref={headingRef}>
           {heading}
         </h2>
         {!isCompound && question.help ? <p className="dg-run__help">{question.help}</p> : null}
@@ -340,6 +340,7 @@ function QuestionBody({
           className="dg-textarea"
           rows={4}
           placeholder={question.placeholder}
+          aria-labelledby="dg-question-heading"
           value={draft.text}
           disabled={!!none}
           onChange={(e) => setDraft({ ...draft, text: e.target.value })}
