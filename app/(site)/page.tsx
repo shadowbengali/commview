@@ -137,8 +137,11 @@ export default function HomePage() {
                 data-cap={cap.id}
                 href={cap.href}
                 style={cvar(cap.c)}
+                aria-label={cap.label}
               >
-                <span className="rail__label">{cap.label}</span>
+                <span className="rail__label" aria-hidden="true">
+                  {cap.label}
+                </span>
               </a>
             ))}
           </nav>
