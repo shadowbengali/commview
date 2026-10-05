@@ -477,6 +477,9 @@ function Shell({
 }) {
   return (
     <section className="dg-run">
+      {/* Stable page-level heading: the per-step question stems are h2s and
+          change as you progress, so the page needs one constant h1. */}
+      <h1 className="sr">CommView Business Diagnostic</h1>
       <div className="wrap dg-run__grid">
         {children}
         <aside className="dg-aside" aria-label="Diagnostic progress">

@@ -127,17 +127,20 @@ export default async function CategoryArchivePage({ params }: { params: Promise<
       </section>
 
       {/* ===== articles ===== */}
-      <section className="latest" aria-label={`${name} articles`}>
+      <section className="latest" aria-labelledby="icat-latest-h">
         <div className="wrap">
           {posts.length > 0 ? (
-            <div className="cards">
-              {posts.map((post) => (
-                <Card key={post._id} post={post} />
-              ))}
-            </div>
+            <>
+              <h2 id="icat-latest-h" className="icat-latest-h">{`Latest in ${name}`}</h2>
+              <div className="cards">
+                {posts.map((post) => (
+                  <Card key={post._id} post={post} />
+                ))}
+              </div>
+            </>
           ) : (
             <div className="icat-empty">
-              <h2 className="icat-empty__h">Nothing published here yet.</h2>
+              <h2 id="icat-latest-h" className="icat-empty__h">Nothing published here yet.</h2>
               <p className="icat-intro">We&apos;re working on it. Explore the latest CommView Insights in the meantime.</p>
               <div className="close__row">
                 <a className="btn btn--ink btn--lg" href="/insights">View all Insights</a>
