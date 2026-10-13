@@ -37,24 +37,24 @@ const homeJsonLd = HOME_JSON_LD.replaceAll("https://www.commview.co.uk", SITE);
 export const metadata: Metadata = {
   title: {
     absolute:
-      "B2B Specialists for Scale-Ups | GTM, Growth, Product & Operational AI | COMMVIEW",
+      "B2B Specialists for Scale-Ups | GTM, Growth, Product & Operational AI | CommView",
   },
   description:
-    "COMMVIEW is an operator-led B2B consultancy for scale-ups. GTM leadership, growth, product and operational AI. You bring the question. We find the answer. Then we help you do something about it.",
+    "CommView is an operator-led B2B consultancy for scale-ups. GTM leadership, growth, product and operational AI. You bring the question. We find the answer. Then we help you do something about it.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "COMMVIEW",
+    siteName: "CommView",
     locale: "en_GB",
     url: "/",
-    title: "B2B specialists for scale-ups | COMMVIEW",
+    title: "B2B specialists for scale-ups | CommView",
     description:
       "You bring the question. We find the answer. Then we help you do something about it. GTM leadership, growth, product and operational AI for growing B2B businesses.",
     images: ["/og-commview.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "B2B specialists for scale-ups | COMMVIEW",
+    title: "B2B specialists for scale-ups | CommView",
     description:
       "Operator-led GTM, growth, product and operational AI for scale-ups. From Insight to Impact.",
     images: ["/og-commview.png"],

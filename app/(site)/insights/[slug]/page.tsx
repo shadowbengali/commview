@@ -266,7 +266,7 @@ export default async function ArticlePage({
                     <b>{post.author.name}</b>
                     {post.author.role ? <span>{post.author.role}</span> : null}
                     {post.author.bio ? <p>{post.author.bio}</p> : null}
-                    <a href="/about">More about COMMVIEW</a>
+                    <a href="/about">More about CommView</a>
                   </div>
                 </aside>
               ) : null}

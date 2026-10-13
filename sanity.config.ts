@@ -11,7 +11,7 @@ import { schemaTypes } from "./sanity/schemas";
 // domain — no second deploy, no CORS dance.
 export default defineConfig({
   name: "commview",
-  title: "COMMVIEW",
+  title: "CommView",
   basePath: "/studio",
   projectId: projectId || "placeholder",
   dataset,

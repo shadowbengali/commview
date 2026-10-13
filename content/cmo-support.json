@@ -41,7 +41,7 @@
     ],
     "diagram": {
       "kind": "overlap",
-      "caption": "WHERE COMMVIEW FITS",
+      "caption": "Where CommView fits",
       "leftLabel": "Your CMO",
       "rightLabel": "CommView operators",
       "centreLabel": "More delivery"

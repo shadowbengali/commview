@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk"
 // with its own styling, uncontaminated by the site chrome.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "COMMVIEW", template: "%s — COMMVIEW" },
+  title: { default: "CommView", template: "%s — CommView" },
   description:
     "Operator-led fractional GTM, Growth, Product and Operational AI.",
   // Indexable by default. Gated/private pages (e.g. /diagnostic/result/[id])

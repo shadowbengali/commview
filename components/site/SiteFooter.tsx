@@ -12,7 +12,7 @@ export function SiteFooter() {
     <footer className="ftr dark">
       <div className="wrap">
         <div className="ftr__top">
-          <a className="logo" href="/" aria-label="COMMVIEW home">
+          <a className="logo" href="/" aria-label="CommView home">
             <Logo />
             <span className="logo__sub" style={slate}>
               GTM Leadership · Growth · Product · Operational AI

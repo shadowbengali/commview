@@ -10,7 +10,7 @@ export const siteSettings = defineType({
     {
       name: "title",
       type: "string",
-      initialValue: "COMMVIEW",
+      initialValue: "CommView",
       readOnly: true,
       hidden: true,
     },

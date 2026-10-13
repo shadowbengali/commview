@@ -187,7 +187,7 @@ export default function AboutPage() {
               ))}
             </ul>
             <div className="ab-orbit__core">
-              <span className="ab-orbit__name">COMMVIEW</span>
+              <span className="ab-orbit__name">CommView</span>
               <span className="ab-orbit__tag">Diagnose. Assemble. Deliver.</span>
             </div>
             <ul className="ab-orbit__col">

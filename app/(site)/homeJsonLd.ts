@@ -9,7 +9,7 @@ export const HOME_JSON_LD = String.raw`
         "ProfessionalService"
       ],
       "@id": "https://www.commview.co.uk/#organisation",
-      "name": "COMMVIEW",
+      "name": "CommView",
       "url": "https://www.commview.co.uk/",
       "email": "hello@commview.co.uk",
       "slogan": "From Insight to Impact.",
@@ -71,7 +71,7 @@ export const HOME_JSON_LD = String.raw`
       "@type": "WebSite",
       "@id": "https://www.commview.co.uk/#website",
       "url": "https://www.commview.co.uk/",
-      "name": "COMMVIEW",
+      "name": "CommView",
       "publisher": {
         "@id": "https://www.commview.co.uk/#organisation"
       },
