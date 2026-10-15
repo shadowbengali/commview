@@ -23,6 +23,7 @@ const STATIC_PATHS = [
   "/contact",
   "/diagnostic",
   "/insights",
+  "/resources/claude-for-marketers",
   "/growth/outbound-lead-generation",
   "/privacy",
   "/terms",
