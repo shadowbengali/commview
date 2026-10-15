@@ -1,0 +1,296 @@
+/* /resources/claude-for-marketers — "Beyond the chat box" course resources.
+   Ported to CommView's system: design tokens only, dark sections via the global
+   .dark class, global .btn / .wrap / .eyebrow-x reused. */
+
+.rc-h2 {
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+/* ---------- 1. Hero (dark) ---------- */
+.rc-hero { padding-block: clamp(72px, 9vw, 128px); }
+.rc-hero__h1 {
+  margin-top: var(--space-4);
+  font-size: clamp(40px, 7vw, 84px);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+}
+.rc-grad {
+  background: linear-gradient(100deg, var(--brand-cyan), var(--slate-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.rc-hero__sub {
+  margin-top: var(--space-6);
+  max-width: 60ch;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.6;
+  color: var(--slate-light);
+}
+.rc-hero__links {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+.rc-hero__links a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--brand-polar);
+  padding-bottom: 2px;
+  border-bottom: 2px solid color-mix(in srgb, var(--brand-cyan) 55%, transparent);
+}
+.rc-hero__links a:hover { border-color: var(--brand-cyan); }
+
+/* ---------- Light section shells ---------- */
+.rc-watch,
+.rc-slides { padding-block: clamp(56px, 7vw, 96px); }
+.rc-try {
+  padding-block: clamp(56px, 7vw, 96px);
+  background: var(--surface-raised);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ---------- 2. Watch ---------- */
+.rc-video {
+  margin-top: var(--space-8);
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--brand-charcoal);
+  border: 1px solid var(--border-subtle);
+}
+.rc-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ---------- 3. Slides ---------- */
+.slides__viewer {
+  margin-top: var(--space-8);
+  height: clamp(440px, 72vh, 760px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--brand-charcoal);
+}
+.slides__object { width: 100%; height: 100%; border: 0; }
+.slides__oops {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: var(--space-8);
+  color: var(--slate-light);
+  text-align: center;
+}
+/* Mobile fallback card — inline PDF rendering is unreliable on phones. */
+.slides__card {
+  display: none;
+  margin-top: var(--space-8);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-raised);
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.slides__card-chip {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--brand-cyan) 18%, transparent);
+  color: color-mix(in srgb, var(--brand-cyan) 72%, var(--text-primary));
+}
+.slides__card-name { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+.slides__card-sub { font-size: 14px; color: var(--text-secondary); }
+
+.rc-actions { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+/* ---------- 4. Try it yourself ---------- */
+.rc-try__intro {
+  margin-top: var(--space-4);
+  max-width: 64ch;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.rc-step { margin-top: var(--space-12); }
+.rc-step__h {
+  font-size: clamp(19px, 2.2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.rc-step__n { color: var(--brand-cyan); }
+.rc-body {
+  margin-top: var(--space-4);
+  max-width: 64ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.rc-note {
+  margin-top: var(--space-4);
+  max-width: 64ch;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--slate);
+}
+
+/* File rows */
+.file-list { list-style: none; margin: var(--space-6) 0 0; padding: 0; display: grid; gap: var(--space-3); }
+.file-row {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--surface-base);
+}
+.file-row__main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+}
+.file-row__chip {
+  flex: none;
+  width: 48px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 0;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--brand-cyan) 14%, transparent);
+  color: color-mix(in srgb, var(--brand-cyan) 70%, var(--text-primary));
+}
+.file-row__meta { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.file-row__name { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.file-row__desc { font-size: 14px; color: var(--text-secondary); }
+.file-row__actions { flex: none; display: flex; align-items: center; gap: var(--space-4); }
+.file-row__preview {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+.file-row__preview:hover { color: var(--brand-cyan); }
+.file-row__dl {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid color-mix(in srgb, var(--brand-cyan) 55%, transparent);
+  padding-bottom: 1px;
+}
+.file-row__dl:hover { border-color: var(--brand-cyan); }
+.file-row__panel {
+  padding: var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+  overflow-x: auto;
+}
+
+.rc-zip { margin-top: var(--space-6); font-size: 14px; }
+.rc-zip a {
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid color-mix(in srgb, var(--brand-cyan) 55%, transparent);
+  padding-bottom: 1px;
+}
+.rc-zip a:hover { border-color: var(--brand-cyan); }
+
+/* Prompt cards + copy button */
+.prompt {
+  margin: var(--space-4) 0 0;
+  position: relative;
+  padding: var(--space-6);
+  padding-right: 92px;
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--brand-cyan);
+  border-radius: var(--radius-md);
+  background: var(--surface-base);
+}
+.prompt__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+.copy-btn {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+.copy-btn:hover { color: var(--brand-cyan); border-color: var(--brand-cyan); }
+.copy-btn[data-copied] { color: var(--brand-charcoal); background: var(--brand-cyan); border-color: var(--brand-cyan); }
+
+/* Safety callout */
+.rc-callout {
+  margin-top: var(--space-16);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--brand-cyan);
+  background: var(--surface-base);
+}
+.rc-callout__h { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+.rc-callout__list { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-3); }
+.rc-callout__list li { font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+.rc-callout__list strong { color: var(--text-primary); }
+
+/* ---------- 5. Closing CTA (dark) ---------- */
+.rc-cta { padding-block: clamp(64px, 7vw, 104px); }
+.rc-cta__h { font-size: clamp(28px, 4vw, 44px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+.rc-cta__p { margin-top: var(--space-4); max-width: 52ch; font-size: 17px; line-height: 1.6; color: var(--slate-light); }
+
+/* ---------- Markdown preview (.md) ---------- */
+.md { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
+.md > :first-child { margin-top: 0; }
+/* File headings are demoted by 3 (h1->h4, h2->h5, h3->h6) to keep one page h1. */
+.md h4 { font-size: 18px; font-weight: 800; color: var(--text-primary); margin: var(--space-6) 0 var(--space-2); letter-spacing: -0.01em; }
+.md h5 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin: var(--space-6) 0 var(--space-2); }
+.md h6 { font-size: 14px; font-weight: 700; color: var(--text-primary); margin: var(--space-4) 0 var(--space-2); }
+.md p { margin: var(--space-2) 0; }
+.md em { color: var(--slate); }
+.md strong { color: var(--text-primary); }
+.md code { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 0.92em; background: color-mix(in srgb, var(--text-primary) 8%, transparent); padding: 1px 5px; border-radius: 4px; }
+.md ul, .md ol { margin: var(--space-2) 0; padding-left: var(--space-6); display: grid; gap: 4px; }
+.md li { padding-left: 2px; }
+.md a { color: var(--text-primary); border-bottom: 1px solid var(--brand-cyan); }
+.md table { width: 100%; border-collapse: collapse; margin: var(--space-3) 0; font-size: 13px; }
+.md th, .md td { text-align: left; padding: 8px 10px; border: 1px solid var(--border-subtle); vertical-align: top; }
+.md th { font-weight: 700; color: var(--text-primary); background: color-mix(in srgb, var(--text-primary) 5%, transparent); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767px) {
+  .slides__viewer { display: none; }
+  .slides__card { display: flex; }
+  .file-row__main { flex-wrap: wrap; }
+  .file-row__chip { order: 0; }
+  .file-row__meta { order: 1; flex-basis: calc(100% - 48px - var(--space-4)); }
+  .file-row__actions { order: 2; flex-basis: 100%; justify-content: flex-start; gap: var(--space-6); }
+  .prompt { padding-right: var(--space-6); padding-top: 56px; }
+  .copy-btn { top: var(--space-4); right: var(--space-4); }
+}

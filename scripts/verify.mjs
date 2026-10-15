@@ -22,6 +22,7 @@ const ROUTES = [
   "/insights/category/gtm-leadership", "/insights/category/growth",
   "/insights/category/product", "/insights/category/operational-ai",
   "/diagnostic", "/diagnostic/questions",
+  "/resources/claude-for-marketers",
   "/privacy", "/terms", "/cookies",
 ];
 const WIDTHS = [360, 390, 430, 768, 900, 1024, 1280, 1440, 1920];
