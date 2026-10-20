@@ -97,7 +97,7 @@ export default function CourseResourcesPage() {
       description: DESC,
       thumbnailUrl: `https://i.ytimg.com/vi/${YOUTUBE_ID}/maxresdefault.jpg`,
       embedUrl: `https://www.youtube.com/embed/${YOUTUBE_ID}`,
-      uploadDate: "2026-10-15",
+      uploadDate: "2026-10-15T11:25:00-07:00",
     });
   }
   const jsonLd = { "@context": "https://schema.org", "@graph": graph };
