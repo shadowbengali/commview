@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk"
 
 // Public site open to search engines and AI answer engines; only the private
 // surfaces (Studio, API, gated diagnostic results) are blocked.
-const DISALLOW = ["/studio", "/api", "/diagnostic/result"];
+const DISALLOW = ["/studio", "/api", "/diagnostic/result", "/brief"];
 
 // AI answer-engine / crawler user-agents we explicitly welcome (AEO).
 const AI_BOTS = [

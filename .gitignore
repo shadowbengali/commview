@@ -35,3 +35,6 @@ yarn-error.log*
 .vscode/*
 !.vscode/extensions.json
 tsconfig.tsbuildinfo
+
+# Confidential prospect brief content (served from Supabase; never commit)
+/content/brief-fixtures/
