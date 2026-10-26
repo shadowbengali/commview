@@ -1,16 +1,17 @@
-// Capture a prospect's homepage hero and emit a compact webp `data:` URI for
-// the brief page. Dismisses cookie consent, hides fixed chat/consent widgets,
-// grabs the above-the-fold hero, and optimises it small enough to inline.
+// Capture a prospect's homepage hero and write a compact `.webp` file for the
+// brief page. Dismisses cookie consent, hides fixed chat/consent widgets, grabs
+// the above-the-fold hero, and optimises it small. seed.mjs uploads the file to
+// Vercel Blob, so the database row holds a short CDN URL, not an inlined image.
 //
-// Usage: node scripts/brief/capture-home.mjs <homepageUrl> <outFile.datauri>
-// Then pass <outFile.datauri> to seed.mjs --shot.
+// Usage: node scripts/brief/capture-home.mjs <homepageUrl> <outFile.webp>
+// Then pass <outFile.webp> to seed.mjs --shot.
 import { chromium } from "playwright";
 import sharp from "sharp";
 import { writeFileSync } from "node:fs";
 
 const [, , url, out] = process.argv;
 if (!url || !out) {
-  console.error("Usage: node capture-home.mjs <homepageUrl> <out.datauri>");
+  console.error("Usage: node capture-home.mjs <homepageUrl> <out.webp>");
   process.exit(1);
 }
 
@@ -34,7 +35,7 @@ try {
   await p.waitForTimeout(800);
   const png = await p.screenshot({ clip: { x: 0, y: 0, width: 1440, height: 780 } });
   const webp = await sharp(png).resize({ width: 920 }).webp({ quality: 62 }).toBuffer();
-  writeFileSync(out, "data:image/webp;base64," + webp.toString("base64"));
+  writeFileSync(out, webp);
   console.log(`captured ${url} -> ${out}  (${Math.round(webp.length / 1024)}KB)`);
 } catch (e) {
   console.error("ERR", e.message);

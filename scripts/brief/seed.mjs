@@ -1,13 +1,16 @@
-// Seed or update a prospect brief in Supabase: content (+ optional homepage
-// screenshot) and the published flag. Reads credentials from .env.local so the
-// confidential content and image never pass through anything but the database.
+// Seed or update a prospect brief in Supabase: content + the published flag,
+// plus an optional homepage screenshot uploaded to Vercel Blob, so the database
+// row holds a short CDN URL rather than an inlined image. Credentials come from
+// .env.local (never committed): the Supabase service key for the row, and
+// BLOB_READ_WRITE_TOKEN for the image upload.
 //
 // Usage:
 //   node scripts/brief/seed.mjs \
 //     --token <40-char token> --company "Trumeter" --contact "Gil Copitch" \
-//     --content <path to content.json> [--shot <path to data-uri.txt>] [--publish]
+//     --content <path to content.json> [--shot <path to .webp>] [--publish]
 //
-// The shot file is a full `data:image/webp;base64,...` URI (see capture-home.mjs).
+//   --shot <file.webp>   webp from capture-home.mjs, uploaded here to Blob
+//   --shot-url <url>     reuse an existing Blob URL instead of uploading
 import fs from "node:fs";
 
 function readEnvLocal() {
@@ -39,6 +42,7 @@ const company = arg("company");
 const contact = arg("contact") || null;
 const contentPath = arg("content");
 const shotPath = arg("shot");
+const shotUrl = arg("shot-url");
 const publish = process.argv.includes("--publish");
 if (!token || !company || !contentPath) {
   console.error("Required: --token --company --content");
@@ -46,7 +50,31 @@ if (!token || !company || !contentPath) {
 }
 
 const content = JSON.parse(fs.readFileSync(contentPath, "utf8"));
-const screenshot = shotPath ? fs.readFileSync(shotPath, "utf8").trim() : undefined;
+
+// Resolve the screenshot to a public URL. --shot uploads a local .webp to
+// Vercel Blob (the row then stores a short CDN URL, not an inlined data URI);
+// --shot-url reuses an existing blob URL unchanged. A generic blob path plus a
+// random suffix keeps the URL unguessable and free of the brief token.
+let screenshot;
+if (shotUrl) {
+  screenshot = shotUrl;
+} else if (shotPath) {
+  const blobToken = env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_READ_WRITE_TOKEN;
+  if (!blobToken) {
+    console.error("Missing BLOB_READ_WRITE_TOKEN in .env.local (needed to upload --shot)");
+    process.exit(1);
+  }
+  const bytes = fs.readFileSync(shotPath);
+  const { put } = await import("@vercel/blob");
+  const blob = await put("brief/home.webp", bytes, {
+    access: "public",
+    contentType: "image/webp",
+    addRandomSuffix: true,
+    token: blobToken,
+  });
+  screenshot = blob.url;
+  console.log(`uploaded shot -> ${screenshot}  (${Math.round(bytes.length / 1024)}KB)`);
+}
 
 const row = {
   token,
@@ -74,7 +102,5 @@ if (!res.ok) {
   process.exit(1);
 }
 const [out] = await res.json();
-console.log(
-  `OK  ${out.company}  published=${out.published}  shot=${out.screenshot ? Math.round(out.screenshot.length / 1024) + "KB" : "none"}`
-);
+console.log(`OK  ${out.company}  published=${out.published}  shot=${out.screenshot || "none"}`);
 console.log(`URL: ${(env.NEXT_PUBLIC_SITE_URL || "https://www.commview.co.uk").replace(/\/$/, "")}/brief/${token}`);
