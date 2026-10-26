@@ -71,12 +71,14 @@ export function BriefDossier({
 
       {/* private strip */}
       <div className="brd-private">
-        <span>{c.hero.privateLabel}{c.hero.date ? ` · ${c.hero.date}` : ""}</span>
-        <span className="brd-private__tag">Confidential</span>
+        <div className="wrap brd-private__inner">
+          <span>{c.hero.privateLabel}{c.hero.date ? ` · ${c.hero.date}` : ""}</span>
+          <span className="brd-private__tag">Confidential</span>
+        </div>
       </div>
 
-      {/* ===== HERO ===== */}
-      <section className="brd-hero" aria-labelledby="brd-q">
+      {/* ===== HERO (dark) ===== */}
+      <section className="brd-hero dark" aria-labelledby="brd-q">
         <div className={`wrap brd-hero__grid${shot ? " brd-hero__grid--split" : ""}`}>
           <div className="brd-hero__lead">
             <span className="brd-pill">
@@ -137,8 +139,8 @@ export function BriefDossier({
         </section>
       )}
 
-      {/* ===== 01 / INSIGHT ===== */}
-      <section className="brd-sec" aria-labelledby="brd-insight-h">
+      {/* ===== 01 / INSIGHT (dark) ===== */}
+      <section className="brd-sec brd-insight dark" aria-labelledby="brd-insight-h">
         <div className="wrap">
           <p className="brd-kicker">01 / Insight</p>
           <h2 className="brd-h2" id="brd-insight-h">{c.insight.heading}</h2>
@@ -180,8 +182,8 @@ export function BriefDossier({
         </div>
       </section>
 
-      {/* ===== THE CONSTRAINT ===== */}
-      <section className="brd-sec" aria-labelledby="brd-con-h">
+      {/* ===== THE CONSTRAINT (light) ===== */}
+      <section className="brd-sec brd-constraint" aria-labelledby="brd-con-h">
         <div className="wrap">
           <h2 className="brd-h2" id="brd-con-h">{c.constraint.heading}</h2>
           <p className="brd-lead">{c.constraint.intro}</p>
@@ -200,8 +202,8 @@ export function BriefDossier({
         </div>
       </section>
 
-      {/* ===== 02 / MOMENTUM ===== */}
-      <section className="brd-sec" aria-labelledby="brd-mom-h">
+      {/* ===== 02 / MOMENTUM (dark) ===== */}
+      <section className="brd-sec brd-momentum dark" aria-labelledby="brd-mom-h">
         <div className="wrap">
           <p className="brd-kicker">02 / Momentum</p>
           <h2 className="brd-h2" id="brd-mom-h">{c.momentum.heading}</h2>
@@ -243,8 +245,8 @@ export function BriefDossier({
         </div>
       </section>
 
-      {/* ===== 03 / IMPACT ===== */}
-      <section className="brd-sec" aria-labelledby="brd-imp-h">
+      {/* ===== 03 / IMPACT (light) ===== */}
+      <section className="brd-sec brd-impact" aria-labelledby="brd-imp-h">
         <div className="wrap">
           <p className="brd-kicker">03 / Impact</p>
           <h2 className="brd-h2" id="brd-imp-h">{c.impact.heading}</h2>
@@ -259,8 +261,8 @@ export function BriefDossier({
         </div>
       </section>
 
-      {/* ===== OPERATOR EXPERIENCE ===== */}
-      <section className="brd-sec" aria-labelledby="brd-exp-h">
+      {/* ===== OPERATOR EXPERIENCE (light) ===== */}
+      <section className="brd-sec brd-exp" aria-labelledby="brd-exp-h">
         <div className="wrap">
           <h2 className="brd-h2" id="brd-exp-h">{c.experience.heading}</h2>
           <p className="brd-lead">{c.experience.intro}</p>
@@ -276,8 +278,8 @@ export function BriefDossier({
         </div>
       </section>
 
-      {/* ===== CALL TO ACTION ===== */}
-      <section className="brd-cta" aria-labelledby="brd-cta-h">
+      {/* ===== CALL TO ACTION (dark) ===== */}
+      <section className="brd-cta dark" aria-labelledby="brd-cta-h">
         <div className="wrap brd-cta__box">
           <h2 className="brd-cta__h" id="brd-cta-h">{c.cta.heading}</h2>
           <p className="brd-cta__b">{c.cta.body}</p>
