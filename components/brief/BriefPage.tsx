@@ -24,8 +24,30 @@ function Cta({ label, place }: { label: string; place: string }) {
   );
 }
 
-export function BriefPage({ content: c, token }: { content: BriefContent; token: string }) {
+// Highlight an optional substring of the callout body in brand cyan.
+function emphasise(body: string, emphasis?: string): React.ReactNode {
+  if (!emphasis || !body.includes(emphasis)) return body;
+  const [before, after] = body.split(emphasis);
+  return (
+    <>
+      {before}
+      <b className="br-shot__em">{emphasis}</b>
+      {after}
+    </>
+  );
+}
+
+export function BriefPage({
+  content: c,
+  screenshot,
+  token,
+}: {
+  content: BriefContent;
+  screenshot?: string | null;
+  token: string;
+}) {
   const maxBar = c.chart ? Math.max(...c.chart.bars.map((b) => b.value)) : 0;
+  const shot = c.site && screenshot ? c.site : null;
 
   return (
     <main id="main" className="br">
@@ -36,18 +58,47 @@ export function BriefPage({ content: c, token }: { content: BriefContent; token:
 
       {/* ===== HERO (dark) ===== */}
       <section className="br-hero dark" aria-labelledby="br-q">
-        <div className="wrap">
-          <p className="eyebrow-x">{c.hero.eyebrow}</p>
-          <p className="br-hero__small">{c.hero.smallLabel}</p>
-          <h1 className="br-hero__q" id="br-q">{c.hero.question}</h1>
-          <p className="br-hero__answer">{c.hero.answerLine}</p>
-          <p className="br-hero__intro">{c.hero.intro}</p>
-          <div className="br-hero__row">
-            <Cta label={c.cta.button} place="hero" />
-            <span className="br-hero__disc">
-              Where we would start: {c.disciplines.join(" · ")}
+        <div className={`wrap br-hero__grid${shot ? " br-hero__grid--split" : ""}`}>
+          <div className="br-hero__lead">
+            <span className="br-pill">
+              <span className="br-pill__dot" aria-hidden="true" />
+              {c.hero.eyebrow}
             </span>
+            <p className="br-hero__small">{c.hero.smallLabel}</p>
+            <h1 className="br-hero__q" id="br-q">{c.hero.question}</h1>
+            <p className="br-hero__answer">{c.hero.answerLine}</p>
+            <p className="br-hero__intro">{c.hero.intro}</p>
+            <div className="br-hero__row">
+              <Cta label={c.cta.button} place="hero" />
+              <span className="br-hero__disc">
+                Where we would start: {c.disciplines.join(" · ")}
+              </span>
+            </div>
           </div>
+
+          {shot && (
+            <div className="br-shot">
+              <span className="br-shot__date">{shot.displayUrl} · {shot.capturedOn}</span>
+              <div className="br-shot__frame">
+                <div className="br-shot__bar" aria-hidden="true">
+                  <i /><i /><i />
+                  <span className="br-shot__urlbar">{shot.displayUrl}</span>
+                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <div className="br-shot__img">
+                  <img src={screenshot as string} alt={`${c.company} homepage, ${shot.capturedOn}`} loading="lazy" />
+                </div>
+              </div>
+              <div className="br-shot__callout">
+                <span className="br-shot__flag">
+                  <span aria-hidden="true" />
+                  {shot.callout.flag}
+                </span>
+                <p className="br-shot__h">{shot.callout.headline}</p>
+                <p className="br-shot__b">{emphasise(shot.callout.body, shot.callout.emphasis)}</p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

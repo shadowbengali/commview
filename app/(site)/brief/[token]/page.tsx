@@ -19,8 +19,9 @@ export async function generateMetadata({
   params: Promise<{ token: string }>;
 }): Promise<Metadata> {
   const { token } = await params;
-  const content = await getBrief(token);
-  if (!content) return { title: { absolute: "Not found" }, robots: { index: false, follow: false } };
+  const brief = await getBrief(token);
+  if (!brief) return { title: { absolute: "Not found" }, robots: { index: false, follow: false } };
+  const { content } = brief;
 
   // Personalised share preview; page itself stays noindex.
   return {
@@ -47,8 +48,8 @@ export default async function BriefRoute({
   params: Promise<{ token: string }>;
 }) {
   const { token } = await params;
-  const content = await getBrief(token);
-  if (!content) notFound();
+  const brief = await getBrief(token);
+  if (!brief) notFound();
 
-  return <BriefPage content={content} token={token} />;
+  return <BriefPage content={brief.content} screenshot={brief.screenshot} token={token} />;
 }

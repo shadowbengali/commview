@@ -24,19 +24,22 @@ function supabaseConfigured(): boolean {
 }
 
 interface Row {
-  company: string;
-  contact_name: string | null;
   content: BriefContent;
-  published: boolean;
+  screenshot: string | null;
+}
+
+export interface Brief {
+  content: BriefContent;
+  screenshot: string | null; // data: URI of the homepage shot, or null
 }
 
 /** Fetch a published brief by token, or null if missing/unpublished/invalid. */
-export async function getBrief(token: string): Promise<BriefContent | null> {
+export async function getBrief(token: string): Promise<Brief | null> {
   if (!validToken(token)) return null;
 
   if (supabaseConfigured()) {
     const res = await fetch(
-      `${URL}/rest/v1/${TABLE}?token=eq.${encodeURIComponent(token)}&published=eq.true&select=content&limit=1`,
+      `${URL}/rest/v1/${TABLE}?token=eq.${encodeURIComponent(token)}&published=eq.true&select=content,screenshot&limit=1`,
       {
         headers: { apikey: KEY as string, Authorization: `Bearer ${KEY}` },
         cache: "no-store",
@@ -44,14 +47,18 @@ export async function getBrief(token: string): Promise<BriefContent | null> {
     );
     if (!res.ok) return null;
     const rows = (await res.json()) as Row[];
-    return rows[0]?.content ?? null;
+    const row = rows[0];
+    return row ? { content: row.content, screenshot: row.screenshot ?? null } : null;
   }
 
-  // Dev fallback: gitignored fixture (never used in production).
+  // Dev fallback: gitignored fixture (never used in production). The fixture may
+  // carry the shot inline as `_screenshot` so the hero can be built locally.
   if (process.env.NODE_ENV !== "production") {
     try {
       const file = path.join(process.cwd(), "content", "brief-fixtures", `${token}.json`);
-      return JSON.parse(fs.readFileSync(file, "utf8")) as BriefContent;
+      const parsed = JSON.parse(fs.readFileSync(file, "utf8")) as BriefContent & { _screenshot?: string };
+      const { _screenshot, ...content } = parsed;
+      return { content: content as BriefContent, screenshot: _screenshot ?? null };
     } catch {
       return null;
     }
