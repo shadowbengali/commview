@@ -1,5 +1,5 @@
 import type { BriefContent, Discipline } from "@/lib/brief/types";
-import { BriefTracker } from "./BriefTracker";
+import { BriefTracker } from "@/components/brief/BriefTracker";
 
 // The prospect brief template. One shape, filled per prospect. Server-rendered;
 // the only client piece is first-party engagement tracking. Design reuses
