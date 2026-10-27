@@ -6,7 +6,7 @@ import { BriefTracker } from "./BriefTracker";
 // Self-contained styles (.brd-*) so the original BriefPage is untouched. Server-
 // rendered; the only client piece is first-party engagement tracking.
 
-const CALENDAR_URL = "https://calendar.app.google/Hx4AQi6bJurZL8jU7";
+const CALENDAR_URL = "https://calendar.app.google/X7c8NFgSXuiiVVg3A";
 
 const DISC_COLOUR: Record<Discipline, string> = {
   "GTM Leadership": "var(--brand-cyan)",
