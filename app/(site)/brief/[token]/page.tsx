@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getBrief } from "@/lib/brief/store";
-import { BriefPage } from "@/components/brief/BriefPage";
+import { BriefDossier } from "@/components/brief/BriefDossier";
 
-import "../../../../styles/brief.css";
+import "../../../../styles/brief-dossier.css";
 
 // /brief/[token] — a personalised, confidential CommView analysis for one
 // prospect. Served from an unguessable token (Supabase in prod, gitignored
@@ -51,5 +51,5 @@ export default async function BriefRoute({
   const brief = await getBrief(token);
   if (!brief) notFound();
 
-  return <BriefPage content={brief.content} screenshot={brief.screenshot} token={token} />;
+  return <BriefDossier content={brief.content} screenshot={brief.screenshot} token={token} />;
 }

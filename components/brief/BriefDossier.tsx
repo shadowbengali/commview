@@ -1,12 +1,13 @@
 import type { BriefContent, Discipline } from "@/lib/brief/types";
 import { BriefTracker } from "./BriefTracker";
 
-// Alternate "audit dossier" treatment of the prospect brief: identical content,
-// denser dark instrument-panel styling, the real homepage shot kept in the hero.
-// Self-contained styles (.brd-*) so the original BriefPage is untouched. Server-
-// rendered; the only client piece is first-party engagement tracking.
+// The prospect brief template ("audit dossier" treatment): one shape filled per
+// prospect, denser dark instrument-panel styling, the real homepage shot kept in
+// the hero. Self-contained styles (.brd-*). Server-rendered; the only client
+// piece is first-party engagement tracking. Served at /brief/[token]. The earlier
+// first-pass layout is retired to archive/brief-first-layout/.
 
-const CALENDAR_URL = "https://calendar.app.google/Hx4AQi6bJurZL8jU7";
+const CALENDAR_URL = "https://calendar.app.google/X7c8NFgSXuiiVVg3A";
 
 const DISC_COLOUR: Record<Discipline, string> = {
   "GTM Leadership": "var(--brand-cyan)",
